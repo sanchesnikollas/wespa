@@ -163,7 +163,7 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div className="flex flex-wrap gap-4" variants={fadeInUp}>
-              <Button size="lg" className="bg-white text-stone-900 hover:bg-stone-100">
+              <Button variant="wespa" size="lg">
                 Book a Visit
               </Button>
               <Button
@@ -604,7 +604,7 @@ export function PainPointsSection() {
               ))}
             </div>
 
-            <Button size="lg" className="mt-8">
+            <Button variant="wespa" size="lg" className="mt-8">
               Book a Visit
             </Button>
           </motion.div>

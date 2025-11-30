@@ -155,7 +155,7 @@ export function Header() {
                   <>
                     <Button variant="ghost" size="sm" asChild>
                       <Link href="/dashboard" className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center text-white text-xs font-semibold">
+                        <div className="w-6 h-6 rounded-full bg-wespa-red flex items-center justify-center text-white text-xs font-semibold">
                           {user?.firstName?.charAt(0) || 'U'}
                         </div>
                         Dashboard
@@ -184,7 +184,7 @@ export function Header() {
               {isAuthenticated && (
                 <Link
                   href="/dashboard"
-                  className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white text-sm font-semibold"
+                  className="w-8 h-8 rounded-full bg-wespa-red flex items-center justify-center text-white text-sm font-semibold"
                 >
                   {user?.firstName?.charAt(0) || 'U'}
                 </Link>

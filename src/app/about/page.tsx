@@ -34,8 +34,8 @@ function ValueCard({ icon, title, description }: ValueCardProps) {
       variants={fadeInUp}
       whileHover={{ y: -4 }}
     >
-      <div className="w-14 h-14 rounded-xl bg-amber-100 flex items-center justify-center mb-6">
-        <Icon name={icon} size="lg" className="text-amber-600" />
+      <div className="w-14 h-14 rounded-xl bg-red-100 flex items-center justify-center mb-6">
+        <Icon name={icon} size="lg" className="text-wespa-red" />
       </div>
       <h3 className="text-xl font-semibold text-stone-900 mb-3">{title}</h3>
       <p className="text-stone-600">{description}</p>
@@ -122,7 +122,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-amber-600 font-medium mb-4 block">Our Story</span>
+              <span className="text-wespa-red font-medium mb-4 block">Our Story</span>
               <h2 className="text-4xl lg:text-5xl font-bold text-stone-900 mb-6">
                 Redefining the Modern Workspace
               </h2>
@@ -273,7 +273,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-32 bg-amber-500">
+      <section className="py-20 lg:py-32 bg-wespa-red">
         <div className="container-wespa text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

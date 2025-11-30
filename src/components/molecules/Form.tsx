@@ -276,6 +276,7 @@ export function LeadForm({
             {/* Submit button */}
             <Button
               type="submit"
+              variant="wespa"
               fullWidth
               isLoading={status === 'loading'}
             >
@@ -395,7 +396,7 @@ export function ContactForm({ className, onSubmit }: ContactFormProps) {
 
             {status === 'error' && <FormStatusMessage status={status} />}
 
-            <Button type="submit" fullWidth isLoading={status === 'loading'}>
+            <Button type="submit" variant="wespa" fullWidth isLoading={status === 'loading'}>
               Send Message
             </Button>
           </motion.div>
@@ -549,7 +550,7 @@ export function HeroFilterForm({ className, onFilter }: HeroFilterFormProps) {
           onChange={(e) => handleFilterChange('needType', e.target.value)}
         />
       </div>
-      <Button fullWidth size="lg" rightIcon={<Icon name="arrow-right" size="sm" />}>
+      <Button variant="wespa" fullWidth size="lg" rightIcon={<Icon name="arrow-right" size="sm" />}>
         Book a Visit
       </Button>
       <p className="text-caption text-wire-500 text-center">

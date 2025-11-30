@@ -162,7 +162,7 @@ export function BottomNav() {
                     className={cn(
                       'flex items-center gap-4 px-4 py-4 rounded-xl transition-colors',
                       'hover:bg-stone-100 active:bg-stone-200',
-                      isActive(item.href) && 'bg-amber-50 text-amber-600'
+                      isActive(item.href) && 'bg-red-50 text-wespa-red'
                     )}
                   >
                     <Icon name={item.icon} size="md" />
@@ -219,7 +219,7 @@ export function BottomNav() {
                   className={cn(
                     'flex flex-col items-center justify-center gap-1 py-2 px-4 min-w-[64px]',
                     'transition-colors duration-200',
-                    active ? 'text-amber-600' : 'text-stone-500'
+                    active ? 'text-wespa-red' : 'text-stone-500'
                   )}
                 >
                   <motion.div
@@ -249,7 +249,7 @@ export function BottomNav() {
                 className={cn(
                   'flex flex-col items-center justify-center gap-1 py-2 px-4 min-w-[64px]',
                   'transition-colors duration-200',
-                  active ? 'text-amber-600' : 'text-stone-500'
+                  active ? 'text-wespa-red' : 'text-stone-500'
                 )}
               >
                 <motion.div
@@ -272,7 +272,7 @@ export function BottomNav() {
                 {active && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute -top-0.5 w-1 h-1 bg-amber-500 rounded-full"
+                    className="absolute -top-0.5 w-1 h-1 bg-wespa-red rounded-full"
                     transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                   />
                 )}
