@@ -7,6 +7,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/atoms/Button'
 import { Tag, StatusTag } from '@/components/atoms/Tag'
@@ -74,68 +75,70 @@ export function CardSpace({ space, onClick }: CardSpaceProps) {
   const imageUrl = space.images?.[0] || spaceTypeImages[space.type] || '/images/spaces/coworking-1.jpg'
 
   return (
-    <CardBase interactive as="article" className="overflow-hidden">
-      {/* Image */}
-      <div className="aspect-card bg-wire-200 relative overflow-hidden">
-        <Image
-          src={imageUrl}
-          alt={space.name}
-          fill
-          className="object-cover transition-transform duration-300 hover:scale-105"
-        />
-        {/* Status badge */}
-        <div className="absolute top-3 right-3">
-          <StatusTag status={space.availability} />
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="p-5">
-        {/* Type tag */}
-        <Tag size="sm" className="mb-3">
-          {space.type.replace('-', ' ')}
-        </Tag>
-
-        {/* Title */}
-        <h3 className="text-heading-md font-semibold text-wire-900 mb-2">
-          {space.name}
-        </h3>
-
-        {/* Short description */}
-        <p className="text-body-sm text-wire-600 line-clamp-2 mb-4">
-          {space.shortDescription}
-        </p>
-
-        {/* Capacity */}
-        <div className="flex items-center gap-2 text-body-sm text-wire-500 mb-4">
-          <Icon name="users" size="sm" />
-          <span>
-            {space.capacity.min === space.capacity.max
-              ? `${space.capacity.max} people`
-              : `${space.capacity.min}-${space.capacity.max} people`}
-          </span>
-        </div>
-
-        {/* Pricing (if available) */}
-        {space.pricing && (
-          <div className="text-body-sm text-wire-700 mb-4">
-            <span className="font-semibold">From {space.pricing.currency} {space.pricing.from}</span>
-            <span className="text-wire-500">/{space.pricing.type}</span>
+    <Link href={`/spaces/${space.slug}`} className="block">
+      <CardBase interactive as="article" className="overflow-hidden">
+        {/* Image */}
+        <div className="aspect-card bg-wire-200 relative overflow-hidden">
+          <Image
+            src={imageUrl}
+            alt={space.name}
+            fill
+            className="object-cover transition-transform duration-300 hover:scale-105"
+          />
+          {/* Status badge */}
+          <div className="absolute top-3 right-3">
+            <StatusTag status={space.availability} />
           </div>
-        )}
+        </div>
 
-        {/* CTA */}
-        <Button
-          variant="secondary"
-          size="sm"
-          fullWidth
-          onClick={onClick}
-          rightIcon={<Icon name="arrow-right" size="sm" />}
-        >
-          View details
-        </Button>
-      </div>
-    </CardBase>
+        {/* Content */}
+        <div className="p-5">
+          {/* Type tag */}
+          <Tag size="sm" className="mb-3">
+            {space.type.replace('-', ' ')}
+          </Tag>
+
+          {/* Title */}
+          <h3 className="text-heading-md font-semibold text-wire-900 mb-2">
+            {space.name}
+          </h3>
+
+          {/* Short description */}
+          <p className="text-body-sm text-wire-600 line-clamp-2 mb-4">
+            {space.shortDescription}
+          </p>
+
+          {/* Capacity */}
+          <div className="flex items-center gap-2 text-body-sm text-wire-500 mb-4">
+            <Icon name="users" size="sm" />
+            <span>
+              {space.capacity.min === space.capacity.max
+                ? `${space.capacity.max} people`
+                : `${space.capacity.min}-${space.capacity.max} people`}
+            </span>
+          </div>
+
+          {/* Pricing (if available) */}
+          {space.pricing && (
+            <div className="text-body-sm text-wire-700 mb-4">
+              <span className="font-semibold">From {space.pricing.currency} {space.pricing.from}</span>
+              <span className="text-wire-500">/{space.pricing.type}</span>
+            </div>
+          )}
+
+          {/* CTA */}
+          <Button
+            variant="secondary"
+            size="sm"
+            fullWidth
+            onClick={onClick}
+            rightIcon={<Icon name="arrow-right" size="sm" />}
+          >
+            View details
+          </Button>
+        </div>
+      </CardBase>
+    </Link>
   )
 }
 
