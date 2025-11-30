@@ -8,10 +8,9 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Placeholder domains for development (update with actual CDN)
-    domains: ['placeholder.wespa.hr', 'images.wespa.hr'],
-    // Use unoptimized for wireframes with placeholder images
-    unoptimized: process.env.NODE_ENV === 'development',
+    // Use unoptimized since we're serving static images from public folder
+    // This ensures images work reliably on all hosting platforms (Railway, Vercel, etc.)
+    unoptimized: true,
   },
 
   // Enable experimental features
