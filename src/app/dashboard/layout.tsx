@@ -30,6 +30,7 @@ const dashboardNav: NavItem[] = [
   { label: 'My Bookings', href: '/dashboard/bookings', icon: 'calendar' },
   { label: 'Membership', href: '/dashboard/membership', icon: 'briefcase' },
   { label: 'Profile', href: '/dashboard/profile', icon: 'user' },
+  { label: 'Settings', href: '/dashboard/settings', icon: 'monitor' },
 ]
 
 // ============================================
@@ -56,7 +57,7 @@ function DashboardSidebar() {
       {/* User Info */}
       <div className="px-6 py-6 border-b border-stone-800">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center text-white font-semibold">
+          <div className="w-10 h-10 rounded-full bg-wespa-red flex items-center justify-center text-white font-semibold">
             {user?.firstName?.charAt(0) || 'U'}
           </div>
           <div>
@@ -81,7 +82,7 @@ function DashboardSidebar() {
               className={cn(
                 'flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors',
                 isActive
-                  ? 'bg-amber-500/20 text-amber-400'
+                  ? 'bg-wespa-red/20 text-wespa-red'
                   : 'text-stone-400 hover:text-white hover:bg-stone-800'
               )}
             >
@@ -176,7 +177,7 @@ export default function DashboardLayout({
     return (
       <div className="min-h-screen flex items-center justify-center bg-stone-50">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-stone-200 border-t-amber-500 rounded-full animate-spin mx-auto mb-4" />
+          <div className="w-12 h-12 border-4 border-stone-200 border-t-wespa-red rounded-full animate-spin mx-auto mb-4" />
           <p className="text-stone-600">Loading...</p>
         </div>
       </div>

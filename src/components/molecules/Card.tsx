@@ -6,6 +6,7 @@
 // ============================================
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/atoms/Button'
 import { Tag, StatusTag } from '@/components/atoms/Tag'
@@ -60,14 +61,28 @@ interface CardSpaceProps {
   onClick?: () => void
 }
 
+// Default images for space types
+const spaceTypeImages: Record<string, string> = {
+  coworking: '/images/spaces/coworking-1.jpg',
+  meeting: '/images/spaces/meeting-KGD_8894-Edit.jpg',
+  office: '/images/spaces/office-Copy-of-DSC_4745.jpg',
+  'urban-hub': '/images/spaces/urban-hub-1.jpg',
+  'business-lounge': '/images/spaces/lounge-1.jpg',
+}
+
 export function CardSpace({ space, onClick }: CardSpaceProps) {
+  const imageUrl = space.images?.[0] || spaceTypeImages[space.type] || '/images/spaces/coworking-1.jpg'
+
   return (
     <CardBase interactive as="article" className="overflow-hidden">
-      {/* Image placeholder (wireframe) */}
-      <div className="aspect-card bg-wire-200 relative">
-        <div className="absolute inset-0 flex items-center justify-center text-wire-400">
-          <Icon name="building" size="xl" />
-        </div>
+      {/* Image */}
+      <div className="aspect-card bg-wire-200 relative overflow-hidden">
+        <Image
+          src={imageUrl}
+          alt={space.name}
+          fill
+          className="object-cover transition-transform duration-300 hover:scale-105"
+        />
         {/* Status badge */}
         <div className="absolute top-3 right-3">
           <StatusTag status={space.availability} />
