@@ -845,3 +845,26 @@
     content: " (" attr(href) ")";
   }
 }
+
+/* ============================================
+   iOS Safe Area Support (Bottom Nav)
+   ============================================ */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Ensure footer has extra padding on mobile when bottom nav is present */
+  @media (max-width: 1023px) {
+    footer {
+      padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/* Mobile bottom navigation spacing */
+@media (max-width: 1023px) {
+  main {
+    padding-bottom: 5rem;
+  }
+}

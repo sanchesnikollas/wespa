@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Lora, Source_Sans_3 } from 'next/font/google'
 import '@/styles/globals.css'
-import { Header, StickyCtaBar } from '@/components/organisms/Header'
+import { Header } from '@/components/organisms/Header'
+import { BottomNav } from '@/components/organisms/BottomNav'
 import { Footer } from '@/components/organisms/Footer'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { AuthProvider } from '@/contexts/AuthContext'
@@ -136,8 +137,8 @@ export default function RootLayout({
             {/* Global Footer */}
             <Footer />
 
-            {/* Mobile sticky CTA */}
-            <StickyCtaBar />
+            {/* Mobile bottom navigation (app-like) */}
+            <BottomNav />
           </LanguageProvider>
         </AuthProvider>
       </body>

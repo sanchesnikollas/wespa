@@ -12,7 +12,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/atoms/Button'
 import { Icon } from '@/components/atoms/Icon'
-import { NavLink, MobileNav } from '@/components/molecules/Navigation'
+import { NavLink } from '@/components/molecules/Navigation'
 import { mainNavigation, secondaryNavigation } from '@/config/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useAuth } from '@/contexts/AuthContext'
@@ -70,7 +70,6 @@ function Logo({ className, compact = false }: { className?: string; compact?: bo
 // Header Component with scroll animation
 // ============================================
 export function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isCompact, setIsCompact] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -97,16 +96,6 @@ export function Header() {
     setIsCompact(latest > 100)
   })
 
-  // Close mobile menu on resize to desktop
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsMobileMenuOpen(false)
-      }
-    }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
 
   return (
     <>
@@ -189,17 +178,18 @@ export function Header() {
               </div>
             </div>
 
-            {/* Mobile Menu Button - 48px touch target */}
-            <button
-              type="button"
-              onClick={() => setIsMobileMenuOpen(true)}
-              className="lg:hidden p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
-              aria-label="Open navigation menu"
-              aria-expanded={isMobileMenuOpen}
-              aria-controls="mobile-navigation"
-            >
-              <Icon name="menu" size="md" />
-            </button>
+            {/* Mobile: Language Switcher only (navigation moved to bottom bar) */}
+            <div className="lg:hidden flex items-center gap-2">
+              <LanguageSwitcher className="text-stone-600" />
+              {isAuthenticated && (
+                <Link
+                  href="/dashboard"
+                  className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white text-sm font-semibold"
+                >
+                  {user?.firstName?.charAt(0) || 'U'}
+                </Link>
+              )}
+            </div>
           </motion.nav>
         </div>
 
@@ -211,14 +201,6 @@ export function Header() {
           }}
         />
       </motion.header>
-
-      {/* Mobile Navigation */}
-      <MobileNav
-        items={mainNavigation}
-        secondaryItems={secondaryNavigation}
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-      />
 
       {/* Header spacer - animated */}
       <motion.div
