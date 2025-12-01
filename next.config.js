@@ -3,6 +3,9 @@ const nextConfig = {
   // Enable React strict mode for better development experience
   reactStrictMode: true,
 
+  // Output standalone for faster builds and smaller deployments
+  output: 'standalone',
+
   // Image optimization configuration
   images: {
     formats: ['image/avif', 'image/webp'],
