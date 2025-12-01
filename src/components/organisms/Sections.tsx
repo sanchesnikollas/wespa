@@ -8,6 +8,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/atoms/Button'
 import { Icon, IconName } from '@/components/atoms/Icon'
@@ -163,15 +164,16 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div className="flex flex-wrap gap-4" variants={fadeInUp}>
-              <Button variant="wespa" size="lg">
-                Book a Visit
+              <Button variant="wespa" size="lg" asChild>
+                <Link href="/book-visit">Book a Visit</Link>
               </Button>
               <Button
                 variant="ghost"
                 size="lg"
                 className="text-white hover:bg-white/10 border border-white/30"
+                asChild
               >
-                Explore Spaces
+                <Link href="/spaces">Explore Spaces</Link>
               </Button>
             </motion.div>
 
@@ -604,8 +606,8 @@ export function PainPointsSection() {
               ))}
             </div>
 
-            <Button variant="wespa" size="lg" className="mt-8">
-              Book a Visit
+            <Button variant="wespa" size="lg" className="mt-8" asChild>
+              <Link href="/book-visit">Book a Visit</Link>
             </Button>
           </motion.div>
         </div>
@@ -681,8 +683,9 @@ export function LocationsSection() {
                     <Button
                       variant="secondary"
                       className="w-fit bg-white/10 border-white/30 text-white hover:bg-white hover:text-stone-900"
+                      asChild
                     >
-                      Explore Location
+                      <Link href="/spaces">Explore Location</Link>
                     </Button>
                   </motion.div>
                 </div>
@@ -803,9 +806,11 @@ export function IdeasSection({ articles }: IdeasSectionProps) {
               Insights and trends shaping the future of work
             </p>
           </div>
-          <Button variant="secondary">
-            View all articles
-            <Icon name="arrow-right" size="sm" />
+          <Button variant="secondary" asChild>
+            <Link href="/ideas" className="flex items-center gap-2">
+              View all articles
+              <Icon name="arrow-right" size="sm" />
+            </Link>
           </Button>
         </div>
 
@@ -863,8 +868,8 @@ export function WorkplaceTeaserSection() {
                 </li>
               ))}
             </ul>
-            <Button className="bg-white text-stone-900 hover:bg-stone-100">
-              Join the waitlist
+            <Button className="bg-white text-stone-900 hover:bg-stone-100" asChild>
+              <Link href="/contact">Join the waitlist</Link>
             </Button>
           </motion.div>
 
@@ -939,12 +944,12 @@ export function PageHero({ title, subtitle, breadcrumbs, image, children }: Page
                     <Icon name="chevron-right" size="xs" className={image ? 'text-stone-400' : 'text-stone-400'} />
                   )}
                   {item.href ? (
-                    <a href={item.href} className={cn(
+                    <Link href={item.href} className={cn(
                       'transition-colors',
                       image ? 'text-stone-300 hover:text-white' : 'text-stone-600 hover:text-stone-900'
                     )}>
                       {item.label}
-                    </a>
+                    </Link>
                   ) : (
                     <span className={image ? 'text-white font-medium' : 'text-stone-900 font-medium'}>
                       {item.label}
@@ -1009,8 +1014,8 @@ export function EmptyState({ icon = 'search', title, description, action }: Empt
       <h3 className="text-2xl font-semibold text-stone-900 mb-3">{title}</h3>
       <p className="text-lg text-stone-600 mb-8 max-w-md mx-auto">{description}</p>
       {action && (
-        <Button variant="secondary">
-          {action.label}
+        <Button variant="secondary" asChild>
+          <Link href={action.href}>{action.label}</Link>
         </Button>
       )}
     </div>

@@ -7,6 +7,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -583,12 +584,9 @@ export function HeroFilterForm({ className, onFilter }: HeroFilterFormProps) {
           onChange={(e) => handleFilterChange('needType', e.target.value)}
         />
       </div>
-      <Button variant="wespa" fullWidth size="lg" rightIcon={<Icon name="arrow-right" size="sm" />}>
-        Book a Visit
+      <Button variant="wespa" fullWidth size="lg" rightIcon={<Icon name="arrow-right" size="sm" />} asChild>
+        <Link href="/book-visit">Book a Visit</Link>
       </Button>
-      <p className="text-caption text-wire-500 text-center">
-        Entry point of the main conversion funnel
-      </p>
     </div>
   )
 }
