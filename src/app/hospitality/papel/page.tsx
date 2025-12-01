@@ -4,8 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import { Header } from '@/components/organisms/Header'
-import { Footer } from '@/components/organisms/Footer'
 import { Button } from '@/components/atoms/Button'
 import { WespaIcon, WespaIconCircle, type WespaIconName } from '@/components/atoms/WespaIcon'
 
@@ -65,9 +63,7 @@ export default function PapelPage() {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-
+    <>
       {/* Hero Section */}
       <section ref={heroRef} className="relative h-[80vh] flex items-center overflow-hidden">
         <motion.div
@@ -111,10 +107,10 @@ export default function PapelPage() {
               Fresh ingredients, creative cuisine, and an ambiance designed for connection.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex gap-4">
-              <Button variant="primary" size="lg" className="bg-white text-stone-900 hover:bg-stone-100">
+              <Button variant="secondary" size="lg">
                 Reserve a Table
               </Button>
-              <Button variant="secondary" size="lg" className="border-white/30 text-white hover:bg-white/10">
+              <Button variant="ghost" size="lg" className="border border-white/30 text-white hover:bg-white/10">
                 View Menu
               </Button>
             </motion.div>
@@ -247,7 +243,7 @@ export default function PapelPage() {
                 ))}
               </div>
 
-              <Button variant="primary" size="lg" className="mt-10 bg-white text-stone-900 hover:bg-stone-100">
+              <Button variant="secondary" size="lg" className="mt-10">
                 View Full Menu
               </Button>
             </motion.div>
@@ -363,8 +359,6 @@ export default function PapelPage() {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </>
   )
 }

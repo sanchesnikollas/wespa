@@ -3,8 +3,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Header } from '@/components/organisms/Header'
-import { Footer } from '@/components/organisms/Footer'
 import { Button } from '@/components/atoms/Button'
 
 const fadeInUp = {
@@ -96,9 +94,7 @@ const stats = [
 
 export default function ClientStoriesPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-
+    <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-stone-900 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
@@ -369,12 +365,12 @@ export default function ClientStoriesPage() {
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/book-visit">
-                <Button variant="primary" size="lg" className="bg-white text-stone-900 hover:bg-stone-100">
+                <Button variant="secondary" size="lg">
                   Book a Visit
                 </Button>
               </Link>
               <Link href="/spaces">
-                <Button variant="secondary" size="lg" className="border-white/30 text-white hover:bg-white/10">
+                <Button variant="ghost" size="lg" className="border border-white/30 text-white hover:bg-white/10">
                   Explore Spaces
                 </Button>
               </Link>
@@ -382,8 +378,6 @@ export default function ClientStoriesPage() {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </>
   )
 }

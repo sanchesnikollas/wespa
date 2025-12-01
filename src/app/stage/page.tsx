@@ -6,6 +6,8 @@
 // ============================================
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
 import { PageHero, SectionTitle } from '@/components/organisms/Sections'
 import { CardEventType, CardBase } from '@/components/molecules/Card'
 import { LeadForm } from '@/components/molecules/Form'
@@ -143,77 +145,91 @@ export default function StagePage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Green Gold Venue */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <CardBase className="overflow-hidden h-full">
-                <div className="aspect-video bg-wire-200 flex items-center justify-center">
-                  <Icon name="building" size="xl" className="text-wire-400" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-heading-lg font-semibold text-wire-900 mb-2">
-                    WESPA Business & Lounge
-                  </h3>
-                  <p className="text-body-sm text-wire-500 mb-4">
-                    Green Gold Business Centre
-                  </p>
-                  <p className="text-body-md text-wire-600 mb-4">
-                    Sophisticated venue for corporate events, elegant receptions,
-                    and executive gatherings. Features our premium cigar & cocktail room.
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {['Up to 150 guests', 'Premium catering by Papel', 'Executive boardrooms', 'Parking available'].map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-body-sm text-wire-700">
-                        <Icon name="check" size="sm" className="text-wire-500" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button variant="secondary" fullWidth>
-                    Explore venue
-                  </Button>
-                </div>
-              </CardBase>
-            </motion.div>
+            <Link href="/stage/business-events" className="block group">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <CardBase className="overflow-hidden h-full hover:shadow-lg hover:border-wire-300 transition-all">
+                  <div className="aspect-video bg-wire-200 relative overflow-hidden">
+                    <Image
+                      src="/images/spaces/lounge-1.jpg"
+                      alt="WESPA Business & Lounge"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-heading-lg font-semibold text-wire-900 mb-2 group-hover:text-wespa-red transition-colors">
+                      WESPA Business & Lounge
+                    </h3>
+                    <p className="text-body-sm text-wire-500 mb-4">
+                      Green Gold Business Centre
+                    </p>
+                    <p className="text-body-md text-wire-600 mb-4">
+                      Sophisticated venue for corporate events, elegant receptions,
+                      and executive gatherings. Features our premium cigar & cocktail room.
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      {['Up to 150 guests', 'Premium catering by Papel', 'Executive boardrooms', 'Parking available'].map((feature) => (
+                        <li key={feature} className="flex items-center gap-2 text-body-sm text-wire-700">
+                          <Icon name="check" size="sm" className="text-wire-500" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <Button variant="secondary" fullWidth>
+                      Explore venue
+                    </Button>
+                  </div>
+                </CardBase>
+              </motion.div>
+            </Link>
 
             {/* Zavrtnica Venue */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <CardBase className="overflow-hidden h-full">
-                <div className="aspect-video bg-wire-200 flex items-center justify-center">
-                  <Icon name="building" size="xl" className="text-wire-400" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-heading-lg font-semibold text-wire-900 mb-2">
-                    WESPA Spaces
-                  </h3>
-                  <p className="text-body-sm text-wire-500 mb-4">
-                    Zavrtnica
-                  </p>
-                  <p className="text-body-md text-wire-600 mb-4">
-                    Dynamic venue for creative events, startup launches, workshops,
-                    and community gatherings. Features podcast studio and open spaces.
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {['Up to 100 guests', 'Flexible layouts', 'Podcast studio', 'Catering by SPOT'].map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-body-sm text-wire-700">
-                        <Icon name="check" size="sm" className="text-wire-500" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button variant="secondary" fullWidth>
-                    Explore venue
-                  </Button>
-                </div>
-              </CardBase>
-            </motion.div>
+            <Link href="/stage/special-events" className="block group">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <CardBase className="overflow-hidden h-full hover:shadow-lg hover:border-wire-300 transition-all">
+                  <div className="aspect-video bg-wire-200 relative overflow-hidden">
+                    <Image
+                      src="/images/spaces/coworking-1.jpg"
+                      alt="WESPA Spaces"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-heading-lg font-semibold text-wire-900 mb-2 group-hover:text-wespa-red transition-colors">
+                      WESPA Spaces
+                    </h3>
+                    <p className="text-body-sm text-wire-500 mb-4">
+                      Zavrtnica
+                    </p>
+                    <p className="text-body-md text-wire-600 mb-4">
+                      Dynamic venue for creative events, startup launches, workshops,
+                      and community gatherings. Features podcast studio and open spaces.
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      {['Up to 100 guests', 'Flexible layouts', 'Podcast studio', 'Catering by SPOT'].map((feature) => (
+                        <li key={feature} className="flex items-center gap-2 text-body-sm text-wire-700">
+                          <Icon name="check" size="sm" className="text-wire-500" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <Button variant="secondary" fullWidth>
+                      Explore venue
+                    </Button>
+                  </div>
+                </CardBase>
+              </motion.div>
+            </Link>
           </div>
         </div>
       </section>

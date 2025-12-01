@@ -102,10 +102,10 @@ export default function AboutPage() {
               WESPA is more than a workspace. It's an ecosystem designed for modern professionals who demand flexibility, community, and excellence in everything they do.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button asChild className="bg-white text-stone-900 hover:bg-stone-100">
+              <Button asChild variant="secondary">
                 <Link href="/book-visit">Book a Visit</Link>
               </Button>
-              <Button asChild variant="secondary" className="text-white border-white/30 hover:bg-white/10">
+              <Button asChild variant="ghost" className="border border-white/30 text-white hover:bg-white/10">
                 <Link href="/contact">Get in Touch</Link>
               </Button>
             </div>
@@ -286,7 +286,7 @@ export default function AboutPage() {
             <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
               Schedule a tour and discover why leading professionals choose WESPA as their workspace.
             </p>
-            <Button asChild size="lg" className="bg-white text-stone-900 hover:bg-stone-100">
+            <Button asChild variant="secondary" size="lg">
               <Link href="/book-visit">Book Your Visit</Link>
             </Button>
           </motion.div>
