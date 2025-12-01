@@ -56,7 +56,7 @@ export default function ProfilePage() {
         {/* Avatar Section */}
         <div className="bg-gradient-to-r from-stone-900 to-stone-800 px-8 py-12 text-center">
           <div className="w-24 h-24 rounded-full bg-wespa-red flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">
-            {user?.firstName?.charAt(0)}{user?.lastName?.charAt(0)}
+            {user?.firstName?.charAt(0)?.toUpperCase()}{user?.lastName?.charAt(0)?.toUpperCase()}
           </div>
           <h2 className="text-xl font-semibold text-white">
             {user?.firstName} {user?.lastName}

@@ -6,6 +6,7 @@
 // ============================================
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -14,6 +15,7 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/atoms/Button'
 import { Input, Textarea, Select, Checkbox } from '@/components/atoms/Input'
 import { Icon } from '@/components/atoms/Icon'
+import { trackEvent, getStoredUTM } from '@/components/tracking'
 import type { FormStatus, LeadFormData, ContactFormData, NewsletterFormData } from '@/types'
 
 // ============================================
@@ -94,6 +96,7 @@ interface LeadFormProps {
   variant?: 'full' | 'compact'
   defaultInquiryType?: LeadFormData['inquiryType']
   onSubmit?: (data: LeadFormData) => Promise<void>
+  redirectToConfirmation?: boolean
 }
 
 export function LeadForm({
@@ -101,7 +104,9 @@ export function LeadForm({
   variant = 'full',
   defaultInquiryType = 'workspace',
   onSubmit,
+  redirectToConfirmation = true,
 }: LeadFormProps) {
+  const router = useRouter()
   const [status, setStatus] = useState<FormStatus>('idle')
 
   const {
@@ -123,14 +128,27 @@ export function LeadForm({
   const handleFormSubmit = async (data: LeadFormData) => {
     setStatus('loading')
     try {
+      // Get UTM parameters
+      const utmData = getStoredUTM()
+
       if (onSubmit) {
         await onSubmit(data)
       } else {
-        // Simulate API call
+        // Simulate API call (would send to CRM with UTM data)
         await new Promise((resolve) => setTimeout(resolve, 1500))
+        console.log('Form data:', { ...data, ...utmData })
       }
-      setStatus('success')
-      reset()
+
+      // Track conversion
+      trackEvent.bookVisit(data.spaceType)
+
+      // Redirect to confirmation page
+      if (redirectToConfirmation) {
+        router.push('/book-visit/confirmation')
+      } else {
+        setStatus('success')
+        reset()
+      }
     } catch {
       setStatus('error')
     }
@@ -303,9 +321,11 @@ export function LeadForm({
 interface ContactFormProps {
   className?: string
   onSubmit?: (data: ContactFormData) => Promise<void>
+  redirectToConfirmation?: boolean
 }
 
-export function ContactForm({ className, onSubmit }: ContactFormProps) {
+export function ContactForm({ className, onSubmit, redirectToConfirmation = true }: ContactFormProps) {
+  const router = useRouter()
   const [status, setStatus] = useState<FormStatus>('idle')
 
   const {
@@ -320,13 +340,26 @@ export function ContactForm({ className, onSubmit }: ContactFormProps) {
   const handleFormSubmit = async (data: ContactFormData) => {
     setStatus('loading')
     try {
+      // Get UTM parameters
+      const utmData = getStoredUTM()
+
       if (onSubmit) {
         await onSubmit(data)
       } else {
         await new Promise((resolve) => setTimeout(resolve, 1500))
+        console.log('Contact form data:', { ...data, ...utmData })
       }
-      setStatus('success')
-      reset()
+
+      // Track conversion
+      trackEvent.contactSubmit(data.subject)
+
+      // Redirect to confirmation page
+      if (redirectToConfirmation) {
+        router.push('/contact/confirmation')
+      } else {
+        setStatus('success')
+        reset()
+      }
     } catch {
       setStatus('error')
     }

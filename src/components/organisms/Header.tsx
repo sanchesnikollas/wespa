@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/atoms/Button'
 import { Icon } from '@/components/atoms/Icon'
 import { NavLink } from '@/components/molecules/Navigation'
-import { mainNavigation, secondaryNavigation } from '@/config/navigation'
+import { mainNavigation } from '@/config/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useAuth } from '@/contexts/AuthContext'
 
@@ -132,50 +132,29 @@ export function Header() {
             </div>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center gap-3">
-              {/* Secondary nav links */}
-              <div className="flex items-center gap-2 border-r border-wire-200 pr-3">
-                {secondaryNavigation.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-body-sm text-wire-600 hover:text-wire-900 transition-colors px-2 py-1"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
+            <div className="hidden lg:flex items-center gap-2">
+              {/* Book a Visit CTA */}
+              <Button variant="wespa" size="sm" asChild>
+                <Link href="/book-visit">Book a Visit</Link>
+              </Button>
 
               {/* Language Switcher */}
               <LanguageSwitcher />
 
               {/* Auth actions */}
-              <div className="flex items-center gap-2">
-                {isAuthenticated ? (
-                  <>
-                    <Button variant="ghost" size="sm" asChild>
-                      <Link href="/dashboard" className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-full bg-wespa-red flex items-center justify-center text-white text-xs font-semibold">
-                          {user?.firstName?.charAt(0) || 'U'}
-                        </div>
-                        Dashboard
-                      </Link>
-                    </Button>
-                    <Button variant="ghost" size="sm" onClick={logout}>
-                      Sign Out
-                    </Button>
-                  </>
-                ) : (
-                  <>
-                    <Button variant="ghost" size="sm" asChild>
-                      <Link href="/login">{t('nav.login')}</Link>
-                    </Button>
-                    <Button size="sm" asChild>
-                      <Link href="/join">{t('nav.joinNow')}</Link>
-                    </Button>
-                  </>
-                )}
-              </div>
+              {isAuthenticated ? (
+                <Link
+                  href="/dashboard"
+                  className="w-8 h-8 rounded-full bg-wespa-red flex items-center justify-center text-white text-sm font-semibold hover:bg-wespa-red-dark transition-colors"
+                  title="Dashboard"
+                >
+                  {user?.firstName?.charAt(0)?.toUpperCase() || 'U'}
+                </Link>
+              ) : (
+                <Button variant="ghost" size="sm" asChild>
+                  <Link href="/login">{t('nav.login')}</Link>
+                </Button>
+              )}
             </div>
 
             {/* Mobile: Language Switcher only (navigation moved to bottom bar) */}
@@ -186,7 +165,7 @@ export function Header() {
                   href="/dashboard"
                   className="w-8 h-8 rounded-full bg-wespa-red flex items-center justify-center text-white text-sm font-semibold"
                 >
-                  {user?.firstName?.charAt(0) || 'U'}
+                  {user?.firstName?.charAt(0)?.toUpperCase() || 'U'}
                 </Link>
               )}
             </div>

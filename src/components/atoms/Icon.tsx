@@ -49,6 +49,25 @@ import {
   User,
   Eye,
   EyeOff,
+  FileText,
+  File,
+  Folder,
+  Lightbulb,
+  Twitter,
+  Calculator,
+  TrendingUp,
+  CheckSquare,
+  Rocket,
+  Link,
+  BookOpen,
+  Award,
+  ClipboardList,
+  Camera,
+  Music,
+  Car,
+  Wine,
+  Gift,
+  Image,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -97,6 +116,25 @@ export type IconName =
   | 'user'
   | 'eye'
   | 'eye-off'
+  | 'file-text'
+  | 'file'
+  | 'folder'
+  | 'lightbulb'
+  | 'twitter'
+  | 'calculator'
+  | 'trending-up'
+  | 'check-square'
+  | 'rocket'
+  | 'link'
+  | 'book-open'
+  | 'award'
+  | 'clipboard-list'
+  | 'camera'
+  | 'music'
+  | 'car'
+  | 'wine'
+  | 'gift'
+  | 'image'
 
 export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
@@ -163,6 +201,25 @@ const iconMap: Record<IconName, LucideIcon> = {
   user: User,
   eye: Eye,
   'eye-off': EyeOff,
+  'file-text': FileText,
+  file: File,
+  folder: Folder,
+  lightbulb: Lightbulb,
+  twitter: Twitter,
+  calculator: Calculator,
+  'trending-up': TrendingUp,
+  'check-square': CheckSquare,
+  rocket: Rocket,
+  link: Link,
+  'book-open': BookOpen,
+  award: Award,
+  'clipboard-list': ClipboardList,
+  camera: Camera,
+  music: Music,
+  car: Car,
+  wine: Wine,
+  gift: Gift,
+  image: Image,
 }
 
 // ============================================

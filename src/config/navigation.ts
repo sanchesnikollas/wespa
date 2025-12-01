@@ -4,10 +4,29 @@
 
 import { NavItem } from '@/types'
 
+// Primary navigation - shown in main header area
 export const mainNavigation: NavItem[] = [
   {
-    label: 'Home',
-    href: '/',
+    label: 'Spaces',
+    href: '/spaces',
+    children: [
+      {
+        label: 'Co-working',
+        href: '/spaces?type=coworking',
+      },
+      {
+        label: 'Private Offices',
+        href: '/spaces?type=office',
+      },
+      {
+        label: 'Meeting Rooms',
+        href: '/spaces?type=meeting',
+      },
+      {
+        label: 'Urban Hub',
+        href: '/spaces?type=urban-hub',
+      },
+    ],
   },
   {
     label: 'Hospitality',
@@ -24,53 +43,27 @@ export const mainNavigation: NavItem[] = [
     ],
   },
   {
-    label: 'Spaces',
-    href: '/spaces',
-    children: [
-      {
-        label: 'Co-working',
-        href: '/spaces?type=coworking',
-      },
-      {
-        label: 'Meetings',
-        href: '/spaces?type=meeting',
-      },
-      {
-        label: 'Offices',
-        href: '/spaces?type=office',
-      },
-      {
-        label: 'Working Space',
-        href: '/spaces?type=working-space',
-      },
-      {
-        label: 'Urban Hub / Business & Lounge',
-        href: '/spaces?type=urban-hub',
-      },
-    ],
-  },
-  {
-    label: 'Stage',
+    label: 'Events',
     href: '/stage',
     children: [
       {
-        label: 'Custom Special Events',
-        href: '/stage?category=social',
+        label: 'Special Events',
+        href: '/stage/special-events',
       },
       {
         label: 'Business Events',
-        href: '/stage?category=corporate',
-      },
-      {
-        label: 'Workshops & Podcasts',
-        href: '/stage?category=workshop',
+        href: '/stage/business-events',
       },
     ],
   },
   {
-    label: 'Book a Visit',
-    href: '/book-visit',
+    label: 'About',
+    href: '/about',
   },
+]
+
+// Secondary links - shown in a "More" dropdown or footer
+export const secondaryNavigation: NavItem[] = [
   {
     label: 'Franchise',
     href: '/franchise',
@@ -78,17 +71,6 @@ export const mainNavigation: NavItem[] = [
   {
     label: 'Contact',
     href: '/contact',
-  },
-]
-
-export const secondaryNavigation: NavItem[] = [
-  {
-    label: 'Ideas by WESPA',
-    href: '/ideas',
-  },
-  {
-    label: 'Client Stories',
-    href: '/client-stories',
   },
 ]
 

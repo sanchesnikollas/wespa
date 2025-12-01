@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from 'next'
 import { Lora, Source_Sans_3 } from 'next/font/google'
+import { Suspense } from 'react'
 import '@/styles/globals.css'
-import { Header } from '@/components/organisms/Header'
-import { BottomNav } from '@/components/organisms/BottomNav'
-import { Footer } from '@/components/organisms/Footer'
+import { ConditionalLayout } from '@/components/organisms/ConditionalLayout'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { AuthProvider } from '@/contexts/AuthContext'
+import { AnalyticsProvider, UTMTracker } from '@/components/tracking'
 
 // ============================================
 // Font Configuration - Premium Typography
@@ -116,31 +116,21 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/images/logo/fav-icon-dark.png" />
       </head>
       <body className="font-sans antialiased">
-        <AuthProvider>
-          <LanguageProvider>
-            {/* Skip to main content link for accessibility */}
-            <a
-              href="#main-content"
-              className="skip-link"
-            >
-              Skip to main content
-            </a>
+        <AnalyticsProvider>
+          <AuthProvider>
+            <LanguageProvider>
+              {/* UTM Parameter Tracker */}
+              <Suspense fallback={null}>
+                <UTMTracker />
+              </Suspense>
 
-            {/* Global Header */}
-            <Header />
-
-            {/* Main content */}
-            <main id="main-content" className="min-h-screen">
-              {children}
-            </main>
-
-            {/* Global Footer */}
-            <Footer />
-
-            {/* Mobile bottom navigation (app-like) */}
-            <BottomNav />
-          </LanguageProvider>
-        </AuthProvider>
+              {/* Conditional Layout - hides Header/Footer in Dashboard */}
+              <ConditionalLayout>
+                {children}
+              </ConditionalLayout>
+            </LanguageProvider>
+          </AuthProvider>
+        </AnalyticsProvider>
       </body>
     </html>
   )

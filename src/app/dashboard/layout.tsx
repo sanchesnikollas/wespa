@@ -58,7 +58,7 @@ function DashboardSidebar() {
       <div className="px-6 py-6 border-b border-stone-800">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-wespa-red flex items-center justify-center text-white font-semibold">
-            {user?.firstName?.charAt(0) || 'U'}
+            {user?.firstName?.charAt(0)?.toUpperCase() || 'U'}
           </div>
           <div>
             <p className="text-sm font-medium text-white">
@@ -113,11 +113,12 @@ function DashboardSidebar() {
 // Mobile Header
 // ============================================
 function DashboardMobileHeader() {
+  const pathname = usePathname()
   const { user, logout } = useAuth()
 
   return (
     <header className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white border-b border-stone-200">
-      <div className="flex items-center justify-between h-16 px-4">
+      <div className="flex items-center justify-between h-14 px-4">
         <Link href="/" className="relative w-24 h-6">
           <Image
             src="/images/logo/logo-cinza.svg"
@@ -127,28 +128,44 @@ function DashboardMobileHeader() {
           />
         </Link>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <span className="text-sm text-stone-600">
             {user?.firstName}
           </span>
-          <Button variant="ghost" size="sm" onClick={logout}>
-            Sign Out
-          </Button>
+          <button
+            onClick={logout}
+            className="text-xs text-stone-500 hover:text-stone-700"
+          >
+            Sair
+          </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <nav className="flex overflow-x-auto px-4 py-2 gap-2 border-t border-stone-100">
-        {dashboardNav.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-stone-100 text-stone-700 hover:bg-stone-200"
-          >
-            <Icon name={item.icon} size="xs" />
-            {item.label}
-          </Link>
-        ))}
+      {/* Mobile Navigation - Icon-based tabs */}
+      <nav className="flex justify-around px-2 py-2 border-t border-stone-100 bg-stone-50">
+        {dashboardNav.map((item) => {
+          const isActive = pathname === item.href
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                'flex flex-col items-center gap-1 px-3 py-1.5 rounded-lg transition-colors min-w-0',
+                isActive
+                  ? 'text-wespa-red'
+                  : 'text-stone-500 hover:text-stone-700'
+              )}
+            >
+              <Icon name={item.icon} size="md" />
+              <span className={cn(
+                'text-[10px] font-medium truncate max-w-[60px]',
+                isActive && 'font-semibold'
+              )}>
+                {item.label.split(' ')[0]}
+              </span>
+            </Link>
+          )
+        })}
       </nav>
     </header>
   )
@@ -195,7 +212,7 @@ export default function DashboardLayout({
       <DashboardMobileHeader />
 
       {/* Main Content */}
-      <main className="lg:pl-64 pt-28 lg:pt-0">
+      <main className="lg:pl-64 pt-24 lg:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
