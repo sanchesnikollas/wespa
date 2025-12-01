@@ -43,6 +43,7 @@ export interface Location {
   description: string
   features: string[]
   vibe: 'corporate' | 'startup' | 'mixed'
+  image: string
   coordinates?: {
     lat: number
     lng: number

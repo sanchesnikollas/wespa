@@ -56,6 +56,7 @@ export const locations: Location[] = [
       'Corporate-ready infrastructure',
     ],
     vibe: 'corporate',
+    image: '/images/spaces/lounge-1.jpg',
     coordinates: {
       lat: 45.8066,
       lng: 15.9841,
@@ -81,6 +82,7 @@ export const locations: Location[] = [
       'Community events',
     ],
     vibe: 'startup',
+    image: '/images/spaces/coworking-1.jpg',
     coordinates: {
       lat: 45.8012,
       lng: 15.9878,

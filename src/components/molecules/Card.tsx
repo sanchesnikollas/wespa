@@ -309,63 +309,69 @@ interface CardLocationProps {
     description: string
     features: string[]
     vibe: 'corporate' | 'startup' | 'mixed'
+    image: string
   }
   onClick?: () => void
 }
 
 export function CardLocation({ location, onClick }: CardLocationProps) {
   return (
-    <CardBase interactive className="overflow-hidden">
-      {/* Image placeholder */}
-      <div className="aspect-video bg-wire-200 relative">
-        <div className="absolute inset-0 flex items-center justify-center text-wire-400">
-          <Icon name="building" size="xl" />
+    <Link href="/spaces" className="block">
+      <CardBase interactive className="overflow-hidden">
+        {/* Image */}
+        <div className="aspect-video bg-wire-200 relative overflow-hidden">
+          <Image
+            src={location.image}
+            alt={location.fullName}
+            fill
+            className="object-cover transition-transform duration-300 hover:scale-105"
+          />
+          {/* Vibe badge */}
+          <div className="absolute top-3 left-3">
+            <Tag variant="solid" color="neutral" size="sm">
+              {location.vibe === 'corporate' ? 'Corporate Vibe' : 'Startup Vibe'}
+            </Tag>
+          </div>
         </div>
-        {/* Vibe badge */}
-        <div className="absolute top-3 left-3">
-          <Tag variant="solid" color="neutral" size="sm">
-            {location.vibe === 'corporate' ? 'Corporate Vibe' : 'Startup Vibe'}
-          </Tag>
+
+        {/* Content */}
+        <div className="p-6">
+          <h3 className="text-heading-lg font-semibold text-wire-900 mb-1">
+            {location.fullName}
+          </h3>
+          <p className="text-body-sm text-wire-500 mb-4 flex items-center gap-1">
+            <Icon name="map-pin" size="sm" />
+            {location.address}
+          </p>
+
+          <p className="text-body-sm text-wire-600 mb-4 line-clamp-2">
+            {location.description}
+          </p>
+
+          {/* Features */}
+          <ul className="flex flex-wrap gap-2 mb-6">
+            {location.features.slice(0, 3).map((feature, index) => (
+              <li key={index}>
+                <Tag variant="outline" size="sm">{feature}</Tag>
+              </li>
+            ))}
+            {location.features.length > 3 && (
+              <Tag variant="outline" size="sm">+{location.features.length - 3}</Tag>
+            )}
+          </ul>
+
+          {/* CTA */}
+          <Button
+            variant="secondary"
+            fullWidth
+            onClick={onClick}
+            rightIcon={<Icon name="arrow-right" size="sm" />}
+          >
+            Explore this location
+          </Button>
         </div>
-      </div>
-
-      {/* Content */}
-      <div className="p-6">
-        <h3 className="text-heading-lg font-semibold text-wire-900 mb-1">
-          {location.fullName}
-        </h3>
-        <p className="text-body-sm text-wire-500 mb-4 flex items-center gap-1">
-          <Icon name="map-pin" size="sm" />
-          {location.address}
-        </p>
-
-        <p className="text-body-sm text-wire-600 mb-4 line-clamp-2">
-          {location.description}
-        </p>
-
-        {/* Features */}
-        <ul className="flex flex-wrap gap-2 mb-6">
-          {location.features.slice(0, 3).map((feature, index) => (
-            <li key={index}>
-              <Tag variant="outline" size="sm">{feature}</Tag>
-            </li>
-          ))}
-          {location.features.length > 3 && (
-            <Tag variant="outline" size="sm">+{location.features.length - 3}</Tag>
-          )}
-        </ul>
-
-        {/* CTA */}
-        <Button
-          variant="secondary"
-          fullWidth
-          onClick={onClick}
-          rightIcon={<Icon name="arrow-right" size="sm" />}
-        >
-          Explore this location
-        </Button>
-      </div>
-    </CardBase>
+      </CardBase>
+    </Link>
   )
 }
 
