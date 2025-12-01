@@ -20,8 +20,12 @@ export function ConditionalLayout({ children }: ConditionalLayoutProps) {
   // Routes that should NOT show the public header/footer
   const isDashboard = pathname?.startsWith('/dashboard')
 
-  if (isDashboard) {
-    // Dashboard has its own layout, just render children
+  // Auth pages have their own layout with logos
+  const authRoutes = ['/login', '/join', '/forgot-password', '/reset-password']
+  const isAuthPage = authRoutes.some(route => pathname?.startsWith(route))
+
+  if (isDashboard || isAuthPage) {
+    // Dashboard and auth pages have their own layout, just render children
     return <>{children}</>
   }
 
