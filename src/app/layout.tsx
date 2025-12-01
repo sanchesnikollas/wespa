@@ -3,6 +3,7 @@ import { Lora, Source_Sans_3 } from 'next/font/google'
 import { Suspense } from 'react'
 import '@/styles/globals.css'
 import { ConditionalLayout } from '@/components/organisms/ConditionalLayout'
+import { SplashScreen } from '@/components/organisms/SplashScreen'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { AnalyticsProvider, UTMTracker } from '@/components/tracking'
@@ -119,6 +120,9 @@ export default function RootLayout({
         <AnalyticsProvider>
           <AuthProvider>
             <LanguageProvider>
+              {/* Splash Screen */}
+              <SplashScreen />
+
               {/* UTM Parameter Tracker */}
               <Suspense fallback={null}>
                 <UTMTracker />
