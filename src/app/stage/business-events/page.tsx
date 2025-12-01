@@ -240,30 +240,31 @@ export default function BusinessEventsPage() {
                 image: '/images/spaces/meeting-Copy-of-Conference-4.jpg',
               },
             ].map((venue, i) => (
-              <motion.div
-                key={venue.name}
-                className="bg-white rounded-2xl overflow-hidden border border-stone-200"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
-                <div className="aspect-video relative">
-                  <Image src={venue.image} alt={venue.name} fill className="object-cover" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-stone-900">{venue.name}</h3>
-                    <span className="text-sm text-stone-500">{venue.capacity}</span>
+              <Link key={venue.name} href="#inquiry" className="block group">
+                <motion.div
+                  className="bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg hover:border-stone-300 transition-all"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <div className="aspect-video relative overflow-hidden">
+                    <Image src={venue.image} alt={venue.name} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
                   </div>
-                  <p className="text-stone-600 text-sm mb-4">{venue.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {venue.features.map((feature, j) => (
-                      <Tag key={j} variant="outline" size="sm">{feature}</Tag>
-                    ))}
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-xl font-semibold text-stone-900 group-hover:text-wespa-red transition-colors">{venue.name}</h3>
+                      <span className="text-sm text-stone-500">{venue.capacity}</span>
+                    </div>
+                    <p className="text-stone-600 text-sm mb-4">{venue.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {venue.features.map((feature, j) => (
+                        <Tag key={j} variant="outline" size="sm">{feature}</Tag>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
