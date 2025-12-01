@@ -7,6 +7,7 @@ import { SplashScreen } from '@/components/organisms/SplashScreen'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { AnalyticsProvider, UTMTracker } from '@/components/tracking'
+import { HomePageJsonLd } from '@/components/seo'
 
 // ============================================
 // Font Configuration - Premium Typography
@@ -111,10 +112,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${lora.variable} ${sourceSans.variable}`}>
+    <html lang="hr" className={`${lora.variable} ${sourceSans.variable}`}>
       <head>
-        <link rel="icon" href="/images/logo/fav-icon-dark.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/images/logo/fav-icon-dark.png" />
+        {/* Favicons */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        {/* JSON-LD Structured Data for SEO */}
+        <HomePageJsonLd />
       </head>
       <body className="font-sans antialiased">
         <AnalyticsProvider>
