@@ -597,7 +597,7 @@ export function PainPointsSection() {
                   <ul className="space-y-3">
                     {group.items.map((item, j) => (
                       <li key={j} className="flex items-center gap-3 text-stone-600">
-                        <WespaIcon name="check" size="sm" />
+                        <Icon name="check" size="sm" className="text-wespa-red shrink-0" />
                         {item}
                       </li>
                     ))}
@@ -863,7 +863,7 @@ export function WorkplaceTeaserSection() {
                 'Mobile app',
               ].map((feature, i) => (
                 <li key={i} className="flex items-center gap-3 text-stone-300">
-                  <WespaIcon name="check" size="sm" />
+                  <Icon name="check" size="sm" className="text-wespa-red shrink-0" />
                   {feature}
                 </li>
               ))}

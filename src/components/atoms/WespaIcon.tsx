@@ -68,13 +68,14 @@ export type WespaIconName = keyof typeof WESPA_ICONS
 
 interface WespaIconProps {
   name: WespaIconName
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+  size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
   className?: string
   alt?: string
 }
 
 // Icon sizes for standalone use
 const sizeMap = {
+  xxs: 16,
   xs: 24,
   sm: 32,
   md: 48,
@@ -85,7 +86,8 @@ const sizeMap = {
 
 // Container sizes for circle variants
 const containerSizeMap = {
-  xs: 56,
+  xxs: 24,
+  xs: 32,
   sm: 72,
   md: 100,
   lg: 140,
@@ -95,7 +97,8 @@ const containerSizeMap = {
 
 // Icon sizes inside circles (should fill ~55-60% of container for visual balance)
 const iconInCircleSizeMap = {
-  xs: 32,
+  xxs: 14,
+  xs: 18,
   sm: 42,
   md: 56,
   lg: 80,

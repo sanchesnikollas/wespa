@@ -211,9 +211,9 @@ export default function SpaceDetailPage() {
           </nav>
 
           {/* Image Grid */}
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-3 gap-4 h-[400px] md:h-[500px]">
             <motion.div
-              className="aspect-[4/3] relative rounded-2xl overflow-hidden"
+              className="md:col-span-2 relative rounded-2xl overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
@@ -225,11 +225,11 @@ export default function SpaceDetailPage() {
                 priority
               />
             </motion.div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="hidden md:grid grid-rows-2 gap-4">
               {space.images.slice(1, 3).map((img, i) => (
                 <motion.div
                   key={i}
-                  className="aspect-square relative rounded-2xl overflow-hidden"
+                  className="relative rounded-2xl overflow-hidden"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: (i + 1) * 0.1 }}
