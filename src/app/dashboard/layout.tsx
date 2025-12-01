@@ -41,9 +41,9 @@ function DashboardSidebar() {
   const { user, logout } = useAuth()
 
   return (
-    <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 bg-stone-900">
+    <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 bg-gray-900">
       {/* Logo */}
-      <div className="flex items-center h-16 px-6 border-b border-stone-800">
+      <div className="flex items-center h-16 px-6 border-b border-gray-800">
         <Link href="/" className="relative w-28 h-8">
           <Image
             src="/images/logo/logo-white.png"
@@ -55,7 +55,7 @@ function DashboardSidebar() {
       </div>
 
       {/* User Info */}
-      <div className="px-6 py-6 border-b border-stone-800">
+      <div className="px-6 py-6 border-b border-gray-800">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-wespa-red flex items-center justify-center text-white font-semibold">
             {user?.firstName?.charAt(0)?.toUpperCase() || 'U'}
@@ -64,7 +64,7 @@ function DashboardSidebar() {
             <p className="text-sm font-medium text-white">
               {user?.firstName} {user?.lastName}
             </p>
-            <p className="text-xs text-stone-400 capitalize">
+            <p className="text-xs text-gray-400 capitalize">
               {user?.membershipType || 'Member'}
             </p>
           </div>
@@ -83,7 +83,7 @@ function DashboardSidebar() {
                 'flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors',
                 isActive
                   ? 'bg-wespa-red/20 text-wespa-red'
-                  : 'text-stone-400 hover:text-white hover:bg-stone-800'
+                  : 'text-gray-400 hover:text-white hover:bg-gray-800'
               )}
             >
               <Icon name={item.icon} size="sm" />
@@ -94,11 +94,11 @@ function DashboardSidebar() {
       </nav>
 
       {/* Logout */}
-      <div className="p-4 border-t border-stone-800">
+      <div className="p-4 border-t border-gray-800">
         <Button
           variant="ghost"
           fullWidth
-          className="text-stone-400 hover:text-white hover:bg-stone-800 justify-start"
+          className="text-gray-400 hover:text-white hover:bg-gray-800 justify-start"
           onClick={logout}
         >
           <Icon name="arrow-left" size="sm" />
@@ -117,7 +117,7 @@ function DashboardMobileHeader() {
   const { user, logout } = useAuth()
 
   return (
-    <header className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white border-b border-stone-200">
+    <header className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-200">
       <div className="flex items-center justify-between h-14 px-4">
         <Link href="/" className="relative w-24 h-6">
           <Image
@@ -128,13 +128,13 @@ function DashboardMobileHeader() {
           />
         </Link>
 
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-stone-600">
+        <div className="flex items-center gap-3">
+          <span className="text-sm text-gray-600">
             {user?.firstName}
           </span>
           <button
             onClick={logout}
-            className="text-xs text-stone-500 hover:text-stone-700"
+            className="text-xs text-gray-500 hover:text-gray-700 border border-gray-300 px-2 py-1 rounded"
           >
             Sair
           </button>
@@ -142,7 +142,7 @@ function DashboardMobileHeader() {
       </div>
 
       {/* Mobile Navigation - Icon-based tabs */}
-      <nav className="flex justify-around px-2 py-2 border-t border-stone-100 bg-stone-50">
+      <nav className="flex justify-around px-2 py-2 border-t border-gray-100 bg-gray-50">
         {dashboardNav.map((item) => {
           const isActive = pathname === item.href
           return (
@@ -153,7 +153,7 @@ function DashboardMobileHeader() {
                 'flex flex-col items-center gap-1 px-3 py-1.5 rounded-lg transition-colors min-w-0',
                 isActive
                   ? 'text-wespa-red'
-                  : 'text-stone-500 hover:text-stone-700'
+                  : 'text-gray-500 hover:text-gray-700'
               )}
             >
               <Icon name={item.icon} size="md" />
@@ -192,10 +192,10 @@ export default function DashboardLayout({
   // Show loading state
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-stone-50">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-stone-200 border-t-wespa-red rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-stone-600">Loading...</p>
+          <div className="w-12 h-12 border-4 border-gray-200 border-t-wespa-red rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-gray-600">Loading...</p>
         </div>
       </div>
     )
@@ -207,7 +207,7 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-gray-50">
       <DashboardSidebar />
       <DashboardMobileHeader />
 

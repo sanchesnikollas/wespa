@@ -67,20 +67,20 @@ const mockBookings: Booking[] = [
 function BookingCard({ booking }: { booking: Booking }) {
   const typeConfig = {
     meeting: { label: 'Meeting Room', color: 'bg-blue-100 text-blue-700' },
-    focus: { label: 'Focus Booth', color: 'bg-amber-100 text-amber-700' },
+    focus: { label: 'Focus Booth', color: 'bg-red-100 text-red-700' },
     event: { label: 'Event Space', color: 'bg-purple-100 text-purple-700' },
   }
 
   const statusConfig = {
     upcoming: { label: 'Upcoming', color: 'text-green-600' },
-    completed: { label: 'Completed', color: 'text-stone-400' },
+    completed: { label: 'Completed', color: 'text-gray-400' },
     cancelled: { label: 'Cancelled', color: 'text-red-500' },
   }
 
   return (
     <motion.div
       className={cn(
-        'bg-white rounded-2xl p-6 border border-stone-200',
+        'bg-white rounded-2xl p-6 border border-gray-200',
         booking.status === 'completed' && 'opacity-60'
       )}
       whileHover={{ y: -2 }}
@@ -95,12 +95,12 @@ function BookingCard({ booking }: { booking: Booking }) {
         </span>
       </div>
 
-      <h3 className="text-lg font-semibold text-stone-900 mb-1">{booking.room}</h3>
-      <p className="text-sm text-stone-500 mb-4">{booking.location}</p>
+      <h3 className="text-lg font-semibold text-gray-900 mb-1">{booking.room}</h3>
+      <p className="text-sm text-gray-500 mb-4">{booking.location}</p>
 
-      <div className="flex items-center gap-4 text-sm text-stone-600">
+      <div className="flex items-center gap-4 text-sm text-gray-600">
         <div className="flex items-center gap-2">
-          <Icon name="calendar" size="sm" className="text-stone-400" />
+          <Icon name="calendar" size="sm" className="text-gray-400" />
           {new Date(booking.date).toLocaleDateString('en-US', {
             weekday: 'short',
             month: 'short',
@@ -108,13 +108,13 @@ function BookingCard({ booking }: { booking: Booking }) {
           })}
         </div>
         <div className="flex items-center gap-2">
-          <Icon name="clock" size="sm" className="text-stone-400" />
+          <Icon name="clock" size="sm" className="text-gray-400" />
           {booking.startTime} - {booking.endTime}
         </div>
       </div>
 
       {booking.status === 'upcoming' && (
-        <div className="flex gap-2 mt-4 pt-4 border-t border-stone-100">
+        <div className="flex gap-2 mt-4 pt-4 border-t border-gray-100">
           <Button variant="secondary" size="sm" className="flex-1">
             Reschedule
           </Button>
@@ -144,8 +144,8 @@ export default function BookingsPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-stone-900 mb-2">My Bookings</h1>
-          <p className="text-stone-600">Manage your room reservations</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">My Bookings</h1>
+          <p className="text-gray-600">Manage your room reservations</p>
         </div>
         <Button onClick={() => setShowNewBooking(true)}>
           <Icon name="calendar" size="sm" />
@@ -154,7 +154,7 @@ export default function BookingsPage() {
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex gap-2 p-1 bg-stone-100 rounded-xl w-fit">
+      <div className="flex gap-2 p-1 bg-gray-100 rounded-xl w-fit">
         {(['all', 'upcoming', 'completed'] as const).map((tab) => (
           <button
             key={tab}
@@ -162,8 +162,8 @@ export default function BookingsPage() {
             className={cn(
               'px-4 py-2 rounded-lg text-sm font-medium transition-colors capitalize',
               filter === tab
-                ? 'bg-white text-stone-900 shadow-sm'
-                : 'text-stone-600 hover:text-stone-900'
+                ? 'bg-white text-gray-900 shadow-sm'
+                : 'text-gray-600 hover:text-gray-900'
             )}
           >
             {tab}
@@ -179,10 +179,10 @@ export default function BookingsPage() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-16 bg-white rounded-2xl border border-stone-200">
-          <Icon name="calendar" size="xl" className="mx-auto mb-4 text-stone-300" />
-          <h3 className="text-lg font-semibold text-stone-900 mb-2">No bookings found</h3>
-          <p className="text-stone-500 mb-6">You don't have any {filter !== 'all' ? filter : ''} bookings</p>
+        <div className="text-center py-16 bg-white rounded-2xl border border-gray-200">
+          <Icon name="calendar" size="xl" className="mx-auto mb-4 text-gray-300" />
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">No bookings found</h3>
+          <p className="text-gray-500 mb-6">You don't have any {filter !== 'all' ? filter : ''} bookings</p>
           <Button onClick={() => setShowNewBooking(true)}>
             Book a Room
           </Button>
@@ -198,15 +198,15 @@ export default function BookingsPage() {
             className="bg-white rounded-2xl p-8 max-w-md w-full"
           >
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-bold text-stone-900">New Booking</h2>
+              <h2 className="text-xl font-bold text-gray-900">New Booking</h2>
               <button
                 onClick={() => setShowNewBooking(false)}
-                className="p-2 hover:bg-stone-100 rounded-lg"
+                className="p-2 hover:bg-gray-100 rounded-lg"
               >
                 <Icon name="x" size="md" />
               </button>
             </div>
-            <p className="text-stone-600 mb-6">
+            <p className="text-gray-600 mb-6">
               Booking functionality coming soon. For now, please contact reception to make a reservation.
             </p>
             <div className="flex gap-3">

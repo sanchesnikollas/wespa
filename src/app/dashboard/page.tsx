@@ -26,13 +26,13 @@ interface StatCardProps {
 function StatCard({ label, value, icon, trend, trendUp }: StatCardProps) {
   return (
     <motion.div
-      className="bg-white rounded-2xl p-6 shadow-sm border border-stone-200"
+      className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200"
       whileHover={{ y: -2 }}
       transition={{ duration: 0.2 }}
     >
       <div className="flex items-start justify-between mb-4">
-        <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center">
-          <Icon name={icon} size="lg" className="text-stone-600" />
+        <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center">
+          <Icon name={icon} size="lg" className="text-gray-600" />
         </div>
         {trend && (
           <span
@@ -47,8 +47,8 @@ function StatCard({ label, value, icon, trend, trendUp }: StatCardProps) {
           </span>
         )}
       </div>
-      <p className="text-3xl font-bold text-stone-900 mb-1">{value}</p>
-      <p className="text-sm text-stone-500">{label}</p>
+      <p className="text-3xl font-bold text-gray-900 mb-1">{value}</p>
+      <p className="text-sm text-gray-500">{label}</p>
     </motion.div>
   )
 }
@@ -66,8 +66,8 @@ interface QuickActionProps {
 
 function QuickAction({ title, description, icon, href, color = 'default' }: QuickActionProps) {
   const colorClasses = {
-    default: 'bg-stone-900 text-white hover:bg-stone-800',
-    amber: 'bg-amber-500 text-white hover:bg-amber-600',
+    default: 'bg-gray-900 text-white hover:bg-gray-800',
+    amber: 'bg-red-500 text-white hover:bg-red-600',
     red: 'bg-wespa-red text-white hover:bg-wespa-red-dark',
   }
 
@@ -101,17 +101,17 @@ interface BookingProps {
 
 function UpcomingBooking({ type, location, date, time }: BookingProps) {
   return (
-    <div className="flex items-center gap-4 p-4 bg-stone-50 rounded-xl">
-      <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center">
-        <Icon name="calendar" size="md" className="text-amber-600" />
+    <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl">
+      <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center">
+        <Icon name="calendar" size="md" className="text-red-600" />
       </div>
       <div className="flex-1">
-        <p className="font-medium text-stone-900">{type}</p>
-        <p className="text-sm text-stone-500">{location}</p>
+        <p className="font-medium text-gray-900">{type}</p>
+        <p className="text-sm text-gray-500">{location}</p>
       </div>
       <div className="text-right">
-        <p className="text-sm font-medium text-stone-900">{date}</p>
-        <p className="text-sm text-stone-500">{time}</p>
+        <p className="text-sm font-medium text-gray-900">{date}</p>
+        <p className="text-sm text-gray-500">{time}</p>
       </div>
     </div>
   )
@@ -140,10 +140,10 @@ export default function DashboardPage() {
     <div className="max-w-6xl mx-auto space-y-8">
       {/* Welcome Header */}
       <div>
-        <h1 className="text-3xl font-bold text-stone-900 mb-2">
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">
           Welcome back, {user?.firstName}!
         </h1>
-        <p className="text-stone-600">
+        <p className="text-gray-600">
           Here's what's happening with your workspace today.
         </p>
       </div>
@@ -157,7 +157,7 @@ export default function DashboardPage() {
 
       {/* Quick Actions */}
       <div>
-        <h2 className="text-xl font-semibold text-stone-900 mb-4">Quick Actions</h2>
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <QuickAction
             title="Book a Room"
@@ -185,8 +185,8 @@ export default function DashboardPage() {
       <div className="grid lg:grid-cols-2 gap-8">
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold text-stone-900">Upcoming Bookings</h2>
-            <Link href="/dashboard/bookings" className="text-sm text-amber-600 hover:text-amber-700">
+            <h2 className="text-xl font-semibold text-gray-900">Upcoming Bookings</h2>
+            <Link href="/dashboard/bookings" className="text-sm text-red-600 hover:text-red-700">
               View all
             </Link>
           </div>
@@ -196,9 +196,9 @@ export default function DashboardPage() {
                 <UpcomingBooking key={i} {...booking} />
               ))
             ) : (
-              <div className="text-center py-12 bg-stone-50 rounded-2xl">
-                <Icon name="calendar" size="xl" className="mx-auto mb-4 text-stone-300" />
-                <p className="text-stone-500">No upcoming bookings</p>
+              <div className="text-center py-12 bg-gray-50 rounded-2xl">
+                <Icon name="calendar" size="xl" className="mx-auto mb-4 text-gray-300" />
+                <p className="text-gray-500">No upcoming bookings</p>
                 <Button variant="secondary" size="sm" className="mt-4">
                   Book Now
                 </Button>
@@ -209,24 +209,24 @@ export default function DashboardPage() {
 
         {/* Membership Card */}
         <div>
-          <h2 className="text-xl font-semibold text-stone-900 mb-4">Your Membership</h2>
-          <div className="bg-gradient-to-br from-stone-900 to-stone-800 rounded-2xl p-6 text-white">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Your Membership</h2>
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 text-white">
             <div className="flex items-start justify-between mb-6">
               <div>
-                <p className="text-stone-400 text-sm mb-1">Current Plan</p>
+                <p className="text-gray-400 text-sm mb-1">Current Plan</p>
                 <p className="text-2xl font-bold capitalize">{user?.membershipType || 'FlyDesk'}</p>
               </div>
-              <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-red-500 flex items-center justify-center">
                 <Icon name="star" size="lg" className="text-white" />
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div>
-                <p className="text-stone-400 text-sm">Member Since</p>
+                <p className="text-gray-400 text-sm">Member Since</p>
                 <p className="font-medium">{user?.memberSince || 'Jan 2024'}</p>
               </div>
               <div>
-                <p className="text-stone-400 text-sm">Location</p>
+                <p className="text-gray-400 text-sm">Location</p>
                 <p className="font-medium capitalize">{user?.location || 'Business'}</p>
               </div>
             </div>
@@ -241,8 +241,8 @@ export default function DashboardPage() {
 
       {/* Recent Activity */}
       <div>
-        <h2 className="text-xl font-semibold text-stone-900 mb-4">Recent Activity</h2>
-        <div className="bg-white rounded-2xl border border-stone-200 divide-y divide-stone-100">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h2>
+        <div className="bg-white rounded-2xl border border-gray-200 divide-y divide-gray-100">
           {[
             { action: 'Meeting Room booked', detail: 'Room A - Business', time: '2 hours ago' },
             { action: 'Profile updated', detail: 'Contact information changed', time: 'Yesterday' },
@@ -250,10 +250,10 @@ export default function DashboardPage() {
           ].map((activity, i) => (
             <div key={i} className="flex items-center justify-between p-4">
               <div>
-                <p className="font-medium text-stone-900">{activity.action}</p>
-                <p className="text-sm text-stone-500">{activity.detail}</p>
+                <p className="font-medium text-gray-900">{activity.action}</p>
+                <p className="text-sm text-gray-500">{activity.detail}</p>
               </div>
-              <span className="text-xs text-stone-400">{activity.time}</span>
+              <span className="text-xs text-gray-400">{activity.time}</span>
             </div>
           ))}
         </div>
