@@ -1,0 +1,35 @@
+# WESPA - Robots.txt
+# https://wespa.hr
+
+User-agent: *
+Allow: /
+
+# Disallow private/admin areas
+Disallow: /dashboard
+Disallow: /dashboard/*
+Disallow: /login
+Disallow: /join
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /api/
+Disallow: /_next/
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://wespa.hr/sitemap.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Disallow: /dashboard
+Disallow: /login
+Disallow: /join
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Disallow: /dashboard
+Disallow: /login
+Disallow: /join
