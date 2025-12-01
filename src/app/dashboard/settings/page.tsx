@@ -119,12 +119,12 @@ export default function SettingsPage() {
             <div>
               <p className="font-medium text-gray-900">Display Language</p>
               <p className="text-sm text-gray-500">
-                {language === 'en' ? 'English' : 'Português'}
+                {language === 'en' ? 'English' : 'Hrvatski'}
               </p>
             </div>
           </div>
           <Button variant="secondary" size="sm" onClick={toggleLanguage}>
-            Switch to {language === 'en' ? 'PT' : 'EN'}
+            Switch to {language === 'en' ? 'HR' : 'EN'}
           </Button>
         </div>
       </SettingsSection>

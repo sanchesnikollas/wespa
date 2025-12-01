@@ -20,7 +20,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 interface NavItemConfig {
   id: string
   label: string
-  labelPt: string
+  labelHr: string
   icon: IconName
   href: string
   activeIcon?: IconName
@@ -33,28 +33,28 @@ const navItems: NavItemConfig[] = [
   {
     id: 'home',
     label: 'Home',
-    labelPt: 'Inicio',
+    labelHr: 'Početna',
     icon: 'home',
     href: '/',
   },
   {
     id: 'spaces',
     label: 'Spaces',
-    labelPt: 'Espacos',
+    labelHr: 'Prostori',
     icon: 'building',
     href: '/spaces',
   },
   {
     id: 'book',
     label: 'Book',
-    labelPt: 'Reservar',
+    labelHr: 'Rezerviraj',
     icon: 'calendar',
     href: '/book-visit',
   },
   {
     id: 'menu',
     label: 'More',
-    labelPt: 'Mais',
+    labelHr: 'Više',
     icon: 'menu',
     href: '#menu',
   },
@@ -64,11 +64,11 @@ const navItems: NavItemConfig[] = [
 // More Menu Items
 // ============================================
 const moreMenuItems = [
-  { label: 'About', labelPt: 'Sobre', href: '/about', icon: 'users' as IconName },
-  { label: 'Hospitality', labelPt: 'Hospitalidade', href: '/hospitality', icon: 'utensils' as IconName },
-  { label: 'Events', labelPt: 'Eventos', href: '/events', icon: 'mic' as IconName },
-  { label: 'Contact', labelPt: 'Contato', href: '/contact', icon: 'mail' as IconName },
-  { label: 'Blog', labelPt: 'Blog', href: '/blog', icon: 'external-link' as IconName },
+  { label: 'About', labelHr: 'O nama', href: '/about', icon: 'users' as IconName },
+  { label: 'Hospitality', labelHr: 'Ugostiteljstvo', href: '/hospitality', icon: 'utensils' as IconName },
+  { label: 'Events', labelHr: 'Događanja', href: '/events', icon: 'mic' as IconName },
+  { label: 'Contact', labelHr: 'Kontakt', href: '/contact', icon: 'mail' as IconName },
+  { label: 'Blog', labelHr: 'Blog', href: '/blog', icon: 'external-link' as IconName },
 ]
 
 // ============================================
@@ -125,7 +125,7 @@ export function BottomNav() {
         ...item,
         id: 'profile',
         label: 'Profile',
-        labelPt: 'Perfil',
+        labelHr: 'Profil',
         icon: 'user' as IconName,
         href: '/dashboard',
       }
@@ -161,13 +161,13 @@ export function BottomNav() {
                     onClick={() => setIsMoreMenuOpen(false)}
                     className={cn(
                       'flex items-center gap-4 px-4 py-4 rounded-xl transition-colors',
-                      'hover:bg-stone-100 active:bg-stone-200',
+                      'hover:bg-gray-100 active:bg-gray-200',
                       isActive(item.href) && 'bg-red-50 text-wespa-red'
                     )}
                   >
                     <Icon name={item.icon} size="md" />
                     <span className="text-base font-medium">
-                      {language === 'pt' ? item.labelPt : item.label}
+                      {language === 'hr' ? item.labelHr : item.label}
                     </span>
                   </Link>
                 ))}
@@ -177,11 +177,11 @@ export function BottomNav() {
                   <Link
                     href="/login"
                     onClick={() => setIsMoreMenuOpen(false)}
-                    className="flex items-center gap-4 px-4 py-4 rounded-xl transition-colors hover:bg-stone-100 active:bg-stone-200 border-t border-stone-100 mt-2"
+                    className="flex items-center gap-4 px-4 py-4 rounded-xl transition-colors hover:bg-gray-100 active:bg-gray-200 border-t border-gray-100 mt-2"
                   >
                     <Icon name="user" size="md" />
                     <span className="text-base font-medium">
-                      {language === 'pt' ? 'Entrar' : 'Sign In'}
+                      {language === 'hr' ? 'Prijava' : 'Sign In'}
                     </span>
                   </Link>
                 )}
@@ -199,7 +199,7 @@ export function BottomNav() {
         className={cn(
           'fixed bottom-0 left-0 right-0 z-40 lg:hidden',
           'bg-white/95 backdrop-blur-lg',
-          'border-t border-stone-200',
+          'border-t border-gray-200',
           'pb-safe' // iOS safe area
         )}
         style={{
@@ -219,7 +219,7 @@ export function BottomNav() {
                   className={cn(
                     'flex flex-col items-center justify-center gap-1 py-2 px-4 min-w-[64px]',
                     'transition-colors duration-200',
-                    active ? 'text-wespa-red' : 'text-stone-500'
+                    active ? 'text-wespa-red' : 'text-gray-500'
                   )}
                 >
                   <motion.div
@@ -236,7 +236,7 @@ export function BottomNav() {
                     'text-[10px] font-medium',
                     active && 'font-semibold'
                   )}>
-                    {language === 'pt' ? item.labelPt : item.label}
+                    {language === 'hr' ? item.labelHr : item.label}
                   </span>
                 </button>
               )
@@ -249,7 +249,7 @@ export function BottomNav() {
                 className={cn(
                   'flex flex-col items-center justify-center gap-1 py-2 px-4 min-w-[64px]',
                   'transition-colors duration-200',
-                  active ? 'text-wespa-red' : 'text-stone-500'
+                  active ? 'text-wespa-red' : 'text-gray-500'
                 )}
               >
                 <motion.div
@@ -266,7 +266,7 @@ export function BottomNav() {
                   'text-[10px] font-medium',
                   active && 'font-semibold'
                 )}>
-                  {language === 'pt' ? item.labelPt : item.label}
+                  {language === 'hr' ? item.labelHr : item.label}
                 </span>
                 {/* Active indicator dot */}
                 {active && (

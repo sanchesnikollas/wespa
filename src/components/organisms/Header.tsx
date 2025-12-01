@@ -32,7 +32,7 @@ function LanguageSwitcher({ className }: { className?: string }) {
         'hover:bg-wire-100 active:bg-wire-200',
         className
       )}
-      aria-label={`Switch to ${language === 'en' ? 'Portuguese' : 'English'}`}
+      aria-label={`Switch to ${language === 'en' ? 'Croatian' : 'English'}`}
     >
       <Icon name="globe" size="sm" />
       <span className="uppercase">{language}</span>
