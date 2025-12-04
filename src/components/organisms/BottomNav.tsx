@@ -11,7 +11,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Icon, IconName } from '@/components/atoms/Icon'
-import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 // ============================================
@@ -76,14 +75,10 @@ const moreMenuItems = [
 // ============================================
 export function BottomNav() {
   const pathname = usePathname()
-  const { isAuthenticated } = useAuth()
   const { language } = useLanguage()
   const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
-
-  // Hide on dashboard pages
-  const isDashboard = pathname?.startsWith('/dashboard')
 
   // Handle scroll to show/hide nav
   useEffect(() => {
@@ -110,28 +105,13 @@ export function BottomNav() {
     setIsMoreMenuOpen(false)
   }, [pathname])
 
-  // Don't show on dashboard
-  if (isDashboard) return null
-
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/'
     return pathname?.startsWith(href)
   }
 
-  // Dynamic nav items - replace last item with profile when authenticated
-  const displayNavItems = navItems.map((item, index) => {
-    if (index === navItems.length - 1 && isAuthenticated) {
-      return {
-        ...item,
-        id: 'profile',
-        label: 'Profile',
-        labelHr: 'Profil',
-        icon: 'user' as IconName,
-        href: '/dashboard',
-      }
-    }
-    return item
-  })
+  // Nav items - just use the standard items
+  const displayNavItems = navItems
 
   return (
     <>
@@ -171,20 +151,6 @@ export function BottomNav() {
                     </span>
                   </Link>
                 ))}
-
-                {/* Login link if not authenticated */}
-                {!isAuthenticated && (
-                  <Link
-                    href="/login"
-                    onClick={() => setIsMoreMenuOpen(false)}
-                    className="flex items-center gap-4 px-4 py-4 rounded-xl transition-colors hover:bg-gray-100 active:bg-gray-200 border-t border-gray-100 mt-2"
-                  >
-                    <Icon name="user" size="md" />
-                    <span className="text-base font-medium">
-                      {language === 'hr' ? 'Prijava' : 'Sign In'}
-                    </span>
-                  </Link>
-                )}
               </div>
             </motion.div>
           </>

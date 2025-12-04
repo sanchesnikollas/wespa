@@ -5,7 +5,7 @@
 // Cmp/Header - Global navigation header
 // ============================================
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -15,7 +15,6 @@ import { Icon } from '@/components/atoms/Icon'
 import { NavLink } from '@/components/molecules/Navigation'
 import { mainNavigation } from '@/config/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { useAuth } from '@/contexts/AuthContext'
 
 // ============================================
 // Language Switcher Component
@@ -76,7 +75,6 @@ export function Header() {
   const [isVisible, setIsVisible] = useState(true)
   const { scrollY } = useScroll()
   const { t } = useLanguage()
-  const { user, isAuthenticated, logout } = useAuth()
 
   // Track scroll position for header style changes
   useMotionValueEvent(scrollY, 'change', (latest) => {
@@ -140,34 +138,11 @@ export function Header() {
 
               {/* Language Switcher */}
               <LanguageSwitcher />
-
-              {/* Auth actions */}
-              {isAuthenticated ? (
-                <Link
-                  href="/dashboard"
-                  className="w-8 h-8 rounded-full bg-wespa-red flex items-center justify-center text-white text-sm font-semibold hover:bg-wespa-red-dark transition-colors"
-                  title="Dashboard"
-                >
-                  {user?.firstName?.charAt(0)?.toUpperCase() || 'U'}
-                </Link>
-              ) : (
-                <Button variant="ghost" size="sm" asChild>
-                  <Link href="/login">{t('nav.login')}</Link>
-                </Button>
-              )}
             </div>
 
             {/* Mobile: Language Switcher only (navigation moved to bottom bar) */}
             <div className="lg:hidden flex items-center gap-2">
               <LanguageSwitcher className="text-stone-600" />
-              {isAuthenticated && (
-                <Link
-                  href="/dashboard"
-                  className="w-8 h-8 rounded-full bg-wespa-red flex items-center justify-center text-white text-sm font-semibold"
-                >
-                  {user?.firstName?.charAt(0)?.toUpperCase() || 'U'}
-                </Link>
-              )}
             </div>
           </motion.nav>
         </div>
