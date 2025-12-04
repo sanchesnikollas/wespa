@@ -5,7 +5,6 @@ import '@/styles/globals.css'
 import { ConditionalLayout } from '@/components/organisms/ConditionalLayout'
 import { SplashScreen } from '@/components/organisms/SplashScreen'
 import { LanguageProvider } from '@/contexts/LanguageContext'
-import { AuthProvider } from '@/contexts/AuthContext'
 import { AnalyticsProvider, UTMTracker } from '@/components/tracking'
 import { HomePageJsonLd } from '@/components/seo'
 
@@ -124,22 +123,20 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <AnalyticsProvider>
-          <AuthProvider>
-            <LanguageProvider>
-              {/* Splash Screen */}
-              <SplashScreen />
+          <LanguageProvider>
+            {/* Splash Screen */}
+            <SplashScreen />
 
-              {/* UTM Parameter Tracker */}
-              <Suspense fallback={null}>
-                <UTMTracker />
-              </Suspense>
+            {/* UTM Parameter Tracker */}
+            <Suspense fallback={null}>
+              <UTMTracker />
+            </Suspense>
 
-              {/* Conditional Layout - hides Header/Footer in Dashboard */}
-              <ConditionalLayout>
-                {children}
-              </ConditionalLayout>
-            </LanguageProvider>
-          </AuthProvider>
+            {/* Layout with Header/Footer */}
+            <ConditionalLayout>
+              {children}
+            </ConditionalLayout>
+          </LanguageProvider>
         </AnalyticsProvider>
       </body>
     </html>

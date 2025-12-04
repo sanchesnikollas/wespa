@@ -1,11 +1,10 @@
 'use client'
 
 // ============================================
-// WESPA Website - Conditional Layout Wrapper
-// Hides public Header/Footer in Dashboard routes
+// WESPA Website - Layout Wrapper
+// Global Header/Footer for all public pages
 // ============================================
 
-import { usePathname } from 'next/navigation'
 import { Header } from '@/components/organisms/Header'
 import { Footer } from '@/components/organisms/Footer'
 import { BottomNav } from '@/components/organisms/BottomNav'
@@ -15,21 +14,7 @@ interface ConditionalLayoutProps {
 }
 
 export function ConditionalLayout({ children }: ConditionalLayoutProps) {
-  const pathname = usePathname()
-
-  // Routes that should NOT show the public header/footer
-  const isDashboard = pathname?.startsWith('/dashboard')
-
-  // Auth pages have their own layout with logos
-  const authRoutes = ['/login', '/join', '/forgot-password', '/reset-password']
-  const isAuthPage = authRoutes.some(route => pathname?.startsWith(route))
-
-  if (isDashboard || isAuthPage) {
-    // Dashboard and auth pages have their own layout, just render children
-    return <>{children}</>
-  }
-
-  // Public pages get Header, Footer, and BottomNav
+  // All pages get Header, Footer, and BottomNav
   return (
     <>
       {/* Skip to main content link for accessibility */}
