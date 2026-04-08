@@ -277,40 +277,25 @@ export default function SpotPage() {
       </section>
 
       {/* Gallery */}
-      <section className="section-spacing">
+      <section className="section-spacing bg-stone-50">
         <div className="container-wespa">
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-4"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-          >
-            <motion.div variants={fadeInUp} className="image-container aspect-square lg:col-span-2 lg:row-span-2">
-              <Image
-                src="/images/hospitality/spot-1.jpg"
-                alt="SPOT ambiance"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-            <motion.div variants={fadeInUp} className="image-container aspect-square">
-              <Image
-                src="/images/hospitality/spot-2.jpg"
-                alt="SPOT coffee"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-            <motion.div variants={fadeInUp} className="image-container aspect-square">
-              <Image
-                src="/images/hospitality/spot-3.jpg"
-                alt="SPOT interior"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-          </motion.div>
+          <h2 className="text-3xl font-bold text-center mb-10">The SPOT Atmosphere</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
+            {[
+              '/images/hospitality/spot-1.jpg',
+              '/images/hospitality/spot-2.jpg',
+              '/images/hospitality/spot-3.jpg',
+              '/images/food/spot/spot-3.jpg',
+              '/images/food/spot/spot-5.jpg',
+              '/images/food/spot/spot-9.jpg',
+              '/images/food/spot/spot-10.jpg',
+              '/images/food/spot/spot-12.jpg',
+            ].map((src, i) => (
+              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <Image src={src} alt={`SPOT ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

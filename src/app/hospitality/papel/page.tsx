@@ -264,63 +264,25 @@ export default function PapelPage() {
       </section>
 
       {/* Gallery */}
-      <section className="section-spacing">
+      <section className="section-spacing bg-stone-50">
         <div className="container-wespa">
-          <motion.div
-            className="text-center max-w-2xl mx-auto mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-          >
-            <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4">
-              The Atmosphere
-            </h2>
-            <p className="text-lg text-stone-600">
-              A space designed for connection, conversation, and culinary delight
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid md:grid-cols-3 gap-4"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-          >
-            <motion.div variants={fadeInUp} className="image-container aspect-[3/4] md:row-span-2">
-              <Image
-                src="/images/hospitality/papel-1.jpg"
-                alt="PAPEL ambiance"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-            <motion.div variants={fadeInUp} className="image-container aspect-video">
-              <Image
-                src="/images/hospitality/papel-2.jpg"
-                alt="PAPEL interior"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-            <motion.div variants={fadeInUp} className="image-container aspect-video">
-              <Image
-                src="/images/hero/hero-secondary.jpg"
-                alt="PAPEL cuisine"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-            <motion.div variants={fadeInUp} className="image-container aspect-video md:col-span-2">
-              <Image
-                src="/images/hospitality/papel-3.jpg"
-                alt="PAPEL details"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-          </motion.div>
+          <h2 className="text-3xl font-bold text-center mb-10">The Atmosphere</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
+            {[
+              '/images/hospitality/papel-1.jpg',
+              '/images/hospitality/papel-2.jpg',
+              '/images/hospitality/papel-3.jpg',
+              '/images/food/papel/papel-3.jpg',
+              '/images/food/papel/papel-5.jpg',
+              '/images/food/papel/papel-9.jpg',
+              '/images/food/papel/papel-10.jpg',
+              '/images/food/papel/papel-12.jpg',
+            ].map((src, i) => (
+              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <Image src={src} alt={`Papel ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

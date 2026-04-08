@@ -176,18 +176,11 @@ export default function SpecialEventsPage() {
             subtitle="Get inspired by past celebrations at WESPA Stage."
           />
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
             {galleryImages.map((img, i) => (
-              <motion.div
-                key={i}
-                className="aspect-square relative rounded-xl overflow-hidden"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
+              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-lg">
                 <Image src={img} alt={`Event gallery ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
