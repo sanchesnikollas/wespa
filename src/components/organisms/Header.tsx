@@ -34,7 +34,7 @@ function LanguageSwitcher({ className }: { className?: string }) {
       aria-label={`Switch to ${language === 'en' ? 'Croatian' : 'English'}`}
     >
       <Icon name="globe" size="sm" />
-      <span className="uppercase">{language}</span>
+      <span className="uppercase">{language === 'en' ? 'HR' : 'EN'}</span>
     </button>
   )
 }
