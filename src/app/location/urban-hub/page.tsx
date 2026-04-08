@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     breadcrumb: 'Home / Locations / Urban Hub',
-    title: 'Urban Hub',
-    subtitle: 'Industrial charm meets modern innovation at Zavrtnica. A startup hub, coworking space, and creative community with SPOT restaurant on-site.',
+    title: 'WESPA Spaces',
+    subtitle: 'An authentic industrial setting for teams building the future.',
     aboutTitle: 'Where Ideas Come to Life',
     aboutP1: 'WESPA Urban Hub at Zavrtnica is the antidote to the corporate office. It is a space where raw creativity meets modern infrastructure — where startups launch, freelancers find their tribe, and ideas turn into ventures.',
     aboutP2: 'The industrial character of the building is not just aesthetic — it is a mindset. Open, honest, and built for people who are making things happen.',
@@ -33,8 +33,8 @@ const content = {
   },
   hr: {
     breadcrumb: 'Početna / Lokacije / Urban Hub',
-    title: 'Urban Hub',
-    subtitle: 'Industrijski šarm susreće modernu inovaciju na Zavrtnici. Startup hub, coworking prostor i kreativna zajednica s restoranom SPOT na lokaciji.',
+    title: 'WESPA Spaces',
+    subtitle: 'Autentičan industrijski prostor za timove koji stvaraju budućnost.',
     aboutTitle: 'Gdje ideje dobivaju život',
     aboutP1: 'WESPA Urban Hub na Zavrtnici je protuteža korporativnom uredu. To je prostor gdje se sirova kreativnost susreće s modernom infrastrukturom — gdje startupovi nastaju, freelanceri pronalaze svoje pleme, a ideje se pretvaraju u pothvate.',
     aboutP2: 'Industrijski karakter zgrade nije samo estetika — to je način razmišljanja. Otvoren, iskren i izgrađen za ljude koji stvaraju promjene.',

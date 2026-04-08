@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     breadcrumb: 'Home / Food / Papel',
-    title: 'Papel',
-    subtitle: 'A community restaurant built for the modern business pace. Premium daily specials and a la carte dining at WESPA Business & Lounge, Green Gold.',
+    title: 'The gastro hub for your workday',
+    subtitle: 'A relaxed community restaurant tailored to the pace of modern business. Choose from premium daily specials and an a la carte menu made with nutrient-rich ingredients.',
     aboutTitle: 'Your Daily Dining Companion',
     aboutP1: 'Papel is more than a lunch spot — it is the heartbeat of the WESPA community. Designed for professionals who value quality without compromise, our kitchen serves dishes that are nutritious, flavorful, and ready when you are.',
     aboutP2: 'Whether you are catching up with a colleague over daily specials or hosting an informal meeting over an a la carte lunch, Papel offers the perfect balance of convenience and quality.',
@@ -31,8 +31,8 @@ const content = {
   },
   hr: {
     breadcrumb: 'Početna / Gastronomija / Papel',
-    title: 'Papel',
-    subtitle: 'Restoran zajednice osmišljen za moderni poslovni tempo. Premium dnevni specijaliteti i a la carte jelovnik u WESPA Business & Lounge, Green Gold.',
+    title: 'Gastro baza vašeg radnog dana',
+    subtitle: 'Opušteni community restoran prilagođen tempu suvremenog poslovanja. Birajte između vrhunskih dnevnih i a la carte jela od nutritivno bogatih namirnica.',
     aboutTitle: 'Vaš svakodnevni gastronomski pratitelj',
     aboutP1: 'Papel je više od mjesta za ručak — to je srce WESPA zajednice. Dizajniran za profesionalce koji cijene kvalitetu bez kompromisa, naša kuhinja služi jela koja su nutritivna, ukusna i spremna kad vi jeste.',
     aboutP2: 'Bilo da se družite s kolegom uz dnevne specijalitete ili organizirate neformalni sastanak uz a la carte ručak, Papel nudi savršenu ravnotežu praktičnosti i kvalitete.',

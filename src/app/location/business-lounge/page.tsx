@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     breadcrumb: 'Home / Locations / Business & Lounge',
-    title: 'Business & Lounge',
-    subtitle: 'A premium business center at Green Gold with exclusive offices, a sophisticated atmosphere, and Papel restaurant on-site.',
+    title: 'WESPA Business & Lounge',
+    subtitle: 'Exclusive business hub in the heart of Radnička.',
     aboutTitle: 'The Premium WESPA Experience',
     aboutP1: 'WESPA Business & Lounge at Green Gold is where established businesses find their home. Every detail — from the refined interiors to the on-site dining — is designed to support professionals who operate at the highest level.',
     aboutP2: 'Located at Radnicka cesta 52 in Zagreb, this flagship location brings together exclusive workspaces, premium hospitality, and a vibrant business community under one roof.',
@@ -34,8 +34,8 @@ const content = {
   },
   hr: {
     breadcrumb: 'Početna / Lokacije / Business & Lounge',
-    title: 'Business & Lounge',
-    subtitle: 'Premium poslovni centar u Green Goldu s ekskluzivnim uredima, sofisticiranom atmosferom i restoranom Papel.',
+    title: 'WESPA Business & Lounge',
+    subtitle: 'Ekskluzivni poslovni centar u srcu Radničke.',
     aboutTitle: 'Premium WESPA iskustvo',
     aboutP1: 'WESPA Business & Lounge u Green Goldu je mjesto gdje etablirane tvrtke pronalaze svoj dom. Svaki detalj — od rafiniranjih interijera do gastronomije na lokaciji — dizajniran je za podršku profesionalcima koji posluju na najvišoj razini.',
     aboutP2: 'Smješten na Radničkoj cesti 52 u Zagrebu, ova vodeća lokacija spaja ekskluzivne radne prostore, premium ugostiteljstvo i živahnu poslovnu zajednicu pod jednim krovom.',

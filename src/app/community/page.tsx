@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     breadcrumb: 'Home / Community',
-    title: 'WESPA Community',
-    subtitle: 'More than a workspace — a community of professionals, creators, and entrepreneurs building something meaningful together.',
+    title: 'More than just space. Join the community shaping the future.',
+    subtitle: 'WESPA Community is the hub for innovation, business opportunities, and unforgettable experiences.',
     newsletterTitle: 'Stay in the Loop',
     newsletterDesc: 'Sign up for the WESPA newsletter and get community updates, event invitations, and exclusive content delivered to your inbox.',
     emailPlaceholder: 'Your email address',
@@ -45,8 +45,8 @@ const content = {
   },
   hr: {
     breadcrumb: 'Početna / Zajednica',
-    title: 'WESPA zajednica',
-    subtitle: 'Više od radnog prostora — zajednica profesionalaca, kreatora i poduzetnika koji zajedno grade nešto značajno.',
+    title: 'Više od prostora. Pripadajte zajednici koja stvara budućnost.',
+    subtitle: 'WESPA Community je središte inovacija, poslovnih prilika i nezaboravnih iskustava.',
     newsletterTitle: 'Budite u toku',
     newsletterDesc: 'Prijavite se na WESPA newsletter i primajte novosti zajednice, pozivnice na događanja i ekskluzivni sadržaj izravno u inbox.',
     emailPlaceholder: 'Vaša email adresa',

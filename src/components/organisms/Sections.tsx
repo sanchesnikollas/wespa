@@ -153,8 +153,9 @@ export function HeroSection() {
               variants={fadeInUp}
             >
               {t('hero.title')}
-              <br />
-              <span className="text-gradient">{t('hero.titleHighlight')}</span>
+              {t('hero.titleHighlight') && (
+                <><br /><span className="text-gradient">{t('hero.titleHighlight')}</span></>
+              )}
             </motion.h1>
 
             <motion.p
@@ -342,50 +343,50 @@ export function FeaturesSection() {
     {
       id: 'events',
       icon: 'stage' as WespaIconName,
-      title: 'Events & Conferences',
-      description: 'Host events for up to 500+ people across 10 halls with full AV production and catering.',
+      title: t('features.events.title'),
+      description: t('features.events.description'),
     },
     {
       id: 'lounge',
       icon: 'hospitality' as WespaIconName,
-      title: 'Lounge & Relax Zones',
-      description: 'Spacious lounge for informal meetings, networking, or simply unwinding between tasks.',
+      title: t('features.lounge.title'),
+      description: t('features.lounge.description'),
     },
     {
       id: 'gastro',
       icon: 'hospitality' as WespaIconName,
-      title: 'Gastro Experience',
-      description: 'Two on-site restaurants — Papel for fine dining and SPOT for casual business meals.',
+      title: t('features.gastro.title'),
+      description: t('features.gastro.description'),
     },
     {
       id: 'podcast',
       icon: 'presentation' as WespaIconName,
-      title: 'Podcast Room',
-      description: 'Professional recording studio for podcasts, interviews, and content creation.',
+      title: t('features.podcast.title'),
+      description: t('features.podcast.description'),
     },
     {
       id: 'focus-zones',
       icon: 'private-office' as WespaIconName,
-      title: 'Focus Zones',
-      description: 'Quiet, distraction-free areas designed for deep work and concentration.',
+      title: t('features.focusZones.title'),
+      description: t('features.focusZones.description'),
     },
     {
       id: 'relax-zones',
       icon: 'flexibility' as WespaIconName,
-      title: 'Relax Zones',
-      description: 'Comfortable areas to recharge, socialize, or take a break from your workday.',
+      title: t('features.relaxZones.title'),
+      description: t('features.relaxZones.description'),
     },
     {
       id: 'pet-friendly',
       icon: 'amenities' as WespaIconName,
-      title: 'Pet Friendly',
-      description: 'Bring your furry companion to work. We provide water bowls and pet-friendly zones.',
+      title: t('features.petFriendly.title'),
+      description: t('features.petFriendly.description'),
     },
     {
       id: 'parking',
       icon: 'door' as WespaIconName,
-      title: 'Dedicated Parking',
-      description: 'Convenient parking available at both locations for members and visitors.',
+      title: t('features.parking.title'),
+      description: t('features.parking.description'),
     },
   ]
 
@@ -449,26 +450,26 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
     {
       id: '1',
       slug: 'saltpay-story',
-      clientName: 'SaltPay',
-      clientRole: 'Team Lead',
+      clientName: 'Frano Primorac',
+      clientRole: 'SaltPay',
       companyName: 'SaltPay',
-      testimonial: 'WESPA provides the perfect environment for our team — flexible, professional, and inspiring. The community and amenities make it much more than just an office.',
+      testimonial: 'A hive of a million ideas, and the hospitality is top-level.',
     },
     {
       id: '2',
       slug: 'felloz-story',
-      clientName: 'Felloz',
-      clientRole: 'Founder',
+      clientName: 'Raphael Marton',
+      clientRole: 'Felloz',
       companyName: 'Felloz',
-      testimonial: 'We chose WESPA because it grows with us. From a hot desk to a private office, the transition was seamless. The networking opportunities alone have been invaluable.',
+      testimonial: 'Incredible design and people who genuinely care.',
     },
     {
       id: '3',
       slug: 'navigo-story',
-      clientName: 'Navigo Sport Travel',
-      clientRole: 'Director',
+      clientName: 'Timothei Jukic',
+      clientRole: 'Navigo Sport Travel',
       companyName: 'Navigo Sport Travel',
-      testimonial: 'The professional atmosphere, on-site restaurants, and premium meeting rooms make WESPA the ideal place for our client-facing business. Highly recommended.',
+      testimonial: 'The space leaves a special impression on our partners.',
     },
   ]
 
@@ -617,20 +618,16 @@ export function PainPointsSection() {
 
             <div className="space-y-6">
               {[
-                { title: 'For Freelancers & Remote Workers', items: ['Professional workspace on-demand', 'Network with like-minded professionals', 'No long-term commitments'] },
-                { title: 'For Growing Teams & Startups', items: ['Scale your space as you grow', 'All-inclusive pricing', 'Premium amenities included'] },
-                { title: 'For Corporations', items: ['Short-term or project-based offices', 'Executive meeting rooms & conference halls', 'Dedicated parking & premium services'] },
+                { title: t('painPoints.forFreelancers.title'), description: t('painPoints.forFreelancers.description') },
+                { title: t('painPoints.forTeams.title'), description: t('painPoints.forTeams.description') },
+                { title: t('painPoints.forCorporations.title'), description: t('painPoints.forCorporations.description') },
               ].map((group, i) => (
                 <div key={i} className="bg-stone-50 rounded-2xl p-6">
                   <h3 className="font-semibold text-stone-900 mb-4">{group.title}</h3>
-                  <ul className="space-y-3">
-                    {group.items.map((item, j) => (
-                      <li key={j} className="flex items-center gap-3 text-stone-600">
-                        <Icon name="check" size="sm" className="text-wespa-red shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="flex items-center gap-3 text-stone-600">
+                    <Icon name="check" size="sm" className="text-wespa-red shrink-0" />
+                    {group.description}
+                  </p>
                 </div>
               ))}
             </div>

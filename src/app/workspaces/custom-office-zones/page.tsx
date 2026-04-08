@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     breadcrumb: 'Workspaces',
-    title: 'Custom Office Zones',
-    subtitle: 'Dedicated spaces up to 150m² with fully customizable layouts. Design your ideal work environment within the WESPA ecosystem.',
+    title: 'Custom office suites tailored to your needs',
+    subtitle: 'Full-service office solutions for larger teams and established companies.',
     highlights: [
       { title: 'Up to 150m²', desc: 'Generous spaces for growing teams' },
       { title: 'Fully Customizable', desc: 'Design the layout that works for you' },
@@ -21,8 +21,8 @@ const content = {
   },
   hr: {
     breadcrumb: 'Prostori',
-    title: 'Prilagođene uredske zone',
-    subtitle: 'Namjenski prostori do 150m² s potpuno prilagodljivim rasporedom. Dizajnirajte idealno radno okruženje.',
+    title: 'Samostalni uredski prostor prilagođen vašim potrebama',
+    subtitle: 'Cjelovita uredska rješenja za veće timove i etablirane tvrtke.',
     highlights: [
       { title: 'Do 150m²', desc: 'Prostrani prostori za timove u rastu' },
       { title: 'Potpuno prilagodljivo', desc: 'Dizajnirajte raspored koji vam odgovara' },

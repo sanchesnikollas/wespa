@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     breadcrumb: 'Forge Growth Platform',
-    title: 'Grow Your Company',
-    subtitle: 'Not an accelerator. A growth partner for post-seed companies with proven traction, paying customers, and scalable teams. Powered by experienced operators and former founders.',
+    title: 'FORGE: From Traction to Scale.',
+    subtitle: 'We don\'t build MVPs; we build growth engines. The region\'s first execution-first platform for post-seed startups ready for global expansion.',
     processTitle: 'Our Process',
     processDesc: 'A structured, hands-on approach to unlocking your next stage of growth.',
     phases: [
@@ -29,8 +29,8 @@ const content = {
   },
   hr: {
     breadcrumb: 'Forge platforma za rast',
-    title: 'Rast vaše tvrtke',
-    subtitle: 'Nismo akcelerator. Partner za rast post-seed tvrtki s dokazanim rezultatima, klijentima koji plaćaju i skalabilnim timovima. Pokreću nas iskusni operateri i bivši osnivači.',
+    title: 'FORGE: Od trakcije do skaliranja.',
+    subtitle: 'Ne gradimo MVP-e, gradimo mašine za rast. Prva execution-first platforma u regiji za post-seed startupe.',
     processTitle: 'Naš proces',
     processDesc: 'Strukturirani, praktični pristup otključavanju vaše sljedeće faze rasta.',
     phases: [

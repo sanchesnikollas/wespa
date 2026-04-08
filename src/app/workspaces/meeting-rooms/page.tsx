@@ -9,7 +9,7 @@ const content = {
   en: {
     breadcrumb: 'Workspaces',
     title: 'Meeting Rooms',
-    subtitle: 'Professional meeting rooms equipped with latest technology. Book by the hour or save with our flexible packages.',
+    subtitle: 'Choose an environment tailored specifically for your business needs.',
     meetingRoomS: 'Meeting Room S',
     upTo4: 'Up to 4 people',
     meetingRoomL: 'Meeting Room L',
@@ -21,8 +21,8 @@ const content = {
   },
   hr: {
     breadcrumb: 'Prostori',
-    title: 'Sobe za sastanke',
-    subtitle: 'Profesionalne sobe za sastanke opremljene najnovijom tehnologijom. Rezervirajte po satu ili uštedite s našim paketima.',
+    title: 'WESPA sobe za sastanke',
+    subtitle: 'Osigurajte vrhunski opremljen prostor za sve Vaše poslovne potrebe.',
     meetingRoomS: 'Soba za sastanke S',
     upTo4: 'Do 4 osobe',
     meetingRoomL: 'Soba za sastanke L',

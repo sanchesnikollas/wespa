@@ -8,16 +8,16 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     breadcrumb: 'Workspaces',
-    title: 'Conference Rooms',
-    subtitle: '8 premium conference rooms across 2 locations. Full AV equipment, projectors, catering, and tech support included.',
+    title: 'WESPA Conference Rooms',
+    subtitle: 'Choose a setting that matches your plans. Spaces equipped with high-end technology.',
     divisible: 'Divisible',
     galleryTitle: 'Our Conference Spaces',
     bookRoom: 'Book a Conference Room',
   },
   hr: {
     breadcrumb: 'Prostori',
-    title: 'Konferencijske dvorane',
-    subtitle: '8 premium konferencijskih dvorana na 2 lokacije. Puna AV oprema, projektori, catering i tehnička podrška.',
+    title: 'WESPA konferencijski prostori',
+    subtitle: 'Odaberite ambijent koji prati Vaše planove. Prostor opremljen vrhunskom tehnologijom.',
     divisible: 'Djeljivo',
     galleryTitle: 'Naši konferencijski prostori',
     bookRoom: 'Rezervirajte konferencijsku dvoranu',

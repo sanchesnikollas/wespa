@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     breadcrumb: 'Home / Food / SPOT',
-    title: 'SPOT',
-    subtitle: 'Premium business dining with fine dining standards, a curated wine list, and flawless service tailored to corporate expectations.',
+    title: 'Business-class dining',
+    subtitle: 'A premium business restaurant in the Green Gold center featuring top-tier daily menu, a la carte service and a curated wine list.',
     aboutTitle: 'Where Business Meets Culinary Art',
     aboutP1: 'SPOT redefines business dining in Zagreb. This is not just a restaurant — it is a venue where important conversations happen, partnerships are forged, and milestones are celebrated over exceptional food.',
     aboutP2: 'With a kitchen driven by precision and creativity, SPOT delivers an experience that meets and exceeds the standards expected by corporate leaders and discerning diners alike.',
@@ -31,8 +31,8 @@ const content = {
   },
   hr: {
     breadcrumb: 'Početna / Gastronomija / SPOT',
-    title: 'SPOT',
-    subtitle: 'Premium poslovna gastronomija s fine dining standardima, kuratiranom vinskom kartom i besprijekornom uslugom prilagođenom korporativnim očekivanjima.',
+    title: 'Gastronomija s poslovnim potpisom',
+    subtitle: 'Premium restoran u Green Gold centru s vrhunskim dnevnim menijem, a la carte uslugom i probranom vinskom kartom.',
     aboutTitle: 'Gdje se poslovanje susreće s kulinarskom umjetnošću',
     aboutP1: 'SPOT redefinira poslovnu gastronomiju u Zagrebu. Ovo nije samo restoran — to je mjesto gdje se vode važni razgovori, stvaraju partnerstva i slave postignuća uz iznimnu hranu.',
     aboutP2: 'S kuhinjom vođenom preciznošću i kreativnošću, SPOT pruža iskustvo koje zadovoljava i premašuje standarde koje očekuju korporativni lideri i zahtjevni gosti.',

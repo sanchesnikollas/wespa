@@ -34,9 +34,9 @@ export const translations = {
     // Hero Section
     hero: {
       tagline: 'Work. Eat. Socialize. Play. Anytime.',
-      title: 'The workspace,',
-      titleHighlight: 'redefined',
-      subtitle: 'Experience total business flexibility within our ecosystem — premium offices, inspiring coworking, fine dining, and event venues in Zagreb\'s business district.',
+      title: 'A space built for big ideas.',
+      titleHighlight: '',
+      subtitle: 'Experience total business flexibility in the heart of Zagreb. From premium offices and inspiring coworking to event halls, restaurants and relaxation zones. WESPA is where serious business meets creative atmosphere.',
       cta: 'Book a Visit',
       ctaSecondary: 'Explore Spaces',
       findSpace: 'Find your space',
@@ -49,7 +49,7 @@ export const translations = {
     },
     // Client Logos
     clientLogos: {
-      title: 'Companies that call WESPA home',
+      title: 'Home to industry leaders and the fastest-growing companies.',
     },
     // Plans Section
     plans: {
@@ -62,68 +62,68 @@ export const translations = {
     },
     // Features Section
     features: {
-      title: 'Why choose WESPA?',
+      title: 'Amenities designed for modern business.',
       subtitle: 'Everything you need for productive work, exceptional hospitality, and memorable events.',
       events: {
         title: 'Events & Conferences',
-        description: 'Host events for up to 500+ people across 10 halls with full AV production and catering.',
+        description: 'From small workshops to conferences for 180 people, fully equipped.',
       },
       lounge: {
-        title: 'Lounge & Relax Zones',
-        description: 'Spacious lounge for informal meetings, networking, or simply unwinding between tasks.',
+        title: 'Premium Lounge & Cigar Room',
+        description: 'A sophisticated space for informal meetings and relaxation.',
       },
       gastro: {
         title: 'Gastro Experience',
-        description: 'Two on-site restaurants — Papel for fine dining and SPOT for casual business meals.',
+        description: 'On-site restaurant and cafe for a quick coffee or a business lunch; home to WESPA Cooking LAB workshops',
       },
       podcast: {
         title: 'Podcast Room',
-        description: 'Professional recording studio for podcasts, interviews, and content creation.',
+        description: 'A room designed specially for making podcasts',
       },
       focusZones: {
         title: 'Focus Zones',
-        description: 'Quiet, distraction-free areas designed for deep work and concentration.',
+        description: 'Soundproof booths and meeting rooms for when you need absolute quiet.',
       },
       relaxZones: {
         title: 'Relax Zones',
-        description: 'Comfortable areas to recharge, socialize, or take a break from your workday.',
+        description: 'Comfortable spaces available for breaks and informal meetings.',
       },
       petFriendly: {
         title: 'Pet Friendly',
-        description: 'Bring your furry companion to work. We provide water bowls and pet-friendly zones.',
+        description: 'Your pets are welcome here.',
       },
       parking: {
         title: 'Dedicated Parking',
-        description: 'Convenient parking available at both locations for members and visitors.',
+        description: 'Parking available on request.',
       },
     },
     // Testimonials
     testimonials: {
-      title: 'Trusted by Zagreb\'s best',
+      title: 'What our members say.',
       subtitle: 'Join hundreds of professionals who\'ve made WESPA their workspace home.',
       trustedBy: 'Trusted by industry leaders',
     },
     // Pain Points / Personas
     painPoints: {
-      title: 'Is the traditional office holding you back?',
+      title: 'Find your ideal way of working.',
       subtitle: 'Long leases, rigid setups, and isolated home offices don\'t work for modern businesses. You need flexibility, community, and spaces that adapt to your needs.',
       forFreelancers: {
         title: 'For Freelancers & Remote Workers',
-        items: ['Professional workspace on-demand', 'Network with like-minded professionals', 'No long-term commitments'],
+        description: 'Trade isolation for a dynamic community.',
       },
       forTeams: {
         title: 'For Growing Teams & Startups',
-        items: ['Scale your space as you grow', 'All-inclusive pricing', 'Premium amenities included'],
+        description: 'Flexibility without long-term contracts.',
       },
       forCorporations: {
         title: 'For Corporations',
-        items: ['Short-term or project-based offices', 'Executive meeting rooms & conference halls', 'Dedicated parking & premium services'],
+        description: 'Scalable offices with zero admin overhead',
       },
       satisfaction: 'member satisfaction rate',
     },
     // Locations
     locations: {
-      title: 'Two prime locations',
+      title: 'One community, two premium locations.',
       subtitle: 'Each with its unique character, united by the WESPA experience.',
       corporate: 'Corporate Vibe',
       startup: 'Startup Vibe',
@@ -131,8 +131,8 @@ export const translations = {
     },
     // Lead Form
     leadForm: {
-      title: 'Ready to elevate your work?',
-      subtitle: 'Book a visit and let our team help you find the perfect space.',
+      title: 'Experience WESPA',
+      subtitle: 'Come see how work should feel',
     },
     // Ideas / Resources Section
     ideas: {
@@ -311,9 +311,9 @@ export const translations = {
     // Hero Section
     hero: {
       tagline: 'Radi. Jedi. Druži se. Igraj. Bilo kada.',
-      title: 'Radni prostor,',
-      titleHighlight: 'redefiniran',
-      subtitle: 'Iskusite potpunu poslovnu fleksibilnost unutar našeg ekosustava — premium uredi, inspirativni coworking, fina gastronomija i prostori za događanja u poslovnoj četvrti Zagreba.',
+      title: 'Prostor stvoren za velike ideje.',
+      titleHighlight: '',
+      subtitle: 'Doživite potpunu poslovnu fleksibilnost u srcu Zagreba. Od premium ureda i inspirativnog coworkinga, do dvorana za evente i zone za opuštanje. WESPA je mjesto za ozbiljan posao u kreativnoj atmosferi.',
       cta: 'Zakažite posjet',
       ctaSecondary: 'Istražite prostore',
       findSpace: 'Pronađite svoj prostor',
@@ -326,7 +326,7 @@ export const translations = {
     },
     // Client Logos
     clientLogos: {
-      title: 'Tvrtke koje nazivaju WESPA domom',
+      title: 'Dom lidera industrije i najbrže rastućih tvrtki.',
     },
     // Plans Section
     plans: {
@@ -339,68 +339,68 @@ export const translations = {
     },
     // Features Section
     features: {
-      title: 'Zašto odabrati WESPA?',
+      title: 'Sadržaj prilagođen modernom poslovanju.',
       subtitle: 'Sve što vam treba za produktivan rad, iznimno ugostiteljstvo i nezaboravne događaje.',
       events: {
         title: 'Događanja i konferencije',
-        description: 'Organizirajte događanja za do 500+ osoba u 10 dvorana s punom AV produkcijom i cateringom.',
+        description: 'Od malih radionica do konferencija za 180 ljudi, potpuno opremljeno.',
       },
       lounge: {
-        title: 'Lounge i zone za opuštanje',
-        description: 'Prostrani lounge za neformalne sastanke, umrežavanje ili jednostavno opuštanje između zadataka.',
+        title: 'Premium Lounge & Cigar Room',
+        description: 'Prostor za neformalne sastanke i opuštanje.',
       },
       gastro: {
         title: 'Gastro iskustvo',
-        description: 'Dva restorana na lokaciji — Papel za finu kuhinju i SPOT za poslovne obroke.',
+        description: 'Restoran i kafić u zgradi za brzu kavu ili pravi poslovni ručak; mjesto na kojem se održavaju radionice WESPA Cooking LAB',
       },
       podcast: {
         title: 'Podcast soba',
-        description: 'Profesionalni studio za snimanje podcasta, intervjua i kreiranje sadržaja.',
+        description: 'Soba posebno namijenjena snimanju podscasta',
       },
       focusZones: {
         title: 'Zone za fokus',
-        description: 'Tihe zone bez ometanja dizajnirane za duboki rad i koncentraciju.',
+        description: 'Zvučno izolirane kabine i sobe za sastanke, kad vam treba potpuni mir.',
       },
       relaxZones: {
         title: 'Zone za opuštanje',
-        description: 'Udobna područja za punjenje baterija, druženje ili odmor od radnog dana.',
+        description: 'Udobni prostori dostupni za pauzu i neformalna druženja.',
       },
       petFriendly: {
         title: 'Pet friendly',
-        description: 'Dovedite svog ljubimca na posao. Osiguravamo zdjelice za vodu i zone za kućne ljubimce.',
+        description: 'Vaši ljubimci su ovdje dobrodošli.',
       },
       parking: {
         title: 'Osiguran parking',
-        description: 'Praktičan parking dostupan na obje lokacije za članove i posjetitelje.',
+        description: 'Dostupan na upit.',
       },
     },
     // Testimonials
     testimonials: {
-      title: 'Povjerenje najboljih u Zagrebu',
+      title: 'Što kažu naši stanari.',
       subtitle: 'Pridružite se stotinama profesionalaca koji su WESPA učinili svojim radnim domom.',
       trustedBy: 'Povjerenje vodećih u industriji',
     },
     // Pain Points / Personas
     painPoints: {
-      title: 'Koči li vas tradicionalni ured?',
+      title: 'Pronađite svoj idealan model rada.',
       subtitle: 'Dugi najmi, krute postavke i izolirani kućni uredi ne funkcioniraju za moderne tvrtke. Trebate fleksibilnost, zajednicu i prostore koji se prilagođavaju vašim potrebama.',
       forFreelancers: {
         title: 'Za freelancere i remote radnike',
-        items: ['Profesionalni radni prostor na zahtjev', 'Umrežavanje s istomišljenicima', 'Bez dugoročnih obveza'],
+        description: 'Pridružite se dinamičnoj zajednici.',
       },
       forTeams: {
         title: 'Za timove u rastu i startupe',
-        items: ['Proširite prostor kako rastete', 'Sve uključeno u cijeni', 'Premium pogodnosti uključene'],
+        description: 'Fleksibilnost bez dugoročnih ugovora.',
       },
       forCorporations: {
         title: 'Za korporacije',
-        items: ['Kratkoročni ili projektni uredi', 'Izvršne sobe za sastanke i konferencijske dvorane', 'Osiguran parking i premium usluge'],
+        description: 'Prostori dizajnirani za vrhunsku produktivnost bez operativnih briga.',
       },
       satisfaction: 'stopa zadovoljstva članova',
     },
     // Locations
     locations: {
-      title: 'Dvije vrhunske lokacije',
+      title: 'Jedna zajednica, dvije premium lokacije.',
       subtitle: 'Svaka sa svojim jedinstvenim karakterom, ujedinjene WESPA iskustvom.',
       corporate: 'Korporativni ugođaj',
       startup: 'Startup ugođaj',
@@ -408,8 +408,8 @@ export const translations = {
     },
     // Lead Form
     leadForm: {
-      title: 'Spremni unaprijediti svoj rad?',
-      subtitle: 'Zakažite posjet i dopustite našem timu da vam pomogne pronaći savršen prostor.',
+      title: 'Doživite WESPA-u uživo.',
+      subtitle: 'Otkrijte kako izgleda all inclusive rješenje',
     },
     // Ideas / Resources Section
     ideas: {

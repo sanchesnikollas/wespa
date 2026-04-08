@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     breadcrumb: 'Workspaces',
-    title: 'Private Offices',
-    subtitle: 'Private offices for teams of 2-12 people. All-inclusive amenities with the benefits of a thriving community.',
+    title: 'Beyond the standard office',
+    subtitle: 'Fully managed, move-in ready offices for your team.',
     everythingIncluded: 'Everything Included',
     features: ['Utilities & high-speed internet', 'Professional cleaning', 'Reception services', 'Meeting room hours included', '24/7 secure access', 'Mail & package handling', 'Community events access', 'On-site restaurants'],
     getQuoteTitle: 'Get a Custom Quote',
@@ -18,8 +18,8 @@ const content = {
   },
   hr: {
     breadcrumb: 'Prostori',
-    title: 'Privatni uredi',
-    subtitle: 'Privatni uredi za timove od 2-12 osoba. Sve uključeno u cijeni uz pogodnosti zajednice.',
+    title: 'Vaš tim zaslužuje više od običnog ureda',
+    subtitle: 'Potpuno opremljeni, odmah useljivi poslovni prostori bez operativnih briga.',
     everythingIncluded: 'Sve uključeno',
     features: ['Režije i brzi internet', 'Profesionalno čišćenje', 'Recepcijske usluge', 'Uključeni sati za sobe za sastanke', '24/7 siguran pristup', 'Primanje pošte i paketa', 'Pristup događanjima zajednice', 'Restorani na lokaciji'],
     getQuoteTitle: 'Zatražite prilagođenu ponudu',
