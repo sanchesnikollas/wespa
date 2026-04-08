@@ -40,3 +40,6 @@ next-env.d.ts
 .vscode/
 *.swp
 *.swo
+
+# Client assets (reference only, not for deployment)
+Estrutura, conteudo review/
