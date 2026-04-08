@@ -86,7 +86,7 @@ export default function FoodPage() {
         <div className="container-wespa">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">A Taste of WESPA</h2>
           <p className="text-stone-600 text-center max-w-2xl mx-auto mb-12">From fine dining to casual business meals — culinary excellence at every turn.</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
             {[
               '/images/food/papel/papel-1.jpg',
               '/images/food/spot/spot-3.jpg',
@@ -97,7 +97,7 @@ export default function FoodPage() {
               '/images/food/papel/papel-11.jpg',
               '/images/food/spot/spot-9.jpg',
             ].map((src, i) => (
-              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-xl">
+              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-lg">
                 <Image src={src} alt="WESPA dining" fill className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             ))}

@@ -98,12 +98,15 @@ export default function UrbanHubPage() {
       <section className="section-spacing bg-stone-50">
         <div className="container-wespa">
           <h2 className="text-3xl font-bold text-center mb-10">Explore Urban Hub</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
-              <div key={i} className={`relative overflow-hidden rounded-xl ${i === 1 ? 'md:col-span-2 md:row-span-2' : ''}`}>
-                <div className={`relative ${i === 1 ? 'aspect-square' : 'aspect-[4/3]'}`}>
-                  <Image src={`/images/locations/urban-hub/urban-hub-${i}.jpg`} alt={`Urban Hub ${i}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
-                </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <Image
+                  src={`/images/locations/urban-hub/urban-hub-${i}.jpg`}
+                  alt={`Urban Hub ${i}`}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
             ))}
           </div>

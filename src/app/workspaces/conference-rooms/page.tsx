@@ -60,12 +60,15 @@ export default function ConferenceRoomsPage() {
 
           {/* Gallery */}
           <h2 className="text-3xl font-bold text-center mb-10">Our Conference Spaces</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3 mb-16">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <div key={i} className={`relative overflow-hidden rounded-xl ${i === 1 ? 'md:col-span-2 md:row-span-2' : ''}`}>
-                <div className={`relative ${i === 1 ? 'aspect-square' : 'aspect-[4/3]'}`}>
-                  <Image src={`/images/workspaces/meeting-rooms/meeting-room-${i}.jpg`} alt={`Conference room ${i}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
-                </div>
+              <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <Image
+                  src={`/images/workspaces/meeting-rooms/meeting-room-${i}.jpg`}
+                  alt={`Conference room ${i}`}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
             ))}
           </div>
