@@ -161,7 +161,7 @@ export function Footer() {
       {/* Newsletter Section */}
       <div className="container-wespa py-12 border-b border-stone-200">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-heading-lg font-serif font-semibold text-stone-900 mb-2">
+          <h2 className="text-heading-lg font-sans font-semibold text-stone-900 mb-2">
             {t('footer.newsletter.title')}
           </h2>
           <p className="text-body-md text-stone-600 mb-6">
@@ -196,10 +196,10 @@ export function Footer() {
           </div>
 
           {/* Navigation columns */}
-          <FooterColumn title={t('footer.sections.spaces')} links={footerNavigation.spaces} />
-          <FooterColumn title={t('footer.sections.hospitality')} links={footerNavigation.hospitality} />
-          <FooterColumn title={t('footer.sections.stage')} links={footerNavigation.stage} />
-          <FooterColumn title={t('footer.sections.company')} links={footerNavigation.company} />
+          <FooterColumn title="Workspaces" links={footerNavigation.workspaces} />
+          <FooterColumn title="Food" links={footerNavigation.food} />
+          <FooterColumn title="Events" links={footerNavigation.events} />
+          <FooterColumn title="Company" links={footerNavigation.company} />
         </div>
 
         {/* Contact and Locations Row */}

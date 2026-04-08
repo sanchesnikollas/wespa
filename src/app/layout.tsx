@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { Lora, Source_Sans_3 } from 'next/font/google'
 import { Suspense } from 'react'
 import '@/styles/globals.css'
 import { ConditionalLayout } from '@/components/organisms/ConditionalLayout'
@@ -7,25 +6,6 @@ import { SplashScreen } from '@/components/organisms/SplashScreen'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { AnalyticsProvider, UTMTracker } from '@/components/tracking'
 import { HomePageJsonLd } from '@/components/seo'
-
-// ============================================
-// Font Configuration - Premium Typography
-// Lora for headings (elegant serif)
-// Source Sans 3 for body (readable sans-serif)
-// ============================================
-const lora = Lora({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-lora',
-  weight: ['400', '500', '600', '700'],
-})
-
-const sourceSans = Source_Sans_3({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-source-sans',
-  weight: ['300', '400', '500', '600', '700'],
-})
 
 // ============================================
 // Metadata
@@ -111,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="hr" className={`${lora.variable} ${sourceSans.variable}`}>
+    <html lang="hr">
       <head>
         {/* Favicons */}
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

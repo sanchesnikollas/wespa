@@ -189,7 +189,7 @@ export default function SpaceDetailPage() {
           <h1 className="text-4xl font-bold text-stone-900 mb-4">Space Not Found</h1>
           <p className="text-stone-600 mb-8">The space you're looking for doesn't exist.</p>
           <Button asChild>
-            <Link href="/spaces">View All Spaces</Link>
+            <Link href="/workspaces">View All Spaces</Link>
           </Button>
         </div>
       </div>
@@ -205,7 +205,7 @@ export default function SpaceDetailPage() {
           <nav className="flex items-center gap-2 text-sm text-stone-400 mb-6">
             <Link href="/" className="hover:text-white">Home</Link>
             <Icon name="chevron-right" size="xs" />
-            <Link href="/spaces" className="hover:text-white">Spaces</Link>
+            <Link href="/workspaces" className="hover:text-white">Spaces</Link>
             <Icon name="chevron-right" size="xs" />
             <span className="text-white">{space.name}</span>
           </nav>
@@ -371,7 +371,7 @@ export default function SpaceDetailPage() {
               .map(([key, s]) => (
                 <Link
                   key={key}
-                  href={`/spaces/${key}`}
+                  href={`/workspaces/${key}`}
                   className="flex-shrink-0 w-72 bg-white rounded-xl overflow-hidden border border-stone-200 hover:shadow-lg transition-shadow"
                 >
                   <div className="aspect-video relative">

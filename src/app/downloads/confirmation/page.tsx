@@ -106,7 +106,7 @@ function DownloadConfirmationContent() {
                 <Icon name="arrow-right" size="sm" className="text-stone-400 ml-auto" />
               </Link>
               <Link
-                href="/ideas"
+                href="/resources"
                 className="flex items-center gap-3 p-3 bg-white rounded-xl border border-stone-200 hover:border-stone-300 transition-colors"
               >
                 <Icon name="lightbulb" size="md" className="text-stone-400" />

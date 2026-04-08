@@ -37,11 +37,11 @@ const navItems: NavItemConfig[] = [
     href: '/',
   },
   {
-    id: 'spaces',
-    label: 'Spaces',
+    id: 'workspaces',
+    label: 'Workspaces',
     labelHr: 'Prostori',
     icon: 'building',
-    href: '/spaces',
+    href: '/workspaces',
   },
   {
     id: 'book',
@@ -63,11 +63,11 @@ const navItems: NavItemConfig[] = [
 // More Menu Items
 // ============================================
 const moreMenuItems = [
-  { label: 'About', labelHr: 'O nama', href: '/about', icon: 'users' as IconName },
-  { label: 'Hospitality', labelHr: 'Ugostiteljstvo', href: '/hospitality', icon: 'utensils' as IconName },
+  { label: 'Food', labelHr: 'Gastronomija', href: '/food', icon: 'utensils' as IconName },
   { label: 'Events', labelHr: 'Događanja', href: '/events', icon: 'mic' as IconName },
+  { label: 'Location', labelHr: 'Lokacija', href: '/location', icon: 'map-pin' as IconName },
+  { label: 'Community', labelHr: 'Zajednica', href: '/community', icon: 'users' as IconName },
   { label: 'Contact', labelHr: 'Kontakt', href: '/contact', icon: 'mail' as IconName },
-  { label: 'Blog', labelHr: 'Blog', href: '/blog', icon: 'external-link' as IconName },
 ]
 
 // ============================================

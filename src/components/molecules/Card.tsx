@@ -75,7 +75,7 @@ export function CardSpace({ space, onClick }: CardSpaceProps) {
   const imageUrl = space.images?.[0] || spaceTypeImages[space.type] || '/images/spaces/coworking-1.jpg'
 
   return (
-    <Link href={`/spaces/${space.slug}`} className="block">
+    <Link href={`/workspaces/${space.slug}`} className="block">
       <CardBase interactive as="article" className="overflow-hidden">
         {/* Image */}
         <div className="aspect-card bg-wire-200 relative overflow-hidden">
@@ -270,9 +270,11 @@ export function CardPlan({ plan, onClick }: CardPlanProps) {
       {/* Pricing */}
       <div className="mb-6">
         <span className="text-display-sm font-bold text-wire-900">
-          {plan.pricing.currency} {plan.pricing.monthly}
+          {plan.pricing.currency} {plan.pricing.daily ?? plan.pricing.monthly}
         </span>
-        <span className="text-body-sm text-wire-500">/month</span>
+        <span className="text-body-sm text-wire-500">
+          {plan.pricing.daily ? '/day' : '/month'}
+        </span>
       </div>
 
       {/* Features list */}
@@ -316,7 +318,7 @@ interface CardLocationProps {
 
 export function CardLocation({ location, onClick }: CardLocationProps) {
   return (
-    <Link href="/spaces" className="block">
+    <Link href="/workspaces" className="block">
       <CardBase interactive className="overflow-hidden">
         {/* Image */}
         <div className="aspect-video bg-wire-200 relative overflow-hidden">

@@ -350,7 +350,7 @@ export default function PapelPage() {
               <Button variant="primary" size="lg">
                 Reserve Now
               </Button>
-              <Link href="/hospitality">
+              <Link href="/food">
                 <Button variant="secondary" size="lg">
                   Explore All Hospitality
                 </Button>

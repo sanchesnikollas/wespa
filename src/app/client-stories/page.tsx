@@ -369,7 +369,7 @@ export default function ClientStoriesPage() {
                   Book a Visit
                 </Button>
               </Link>
-              <Link href="/spaces">
+              <Link href="/workspaces">
                 <Button variant="ghost" size="lg" className="border border-white/30 text-white hover:bg-white/10">
                   Explore Spaces
                 </Button>

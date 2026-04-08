@@ -7,96 +7,83 @@ import { NavItem } from '@/types'
 // Primary navigation - shown in main header area
 export const mainNavigation: NavItem[] = [
   {
-    label: 'Spaces',
-    href: '/spaces',
+    label: 'Workspaces',
+    href: '/workspaces',
     children: [
-      {
-        label: 'Co-working',
-        href: '/spaces?type=coworking',
-      },
-      {
-        label: 'Private Offices',
-        href: '/spaces?type=office',
-      },
-      {
-        label: 'Meeting Rooms',
-        href: '/spaces?type=meeting',
-      },
-      {
-        label: 'Urban Hub',
-        href: '/spaces?type=urban-hub',
-      },
-    ],
-  },
-  {
-    label: 'Hospitality',
-    href: '/hospitality',
-    children: [
-      {
-        label: 'Papel Restaurant',
-        href: '/hospitality/papel',
-      },
-      {
-        label: 'SPOT Restaurant',
-        href: '/hospitality/spot',
-      },
+      { label: 'Coworking', href: '/workspaces/coworking' },
+      { label: 'Meeting Rooms', href: '/workspaces/meeting-rooms' },
+      { label: 'Offices', href: '/workspaces/offices' },
+      { label: 'Custom Office Zones', href: '/workspaces/custom-office-zones' },
+      { label: 'Conference Rooms', href: '/workspaces/conference-rooms' },
     ],
   },
   {
     label: 'Events',
-    href: '/stage',
+    href: '/events',
     children: [
-      {
-        label: 'Special Events',
-        href: '/stage/special-events',
-      },
-      {
-        label: 'Business Events',
-        href: '/stage/business-events',
-      },
+      { label: 'Custom Special Events', href: '/events/custom-special-events' },
+      { label: 'Custom Business Events', href: '/events/custom-business-events' },
+      { label: 'Event Spaces', href: '/events/event-spaces' },
     ],
   },
   {
-    label: 'About',
-    href: '/about',
+    label: 'Food',
+    href: '/food',
+    children: [
+      { label: 'Papel', href: '/food/papel' },
+      { label: 'Spot', href: '/food/spot' },
+    ],
+  },
+  {
+    label: 'Location',
+    href: '/location',
+    children: [
+      { label: 'Business & Lounge', href: '/location/business-lounge' },
+      { label: 'Urban Hub', href: '/location/urban-hub' },
+    ],
+  },
+  {
+    label: 'Grow Your Company',
+    href: '/grow-your-company',
+  },
+  {
+    label: 'Community',
+    href: '/community',
+  },
+  {
+    label: 'Resources',
+    href: '/resources',
   },
 ]
 
-// Secondary links - shown in a "More" dropdown or footer
+// Secondary links - shown in footer or secondary positions
 export const secondaryNavigation: NavItem[] = [
-  {
-    label: 'Franchise',
-    href: '/franchise',
-  },
-  {
-    label: 'Contact',
-    href: '/contact',
-  },
+  { label: 'Contact', href: '/contact' },
+  { label: 'About', href: '/about' },
 ]
 
 export const footerNavigation = {
-  spaces: [
-    { label: 'Co-working', href: '/spaces?type=coworking' },
-    { label: 'Private Offices', href: '/spaces?type=office' },
-    { label: 'Meeting Rooms', href: '/spaces?type=meeting' },
-    { label: 'Urban Hub', href: '/spaces?type=urban-hub' },
-    { label: 'Business & Lounge', href: '/spaces?type=business-lounge' },
+  workspaces: [
+    { label: 'Coworking', href: '/workspaces/coworking' },
+    { label: 'Meeting Rooms', href: '/workspaces/meeting-rooms' },
+    { label: 'Offices', href: '/workspaces/offices' },
+    { label: 'Custom Office Zones', href: '/workspaces/custom-office-zones' },
+    { label: 'Conference Rooms', href: '/workspaces/conference-rooms' },
   ],
-  hospitality: [
-    { label: 'Papel Restaurant', href: '/hospitality/papel' },
-    { label: 'SPOT Restaurant', href: '/hospitality/spot' },
+  food: [
+    { label: 'Papel', href: '/food/papel' },
+    { label: 'Spot', href: '/food/spot' },
   ],
-  stage: [
-    { label: 'Corporate Events', href: '/stage?category=corporate' },
-    { label: 'Social Events', href: '/stage?category=social' },
-    { label: 'Workshops', href: '/stage?category=workshop' },
-    { label: 'Podcasts', href: '/stage?category=podcast' },
+  events: [
+    { label: 'Custom Special Events', href: '/events/custom-special-events' },
+    { label: 'Custom Business Events', href: '/events/custom-business-events' },
+    { label: 'Event Spaces', href: '/events/event-spaces' },
   ],
   company: [
     { label: 'About WESPA', href: '/about' },
-    { label: 'Ideas by WESPA', href: '/ideas' },
-    { label: 'Client Stories', href: '/client-stories' },
-    { label: 'Franchise', href: '/franchise' },
+    { label: 'Grow Your Company', href: '/grow-your-company' },
+    { label: 'Community', href: '/community' },
+    { label: 'Resources', href: '/resources' },
     { label: 'Contact', href: '/contact' },
   ],
   legal: [

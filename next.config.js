@@ -49,15 +49,20 @@ const nextConfig = {
     ]
   },
 
-  // Redirect legacy URLs if needed
+  // Redirect legacy URLs to new structure
   async redirects() {
     return [
-      // Example: redirect old blog URL structure
-      // {
-      //   source: '/blog/:slug',
-      //   destination: '/ideas/:slug',
-      //   permanent: true,
-      // },
+      { source: '/spaces', destination: '/workspaces', permanent: true },
+      { source: '/spaces/:path*', destination: '/workspaces/:path*', permanent: true },
+      { source: '/hospitality', destination: '/food', permanent: true },
+      { source: '/hospitality/papel', destination: '/food/papel', permanent: true },
+      { source: '/hospitality/spot', destination: '/food/spot', permanent: true },
+      { source: '/stage', destination: '/events', permanent: true },
+      { source: '/stage/business-events', destination: '/events/custom-business-events', permanent: true },
+      { source: '/stage/special-events', destination: '/events/custom-special-events', permanent: true },
+      { source: '/franchise', destination: '/grow-your-company', permanent: true },
+      { source: '/ideas', destination: '/resources', permanent: true },
+      { source: '/ideas/:slug', destination: '/resources/:slug', permanent: true },
     ]
   },
 }

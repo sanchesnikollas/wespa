@@ -136,7 +136,7 @@ export default function BlogArticlePage() {
           <h1 className="text-4xl font-bold text-stone-900 mb-4">Article Not Found</h1>
           <p className="text-stone-600 mb-8">The article you're looking for doesn't exist.</p>
           <Button asChild>
-            <Link href="/ideas">View All Articles</Link>
+            <Link href="/resources">View All Articles</Link>
           </Button>
         </div>
       </div>
@@ -159,7 +159,7 @@ export default function BlogArticlePage() {
             <nav className="flex items-center justify-center gap-2 text-sm text-stone-400 mb-8">
               <Link href="/" className="hover:text-white">Home</Link>
               <Icon name="chevron-right" size="xs" />
-              <Link href="/ideas" className="hover:text-white">Ideas</Link>
+              <Link href="/resources" className="hover:text-white">Ideas</Link>
               <Icon name="chevron-right" size="xs" />
               <span className="text-white">{article.category}</span>
             </nav>
@@ -245,7 +245,7 @@ export default function BlogArticlePage() {
                 <span className="text-sm text-stone-500">Share this article:</span>
                 <div className="flex gap-2">
                   <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(`https://wespa.hr/ideas/${slug}`)}`}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(`https://wespa.hr/resources/${slug}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-stone-100 rounded-lg hover:bg-stone-200 transition-colors"
@@ -253,7 +253,7 @@ export default function BlogArticlePage() {
                     <Icon name="twitter" size="sm" />
                   </a>
                   <a
-                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://wespa.hr/ideas/${slug}`)}&title=${encodeURIComponent(article.title)}`}
+                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://wespa.hr/resources/${slug}`)}&title=${encodeURIComponent(article.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-stone-100 rounded-lg hover:bg-stone-200 transition-colors"
@@ -328,7 +328,7 @@ export default function BlogArticlePage() {
               .map((a) => (
                 <Link
                   key={a.slug}
-                  href={`/ideas/${a.slug}`}
+                  href={`/resources/${a.slug}`}
                   className="bg-white rounded-xl overflow-hidden border border-stone-200 hover:shadow-lg transition-shadow"
                 >
                   <div className="aspect-video relative">

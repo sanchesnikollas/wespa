@@ -386,7 +386,7 @@ export default function SpotPage() {
               <Button variant="primary" size="lg">
                 Find Location
               </Button>
-              <Link href="/hospitality">
+              <Link href="/food">
                 <Button variant="secondary" size="lg">
                   Explore All Hospitality
                 </Button>

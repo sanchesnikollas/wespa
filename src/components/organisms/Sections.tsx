@@ -173,7 +173,7 @@ export function HeroSection() {
                 className="text-white hover:bg-white/10 border border-white/30"
                 asChild
               >
-                <Link href="/spaces">Explore Spaces</Link>
+                <Link href="/workspaces">Explore Spaces</Link>
               </Button>
             </motion.div>
 
@@ -183,9 +183,9 @@ export function HeroSection() {
               variants={fadeInUp}
             >
               {[
-                { value: '3,000+', label: 'm² workspace' },
-                { value: '320+', label: 'workstations' },
-                { value: '2', label: 'locations' },
+                { value: '6,000+', label: 'm² workspace' },
+                { value: '500+', label: 'workstations' },
+                { value: '1,000+', label: 'events hosted' },
               ].map((stat, i) => (
                 <div key={i}>
                   <div className="text-3xl font-bold text-white">{stat.value}</div>
@@ -245,7 +245,7 @@ export function PlansSection() {
         />
 
         <motion.div
-          className="grid md:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
@@ -334,43 +334,55 @@ const featureIconMap: Record<string, WespaIconName> = {
 }
 
 export function FeaturesSection() {
-  // Features with WESPA icons
+  // Features with WESPA icons - 8 amenities per briefing
   const features = [
     {
-      id: 'flexibility',
-      icon: 'flexibility' as WespaIconName,
-      title: 'Total Flexibility',
-      description: 'Scale up or down as your business evolves. No long-term commitments required.',
-    },
-    {
-      id: 'private-office',
-      icon: 'private-office' as WespaIconName,
-      title: 'Private Offices',
-      description: 'Dedicated spaces for teams of any size, fully furnished and ready to use.',
-    },
-    {
-      id: 'hospitality',
-      icon: 'hospitality' as WespaIconName,
-      title: 'Premium Hospitality',
-      description: 'Two on-site restaurants — PAPEL for fine dining and SPOT for quick bites.',
-    },
-    {
-      id: 'stage',
+      id: 'events',
       icon: 'stage' as WespaIconName,
-      title: 'Events & Stage',
-      description: 'Professional venues for conferences, workshops, and corporate events.',
+      title: 'Events & Conferences',
+      description: 'Host events for up to 500+ people across 10 halls with full AV production and catering.',
     },
     {
-      id: 'wifi',
-      icon: 'wifi' as WespaIconName,
-      title: 'High-Speed Connectivity',
-      description: 'Enterprise-grade WiFi and IT infrastructure throughout all spaces.',
+      id: 'lounge',
+      icon: 'hospitality' as WespaIconName,
+      title: 'Lounge & Relax Zones',
+      description: 'Spacious lounge for informal meetings, networking, or simply unwinding between tasks.',
     },
     {
-      id: 'meeting',
-      icon: 'meeting' as WespaIconName,
-      title: 'Meeting Rooms',
-      description: 'State-of-the-art meeting rooms with video conferencing equipment.',
+      id: 'gastro',
+      icon: 'hospitality' as WespaIconName,
+      title: 'Gastro Experience',
+      description: 'Two on-site restaurants — Papel for fine dining and SPOT for casual business meals.',
+    },
+    {
+      id: 'podcast',
+      icon: 'presentation' as WespaIconName,
+      title: 'Podcast Room',
+      description: 'Professional recording studio for podcasts, interviews, and content creation.',
+    },
+    {
+      id: 'focus-zones',
+      icon: 'private-office' as WespaIconName,
+      title: 'Focus Zones',
+      description: 'Quiet, distraction-free areas designed for deep work and concentration.',
+    },
+    {
+      id: 'relax-zones',
+      icon: 'flexibility' as WespaIconName,
+      title: 'Relax Zones',
+      description: 'Comfortable areas to recharge, socialize, or take a break from your workday.',
+    },
+    {
+      id: 'pet-friendly',
+      icon: 'amenities' as WespaIconName,
+      title: 'Pet Friendly',
+      description: 'Bring your furry companion to work. We provide water bowls and pet-friendly zones.',
+    },
+    {
+      id: 'parking',
+      icon: 'door' as WespaIconName,
+      title: 'Dedicated Parking',
+      description: 'Convenient parking available at both locations for members and visitors.',
     },
   ]
 
@@ -383,7 +395,7 @@ export function FeaturesSection() {
         />
 
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
@@ -432,27 +444,27 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
   const sampleStories: ClientStory[] = stories.length > 0 ? stories : [
     {
       id: '1',
-      slug: 'blanka-story',
-      clientName: 'Blanka M.',
-      clientRole: 'Founder',
-      companyName: 'Creative Studio',
-      testimonial: 'WESPA has transformed how our team works. The flexibility and community here are unmatched. We\'ve grown from 3 to 15 people without ever worrying about office logistics.',
+      slug: 'saltpay-story',
+      clientName: 'SaltPay',
+      clientRole: 'Team Lead',
+      companyName: 'SaltPay',
+      testimonial: 'WESPA provides the perfect environment for our team — flexible, professional, and inspiring. The community and amenities make it much more than just an office.',
     },
     {
       id: '2',
-      slug: 'filip-story',
-      clientName: 'Filip K.',
-      clientRole: 'CEO',
-      companyName: 'Tech Startup',
-      testimonial: 'Moving to WESPA was the best decision for our growing team. Professional environment, great networking, and the restaurants on-site are a huge plus for client meetings.',
+      slug: 'felloz-story',
+      clientName: 'Felloz',
+      clientRole: 'Founder',
+      companyName: 'Felloz',
+      testimonial: 'We chose WESPA because it grows with us. From a hot desk to a private office, the transition was seamless. The networking opportunities alone have been invaluable.',
     },
     {
       id: '3',
-      slug: 'josipa-story',
-      clientName: 'Josipa B.',
-      clientRole: 'Consultant',
-      companyName: 'Independent',
-      testimonial: 'As a freelancer, I needed a professional space without the commitment. WESPA delivers exactly that — plus an amazing community that helps me win new clients.',
+      slug: 'navigo-story',
+      clientName: 'Navigo Sport Travel',
+      clientRole: 'Director',
+      companyName: 'Navigo Sport Travel',
+      testimonial: 'The professional atmosphere, on-site restaurants, and premium meeting rooms make WESPA the ideal place for our client-facing business. Highly recommended.',
     },
   ]
 
@@ -528,10 +540,22 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
           <p className="text-center text-stone-500 text-sm uppercase tracking-widest mb-8">
             Trusted by industry leaders
           </p>
-          <div className="flex flex-wrap justify-center gap-12 opacity-50">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="w-28 h-10 bg-white/20 rounded flex items-center justify-center text-white/40 text-xs">
-                Logo {i}
+          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
+            {[
+              { src: '/images/clients/sony.png', alt: 'Sony' },
+              { src: '/images/clients/disney.png', alt: 'Disney' },
+              { src: '/images/clients/mews.png', alt: 'Mews' },
+              { src: '/images/clients/57-hours.png', alt: '57 hours' },
+              { src: '/images/clients/logo-transparent.png', alt: 'Client' },
+              { src: '/images/clients/client-1.png', alt: 'Client' },
+            ].map((logo, i) => (
+              <div key={i} className="relative w-24 h-10 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 invert">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  fill
+                  className="object-contain"
+                />
               </div>
             ))}
           </div>
@@ -589,8 +613,9 @@ export function PainPointsSection() {
 
             <div className="space-y-6">
               {[
-                { title: 'For Remote Professionals', items: ['Professional workspace on-demand', 'Network with like-minded professionals', 'No long-term commitments'] },
-                { title: 'For Growing Teams', items: ['Scale your space as you grow', 'All-inclusive pricing', 'Premium amenities included'] },
+                { title: 'For Freelancers & Remote Workers', items: ['Professional workspace on-demand', 'Network with like-minded professionals', 'No long-term commitments'] },
+                { title: 'For Growing Teams & Startups', items: ['Scale your space as you grow', 'All-inclusive pricing', 'Premium amenities included'] },
+                { title: 'For Corporations', items: ['Short-term or project-based offices', 'Executive meeting rooms & conference halls', 'Dedicated parking & premium services'] },
               ].map((group, i) => (
                 <div key={i} className="bg-stone-50 rounded-2xl p-6">
                   <h3 className="font-semibold text-stone-900 mb-4">{group.title}</h3>
@@ -685,7 +710,7 @@ export function LocationsSection() {
                       className="w-fit bg-white/10 border-white/30 text-white hover:bg-white hover:text-stone-900"
                       asChild
                     >
-                      <Link href="/spaces">Explore Location</Link>
+                      <Link href={location.id === 'green-gold' ? '/location/business-lounge' : '/location/urban-hub'}>Explore Location</Link>
                     </Button>
                   </motion.div>
                 </div>
@@ -807,7 +832,7 @@ export function IdeasSection({ articles }: IdeasSectionProps) {
             </p>
           </div>
           <Button variant="secondary" asChild>
-            <Link href="/ideas" className="flex items-center gap-2">
+            <Link href="/resources" className="flex items-center gap-2">
               View all articles
               <Icon name="arrow-right" size="sm" />
             </Link>
@@ -987,6 +1012,53 @@ export function PageHero({ title, subtitle, breadcrumbs, image, children }: Page
         )}
 
         {children}
+      </div>
+    </section>
+  )
+}
+
+// ============================================
+// Client Logos Section (Homepage)
+// ============================================
+export function ClientLogosSection() {
+  const logos = [
+    { src: '/images/clients/sony.png', alt: 'Sony' },
+    { src: '/images/clients/disney.png', alt: 'Disney' },
+    { src: '/images/clients/mews.png', alt: 'Mews' },
+    { src: '/images/clients/57-hours.png', alt: '57 hours' },
+    { src: '/images/clients/logo-transparent.png', alt: 'Client' },
+    { src: '/images/clients/client-1.png', alt: 'Client' },
+    { src: '/images/clients/client-2.png', alt: 'Client' },
+    { src: '/images/clients/client-3.jpg', alt: 'Client' },
+  ]
+
+  return (
+    <section className="py-12 md:py-16 border-b border-stone-200">
+      <div className="container-wespa">
+        <p className="text-center text-stone-500 text-sm uppercase tracking-widest mb-8">
+          Companies that call WESPA home
+        </p>
+        <motion.div
+          className="flex flex-wrap justify-center items-center gap-8 md:gap-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          {logos.map((logo, i) => (
+            <div
+              key={i}
+              className="relative w-20 h-8 md:w-24 md:h-10 opacity-40 hover:opacity-80 transition-opacity grayscale hover:grayscale-0"
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                fill
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   )

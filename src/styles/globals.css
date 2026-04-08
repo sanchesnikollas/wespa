@@ -193,16 +193,15 @@
     @apply font-semibold shadow-lg;
   }
 
-  /* Heading defaults - elegant serif typography */
+  /* Heading defaults - D-DIN brand typography */
   /* Color is inherited, not forced - allows white text in dark sections */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-semibold;
-    letter-spacing: -0.01em;
+    @apply font-sans font-semibold;
+    letter-spacing: normal;
     color: inherit;
   }
 
   h1 {
-    letter-spacing: -0.02em;
     @apply font-bold;
   }
 

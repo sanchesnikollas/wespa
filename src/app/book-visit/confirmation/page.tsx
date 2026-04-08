@@ -97,7 +97,7 @@ export default function BookVisitConfirmationPage() {
           {/* Actions */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button variant="wespa" asChild>
-              <Link href="/spaces">Explore Our Spaces</Link>
+              <Link href="/workspaces">Explore Our Spaces</Link>
             </Button>
             <Button variant="secondary" asChild>
               <Link href="/">Back to Home</Link>

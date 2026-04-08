@@ -97,19 +97,38 @@ export const coworkingPlans: CoworkingPlan[] = [
   {
     id: 'flydesk',
     name: 'FlyDesk',
-    tagline: 'Flexible access for mobile workers',
+    tagline: 'Flexible daily access',
     description:
       'Perfect for freelancers and remote workers who need occasional workspace access with full amenities.',
     features: [
       'Access to any available desk',
       'High-speed WiFi',
-      'Meeting room credits (2h/month)',
+      'Meeting room access',
       'Print & scan services',
       'Community events access',
       'Lounge access',
     ],
     pricing: {
-      monthly: 150,
+      daily: 30,
+      currency: 'EUR',
+    },
+  },
+  {
+    id: 'flydesk-lunch',
+    name: 'FlyDesk + Lunch',
+    tagline: 'Work & dine package',
+    description:
+      'Everything in FlyDesk plus a daily lunch included at our on-site restaurants.',
+    features: [
+      'Access to any available desk',
+      'High-speed WiFi',
+      'Daily lunch included',
+      'Meeting room access',
+      'Print & scan services',
+      'Community events access',
+    ],
+    pricing: {
+      daily: 35,
       currency: 'EUR',
     },
   },
@@ -123,13 +142,13 @@ export const coworkingPlans: CoworkingPlan[] = [
       'Personal dedicated desk',
       'Lockable storage',
       'High-speed WiFi',
-      'Meeting room credits (5h/month)',
+      'Meeting room credits',
       'Print & scan services',
       '24/7 access',
       'Mail handling',
     ],
     pricing: {
-      monthly: 300,
+      monthly: 219,
       currency: 'EUR',
     },
     popular: true,
@@ -143,17 +162,48 @@ export const coworkingPlans: CoworkingPlan[] = [
     features: [
       'Private office (2-6 people)',
       'Dedicated phone line',
-      'Meeting room credits (10h/month)',
+      'Meeting room credits',
       'Premium WiFi',
       '24/7 access',
       'Custom branding options',
       'Priority support',
     ],
     pricing: {
-      monthly: 600,
+      monthly: 226,
       currency: 'EUR',
     },
   },
+]
+
+// ============================================
+// Meeting Room Pricing
+// ============================================
+export const meetingRoomPricing = {
+  rooms: [
+    { id: 'small', name: 'Meeting Room S', capacity: 4, pricePerHour: 22, currency: 'EUR' },
+    { id: 'large', name: 'Meeting Room L', capacity: 10, pricePerHour: 32, currency: 'EUR' },
+  ],
+  packages: [
+    { id: 'package-s', name: 'Package S', hours: 20, price: 350, validity: '6 months', currency: 'EUR' },
+    { id: 'package-m', name: 'Package M', hours: 40, price: 750, validity: '6 months', currency: 'EUR' },
+    { id: 'package-l', name: 'Package L', hours: 70, price: 850, validity: '6 months', currency: 'EUR' },
+  ],
+}
+
+// ============================================
+// Conference Rooms Data
+// ============================================
+export const conferenceRooms = [
+  // Zavrtnica location
+  { id: 'indigo', name: 'INDIGO', location: 'zavrtnica', area: 130, pricePerHour: 90, currency: 'EUR' },
+  { id: 'incubator', name: 'INCUBATOR', location: 'zavrtnica', area: 70, pricePerHour: 67, currency: 'EUR' },
+  { id: 'bond', name: 'BOND', location: 'zavrtnica', area: 63, pricePerHour: 65, currency: 'EUR' },
+  { id: 'brain-gym', name: 'BRAIN GYM', location: 'zavrtnica', area: 38, pricePerHour: 47, currency: 'EUR' },
+  // Green Gold location
+  { id: 'enter', name: 'ENTER', location: 'green-gold', area: 170, pricePerHour: 113, maxPrice: 180, currency: 'EUR', divisible: true },
+  { id: 'shift', name: 'SHIFT', location: 'green-gold', area: 110, pricePerHour: 120, currency: 'EUR' },
+  { id: 'escape', name: 'ESCAPE', location: 'green-gold', area: 43, pricePerHour: 57, currency: 'EUR' },
+  { id: 'connect', name: 'CONNECT', location: 'green-gold', area: 26, pricePerHour: 49, currency: 'EUR' },
 ]
 
 // ============================================
@@ -161,46 +211,60 @@ export const coworkingPlans: CoworkingPlan[] = [
 // ============================================
 export const wespaFeatures: Feature[] = [
   {
-    id: 'all-inclusive',
-    icon: 'package',
-    title: 'All services, one price',
+    id: 'events',
+    icon: 'calendar',
+    title: 'Events & Conferences',
     description:
-      'WiFi, utilities, cleaning, coffee, printing — everything included in your membership.',
+      'Host events for up to 500+ people across 10 halls with full AV production and catering.',
   },
   {
     id: 'lounge',
     icon: 'coffee',
-    title: 'Lounge area on 300m²',
+    title: 'Lounge & Relax Zones',
     description:
       'Spacious lounge for informal meetings, networking, or simply unwinding between tasks.',
   },
   {
+    id: 'gastro',
+    icon: 'utensils',
+    title: 'Gastro Experience',
+    description:
+      'Two on-site restaurants — Papel for fine dining and SPOT for casual business meals.',
+  },
+  {
+    id: 'podcast',
+    icon: 'mic',
+    title: 'Podcast Room',
+    description:
+      'Professional recording studio for podcasts, interviews, and content creation.',
+  },
+  {
+    id: 'focus-zones',
+    icon: 'target',
+    title: 'Focus Zones',
+    description:
+      'Quiet, distraction-free areas designed for deep work and concentration.',
+  },
+  {
+    id: 'relax-zones',
+    icon: 'sofa',
+    title: 'Relax Zones',
+    description:
+      'Comfortable areas to recharge, socialize, or take a break from your workday.',
+  },
+  {
     id: 'pet-friendly',
     icon: 'heart',
-    title: 'Pet friendly',
+    title: 'Pet Friendly',
     description:
       'Bring your furry companion to work. We provide water bowls and pet-friendly zones.',
   },
   {
-    id: 'conference',
-    icon: 'users',
-    title: 'Conference rooms up to 150 people',
+    id: 'parking',
+    icon: 'car',
+    title: 'Dedicated Parking',
     description:
-      'From intimate boardrooms to large conference halls, equipped with latest AV technology.',
-  },
-  {
-    id: 'cigar-room',
-    icon: 'star',
-    title: 'Premium Cigar & Cocktail Room',
-    description:
-      'Exclusive lounge for members seeking a sophisticated after-hours atmosphere.',
-  },
-  {
-    id: 'ergonomic',
-    icon: 'monitor',
-    title: 'Modern ergonomic furniture',
-    description:
-      'Height-adjustable desks, premium chairs, and thoughtfully designed workstations.',
+      'Convenient parking available at both locations for members and visitors.',
   },
 ]
 
@@ -210,25 +274,25 @@ export const wespaFeatures: Feature[] = [
 export const wespaMetrics: Metric[] = [
   {
     id: 'sqm',
-    value: '3,000',
+    value: '6,000',
     label: 'Square meters',
     suffix: 'm²',
   },
   {
     id: 'workstations',
-    value: '320',
+    value: '500',
     label: 'Workstations',
     suffix: '+',
   },
   {
-    id: 'meeting-rooms',
-    value: '20',
-    label: 'Meeting rooms',
-    suffix: '+',
+    id: 'locations',
+    value: '2',
+    label: 'Locations',
+    suffix: '',
   },
   {
     id: 'events',
-    value: '500',
+    value: '1,000',
     label: 'Events hosted',
     suffix: '+',
   },

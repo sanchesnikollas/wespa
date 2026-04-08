@@ -54,13 +54,11 @@ const config: Config = {
         info: '#3B82F6',
       },
       fontFamily: {
-        // Primary sans-serif for body text
-        sans: ['var(--font-source-sans)', 'system-ui', 'sans-serif'],
-        // Elegant serif for headings and display
-        serif: ['var(--font-lora)', 'Georgia', 'serif'],
-        display: ['var(--font-lora)', 'Georgia', 'serif'],
-        // Fallback to original D-DIN if needed
-        'brand': ['"D-DIN"', 'system-ui', 'sans-serif'],
+        // D-DIN as primary font (brand typography)
+        sans: ['"D-DIN"', 'system-ui', 'sans-serif'],
+        serif: ['"D-DIN"', 'system-ui', 'sans-serif'],
+        display: ['"D-DIN"', 'system-ui', 'sans-serif'],
+        brand: ['"D-DIN"', 'system-ui', 'sans-serif'],
         condensed: ['"D-DIN Condensed"', 'system-ui', 'sans-serif'],
         expanded: ['"D-DIN Exp"', 'system-ui', 'sans-serif'],
       },

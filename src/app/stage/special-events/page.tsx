@@ -100,7 +100,7 @@ export default function SpecialEventsPage() {
           <nav className="flex items-center gap-2 text-sm text-stone-400 mb-8">
             <Link href="/" className="hover:text-white">Home</Link>
             <Icon name="chevron-right" size="xs" />
-            <Link href="/stage" className="hover:text-white">Stage</Link>
+            <Link href="/events" className="hover:text-white">Stage</Link>
             <Icon name="chevron-right" size="xs" />
             <span className="text-white">Special Events</span>
           </nav>
@@ -270,7 +270,7 @@ export default function SpecialEventsPage() {
               <p className="font-semibold text-stone-900">Check out our business event options</p>
             </div>
             <Button variant="secondary" asChild>
-              <Link href="/stage/business-events">
+              <Link href="/events/custom-business-events">
                 Business Events
                 <Icon name="arrow-right" size="sm" />
               </Link>

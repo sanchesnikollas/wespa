@@ -75,7 +75,7 @@ export interface Space {
 // ============================================
 // Coworking Plan Types
 // ============================================
-export type PlanType = 'flydesk' | 'owndesk' | 'officedesk'
+export type PlanType = 'flydesk' | 'flydesk-lunch' | 'owndesk' | 'officedesk'
 
 export interface CoworkingPlan {
   id: PlanType
@@ -84,7 +84,8 @@ export interface CoworkingPlan {
   description: string
   features: string[]
   pricing: {
-    monthly: number
+    daily?: number
+    monthly?: number
     currency: string
   }
   popular?: boolean
@@ -209,6 +210,17 @@ export interface FranchiseFormData {
   country: string
   city: string
   investmentRange?: string
+  message?: string
+}
+
+export interface ForgeGrowthFormData {
+  fullName: string
+  email: string
+  phone: string
+  companyName: string
+  website?: string
+  stage: string
+  teamSize: string
   message?: string
 }
 
