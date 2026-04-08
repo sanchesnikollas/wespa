@@ -3,6 +3,7 @@ import { Suspense } from 'react'
 import '@/styles/globals.css'
 import { ConditionalLayout } from '@/components/organisms/ConditionalLayout'
 import { SplashScreen } from '@/components/organisms/SplashScreen'
+import { CustomCursor } from '@/components/organisms/CustomCursor'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { AnalyticsProvider, UTMTracker } from '@/components/tracking'
 import { HomePageJsonLd } from '@/components/seo'
@@ -104,6 +105,9 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <AnalyticsProvider>
           <LanguageProvider>
+            {/* Custom Cursor (desktop only) */}
+            <CustomCursor />
+
             {/* Splash Screen */}
             <SplashScreen />
 
