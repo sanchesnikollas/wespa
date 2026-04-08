@@ -60,6 +60,27 @@ export default function PapelPage() {
         </div>
       </section>
 
+      {/* Gallery */}
+      <section className="section-spacing bg-white">
+        <div className="container-wespa">
+          <h2 className="text-3xl font-bold text-stone-900 mb-10">The Papel Experience</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {[1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((i) => (
+              <div key={i} className={`relative overflow-hidden rounded-xl ${i === 1 ? 'col-span-2 row-span-2' : ''}`}>
+                <div className={`relative ${i === 1 ? 'aspect-square' : 'aspect-[4/3]'}`}>
+                  <Image
+                    src={`/images/food/papel/papel-${i}.jpg`}
+                    alt={`Papel restaurant experience ${i}`}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="section-spacing bg-stone-50">
         <div className="container-wespa">
