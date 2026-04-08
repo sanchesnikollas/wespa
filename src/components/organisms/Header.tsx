@@ -20,22 +20,35 @@ import { useLanguage } from '@/contexts/LanguageContext'
 // Language Switcher Component
 // ============================================
 function LanguageSwitcher({ className }: { className?: string }) {
-  const { language, toggleLanguage } = useLanguage()
+  const { language, setLanguage } = useLanguage()
 
   return (
-    <button
-      onClick={toggleLanguage}
-      className={cn(
-        'flex items-center gap-1.5 px-3 py-1.5 rounded-full',
-        'text-body-sm font-medium transition-all duration-200',
-        'hover:bg-wire-100 active:bg-wire-200',
-        className
-      )}
-      aria-label={`Switch to ${language === 'en' ? 'Croatian' : 'English'}`}
-    >
-      <Icon name="globe" size="sm" />
-      <span className="uppercase">{language === 'en' ? 'HR' : 'EN'}</span>
-    </button>
+    <div className={cn('flex items-center bg-wire-100 rounded-full p-0.5', className)}>
+      <button
+        onClick={() => setLanguage('hr')}
+        className={cn(
+          'px-3 py-1 rounded-full text-body-sm font-medium transition-all duration-200',
+          language === 'hr'
+            ? 'bg-white text-stone-900 shadow-sm'
+            : 'text-stone-500 hover:text-stone-700'
+        )}
+        aria-label="Hrvatski"
+      >
+        HR
+      </button>
+      <button
+        onClick={() => setLanguage('en')}
+        className={cn(
+          'px-3 py-1 rounded-full text-body-sm font-medium transition-all duration-200',
+          language === 'en'
+            ? 'bg-white text-stone-900 shadow-sm'
+            : 'text-stone-500 hover:text-stone-700'
+        )}
+        aria-label="English"
+      >
+        EN
+      </button>
+    </div>
   )
 }
 
