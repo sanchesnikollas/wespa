@@ -196,10 +196,10 @@ export function Footer() {
           </div>
 
           {/* Navigation columns */}
-          <FooterColumn title="Workspaces" links={footerNavigation.workspaces} />
-          <FooterColumn title="Food" links={footerNavigation.food} />
-          <FooterColumn title="Events" links={footerNavigation.events} />
-          <FooterColumn title="Company" links={footerNavigation.company} />
+          <FooterColumn title={t('footer.sections.workspaces')} links={footerNavigation.workspaces} />
+          <FooterColumn title={t('footer.sections.food')} links={footerNavigation.food} />
+          <FooterColumn title={t('footer.sections.events')} links={footerNavigation.events} />
+          <FooterColumn title={t('footer.sections.company')} links={footerNavigation.company} />
         </div>
 
         {/* Contact and Locations Row */}

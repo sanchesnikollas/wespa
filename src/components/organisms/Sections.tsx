@@ -25,6 +25,7 @@ import {
 import { HeroFilterForm, LeadForm } from '@/components/molecules/Form'
 import { wespaFeatures, wespaMetrics, coworkingPlans, locations } from '@/config/site'
 import type { Feature, ClientStory, CoworkingPlan } from '@/types'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 // ============================================
 // Animation Variants
@@ -107,6 +108,7 @@ export function SectionTitle({
 // Hero Section (Premium with real images)
 // ============================================
 export function HeroSection() {
+  const { t } = useLanguage()
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -142,7 +144,7 @@ export function HeroSection() {
           >
             <motion.div variants={fadeInUp}>
               <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-8 border border-white/20">
-                Work. Eat. Socialize. Play. Anytime.
+                {t('hero.tagline')}
               </span>
             </motion.div>
 
@@ -150,22 +152,21 @@ export function HeroSection() {
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tight leading-[1.1]"
               variants={fadeInUp}
             >
-              The workspace,
+              {t('hero.title')}
               <br />
-              <span className="text-gradient">redefined</span>
+              <span className="text-gradient">{t('hero.titleHighlight')}</span>
             </motion.h1>
 
             <motion.p
               className="text-xl text-stone-300 mb-10 leading-relaxed max-w-xl"
               variants={fadeInUp}
             >
-              Experience total business flexibility within our ecosystem — premium offices,
-              inspiring coworking, fine dining, and event venues in Zagreb's business district.
+              {t('hero.subtitle')}
             </motion.p>
 
             <motion.div className="flex flex-wrap gap-4" variants={fadeInUp}>
               <Button variant="wespa" size="lg" asChild>
-                <Link href="/book-visit">Book a Visit</Link>
+                <Link href="/book-visit">{t('hero.cta')}</Link>
               </Button>
               <Button
                 variant="ghost"
@@ -173,7 +174,7 @@ export function HeroSection() {
                 className="text-white hover:bg-white/10 border border-white/30"
                 asChild
               >
-                <Link href="/workspaces">Explore Spaces</Link>
+                <Link href="/workspaces">{t('hero.ctaSecondary')}</Link>
               </Button>
             </motion.div>
 
@@ -183,9 +184,9 @@ export function HeroSection() {
               variants={fadeInUp}
             >
               {[
-                { value: '6,000+', label: 'm² workspace' },
-                { value: '500+', label: 'workstations' },
-                { value: '1,000+', label: 'events hosted' },
+                { value: '6,000+', label: t('hero.stats.workspace') },
+                { value: '500+', label: t('hero.stats.workstations') },
+                { value: '1,000+', label: t('hero.stats.events') },
               ].map((stat, i) => (
                 <div key={i}>
                   <div className="text-3xl font-bold text-white">{stat.value}</div>
@@ -203,8 +204,8 @@ export function HeroSection() {
             className="hidden lg:block"
           >
             <div className="card-glass p-8 shadow-2xl">
-              <h2 className="text-2xl font-semibold text-stone-900 mb-2">Find your space</h2>
-              <p className="text-stone-600 mb-6">Tell us about your needs</p>
+              <h2 className="text-2xl font-semibold text-stone-900 mb-2">{t('hero.findSpace')}</h2>
+              <p className="text-stone-600 mb-6">{t('hero.findSpaceSubtitle')}</p>
               <HeroFilterForm />
             </div>
           </motion.div>
@@ -219,7 +220,7 @@ export function HeroSection() {
         transition={{ delay: 1.5, duration: 0.6 }}
       >
         <div className="flex flex-col items-center gap-2 text-white/60">
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
+          <span className="text-xs uppercase tracking-widest">{t('common.scroll')}</span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
@@ -236,12 +237,13 @@ export function HeroSection() {
 // Plans Section (Premium Cards)
 // ============================================
 export function PlansSection() {
+  const { t } = useLanguage()
   return (
     <section className="section-spacing bg-stone-50">
       <div className="container-wespa">
         <SectionTitle
-          title="Flexible plans for every workstyle"
-          subtitle="From hot desks to private offices — find the perfect setup for you and your team."
+          title={t('plans.title')}
+          subtitle={t('plans.subtitle')}
         />
 
         <motion.div
@@ -334,6 +336,7 @@ const featureIconMap: Record<string, WespaIconName> = {
 }
 
 export function FeaturesSection() {
+  const { t } = useLanguage()
   // Features with WESPA icons - 8 amenities per briefing
   const features = [
     {
@@ -390,8 +393,8 @@ export function FeaturesSection() {
     <section className="section-spacing">
       <div className="container-wespa">
         <SectionTitle
-          title="Why choose WESPA?"
-          subtitle="Everything you need for productive work, exceptional hospitality, and memorable events."
+          title={t('features.title')}
+          subtitle={t('features.subtitle')}
         />
 
         <motion.div
@@ -441,6 +444,7 @@ interface TestimonialsSectionProps {
 }
 
 export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
+  const { t } = useLanguage()
   const sampleStories: ClientStory[] = stories.length > 0 ? stories : [
     {
       id: '1',
@@ -472,8 +476,8 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
     <section className="section-spacing bg-stone-900 text-white overflow-hidden">
       <div className="container-wespa">
         <SectionTitle
-          title="Trusted by Zagreb's best"
-          subtitle="Join hundreds of professionals who've made WESPA their workspace home."
+          title={t('testimonials.title')}
+          subtitle={t('testimonials.subtitle')}
           light
         />
 
@@ -538,7 +542,7 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
           viewport={{ once: true }}
         >
           <p className="text-center text-stone-500 text-sm uppercase tracking-widest mb-8">
-            Trusted by industry leaders
+            {t('testimonials.trustedBy')}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
             {[
@@ -569,6 +573,7 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
 // Pain Points Section (Premium Split)
 // ============================================
 export function PainPointsSection() {
+  const { t } = useLanguage()
   return (
     <section className="section-spacing">
       <div className="container-wespa">
@@ -592,7 +597,7 @@ export function PainPointsSection() {
             {/* Floating stat card */}
             <div className="absolute -right-8 bottom-12 bg-white rounded-2xl shadow-2xl p-6 max-w-[200px]">
               <div className="text-4xl font-bold text-stone-900 mb-1">98%</div>
-              <div className="text-sm text-stone-600">member satisfaction rate</div>
+              <div className="text-sm text-stone-600">{t('painPoints.satisfaction')}</div>
             </div>
           </motion.div>
 
@@ -604,11 +609,10 @@ export function PainPointsSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-8 tracking-tight">
-              Is the traditional office holding you back?
+              {t('painPoints.title')}
             </h2>
             <p className="text-xl text-stone-600 mb-10 leading-relaxed">
-              Long leases, rigid setups, and isolated home offices don't work for modern
-              businesses. You need flexibility, community, and spaces that adapt to your needs.
+              {t('painPoints.subtitle')}
             </p>
 
             <div className="space-y-6">
@@ -632,7 +636,7 @@ export function PainPointsSection() {
             </div>
 
             <Button variant="wespa" size="lg" className="mt-8" asChild>
-              <Link href="/book-visit">Book a Visit</Link>
+              <Link href="/book-visit">{t('hero.cta')}</Link>
             </Button>
           </motion.div>
         </div>
@@ -645,6 +649,7 @@ export function PainPointsSection() {
 // Locations Section (Premium Cards with Images)
 // ============================================
 export function LocationsSection() {
+  const { t } = useLanguage()
   const locationData = [
     {
       ...locations[0],
@@ -660,8 +665,8 @@ export function LocationsSection() {
     <section className="section-spacing bg-stone-50">
       <div className="container-wespa">
         <SectionTitle
-          title="Two prime locations"
-          subtitle="Each with its unique character, united by the WESPA experience."
+          title={t('locations.title')}
+          subtitle={t('locations.subtitle')}
         />
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -696,7 +701,7 @@ export function LocationsSection() {
                     className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium w-fit mb-4"
                     whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.3)' }}
                   >
-                    {location.vibe === 'corporate' ? 'Corporate Vibe' : 'Startup Vibe'}
+                    {location.vibe === 'corporate' ? t('locations.corporate') : t('locations.startup')}
                   </motion.span>
                   <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-200">{location.fullName}</h3>
                   <p className="text-stone-300 mb-4 flex items-center gap-2">
@@ -710,7 +715,7 @@ export function LocationsSection() {
                       className="w-fit bg-white/10 border-white/30 text-white hover:bg-white hover:text-stone-900"
                       asChild
                     >
-                      <Link href={location.id === 'green-gold' ? '/location/business-lounge' : '/location/urban-hub'}>Explore Location</Link>
+                      <Link href={location.id === 'green-gold' ? '/location/business-lounge' : '/location/urban-hub'}>{t('locations.explore')}</Link>
                     </Button>
                   </motion.div>
                 </div>
@@ -727,6 +732,7 @@ export function LocationsSection() {
 // Main Lead Form Section (Premium)
 // ============================================
 export function LeadFormSection() {
+  const { t } = useLanguage()
   return (
     <section className="section-spacing relative overflow-hidden">
       {/* Background */}
@@ -749,10 +755,10 @@ export function LeadFormSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-              Ready to elevate your work?
+              {t('leadForm.title')}
             </h2>
             <p className="text-xl text-stone-300">
-              Book a visit and let our team help you find the perfect space.
+              {t('leadForm.subtitle')}
             </p>
           </motion.div>
 
@@ -861,6 +867,7 @@ export function IdeasSection({ articles }: IdeasSectionProps) {
 // WESPA Workplace Teaser Section (Premium)
 // ============================================
 export function WorkplaceTeaserSection() {
+  const { t } = useLanguage()
   return (
     <section className="section-spacing bg-stone-900">
       <div className="container-wespa">
@@ -871,14 +878,13 @@ export function WorkplaceTeaserSection() {
             viewport={{ once: true }}
           >
             <span className="inline-block px-4 py-2 bg-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
-              Coming Soon
+              {t('workplace.comingSoon')}
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-              WESPA Workplace
+              {t('workplace.title')}
             </h2>
             <p className="text-xl text-stone-300 mb-8 leading-relaxed">
-              Our upcoming digital platform will transform how you interact with WESPA.
-              Book rooms, manage your membership, and connect with the community — all in one place.
+              {t('workplace.subtitle')}
             </p>
             <ul className="space-y-4 mb-10">
               {[
@@ -894,7 +900,7 @@ export function WorkplaceTeaserSection() {
               ))}
             </ul>
             <Button className="bg-white text-stone-900 hover:bg-stone-100" asChild>
-              <Link href="/contact">Join the waitlist</Link>
+              <Link href="/contact">{t('workplace.cta')}</Link>
             </Button>
           </motion.div>
 
@@ -919,7 +925,7 @@ export function WorkplaceTeaserSection() {
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">WESPA Workplace</h3>
-                  <p className="text-stone-400">Your digital workspace companion</p>
+                  <p className="text-stone-400">{t('workplace.tagline')}</p>
                 </div>
               </div>
             </div>
@@ -1021,6 +1027,7 @@ export function PageHero({ title, subtitle, breadcrumbs, image, children }: Page
 // Client Logos Section (Homepage)
 // ============================================
 export function ClientLogosSection() {
+  const { t } = useLanguage()
   const logos = [
     { src: '/images/clients/sony.png', alt: 'Sony' },
     { src: '/images/clients/disney.png', alt: 'Disney' },
@@ -1036,7 +1043,7 @@ export function ClientLogosSection() {
     <section className="py-12 md:py-16 border-b border-stone-200">
       <div className="container-wespa">
         <p className="text-center text-stone-500 text-sm uppercase tracking-widest mb-8">
-          Companies that call WESPA home
+          {t('clientLogos.title')}
         </p>
         <motion.div
           className="flex flex-wrap justify-center items-center gap-8 md:gap-12"

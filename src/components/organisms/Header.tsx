@@ -133,7 +133,7 @@ export function Header() {
             <div className="hidden lg:flex items-center gap-2">
               {/* Book a Visit CTA */}
               <Button variant="wespa" size="sm" asChild>
-                <Link href="/book-visit">Book a Visit</Link>
+                <Link href="/book-visit">{t('nav.bookVisit')}</Link>
               </Button>
 
               {/* Language Switcher */}
