@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Resources',
     breadcrumb: 'Ideas by WESPA',
     title: 'Resources',
     subtitle: 'Insights, research, and trends shaping the future of work. Stay informed with articles from the WESPA community.',
@@ -24,6 +25,7 @@ const content = {
     joinCommunity: 'Join the Community',
   },
   hr: {
+    pageTitle: 'Resursi',
     breadcrumb: 'WESPA ideje',
     title: 'Resursi',
     subtitle: 'Uvidi, istraživanja i trendovi koji oblikuju budućnost rada. Budite informirani s člancima iz WESPA zajednice.',
@@ -48,7 +50,7 @@ export default function ResourcesPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">

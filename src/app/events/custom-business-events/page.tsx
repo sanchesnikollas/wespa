@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Business Events',
     breadcrumb: 'Events',
     title: 'Custom Business Events',
     subtitle: 'Professional event infrastructure for conferences, panels, workshops, and corporate gatherings. 10 halls across 2 locations with capacity from 2 to 500+ people.',
@@ -37,6 +38,7 @@ const content = {
     ctaButton: 'Request a Proposal',
   },
   hr: {
+    pageTitle: 'Poslovni događaji',
     breadcrumb: 'Događanja',
     title: 'Poslovni događaji',
     subtitle: 'Profesionalna infrastruktura za konferencije, panele, radionice i korporativna okupljanja. 10 dvorana na 2 lokacije s kapacitetom od 2 do 500+ osoba.',
@@ -74,7 +76,7 @@ export default function CustomBusinessEventsPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}

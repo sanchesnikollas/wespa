@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Workspaces',
     title: 'Find Your Perfect Workspace',
     subtitle: 'From flexible hot desks to fully customizable office zones — WESPA offers workspace solutions that grow with your business.',
     workspaceTypes: [
@@ -20,6 +21,7 @@ const content = {
     bookTour: 'Book a Tour',
   },
   hr: {
+    pageTitle: 'Prostori',
     title: 'Pronađite savršen radni prostor',
     subtitle: 'Od fleksibilnih stolova do potpuno prilagodljivih uredskih zona — WESPA nudi rješenja za radne prostore koji rastu s vašim poslovanjem.',
     workspaceTypes: [
@@ -40,7 +42,7 @@ export default function WorkspacesPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">

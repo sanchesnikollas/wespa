@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'SPOT Restaurant',
     breadcrumb: 'Home / Food / SPOT',
     title: 'Business-class dining',
     subtitle: 'A premium business restaurant in the Green Gold center featuring top-tier daily menu, a la carte service and a curated wine list.',
@@ -30,6 +31,7 @@ const content = {
     backToFood: 'Back to Food',
   },
   hr: {
+    pageTitle: 'Restoran SPOT',
     breadcrumb: 'Početna / Gastronomija / SPOT',
     title: 'Gastronomija s poslovnim potpisom',
     subtitle: 'Premium restoran u Green Gold centru s vrhunskim dnevnim menijem, a la carte uslugom i probranom vinskom kartom.',
@@ -60,7 +62,7 @@ export default function SpotPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}

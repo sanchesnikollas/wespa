@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Food',
     breadcrumb: 'Home / Food',
     title: 'Gastronomy at WESPA',
     subtitle: 'Two restaurants, two experiences. From community-driven daily menus to premium fine dining — fuel your workday with culinary excellence.',
@@ -35,6 +36,7 @@ const content = {
     ctaButton: 'Book a Visit',
   },
   hr: {
+    pageTitle: 'Gastronomija',
     breadcrumb: 'Početna / Gastronomija',
     title: 'Gastronomija u WESPA',
     subtitle: 'Dva restorana, dva iskustva. Od dnevnih jelovnika zajednice do premium fine dininga — napunite radni dan gastronomskom izvrsnošću.',
@@ -70,7 +72,7 @@ export default function FoodPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}

@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Papel Restaurant',
     breadcrumb: 'Home / Food / Papel',
     title: 'The gastro hub for your workday',
     subtitle: 'A relaxed community restaurant tailored to the pace of modern business. Choose from premium daily specials and an a la carte menu made with nutrient-rich ingredients.',
@@ -30,6 +31,7 @@ const content = {
     backToFood: 'Back to Food',
   },
   hr: {
+    pageTitle: 'Restoran Papel',
     breadcrumb: 'Početna / Gastronomija / Papel',
     title: 'Gastro baza vašeg radnog dana',
     subtitle: 'Opušteni community restoran prilagođen tempu suvremenog poslovanja. Birajte između vrhunskih dnevnih i a la carte jela od nutritivno bogatih namirnica.',
@@ -60,7 +62,7 @@ export default function PapelPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}

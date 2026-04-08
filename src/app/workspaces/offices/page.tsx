@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Private Offices',
     breadcrumb: 'Workspaces',
     title: 'Beyond the standard office',
     subtitle: 'Fully managed, move-in ready offices for your team.',
@@ -17,6 +18,7 @@ const content = {
     requestQuote: 'Request a Quote',
   },
   hr: {
+    pageTitle: 'Privatni uredi',
     breadcrumb: 'Prostori',
     title: 'Vaš tim zaslužuje više od običnog ureda',
     subtitle: 'Potpuno opremljeni, odmah useljivi poslovni prostori bez operativnih briga.',
@@ -34,7 +36,7 @@ export default function OfficesPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">

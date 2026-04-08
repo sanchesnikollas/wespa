@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Grow Your Company',
     breadcrumb: 'Forge Growth Platform',
     title: 'FORGE: From Traction to Scale.',
     subtitle: 'We don\'t build MVPs; we build growth engines. The region\'s first execution-first platform for post-seed startups ready for global expansion.',
@@ -28,6 +29,7 @@ const content = {
     ctaButton: 'Apply Your Startup',
   },
   hr: {
+    pageTitle: 'Rast tvrtke',
     breadcrumb: 'Forge platforma za rast',
     title: 'FORGE: Od trakcije do skaliranja.',
     subtitle: 'Ne gradimo MVP-e, gradimo mašine za rast. Prva execution-first platforma u regiji za post-seed startupe.',
@@ -56,7 +58,7 @@ export default function GrowYourCompanyPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">

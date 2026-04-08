@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Event Spaces',
     breadcrumb: 'Events',
     title: 'Event Spaces',
     subtitle: 'Two distinctive venues in Zagreb, each offering a unique atmosphere and full-service event infrastructure for gatherings of every scale.',
@@ -58,6 +59,7 @@ const content = {
     ctaButton: 'Schedule a Visit',
   },
   hr: {
+    pageTitle: 'Prostori za događanja',
     breadcrumb: 'Događanja',
     title: 'Prostori za događanja',
     subtitle: 'Dva jedinstvena prostora u Zagrebu, svaki s posebnom atmosferom i cjelovitom infrastrukturom za događanja svakog razmjera.',
@@ -116,7 +118,7 @@ export default function EventSpacesPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}

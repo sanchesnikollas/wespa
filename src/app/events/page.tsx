@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Events',
     title: 'Your Idea, Our Stage',
     subtitle: 'From intimate private celebrations to large-scale conferences, WESPA delivers end-to-end event production in premium venues across Zagreb.',
     eventTypes: [
@@ -33,6 +34,7 @@ const content = {
     ctaButton: 'Get in Touch',
   },
   hr: {
+    pageTitle: 'Događanja',
     title: 'Vaša ideja, naša pozornica',
     subtitle: 'Od intimnih privatnih proslava do velikih konferencija, WESPA pruža cjelovitu event produkciju u premium prostorima diljem Zagreba.',
     eventTypes: [
@@ -66,7 +68,7 @@ export default function EventsPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}

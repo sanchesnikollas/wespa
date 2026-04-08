@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Locations',
     breadcrumb: 'Home / Locations',
     title: 'Our Locations',
     subtitle: 'Two distinct locations in Zagreb, each with its own character and purpose. Find the WESPA space that fits your work style.',
@@ -33,6 +34,7 @@ const content = {
     ctaButton: 'Book a Tour',
   },
   hr: {
+    pageTitle: 'Lokacije',
     breadcrumb: 'Početna / Lokacije',
     title: 'Naše lokacije',
     subtitle: 'Dvije jedinstvene lokacije u Zagrebu, svaka sa svojim karakterom i svrhom. Pronađite WESPA prostor koji odgovara vašem stilu rada.',
@@ -66,7 +68,7 @@ export default function LocationPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}

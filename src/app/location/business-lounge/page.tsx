@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Business & Lounge',
     breadcrumb: 'Home / Locations / Business & Lounge',
     title: 'WESPA Business & Lounge',
     subtitle: 'Exclusive business hub in the heart of Radnička.',
@@ -33,6 +34,7 @@ const content = {
     allLocations: 'All Locations',
   },
   hr: {
+    pageTitle: 'Business & Lounge',
     breadcrumb: 'Početna / Lokacije / Business & Lounge',
     title: 'WESPA Business & Lounge',
     subtitle: 'Ekskluzivni poslovni centar u srcu Radničke.',
@@ -66,7 +68,7 @@ export default function BusinessLoungePage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}

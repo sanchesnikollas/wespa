@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Urban Hub',
     breadcrumb: 'Home / Locations / Urban Hub',
     title: 'WESPA Spaces',
     subtitle: 'An authentic industrial setting for teams building the future.',
@@ -32,6 +33,7 @@ const content = {
     allLocations: 'All Locations',
   },
   hr: {
+    pageTitle: 'Urban Hub',
     breadcrumb: 'Početna / Lokacije / Urban Hub',
     title: 'WESPA Spaces',
     subtitle: 'Autentičan industrijski prostor za timove koji stvaraju budućnost.',
@@ -64,7 +66,7 @@ export default function UrbanHubPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}

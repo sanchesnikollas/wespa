@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Coworking',
     breadcrumb: 'Workspaces / Coworking',
     title: 'Workspace that works for you.',
     subtitle: 'Choose a plan that matches your pace. High-end infrastructure, fiber-optic internet, and a quiet, distraction-free environment.',
@@ -21,6 +22,7 @@ const content = {
     ],
   },
   hr: {
+    pageTitle: 'Coworking',
     breadcrumb: 'Prostori / Coworking',
     title: 'Workspace koji radi za tebe.',
     subtitle: 'Odaberi paket koji odgovara tvom ritmu, uz osiguranu infrastrukturu, optički internet i tiho radno okruženje.',
@@ -42,7 +44,7 @@ export default function CoworkingPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">

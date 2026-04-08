@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Special Events',
     breadcrumb: 'Events',
     title: 'Custom Special Events',
     subtitle: 'Celebrate life\'s greatest moments in style. From weddings and private parties to concerts and performances, we handle every detail so you can enjoy the occasion.',
@@ -31,6 +32,7 @@ const content = {
     ctaButton: 'Get in Touch',
   },
   hr: {
+    pageTitle: 'Posebni događaji',
     breadcrumb: 'Događanja',
     title: 'Posebni događaji',
     subtitle: 'Proslavite najveće životne trenutke sa stilom. Od vjenčanja i privatnih zabava do koncerata i nastupa, mi brinemo o svakom detalju kako biste vi uživali u prilici.',
@@ -62,7 +64,7 @@ export default function CustomSpecialEventsPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}

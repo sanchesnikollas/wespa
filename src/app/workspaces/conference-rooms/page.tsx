@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Conference Rooms',
     breadcrumb: 'Workspaces',
     title: 'WESPA Conference Rooms',
     subtitle: 'Choose a setting that matches your plans. Spaces equipped with high-end technology.',
@@ -15,6 +16,7 @@ const content = {
     bookRoom: 'Book a Conference Room',
   },
   hr: {
+    pageTitle: 'Konferencijske dvorane',
     breadcrumb: 'Prostori',
     title: 'WESPA konferencijski prostori',
     subtitle: 'Odaberite ambijent koji prati Vaše planove. Prostor opremljen vrhunskom tehnologijom.',
@@ -41,7 +43,7 @@ export default function ConferenceRoomsPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">

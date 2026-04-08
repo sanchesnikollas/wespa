@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
   en: {
+    pageTitle: 'Community',
     breadcrumb: 'Home / Community',
     title: 'More than just space. Join the community shaping the future.',
     subtitle: 'WESPA Community is the hub for innovation, business opportunities, and unforgettable experiences.',
@@ -44,6 +45,7 @@ const content = {
     ctaButton: 'Get in Touch',
   },
   hr: {
+    pageTitle: 'Zajednica',
     breadcrumb: 'Početna / Zajednica',
     title: 'Više od prostora. Pripadajte zajednici koja stvara budućnost.',
     subtitle: 'WESPA Community je središte inovacija, poslovnih prilika i nezaboravnih iskustava.',
@@ -88,7 +90,7 @@ export default function CommunityPage() {
 
   return (
     <>
-      <title>{c.title} | WESPA</title>
+      <title>{c.pageTitle} | WESPA</title>
       <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}
