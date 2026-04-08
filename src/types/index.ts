@@ -7,6 +7,7 @@
 // ============================================
 export interface NavItem {
   label: string
+  labelHr?: string
   href: string
   children?: NavItem[]
   isExternal?: boolean

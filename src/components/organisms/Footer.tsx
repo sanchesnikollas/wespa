@@ -19,10 +19,11 @@ import { useLanguage } from '@/contexts/LanguageContext'
 // ============================================
 interface FooterColumnProps {
   title: string
-  links: { label: string; href: string }[]
+  links: { label: string; labelHr?: string; href: string }[]
 }
 
 function FooterColumn({ title, links }: FooterColumnProps) {
+  const { language } = useLanguage()
   return (
     <div>
       <h3 className="text-body-sm font-semibold text-stone-900 mb-4">{title}</h3>
@@ -33,7 +34,7 @@ function FooterColumn({ title, links }: FooterColumnProps) {
               href={link.href}
               className="text-body-sm text-stone-600 hover:text-stone-900 transition-colors"
             >
-              {link.label}
+              {language === 'hr' && link.labelHr ? link.labelHr : link.label}
             </Link>
           </li>
         ))}

@@ -12,7 +12,13 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/atoms/Button'
 import { Icon, IconName } from '@/components/atoms/Icon'
+import { useLanguage } from '@/contexts/LanguageContext'
 import type { NavItem } from '@/types'
+
+function useNavLabel(item: NavItem) {
+  const { language } = useLanguage()
+  return language === 'hr' && item.labelHr ? item.labelHr : item.label
+}
 
 // ============================================
 // Desktop Navigation Link
@@ -26,6 +32,8 @@ export function NavLink({ item, className }: NavLinkProps) {
   const hasChildren = item.children && item.children.length > 0
   const [isOpen, setIsOpen] = useState(false)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const navLabel = useNavLabel(item)
+  const { language } = useLanguage()
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current)
@@ -47,7 +55,7 @@ export function NavLink({ item, className }: NavLinkProps) {
           className
         )}
       >
-        {item.label}
+        {navLabel}
       </Link>
     )
   }
@@ -70,7 +78,7 @@ export function NavLink({ item, className }: NavLinkProps) {
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
-        {item.label}
+        {navLabel}
         <Icon
           name="chevron-down"
           size="xs"
@@ -87,15 +95,18 @@ export function NavLink({ item, className }: NavLinkProps) {
             transition={{ duration: 0.15 }}
             className="absolute top-full left-0 mt-1 min-w-[200px] bg-wire-white border border-wire-200 rounded-lg shadow-elevated py-2 z-50"
           >
-            {item.children?.map((child) => (
-              <Link
-                key={child.href}
-                href={child.href}
-                className="block px-4 py-2 text-body-sm text-wire-700 hover:bg-wire-50 hover:text-wire-900 transition-colors"
-              >
-                {child.label}
-              </Link>
-            ))}
+            {item.children?.map((child) => {
+              const childLabel = language === 'hr' && child.labelHr ? child.labelHr : child.label
+              return (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  className="block px-4 py-2 text-body-sm text-wire-700 hover:bg-wire-50 hover:text-wire-900 transition-colors"
+                >
+                  {childLabel}
+                </Link>
+              )
+            })}
           </motion.div>
         )}
       </AnimatePresence>
@@ -282,6 +293,8 @@ interface MobileNavItemProps {
 function MobileNavItem({ item, onClose }: MobileNavItemProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const hasChildren = item.children && item.children.length > 0
+  const { language } = useLanguage()
+  const label = language === 'hr' && item.labelHr ? item.labelHr : item.label
 
   if (!hasChildren) {
     return (
@@ -290,7 +303,7 @@ function MobileNavItem({ item, onClose }: MobileNavItemProps) {
         onClick={onClose}
         className="block py-4 px-4 min-h-[52px] flex items-center text-lg font-medium text-stone-900 hover:bg-stone-50 rounded-xl transition-colors active:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
       >
-        {item.label}
+        {label}
       </Link>
     )
   }
@@ -304,7 +317,7 @@ function MobileNavItem({ item, onClose }: MobileNavItemProps) {
         aria-expanded={isExpanded}
         aria-controls={`submenu-${item.href}`}
       >
-        {item.label}
+        {label}
         <motion.span
           animate={{ rotate: isExpanded ? 180 : 0 }}
           transition={{ duration: 0.2 }}
@@ -339,23 +352,26 @@ function MobileNavItem({ item, onClose }: MobileNavItemProps) {
                 }
               }}
             >
-              {item.children?.map((child) => (
-                <motion.div
-                  key={child.href}
-                  variants={{
-                    hidden: { opacity: 0, x: 10 },
-                    visible: { opacity: 1, x: 0 }
-                  }}
-                >
-                  <Link
-                    href={child.href}
-                    onClick={onClose}
-                    className="block py-3 px-4 min-h-[48px] flex items-center text-base text-stone-600 hover:text-stone-900 hover:bg-stone-50 rounded-xl transition-colors active:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+              {item.children?.map((child) => {
+                const childLabel = language === 'hr' && child.labelHr ? child.labelHr : child.label
+                return (
+                  <motion.div
+                    key={child.href}
+                    variants={{
+                      hidden: { opacity: 0, x: 10 },
+                      visible: { opacity: 1, x: 0 }
+                    }}
                   >
-                    {child.label}
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      href={child.href}
+                      onClick={onClose}
+                      className="block py-3 px-4 min-h-[48px] flex items-center text-base text-stone-600 hover:text-stone-900 hover:bg-stone-50 rounded-xl transition-colors active:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+                    >
+                      {childLabel}
+                    </Link>
+                  </motion.div>
+                )
+              })}
             </motion.div>
           </motion.div>
         )}
