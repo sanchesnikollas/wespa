@@ -38,7 +38,7 @@ export function NavLink({ item, className }: NavLinkProps) {
 
   if (!hasChildren) {
     return (
-      <a
+      <Link
         href={item.href}
         className={cn(
           'text-body-sm font-medium text-wire-700',
@@ -48,7 +48,7 @@ export function NavLink({ item, className }: NavLinkProps) {
         )}
       >
         {item.label}
-      </a>
+      </Link>
     )
   }
 
@@ -88,13 +88,13 @@ export function NavLink({ item, className }: NavLinkProps) {
             className="absolute top-full left-0 mt-1 min-w-[200px] bg-wire-white border border-wire-200 rounded-lg shadow-elevated py-2 z-50"
           >
             {item.children?.map((child) => (
-              <a
+              <Link
                 key={child.href}
                 href={child.href}
                 className="block px-4 py-2 text-body-sm text-wire-700 hover:bg-wire-50 hover:text-wire-900 transition-colors"
               >
                 {child.label}
-              </a>
+              </Link>
             ))}
           </motion.div>
         )}
@@ -239,14 +239,14 @@ export function MobileNav({ items, secondaryItems, isOpen, onClose }: MobileNavP
                   transition={{ delay: 0.3 }}
                 >
                   {secondaryItems.map((item) => (
-                    <a
+                    <Link
                       key={item.href}
                       href={item.href}
                       onClick={onClose}
                       className="block py-3 px-4 min-h-[48px] flex items-center text-base text-stone-600 hover:text-stone-900 hover:bg-stone-50 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                 </motion.div>
               </>
@@ -285,13 +285,13 @@ function MobileNavItem({ item, onClose }: MobileNavItemProps) {
 
   if (!hasChildren) {
     return (
-      <a
+      <Link
         href={item.href}
         onClick={onClose}
         className="block py-4 px-4 min-h-[52px] flex items-center text-lg font-medium text-stone-900 hover:bg-stone-50 rounded-xl transition-colors active:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
       >
         {item.label}
-      </a>
+      </Link>
     )
   }
 
@@ -340,18 +340,21 @@ function MobileNavItem({ item, onClose }: MobileNavItemProps) {
               }}
             >
               {item.children?.map((child) => (
-                <motion.a
+                <motion.div
                   key={child.href}
-                  href={child.href}
-                  onClick={onClose}
-                  className="block py-3 px-4 min-h-[48px] flex items-center text-base text-stone-600 hover:text-stone-900 hover:bg-stone-50 rounded-xl transition-colors active:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
                   variants={{
                     hidden: { opacity: 0, x: 10 },
                     visible: { opacity: 1, x: 0 }
                   }}
                 >
-                  {child.label}
-                </motion.a>
+                  <Link
+                    href={child.href}
+                    onClick={onClose}
+                    className="block py-3 px-4 min-h-[48px] flex items-center text-base text-stone-600 hover:text-stone-900 hover:bg-stone-50 rounded-xl transition-colors active:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+                  >
+                    {child.label}
+                  </Link>
+                </motion.div>
               ))}
             </motion.div>
           </motion.div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, useCallback, ReactNode } from 'react'
+import { createContext, useContext, useState, useCallback, useEffect, ReactNode } from 'react'
 import { translations, Language, TranslationKey } from '@/i18n/translations'
 
 interface LanguageContextType {
@@ -12,8 +12,31 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
+function getInitialLanguage(): Language {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('wespa-lang')
+    if (saved === 'en' || saved === 'hr') return saved
+  }
+  return 'hr'
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('hr')
+  const [language, setLanguageState] = useState<Language>('hr')
+
+  // Load saved language on mount
+  useEffect(() => {
+    const saved = localStorage.getItem('wespa-lang')
+    if (saved === 'en' || saved === 'hr') {
+      setLanguageState(saved)
+    }
+  }, [])
+
+  const setLanguage = useCallback((lang: Language) => {
+    setLanguageState(lang)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('wespa-lang', lang)
+    }
+  }, [])
 
   const t = useCallback((key: TranslationKey): string => {
     const keys = key.split('.') as string[]
@@ -40,8 +63,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [language])
 
   const toggleLanguage = useCallback(() => {
-    setLanguage(prev => prev === 'en' ? 'hr' : 'en')
-  }, [])
+    setLanguage(language === 'en' ? 'hr' : 'en')
+  }, [language, setLanguage])
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t, toggleLanguage }}>
