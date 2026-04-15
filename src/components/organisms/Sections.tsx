@@ -480,6 +480,7 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
       clientRole: 'SaltPay',
       companyName: 'SaltPay',
       testimonial: 'A hive of a million ideas, and the hospitality is top-level.',
+      clientImage: '/images/testimonials/frano.jpeg',
     },
     {
       id: '2',
@@ -488,6 +489,7 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
       clientRole: 'Felloz',
       companyName: 'Felloz',
       testimonial: 'Incredible design and people who genuinely care.',
+      clientImage: '/images/testimonials/raphael.jpeg',
     },
     {
       id: '3',
@@ -496,6 +498,7 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
       clientRole: 'Navigo Sport Travel',
       companyName: 'Navigo Sport Travel',
       testimonial: 'The space leaves a special impression on our partners.',
+      clientImage: '/images/testimonials/timothej.jpeg',
     },
   ]
 
@@ -543,11 +546,22 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
                 </blockquote>
                 <div className="flex items-center gap-4">
                   <motion.div
-                    className="w-12 h-12 rounded-full bg-stone-700 flex items-center justify-center text-white font-semibold"
+                    className="relative w-14 h-14 rounded-full overflow-hidden bg-stone-700 flex items-center justify-center text-white font-semibold shrink-0 border-2 border-white/10"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.2 }}
                   >
-                    {story.clientName.charAt(0)}
+                    {story.clientImage ? (
+                      <Image
+                        src={story.clientImage}
+                        alt={story.clientName}
+                        fill
+                        sizes="56px"
+                        className="object-cover"
+                        style={{ objectPosition: '30% center' }}
+                      />
+                    ) : (
+                      story.clientName.charAt(0)
+                    )}
                   </motion.div>
                   <div>
                     <div className="font-semibold text-white">{story.clientName}</div>

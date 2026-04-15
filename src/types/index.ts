@@ -163,6 +163,7 @@ export interface ClientStory {
   clientRole?: string
   companyName: string
   companyLogo?: string
+  clientImage?: string
   testimonial: string
   fullStory?: string
   image?: string
