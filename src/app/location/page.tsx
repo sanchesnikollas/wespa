@@ -15,7 +15,7 @@ const content = {
       {
         title: 'Business & Lounge',
         subtitle: 'Green Gold',
-        address: 'Radnicka cesta 52, Zagreb',
+        address: 'Radnička cesta 50, Zagreb',
         description: 'A premium business center with exclusive offices and a sophisticated atmosphere. Home to Papel restaurant and the WESPA lounge experience. Designed for established businesses and professionals who demand excellence.',
         highlights: ['Premium Offices', 'Papel Restaurant', 'Executive Lounge', 'Meeting Rooms'],
         href: '/location/business-lounge',
@@ -23,7 +23,7 @@ const content = {
       {
         title: 'Urban Hub',
         subtitle: 'Zavrtnica',
-        address: 'Zavrtnica 17, Zagreb',
+        address: 'Heinzelova ulica 60, Zagreb',
         description: 'Industrial charm meets modern innovation. A startup hub and coworking space with SPOT restaurant on-site. Built for creative teams, entrepreneurs, and the WESPA community at large.',
         highlights: ['Coworking Spaces', 'SPOT Restaurant', 'Startup Hub', 'Creative Community'],
         href: '/location/urban-hub',
@@ -42,7 +42,7 @@ const content = {
       {
         title: 'Business & Lounge',
         subtitle: 'Green Gold',
-        address: 'Radnička cesta 52, Zagreb',
+        address: 'Radnička cesta 50, Zagreb',
         description: 'Premium poslovni centar s ekskluzivnim uredima i sofisticiranom atmosferom. Dom restorana Papel i WESPA lounge iskustva. Dizajniran za etablirane tvrtke i profesionalce koji traže izvrsnost.',
         highlights: ['Premium uredi', 'Restoran Papel', 'Izvršni lounge', 'Sobe za sastanke'],
         href: '/location/business-lounge',
@@ -50,7 +50,7 @@ const content = {
       {
         title: 'Urban Hub',
         subtitle: 'Zavrtnica',
-        address: 'Zavrtnica 17, Zagreb',
+        address: 'Heinzelova ulica 60, Zagreb',
         description: 'Industrijski šarm susreće modernu inovaciju. Startup hub i coworking prostor s restoranom SPOT na lokaciji. Izgrađen za kreativne timove, poduzetnike i širu WESPA zajednicu.',
         highlights: ['Coworking prostori', 'Restoran SPOT', 'Startup hub', 'Kreativna zajednica'],
         href: '/location/urban-hub',

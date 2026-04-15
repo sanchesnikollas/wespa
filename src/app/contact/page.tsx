@@ -6,6 +6,7 @@
 // ============================================
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { PageHero } from '@/components/organisms/Sections'
 import { ContactForm } from '@/components/molecules/Form'
 import { Icon, IconName } from '@/components/atoms/Icon'
@@ -176,12 +177,16 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                {/* Map placeholder */}
-                <div className="aspect-video bg-wire-200 flex items-center justify-center">
-                  <div className="text-center text-wire-400">
-                    <Icon name="map-pin" size="xl" className="mx-auto mb-2" />
-                    <span className="text-body-sm">Map for {location.fullName}</span>
-                  </div>
+                {/* Location hero image */}
+                <div className="relative aspect-video overflow-hidden">
+                  <Image
+                    src={location.image}
+                    alt={location.fullName}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent" />
                 </div>
 
                 {/* Info */}

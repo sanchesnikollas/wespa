@@ -34,9 +34,9 @@ export const translations = {
     // Hero Section
     hero: {
       tagline: 'Work. Eat. Socialize. Play. Anytime.',
-      title: 'A space built for big ideas.',
-      titleHighlight: '',
-      subtitle: 'Experience total business flexibility in the heart of Zagreb. From premium offices and inspiring coworking to event halls, restaurants and relaxation zones. WESPA is where serious business meets creative atmosphere.',
+      title: 'More than a workspace.',
+      titleHighlight: 'Where WESPA connects and creates.',
+      subtitle: 'From dedicated offices to dynamic event venues, we create environments that inspire success. Two premium locations in Zagreb, one community for creators, innovators and leaders.',
       cta: 'Book a Visit',
       ctaSecondary: 'Explore Spaces',
       findSpace: 'Find your space',
@@ -62,8 +62,8 @@ export const translations = {
     },
     // Features Section
     features: {
-      title: 'Amenities designed for modern business.',
-      subtitle: 'Everything you need for productive work, exceptional hospitality, and memorable events.',
+      title: 'Why Choose WESPA?',
+      subtitle: 'All services, one price. Everything you need for productive work, exceptional hospitality, and memorable events — under one roof.',
       events: {
         title: 'Events & Conferences',
         description: 'From small workshops to conferences for 180 people, fully equipped.',
@@ -99,8 +99,8 @@ export const translations = {
     },
     // Testimonials
     testimonials: {
-      title: 'What our members say.',
-      subtitle: 'Join hundreds of professionals who\'ve made WESPA their workspace home.',
+      title: 'Meet our current residents.',
+      subtitle: 'A community of creators, innovators and leaders who made WESPA their workspace home.',
       trustedBy: 'Trusted by industry leaders',
     },
     // Pain Points / Personas
@@ -311,9 +311,9 @@ export const translations = {
     // Hero Section
     hero: {
       tagline: 'Radi. Jedi. Druži se. Igraj. Bilo kada.',
-      title: 'Prostor stvoren za velike ideje.',
-      titleHighlight: '',
-      subtitle: 'Doživite potpunu poslovnu fleksibilnost u srcu Zagreba. Od premium ureda i inspirativnog coworkinga, do dvorana za evente i zone za opuštanje. WESPA je mjesto za ozbiljan posao u kreativnoj atmosferi.',
+      title: 'Više od radnog prostora.',
+      titleHighlight: 'Mjesto gdje WESPA povezuje i stvara.',
+      subtitle: 'Od privatnih ureda do dinamičnih dvorana za događanja — stvaramo okruženja koja potiču uspjeh. Dvije premium lokacije u Zagrebu, jedna zajednica kreatora, inovatora i lidera.',
       cta: 'Zakažite posjet',
       ctaSecondary: 'Istražite prostore',
       findSpace: 'Pronađite svoj prostor',
@@ -339,8 +339,8 @@ export const translations = {
     },
     // Features Section
     features: {
-      title: 'Sadržaj prilagođen modernom poslovanju.',
-      subtitle: 'Sve što vam treba za produktivan rad, iznimno ugostiteljstvo i nezaboravne događaje.',
+      title: 'Zašto odabrati WESPU?',
+      subtitle: 'Sve usluge, jedna cijena. Sve što vam treba za produktivan rad, iznimno ugostiteljstvo i nezaboravne događaje — pod jednim krovom.',
       events: {
         title: 'Događanja i konferencije',
         description: 'Od malih radionica do konferencija za 180 ljudi, potpuno opremljeno.',
@@ -376,8 +376,8 @@ export const translations = {
     },
     // Testimonials
     testimonials: {
-      title: 'Što kažu naši stanari.',
-      subtitle: 'Pridružite se stotinama profesionalaca koji su WESPA učinili svojim radnim domom.',
+      title: 'Upoznajte naše stanare.',
+      subtitle: 'Zajednica kreatora, inovatora i lidera koji su WESPU učinili svojim radnim domom.',
       trustedBy: 'Povjerenje vodećih u industriji',
     },
     // Pain Points / Personas

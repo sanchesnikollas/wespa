@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Locations',
   description:
-    'WESPA operates two premium locations in Zagreb: Business & Lounge on Radnička cesta 52 and Urban Hub on Zavrtnica 17. Parking, public transit, and direct highway access.',
+    'WESPA operates two premium locations in Zagreb: Business & Lounge on Radnička cesta 50 and Urban Hub on Heinzelova ulica 60. Parking, public transit, and direct highway access.',
   keywords: [
     'WESPA locations',
     'wespa lokacije',

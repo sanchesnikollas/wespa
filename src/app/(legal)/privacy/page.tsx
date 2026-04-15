@@ -91,7 +91,7 @@ export default function PrivacyPage() {
               </p>
               <p className="text-stone-600">
                 <strong>WESPA</strong><br />
-                Radnička cesta 52<br />
+                Radnička cesta 50<br />
                 10000 Zagreb, Croatia<br />
                 Email: privacy@wespa.hr<br />
                 Phone: +385 1 234 5678

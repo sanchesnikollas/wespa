@@ -229,16 +229,16 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                name: 'WESPA Business',
-                address: 'Radnička cesta 52, Zagreb',
-                description: 'Our flagship location featuring private offices, coworking spaces, and the renowned Papel restaurant.',
-                image: '/images/spaces/urban-hub-1.jpg',
+                name: 'WESPA Business & Lounge',
+                address: 'Radnička cesta 50, Zagreb',
+                description: 'Our flagship in partnership with Green Gold featuring private offices, coworking, meeting rooms, the Papel restaurant, and a premium lounge with cocktail and cigar room.',
+                image: '/images/spaces/lounge-1.jpg',
               },
               {
-                name: 'WESPA Lounge',
-                address: 'Radnička cesta 47, Zagreb',
-                description: 'A more intimate setting perfect for creative professionals, featuring SPOT restaurant and event spaces.',
-                image: '/images/spaces/lounge-1.jpg',
+                name: 'WESPA Spaces — Urban Hub',
+                address: 'Heinzelova ulica 60, Zagreb',
+                description: 'Dynamic coworking hub for startups, freelancers, and growing teams with open collaborative spaces, SPOT restaurant, and event venues.',
+                image: '/images/spaces/urban-hub-1.jpg',
               },
             ].map((location, index) => (
               <motion.div
