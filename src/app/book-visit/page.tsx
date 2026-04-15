@@ -14,7 +14,7 @@ import { CardLocation } from '@/components/molecules/Card'
 import { Button } from '@/components/atoms/Button'
 import { Icon } from '@/components/atoms/Icon'
 import { Tag } from '@/components/atoms/Tag'
-import { locations } from '@/config/site'
+import { locations, siteConfig } from '@/config/site'
 
 // ============================================
 // What to Expect Section
@@ -222,11 +222,11 @@ export default function BookVisitPage() {
               </p>
             </div>
             <div className="flex gap-3">
-              <Button variant="secondary" leftIcon={<Icon name="phone" size="sm" />}>
-                Call Us
+              <Button variant="secondary" leftIcon={<Icon name="phone" size="sm" />} asChild>
+                <a href={`tel:${siteConfig.contact.sales.phone.replace(/\s/g, '')}`}>Call Us</a>
               </Button>
-              <Button variant="secondary" leftIcon={<Icon name="mail" size="sm" />}>
-                Email Us
+              <Button variant="secondary" leftIcon={<Icon name="mail" size="sm" />} asChild>
+                <a href={`mailto:${siteConfig.contact.sales.email}`}>Email Us</a>
               </Button>
             </div>
           </div>

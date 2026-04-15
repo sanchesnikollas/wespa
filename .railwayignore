@@ -1,4 +1,10 @@
 Estrutura, conteudo review/
+SPACES/
+STAGE/
+HOSPITALITY/
 .next/
 node_modules/
 .git/
+*.log
+.DS_Store
+tsconfig.tsbuildinfo

@@ -129,6 +129,7 @@ export default function FranchisePage() {
                   size="lg"
                   className="bg-wire-white text-wire-900 hover:bg-wire-100"
                   rightIcon={<Icon name="download" size="sm" />}
+                  onClick={() => document.getElementById('franchise-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Download Franchise Deck
                 </Button>
@@ -273,6 +274,7 @@ export default function FranchisePage() {
                   size="lg"
                   className="mt-8"
                   rightIcon={<Icon name="download" size="sm" />}
+                  onClick={() => document.getElementById('franchise-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Download Full Details
                 </Button>

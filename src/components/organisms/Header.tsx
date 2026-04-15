@@ -203,15 +203,30 @@ export function Header() {
 
             <nav className="px-6 py-8 space-y-2">
               {mainNavigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-between py-4 border-b border-stone-100 text-lg font-semibold text-stone-900 hover:text-wespa-red transition-colors"
-                >
-                  <span>{language === 'hr' ? item.labelHr ?? item.label : item.label}</span>
-                  <Icon name="chevron-right" size="sm" className="text-stone-400" />
-                </Link>
+                <div key={item.href} className="border-b border-stone-100 pb-2">
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center justify-between py-4 text-lg font-semibold text-stone-900 hover:text-wespa-red transition-colors"
+                  >
+                    <span>{language === 'hr' ? item.labelHr ?? item.label : item.label}</span>
+                    <Icon name="chevron-right" size="sm" className="text-stone-400" />
+                  </Link>
+                  {item.children && item.children.length > 0 && (
+                    <div className="pl-4 space-y-1 pb-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="flex items-center py-2 text-sm text-stone-600 hover:text-wespa-red transition-colors"
+                        >
+                          {language === 'hr' ? child.labelHr ?? child.label : child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               {secondaryNavigation.map((item) => (
                 <Link

@@ -16,6 +16,7 @@ export const mainNavigation: NavItem[] = [
       { label: 'Offices', labelHr: 'Uredi', href: '/workspaces/offices' },
       { label: 'Custom Office Zones', labelHr: 'Prilagođene zone', href: '/workspaces/custom-office-zones' },
       { label: 'Conference Rooms', labelHr: 'Konferencijske dvorane', href: '/workspaces/conference-rooms' },
+      { label: 'Virtual Office', labelHr: 'Virtualna adresa', href: '/workspaces/virtual-office' },
     ],
   },
   {
@@ -76,6 +77,7 @@ export const footerNavigation = {
     { label: 'Offices', labelHr: 'Uredi', href: '/workspaces/offices' },
     { label: 'Custom Office Zones', labelHr: 'Prilagođene zone', href: '/workspaces/custom-office-zones' },
     { label: 'Conference Rooms', labelHr: 'Konferencijske dvorane', href: '/workspaces/conference-rooms' },
+    { label: 'Virtual Office', labelHr: 'Virtualna adresa', href: '/workspaces/virtual-office' },
   ],
   food: [
     { label: 'Papel', labelHr: 'Papel', href: '/food/papel' },
