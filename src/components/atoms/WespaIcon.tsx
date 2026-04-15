@@ -3,65 +3,81 @@ import { cn } from '@/lib/utils'
 
 /**
  * WESPA Brand Icon Catalog
- * Maps semantic names to icon files
+ * Maps semantic names to icon files.
+ * Paths are relative to /public/images/ — accepts both "icones/xxx" (legacy Artboards)
+ * and "wespa-icons/xxx" (official icons from wespa.hr).
  */
 export const WESPA_ICONS = {
-  // Core Actions
-  check: 'Artboard 1@3x.png',
-  'document-stack': 'Artboard 2@3x.png',
-  verified: 'Artboard 3@3x.png',
+  // Core Actions (legacy brand Artboards)
+  check: 'icones/Artboard 1@3x.png',
+  'document-stack': 'icones/Artboard 2@3x.png',
+  verified: 'icones/Artboard 3@3x.png',
 
   // Spaces
-  'private-office': 'Artboard 4@3x.png',
-  door: 'Artboard 13@3x.png',
+  'private-office': 'icones/Artboard 4@3x.png',
+  door: 'icones/Artboard 13@3x.png',
 
   // Services
-  hospitality: 'Artboard 5@3x.png',
-  concierge: 'Artboard 5@3x.png',
-  phone: 'Artboard 6@3x.png',
-  contact: 'Artboard 6@3x.png',
+  hospitality: 'icones/Artboard 5@3x.png',
+  concierge: 'icones/Artboard 5@3x.png',
+  phone: 'icones/Artboard 6@3x.png',
+  contact: 'icones/Artboard 6@3x.png',
 
   // Location & Navigation
-  location: 'Artboard 7@3x.png',
-  pin: 'Artboard 7@3x.png',
+  location: 'icones/Artboard 7@3x.png',
+  pin: 'icones/Artboard 7@3x.png',
 
   // Documents & Business
-  document: 'Artboard 8@3x.png',
-  contract: 'Artboard 8@3x.png',
+  document: 'icones/Artboard 8@3x.png',
+  contract: 'icones/Artboard 8@3x.png',
 
   // Events & Stage
-  stage: 'Artboard 9@3x.png',
-  events: 'Artboard 9@3x.png',
-  auditorium: 'Artboard 9@3x.png',
+  stage: 'icones/Artboard 9@3x.png',
+  events: 'icones/Artboard 9@3x.png',
+  auditorium: 'icones/Artboard 9@3x.png',
 
   // Design & Architecture
-  design: 'Artboard 10@3x.png',
-  architecture: 'Artboard 10@3x.png',
-  ruler: 'Artboard 10@3x.png',
+  design: 'icones/Artboard 10@3x.png',
+  architecture: 'icones/Artboard 10@3x.png',
+  ruler: 'icones/Artboard 10@3x.png',
 
   // Features
-  flexibility: 'Artboard 11@3x.png',
-  balance: 'Artboard 11@3x.png',
+  flexibility: 'icones/Artboard 11@3x.png',
+  balance: 'icones/Artboard 11@3x.png',
 
   // Technology
-  wifi: 'Artboard 12@3x.png',
-  connectivity: 'Artboard 12@3x.png',
+  wifi: 'icones/Artboard 12@3x.png',
+  connectivity: 'icones/Artboard 12@3x.png',
 
   // Amenities
-  printer: 'Artboard 16@3x.png',
-  amenities: 'Artboard 16@3x.png',
+  printer: 'icones/Artboard 16@3x.png',
+  amenities: 'icones/Artboard 16@3x.png',
 
   // Meeting & Presentation
-  meeting: 'Artboard 20@3x.png',
-  presentation: 'Artboard 20@3x.png',
-  screen: 'Artboard 20@3x.png',
+  meeting: 'icones/Artboard 20@3x.png',
+  presentation: 'icones/Artboard 20@3x.png',
+  screen: 'icones/Artboard 20@3x.png',
 
   // Decorative dots
-  'dot-single': 'Artboard 14@3x.png',
-  'dot-double': 'Artboard 15@3x.png',
-  'dot-full': 'Artboard 17@3x.png',
-  'dot-colon': 'Artboard 18@3x.png',
-  'dot-notch': 'Artboard 19@3x.png',
+  'dot-single': 'icones/Artboard 14@3x.png',
+  'dot-double': 'icones/Artboard 15@3x.png',
+  'dot-full': 'icones/Artboard 17@3x.png',
+  'dot-colon': 'icones/Artboard 18@3x.png',
+  'dot-notch': 'icones/Artboard 19@3x.png',
+
+  // Official wespa.hr literal icons (from the live site)
+  'parking': 'wespa-icons/parking.png',
+  'pet-friendly': 'wespa-icons/dog-friendly.png',
+  'ergonomic-chair': 'wespa-icons/office-chair.png',
+  'lounge-chair': 'wespa-icons/lounge.png',
+  'cigar-lounge': 'wespa-icons/tobacco.png',
+  'meditation': 'wespa-icons/relax-area.png',
+  'food-tray': 'wespa-icons/tray.png',
+  'vending-machine': 'wespa-icons/vending-machine.png',
+  'phone-booth': 'wespa-icons/phone-booth.png',
+  'conference-podium': 'wespa-icons/conference-1.png',
+  'meeting-table': 'wespa-icons/meeting-rooms.png',
+  'one-price': 'wespa-icons/one-price.png',
 } as const
 
 export type WespaIconName = keyof typeof WESPA_ICONS
@@ -117,7 +133,7 @@ export function WespaIcon({
 
   return (
     <Image
-      src={`/images/icones/${iconFile}`}
+      src={`/images/${iconFile}`}
       alt={alt || name}
       width={pixelSize}
       height={pixelSize}
@@ -162,7 +178,7 @@ export function WespaIconCircle({
       style={{ width: containerSize, height: containerSize }}
     >
       <Image
-        src={`/images/icones/${iconFile}`}
+        src={`/images/${iconFile}`}
         alt={alt || name}
         width={iconSize}
         height={iconSize}

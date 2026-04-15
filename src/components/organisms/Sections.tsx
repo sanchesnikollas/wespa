@@ -342,56 +342,56 @@ export function FeaturesSection() {
   const features = [
     {
       id: 'events',
-      icon: 'stage' as WespaIconName,
+      icon: 'conference-podium' as WespaIconName,
       image: '/images/events/business/business-event-1.jpg',
       title: t('features.events.title'),
       description: t('features.events.description'),
     },
     {
       id: 'lounge',
-      icon: 'hospitality' as WespaIconName,
+      icon: 'lounge-chair' as WespaIconName,
       image: '/images/spaces/lounge-1.jpg',
       title: t('features.lounge.title'),
       description: t('features.lounge.description'),
     },
     {
       id: 'gastro',
-      icon: 'hospitality' as WespaIconName,
+      icon: 'food-tray' as WespaIconName,
       image: '/images/food/papel/papel-1.jpg',
       title: t('features.gastro.title'),
       description: t('features.gastro.description'),
     },
     {
       id: 'podcast',
-      icon: 'presentation' as WespaIconName,
+      icon: 'phone-booth' as WespaIconName,
       image: '/images/spaces/urban-hub-1.jpg',
       title: t('features.podcast.title'),
       description: t('features.podcast.description'),
     },
     {
       id: 'focus-zones',
-      icon: 'private-office' as WespaIconName,
+      icon: 'ergonomic-chair' as WespaIconName,
       image: '/images/workspaces/offices/office-4.jpg',
       title: t('features.focusZones.title'),
       description: t('features.focusZones.description'),
     },
     {
       id: 'relax-zones',
-      icon: 'flexibility' as WespaIconName,
+      icon: 'meditation' as WespaIconName,
       image: '/images/spaces/lounge-2.jpg',
       title: t('features.relaxZones.title'),
       description: t('features.relaxZones.description'),
     },
     {
       id: 'pet-friendly',
-      icon: 'amenities' as WespaIconName,
+      icon: 'pet-friendly' as WespaIconName,
       image: '/images/workspaces/coworking/coworking-5.jpg',
       title: t('features.petFriendly.title'),
       description: t('features.petFriendly.description'),
     },
     {
       id: 'parking',
-      icon: 'door' as WespaIconName,
+      icon: 'parking' as WespaIconName,
       image: '/images/spaces/coworking-2.jpg',
       title: t('features.parking.title'),
       description: t('features.parking.description'),
@@ -442,7 +442,11 @@ export function FeaturesSection() {
                   whileHover={{ scale: 1.1, rotate: 3 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <WespaIcon name={feature.icon} size="xl" />
+                  <WespaIcon
+                    name={feature.icon}
+                    size="xl"
+                    className="brightness-0 invert"
+                  />
                 </motion.div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-amber-400 transition-colors duration-200">
                   {feature.title}
