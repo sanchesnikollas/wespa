@@ -112,6 +112,10 @@ export const coworkingPlans: CoworkingPlan[] = [
       daily: 30,
       currency: 'EUR',
     },
+    image: {
+      src: '/images/workspaces/coworking/coworking-1.jpg',
+      alt: 'FlyDesk flexible coworking at WESPA',
+    },
   },
   {
     id: 'flydesk-lunch',
@@ -130,6 +134,10 @@ export const coworkingPlans: CoworkingPlan[] = [
     pricing: {
       daily: 35,
       currency: 'EUR',
+    },
+    image: {
+      src: '/images/workspaces/coworking/coworking-4.jpg',
+      alt: 'FlyDesk with lunch included at WESPA',
     },
   },
   {
@@ -152,6 +160,10 @@ export const coworkingPlans: CoworkingPlan[] = [
       currency: 'EUR',
     },
     popular: true,
+    image: {
+      src: '/images/workspaces/coworking/coworking-7.jpg',
+      alt: 'OwnDesk dedicated workstation at WESPA',
+    },
   },
   {
     id: 'officedesk',
@@ -171,6 +183,10 @@ export const coworkingPlans: CoworkingPlan[] = [
     pricing: {
       monthly: 226,
       currency: 'EUR',
+    },
+    image: {
+      src: '/images/workspaces/offices/office-2.jpg',
+      alt: 'OfficeDesk private office at WESPA',
     },
   },
 ]

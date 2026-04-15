@@ -248,19 +248,33 @@ export function CardPlan({ plan, onClick }: CardPlanProps) {
   return (
     <CardBase
       className={cn(
-        'p-6 relative',
+        'relative overflow-hidden flex flex-col',
         plan.popular && 'ring-2 ring-wire-900'
       )}
     >
       {/* Popular badge */}
       {plan.popular && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+        <div className="absolute top-4 right-4 z-10">
           <Tag variant="solid" color="primary" size="sm">
             Most Popular
           </Tag>
         </div>
       )}
 
+      {/* Plan image */}
+      {plan.image && (
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-wire-100">
+          <Image
+            src={plan.image.src}
+            alt={plan.image.alt}
+            fill
+            sizes="(max-width: 768px) 100vw, 25vw"
+            className="object-cover"
+          />
+        </div>
+      )}
+
+      <div className="p-6 flex flex-col flex-1">
       {/* Plan name */}
       <h3 className="text-heading-lg font-semibold text-wire-900 mb-1">
         {plan.name}
@@ -292,9 +306,11 @@ export function CardPlan({ plan, onClick }: CardPlanProps) {
         variant={plan.popular ? 'primary' : 'secondary'}
         fullWidth
         onClick={onClick}
+        className="mt-auto"
       >
         Learn More
       </Button>
+      </div>
     </CardBase>
   )
 }

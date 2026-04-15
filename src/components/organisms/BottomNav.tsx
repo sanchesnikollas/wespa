@@ -11,7 +11,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Icon, IconName } from '@/components/atoms/Icon'
+import { Button } from '@/components/atoms/Button'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { siteConfig } from '@/config/site'
 
 // ============================================
 // Types
@@ -63,10 +65,12 @@ const navItems: NavItemConfig[] = [
 // More Menu Items
 // ============================================
 const moreMenuItems = [
-  { label: 'Food', labelHr: 'Gastronomija', href: '/food', icon: 'utensils' as IconName },
   { label: 'Events', labelHr: 'Događanja', href: '/events', icon: 'mic' as IconName },
+  { label: 'Food', labelHr: 'Gastronomija', href: '/food', icon: 'utensils' as IconName },
   { label: 'Location', labelHr: 'Lokacija', href: '/location', icon: 'map-pin' as IconName },
   { label: 'Community', labelHr: 'Zajednica', href: '/community', icon: 'users' as IconName },
+  { label: 'Resources', labelHr: 'Resursi', href: '/resources', icon: 'file' as IconName },
+  { label: 'About', labelHr: 'O nama', href: '/about', icon: 'building' as IconName },
   { label: 'Contact', labelHr: 'Kontakt', href: '/contact', icon: 'mail' as IconName },
 ]
 
@@ -115,7 +119,7 @@ export function BottomNav() {
 
   return (
     <>
-      {/* More Menu Overlay */}
+      {/* More Menu Full-Screen Drawer */}
       <AnimatePresence>
         {isMoreMenuOpen && (
           <>
@@ -123,34 +127,68 @@ export function BottomNav() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setIsMoreMenuOpen(false)}
             />
             <motion.div
-              initial={{ y: '100%', opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: '100%', opacity: 0 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="fixed bottom-20 left-4 right-4 bg-white rounded-2xl shadow-2xl z-50 lg:hidden overflow-hidden"
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+              className="fixed bottom-0 left-0 right-0 max-h-[85vh] bg-white rounded-t-3xl shadow-2xl z-50 lg:hidden overflow-hidden flex flex-col"
             >
-              <div className="p-2">
-                {moreMenuItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsMoreMenuOpen(false)}
-                    className={cn(
-                      'flex items-center gap-4 px-4 py-4 rounded-xl transition-colors',
-                      'hover:bg-gray-100 active:bg-gray-200',
-                      isActive(item.href) && 'bg-red-50 text-wespa-red'
-                    )}
-                  >
-                    <Icon name={item.icon} size="md" />
-                    <span className="text-base font-medium">
-                      {language === 'hr' ? item.labelHr : item.label}
-                    </span>
+              <div className="flex items-center justify-between px-6 pt-5 pb-3 border-b border-stone-100">
+                <h2 className="text-lg font-bold text-stone-900">
+                  {language === 'hr' ? 'Izbornik' : 'Menu'}
+                </h2>
+                <button
+                  type="button"
+                  onClick={() => setIsMoreMenuOpen(false)}
+                  className="flex items-center justify-center w-10 h-10 rounded-full text-stone-600 hover:bg-stone-100"
+                  aria-label="Close menu"
+                >
+                  <Icon name="x" size="md" />
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto px-4 py-4">
+                <div className="grid grid-cols-2 gap-3">
+                  {moreMenuItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setIsMoreMenuOpen(false)}
+                      className={cn(
+                        'flex flex-col items-start gap-2 p-4 rounded-2xl transition-colors border border-stone-100',
+                        'hover:bg-stone-50 active:bg-stone-100',
+                        isActive(item.href) && 'bg-red-50 border-wespa-red/30 text-wespa-red'
+                      )}
+                    >
+                      <Icon name={item.icon} size="md" />
+                      <span className="text-sm font-semibold">
+                        {language === 'hr' ? item.labelHr : item.label}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div
+                className="px-6 pt-2 pb-6 border-t border-stone-100 space-y-2"
+                style={{ paddingBottom: 'max(env(safe-area-inset-bottom), 16px)' }}
+              >
+                <Button variant="wespa" size="lg" fullWidth asChild>
+                  <Link href="/book-visit" onClick={() => setIsMoreMenuOpen(false)}>
+                    {language === 'hr' ? 'Rezerviraj posjet' : 'Book a Visit'}
                   </Link>
-                ))}
+                </Button>
+                <a
+                  href={`tel:${siteConfig.contact.sales.phone.replace(/\s/g, '')}`}
+                  className="flex items-center justify-center gap-2 py-3 text-stone-700 font-medium hover:text-wespa-red transition-colors"
+                >
+                  <Icon name="phone" size="sm" />
+                  {siteConfig.contact.sales.phone}
+                </a>
               </div>
             </motion.div>
           </>

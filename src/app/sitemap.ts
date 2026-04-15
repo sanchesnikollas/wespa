@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/workspaces/offices', priority: 0.8, changeFrequency: 'weekly' as const },
     { url: '/workspaces/custom-office-zones', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/workspaces/conference-rooms', priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: '/workspaces/virtual-office', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/events', priority: 0.8, changeFrequency: 'weekly' as const },
     { url: '/events/custom-special-events', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/events/custom-business-events', priority: 0.7, changeFrequency: 'monthly' as const },

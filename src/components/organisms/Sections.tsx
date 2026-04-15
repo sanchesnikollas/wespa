@@ -343,48 +343,56 @@ export function FeaturesSection() {
     {
       id: 'events',
       icon: 'stage' as WespaIconName,
+      image: '/images/events/business/business-event-1.jpg',
       title: t('features.events.title'),
       description: t('features.events.description'),
     },
     {
       id: 'lounge',
       icon: 'hospitality' as WespaIconName,
+      image: '/images/spaces/lounge-1.jpg',
       title: t('features.lounge.title'),
       description: t('features.lounge.description'),
     },
     {
       id: 'gastro',
       icon: 'hospitality' as WespaIconName,
+      image: '/images/food/papel/papel-1.jpg',
       title: t('features.gastro.title'),
       description: t('features.gastro.description'),
     },
     {
       id: 'podcast',
       icon: 'presentation' as WespaIconName,
+      image: '/images/spaces/urban-hub-1.jpg',
       title: t('features.podcast.title'),
       description: t('features.podcast.description'),
     },
     {
       id: 'focus-zones',
       icon: 'private-office' as WespaIconName,
+      image: '/images/workspaces/offices/office-4.jpg',
       title: t('features.focusZones.title'),
       description: t('features.focusZones.description'),
     },
     {
       id: 'relax-zones',
       icon: 'flexibility' as WespaIconName,
+      image: '/images/spaces/lounge-2.jpg',
       title: t('features.relaxZones.title'),
       description: t('features.relaxZones.description'),
     },
     {
       id: 'pet-friendly',
       icon: 'amenities' as WespaIconName,
+      image: '/images/workspaces/coworking/coworking-5.jpg',
       title: t('features.petFriendly.title'),
       description: t('features.petFriendly.description'),
     },
     {
       id: 'parking',
       icon: 'door' as WespaIconName,
+      image: '/images/spaces/coworking-2.jpg',
       title: t('features.parking.title'),
       description: t('features.parking.description'),
     },
@@ -408,7 +416,7 @@ export function FeaturesSection() {
           {features.map((feature) => (
             <motion.div
               key={feature.id}
-              className="card-feature bg-stone-900 rounded-2xl p-8 lg:p-10 cursor-pointer group"
+              className="card-feature relative overflow-hidden rounded-2xl cursor-pointer group min-h-[320px] lg:min-h-[380px]"
               variants={fadeInUp}
               whileHover={{
                 y: -6,
@@ -416,19 +424,33 @@ export function FeaturesSection() {
               }}
               whileTap={{ scale: 0.98 }}
             >
-              <motion.div
-                className="mb-6"
-                whileHover={{ scale: 1.1, rotate: 3 }}
-                transition={{ duration: 0.2 }}
-              >
-                <WespaIcon name={feature.icon} size="xl" />
-              </motion.div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-amber-400 transition-colors duration-200">
-                {feature.title}
-              </h3>
-              <p className="text-stone-400 leading-relaxed group-hover:text-stone-300 transition-colors duration-200">
-                {feature.description}
-              </p>
+              {/* Background image */}
+              <Image
+                src={feature.image}
+                alt={feature.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Dark overlay for readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/70 to-stone-900/30 transition-opacity duration-300 group-hover:from-stone-900/95 group-hover:via-stone-900/80" />
+
+              {/* Content */}
+              <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-10">
+                <motion.div
+                  className="mb-6"
+                  whileHover={{ scale: 1.1, rotate: 3 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <WespaIcon name={feature.icon} size="xl" />
+                </motion.div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-amber-400 transition-colors duration-200">
+                  {feature.title}
+                </h3>
+                <p className="text-stone-300 leading-relaxed text-sm group-hover:text-stone-200 transition-colors duration-200">
+                  {feature.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </motion.div>

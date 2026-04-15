@@ -90,6 +90,10 @@ export interface CoworkingPlan {
     currency: string
   }
   popular?: boolean
+  image?: {
+    src: string
+    alt: string
+  }
 }
 
 // ============================================

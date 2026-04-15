@@ -13,8 +13,9 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/atoms/Button'
 import { Icon } from '@/components/atoms/Icon'
 import { NavLink } from '@/components/molecules/Navigation'
-import { mainNavigation } from '@/config/navigation'
+import { mainNavigation, secondaryNavigation } from '@/config/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { siteConfig } from '@/config/site'
 
 // ============================================
 // Language Switcher Component
@@ -86,8 +87,9 @@ export function Header() {
   const [isCompact, setIsCompact] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [isVisible, setIsVisible] = useState(true)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { scrollY } = useScroll()
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   // Track scroll position for header style changes
   useMotionValueEvent(scrollY, 'change', (latest) => {
@@ -153,9 +155,17 @@ export function Header() {
               <LanguageSwitcher />
             </div>
 
-            {/* Mobile: Language Switcher only (navigation moved to bottom bar) */}
+            {/* Mobile: Language Switcher + hamburger */}
             <div className="lg:hidden flex items-center gap-2">
               <LanguageSwitcher className="text-stone-600" />
+              <button
+                type="button"
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="flex items-center justify-center w-10 h-10 rounded-full text-stone-700 hover:bg-stone-100 transition-colors"
+                aria-label="Open menu"
+              >
+                <Icon name="menu" size="md" />
+              </button>
             </div>
           </motion.nav>
         </div>
@@ -168,6 +178,76 @@ export function Header() {
           }}
         />
       </motion.header>
+
+      {/* Mobile Full-Screen Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[60] lg:hidden bg-white overflow-y-auto"
+          >
+            <div className="sticky top-0 flex items-center justify-between px-6 h-16 border-b border-stone-200 bg-white">
+              <Logo />
+              <button
+                type="button"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center justify-center w-10 h-10 rounded-full text-stone-700 hover:bg-stone-100 transition-colors"
+                aria-label="Close menu"
+              >
+                <Icon name="x" size="md" />
+              </button>
+            </div>
+
+            <nav className="px-6 py-8 space-y-2">
+              {mainNavigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center justify-between py-4 border-b border-stone-100 text-lg font-semibold text-stone-900 hover:text-wespa-red transition-colors"
+                >
+                  <span>{language === 'hr' ? item.labelHr ?? item.label : item.label}</span>
+                  <Icon name="chevron-right" size="sm" className="text-stone-400" />
+                </Link>
+              ))}
+              {secondaryNavigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center justify-between py-4 border-b border-stone-100 text-lg font-semibold text-stone-900 hover:text-wespa-red transition-colors"
+                >
+                  <span>{language === 'hr' ? item.labelHr ?? item.label : item.label}</span>
+                  <Icon name="chevron-right" size="sm" className="text-stone-400" />
+                </Link>
+              ))}
+            </nav>
+
+            <div className="px-6 pb-10 space-y-3">
+              <Button variant="wespa" size="lg" fullWidth asChild>
+                <Link href="/book-visit" onClick={() => setIsMobileMenuOpen(false)}>
+                  {t('nav.bookVisit')}
+                </Link>
+              </Button>
+              <Button variant="secondary" size="lg" fullWidth asChild>
+                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  {language === 'hr' ? 'Kontakt' : 'Contact'}
+                </Link>
+              </Button>
+              <a
+                href={`tel:${siteConfig.contact.sales.phone.replace(/\s/g, '')}`}
+                className="flex items-center justify-center gap-2 py-4 text-stone-700 font-medium hover:text-wespa-red transition-colors"
+              >
+                <Icon name="phone" size="sm" />
+                {siteConfig.contact.sales.phone}
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Header spacer - animated */}
       <motion.div
@@ -204,9 +284,16 @@ export function StickyCtaBar() {
           exit={{ y: 100 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
-          <Button fullWidth size="lg" asChild>
-            <Link href="/book-visit">{t('nav.bookVisit')}</Link>
-          </Button>
+          <div className="flex gap-2">
+            <Button fullWidth size="lg" asChild>
+              <Link href="/book-visit">{t('nav.bookVisit')}</Link>
+            </Button>
+            <Button variant="secondary" size="lg" asChild className="shrink-0 px-4">
+              <Link href="/contact" aria-label="Contact">
+                <Icon name="phone" size="sm" />
+              </Link>
+            </Button>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
