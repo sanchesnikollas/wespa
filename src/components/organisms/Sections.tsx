@@ -239,6 +239,12 @@ export function HeroSection() {
 // ============================================
 export function PlansSection() {
   const { t } = useLanguage()
+  const galleryImages = [
+    { src: '/images/wespa-gallery/coworking-in-croatia.jpg', alt: 'WESPA coworking Zagreb' },
+    { src: '/images/wespa-gallery/KGZ_1492-HDR.jpg', alt: 'WESPA workspace' },
+    { src: '/images/wespa-gallery/KGD_4323-HDR-Edit.jpeg', alt: 'WESPA lounge' },
+    { src: '/images/wespa-gallery/offices-for-rent-in-zagreb.jpg', alt: 'WESPA offices' },
+  ]
   return (
     <section className="section-spacing bg-stone-50">
       <div className="container-wespa">
@@ -257,6 +263,37 @@ export function PlansSection() {
           {coworkingPlans.map((plan) => (
             <motion.div key={plan.id} variants={fadeInUp}>
               <CardPlan plan={plan} />
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Gallery mosaic */}
+        <motion.div
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+          variants={staggerContainer}
+        >
+          {galleryImages.map((img, i) => (
+            <motion.div
+              key={img.src}
+              variants={fadeInUp}
+              className={cn(
+                'relative overflow-hidden rounded-2xl group',
+                i === 0 && 'aspect-[4/5]',
+                i === 1 && 'aspect-[4/5] md:mt-8',
+                i === 2 && 'aspect-[4/5]',
+                i === 3 && 'aspect-[4/5] md:mt-8'
+              )}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </motion.div>
           ))}
         </motion.div>
