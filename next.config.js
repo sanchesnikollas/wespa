@@ -101,6 +101,12 @@ const nextConfig = {
       { source: '/code-of-conduct-and-house-rules', destination: '/house-rules', permanent: true },
       { source: '/general-terms', destination: '/terms', permanent: true },
       { source: '/privacy-policy', destination: '/privacy', permanent: true },
+
+      // Legacy PDF downloads from wespa.hr wp-content
+      { source: '/wp-content/uploads/2024/10/Wespa-Sales-Offices.pdf', destination: '/downloads/wespa-sales-offices.pdf', permanent: true },
+      { source: '/wp-content/uploads/2024/10/Wespa-Meeting-Rooms.pdf', destination: '/downloads/wespa-meeting-rooms.pdf', permanent: true },
+      { source: '/download/wespa-events.pdf', destination: '/downloads/wespa-events.pdf', permanent: true },
+      { source: '/download/wespa-eventi.pdf', destination: '/downloads/wespa-events.pdf', permanent: true },
     ]
   },
 }

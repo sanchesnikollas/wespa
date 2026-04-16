@@ -27,90 +27,45 @@ interface DownloadResource {
   fileType: 'PDF' | 'XLSX' | 'ZIP'
   fileSize: string
   featured?: boolean
+  file?: string
 }
 
 const downloadResources: DownloadResource[] = [
   {
     id: '1',
-    slug: 'hybrid-work-guide-2024',
-    title: 'The Ultimate Guide to Hybrid Work in 2024',
-    description: 'Learn how to build a successful hybrid work strategy for your team. Includes templates and best practices.',
+    slug: 'wespa-sales-offices',
+    title: 'WESPA Sales & Offices Deck',
+    description: 'Complete overview of WESPA private offices, pricing, floor plans, and amenities. The sales deck used by our team to walk prospective tenants through the full offer.',
     category: 'guide',
-    icon: 'book-open',
+    icon: 'building',
     fileType: 'PDF',
-    fileSize: '2.4 MB',
+    fileSize: '3.0 MB',
     featured: true,
+    file: '/downloads/wespa-sales-offices.pdf',
   },
   {
     id: '2',
-    slug: 'coworking-roi-calculator',
-    title: 'Coworking ROI Calculator',
-    description: 'Calculate the real cost savings of coworking vs traditional office space with our interactive spreadsheet.',
-    category: 'checklist',
-    icon: 'calculator',
-    fileType: 'XLSX',
-    fileSize: '156 KB',
-  },
-  {
-    id: '3',
-    slug: 'workspace-design-trends',
-    title: 'Workspace Design Trends Report',
-    description: 'Discover the latest trends in office design and how they impact productivity and employee satisfaction.',
-    category: 'report',
-    icon: 'trending-up',
-    fileType: 'PDF',
-    fileSize: '5.8 MB',
-    featured: true,
-  },
-  {
-    id: '4',
-    slug: 'remote-team-management',
-    title: 'Remote Team Management Playbook',
-    description: 'Practical strategies for managing distributed teams effectively, from onboarding to performance reviews.',
+    slug: 'wespa-meeting-rooms',
+    title: 'WESPA Meeting Rooms Catalog',
+    description: 'Every meeting room at WESPA Zagreb — from small booths to 150-capacity conference halls. Layouts, pricing packages, AV equipment, and booking details.',
     category: 'guide',
     icon: 'users',
     fileType: 'PDF',
-    fileSize: '3.1 MB',
+    fileSize: '3.3 MB',
+    featured: true,
+    file: '/downloads/wespa-meeting-rooms.pdf',
   },
   {
-    id: '5',
-    slug: 'office-relocation-checklist',
-    title: 'Office Relocation Checklist',
-    description: 'A comprehensive checklist to ensure a smooth office move with minimal disruption to your business.',
-    category: 'checklist',
-    icon: 'check-square',
-    fileType: 'PDF',
-    fileSize: '890 KB',
-  },
-  {
-    id: '6',
-    slug: 'flexible-workspace-whitepaper',
-    title: 'The Future of Flexible Workspaces',
-    description: 'In-depth analysis of how flexible workspaces are reshaping the commercial real estate landscape.',
+    id: '3',
+    slug: 'wespa-events',
+    title: 'WESPA Events Production Guide',
+    description: 'Your full guide to hosting conferences, corporate events, weddings, and celebrations at WESPA. 20-page deck with event venues, catering, technology, and reference events.',
     category: 'whitepaper',
-    icon: 'file-text',
-    fileType: 'PDF',
-    fileSize: '4.2 MB',
-  },
-  {
-    id: '7',
-    slug: 'wespa-success-stories',
-    title: 'WESPA Client Success Stories',
-    description: 'Case studies from businesses that transformed their operations with WESPA workspaces.',
-    category: 'case-study',
-    icon: 'star',
-    fileType: 'PDF',
-    fileSize: '6.7 MB',
-  },
-  {
-    id: '8',
-    slug: 'meeting-room-booking-guide',
-    title: 'Smart Meeting Room Booking Guide',
-    description: 'Optimize your meeting room usage with data-driven booking strategies and best practices.',
-    category: 'guide',
     icon: 'calendar',
     fileType: 'PDF',
-    fileSize: '1.8 MB',
+    fileSize: '12.0 MB',
+    featured: true,
+    file: '/downloads/wespa-events.pdf',
   },
 ]
 
@@ -176,10 +131,17 @@ function DownloadCard({ resource }: { resource: DownloadResource }) {
 
       {/* CTA */}
       <Button variant="secondary" fullWidth asChild>
-        <Link href={`/downloads/${resource.slug}`}>
-          <Icon name="download" size="sm" />
-          Download Free
-        </Link>
+        {resource.file ? (
+          <a href={resource.file} target="_blank" rel="noopener noreferrer" download>
+            <Icon name="download" size="sm" />
+            Download PDF
+          </a>
+        ) : (
+          <Link href={`/downloads/${resource.slug}`}>
+            <Icon name="download" size="sm" />
+            Download Free
+          </Link>
+        )}
       </Button>
     </motion.div>
   )
@@ -231,10 +193,17 @@ export default function DownloadsPage() {
                   <p className="text-stone-600 mb-4">{resource.description}</p>
                   <div className="flex items-center gap-4">
                     <Button variant="wespa" asChild>
-                      <Link href={`/downloads/${resource.slug}`}>
-                        <Icon name="download" size="sm" />
-                        Download Free
-                      </Link>
+                      {resource.file ? (
+                        <a href={resource.file} target="_blank" rel="noopener noreferrer" download>
+                          <Icon name="download" size="sm" />
+                          Download PDF
+                        </a>
+                      ) : (
+                        <Link href={`/downloads/${resource.slug}`}>
+                          <Icon name="download" size="sm" />
+                          Download Free
+                        </Link>
+                      )}
                     </Button>
                     <span className="text-sm text-stone-500">{resource.fileType} • {resource.fileSize}</span>
                   </div>

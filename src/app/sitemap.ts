@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/grow-your-company', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/community', priority: 0.7, changeFrequency: 'weekly' as const },
     { url: '/resources', priority: 0.7, changeFrequency: 'daily' as const },
+    { url: '/downloads', priority: 0.6, changeFrequency: 'monthly' as const },
     { url: '/book-visit', priority: 0.9, changeFrequency: 'weekly' as const },
     { url: '/contact', priority: 0.8, changeFrequency: 'monthly' as const },
 
