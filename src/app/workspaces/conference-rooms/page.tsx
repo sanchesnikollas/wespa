@@ -27,14 +27,14 @@ const content = {
 }
 
 const rooms = [
-  { name: 'INDIGO', location: 'Zavrtnica', area: '130m²', price: '€90/hr' },
-  { name: 'INCUBATOR', location: 'Zavrtnica', area: '70m²', price: '€67/hr' },
-  { name: 'BOND', location: 'Zavrtnica', area: '63m²', price: '€65/hr' },
-  { name: 'BRAIN GYM', location: 'Zavrtnica', area: '38m²', price: '€47/hr' },
-  { name: 'ENTER', location: 'Green Gold', area: '170m²', price: '€113-180/hr', note: true },
-  { name: 'SHIFT', location: 'Green Gold', area: '110m²', price: '€120/hr' },
-  { name: 'ESCAPE', location: 'Green Gold', area: '43m²', price: '€57/hr' },
-  { name: 'CONNECT', location: 'Green Gold', area: '26m²', price: '€49/hr' },
+  { slug: 'indigo', name: 'INDIGO', location: 'Zavrtnica', area: '130m²', price: '€90/hr', image: '/images/workspaces/meeting-rooms/meeting-room-1.jpg', capacity: 150 },
+  { slug: 'incubator', name: 'INCUBATOR', location: 'Zavrtnica', area: '70m²', price: '€67/hr', image: '/images/workspaces/meeting-rooms/meeting-room-5.jpg', capacity: 60 },
+  { slug: 'bond', name: 'BOND', location: 'Zavrtnica', area: '63m²', price: '€65/hr', image: '/images/workspaces/meeting-rooms/meeting-room-8.jpg', capacity: 50 },
+  { slug: 'brain-gym', name: 'BRAIN GYM', location: 'Zavrtnica', area: '38m²', price: '€47/hr', image: '/images/workspaces/meeting-rooms/meeting-room-10.jpg', capacity: 30 },
+  { slug: 'enter', name: 'ENTER', location: 'Green Gold', area: '170m²', price: '€113-180/hr', note: true, image: '/images/locations/business-lounge/lounge-1.jpg', capacity: 180 },
+  { slug: 'shift', name: 'SHIFT', location: 'Green Gold', area: '110m²', price: '€120/hr', image: '/images/locations/business-lounge/lounge-5.jpg', capacity: 100 },
+  { slug: 'escape', name: 'ESCAPE', location: 'Green Gold', area: '43m²', price: '€57/hr', image: '/images/locations/business-lounge/lounge-8.jpg', capacity: 35 },
+  { slug: 'connect', name: 'CONNECT', location: 'Green Gold', area: '26m²', price: '€49/hr', image: '/images/locations/business-lounge/lounge-10.jpg', capacity: 20 },
 ]
 
 export default function ConferenceRoomsPage() {
@@ -63,22 +63,32 @@ export default function ConferenceRoomsPage() {
             <h2 className="text-2xl font-bold mb-8">Zavrtnica</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-16">
               {rooms.filter(r => r.location === 'Zavrtnica').map((room) => (
-                <div key={room.name} className="p-6 bg-white border border-stone-200 rounded-2xl">
-                  <h3 className="text-lg font-bold mb-1">{room.name}</h3>
-                  <p className="text-stone-500 text-sm mb-3">{room.area}</p>
-                  <p className="text-xl font-bold text-wespa-red">{room.price}</p>
-                </div>
+                <Link key={room.name} href={`/workspaces/conference-rooms/${room.slug}`} className="group bg-white border border-stone-200 rounded-2xl overflow-hidden hover:shadow-card-hover hover:border-stone-300 transition-all">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image src={room.image} alt={room.name} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold mb-1 group-hover:text-wespa-red transition-colors">{room.name}</h3>
+                    <p className="text-stone-500 text-sm mb-2">{room.area} · {room.capacity} people</p>
+                    <p className="text-xl font-bold text-wespa-red">{room.price}</p>
+                  </div>
+                </Link>
               ))}
             </div>
 
             <h2 className="text-2xl font-bold mb-8">Green Gold</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-16">
               {rooms.filter(r => r.location === 'Green Gold').map((room) => (
-                <div key={room.name} className="p-6 bg-white border border-stone-200 rounded-2xl">
-                  <h3 className="text-lg font-bold mb-1">{room.name}</h3>
-                  <p className="text-stone-500 text-sm mb-3">{room.area}{room.note ? ` · ${c.divisible}` : ''}</p>
-                  <p className="text-xl font-bold text-wespa-red">{room.price}</p>
-                </div>
+                <Link key={room.name} href={`/workspaces/conference-rooms/${room.slug}`} className="group bg-white border border-stone-200 rounded-2xl overflow-hidden hover:shadow-card-hover hover:border-stone-300 transition-all">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image src={room.image} alt={room.name} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold mb-1 group-hover:text-wespa-red transition-colors">{room.name}</h3>
+                    <p className="text-stone-500 text-sm mb-2">{room.area}{room.note ? ` · ${c.divisible}` : ''} · {room.capacity} people</p>
+                    <p className="text-xl font-bold text-wespa-red">{room.price}</p>
+                  </div>
+                </Link>
               ))}
             </div>
 
