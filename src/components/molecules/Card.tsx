@@ -305,10 +305,12 @@ export function CardPlan({ plan, onClick }: CardPlanProps) {
       <Button
         variant={plan.popular ? 'primary' : 'secondary'}
         fullWidth
-        onClick={onClick}
         className="mt-auto"
+        asChild
       >
-        Learn More
+        <Link href="/workspaces/coworking">
+          Learn More
+        </Link>
       </Button>
       </div>
     </CardBase>
