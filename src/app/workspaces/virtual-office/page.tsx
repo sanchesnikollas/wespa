@@ -9,9 +9,9 @@ const content = {
   en: {
     pageTitle: 'Virtual Office',
     breadcrumb: 'Workspaces / Virtual Office',
-    title: 'A prestigious Zagreb address, without the office.',
+    title: 'Premium Address, Zero Overhead.',
     subtitle:
-      'Register your company, receive mail, and meet clients on demand — all from a premium business address in the heart of Zagreb.',
+      'Boost your business image without the overhead of a physical office. Register your company, receive mail, and meet clients on demand from a premium business address in the heart of Zagreb.',
     intro:
       'WESPA Virtual Office gives remote teams, freelancers, and international companies a fully compliant Croatian business presence. Use our address for company registration, bank accounts, and official correspondence while working from anywhere.',
     featuresTitle: "What's included",
@@ -102,9 +102,9 @@ const content = {
   hr: {
     pageTitle: 'Virtualna adresa',
     breadcrumb: 'Prostori / Virtualna adresa',
-    title: 'Prestižna zagrebačka adresa, bez ureda.',
+    title: 'Premium adresa, bez režija.',
     subtitle:
-      'Registrirajte tvrtku, primajte poštu i sastajte se s klijentima po potrebi — sve s premium poslovne adrese u centru Zagreba.',
+      'Podignite imidž vašeg poslovanja bez troškova fizičkog ureda. Registrirajte tvrtku, primajte poštu i sastajte se s klijentima po potrebi s premium poslovne adrese u centru Zagreba.',
     intro:
       'WESPA Virtualna Adresa omogućuje udaljenim timovima, freelancerima i međunarodnim tvrtkama potpuno usklađenu hrvatsku poslovnu prisutnost. Koristite našu adresu za registraciju tvrtke, bankovne račune i službenu korespondenciju dok radite odakle god želite.',
     featuresTitle: 'Što je uključeno',

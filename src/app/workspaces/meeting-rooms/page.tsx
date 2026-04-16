@@ -9,8 +9,8 @@ const content = {
   en: {
     pageTitle: 'Meeting Rooms',
     breadcrumb: 'Workspaces',
-    title: 'Meeting Rooms',
-    subtitle: 'Choose an environment tailored specifically for your business needs.',
+    title: 'Where Ideas Become Deals.',
+    subtitle: 'Modern, fully-equipped meeting spaces for all your business needs. Host impactful meetings, training sessions, and workshops in WESPA\'s state-of-the-art rooms.',
     meetingRoomS: 'Meeting Room S',
     upTo4: 'Up to 4 people',
     meetingRoomL: 'Meeting Room L',
@@ -23,8 +23,8 @@ const content = {
   hr: {
     pageTitle: 'Sobe za sastanke',
     breadcrumb: 'Prostori',
-    title: 'WESPA sobe za sastanke',
-    subtitle: 'Osigurajte vrhunski opremljen prostor za sve Vaše poslovne potrebe.',
+    title: 'Gdje ideje postaju dogovori.',
+    subtitle: 'Moderni, potpuno opremljeni prostori za sve Vaše poslovne potrebe. Održavajte učinkovite sastanke, treninge i radionice u WESPA sobama najnovije generacije.',
     meetingRoomS: 'Soba za sastanke S',
     upTo4: 'Do 4 osobe',
     meetingRoomL: 'Soba za sastanke L',

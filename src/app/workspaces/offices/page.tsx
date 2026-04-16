@@ -9,8 +9,8 @@ const content = {
   en: {
     pageTitle: 'Private Offices',
     breadcrumb: 'Workspaces',
-    title: 'Beyond the standard office',
-    subtitle: 'Fully managed, move-in ready offices for your team.',
+    title: 'Your Address to Success.',
+    subtitle: 'WESPA\'s private offices — fully furnished, ready-to-use spaces for 100s of satisfied businesses. Experience the ideal balance of privacy and community.',
     everythingIncluded: 'Everything Included',
     features: ['Utilities & high-speed internet', 'Professional cleaning', 'Reception services', 'Meeting room hours included', '24/7 secure access', 'Mail & package handling', 'Community events access', 'On-site restaurants'],
     getQuoteTitle: 'Get a Custom Quote',
@@ -20,8 +20,8 @@ const content = {
   hr: {
     pageTitle: 'Privatni uredi',
     breadcrumb: 'Prostori',
-    title: 'Vaš tim zaslužuje više od običnog ureda',
-    subtitle: 'Potpuno opremljeni, odmah useljivi poslovni prostori bez operativnih briga.',
+    title: 'Vaša adresa uspjeha.',
+    subtitle: 'WESPA privatni uredi — potpuno opremljeni, spremni za useljenje za stotine zadovoljnih tvrtki. Doživite idealnu ravnotežu privatnosti i zajednice.',
     everythingIncluded: 'Sve uključeno',
     features: ['Režije i brzi internet', 'Profesionalno čišćenje', 'Recepcijske usluge', 'Uključeni sati za sobe za sastanke', '24/7 siguran pristup', 'Primanje pošte i paketa', 'Pristup događanjima zajednice', 'Restorani na lokaciji'],
     getQuoteTitle: 'Zatražite prilagođenu ponudu',

@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/atoms/Button'
+import { WespaIconCircle } from '@/components/atoms/WespaIcon'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const content = {
@@ -18,9 +19,9 @@ const content = {
     eventsTitle: 'Community Events',
     eventsDesc: 'Regular events that educate, connect, and energize the WESPA community.',
     eventCategories: [
-      { title: 'Education', description: 'Workshops, masterclasses, and skill-building sessions led by industry experts and community members.' },
-      { title: 'Networking', description: 'Structured and informal gatherings designed to connect professionals, founders, and creatives across industries.' },
-      { title: 'Fun', description: 'After-work socials, game nights, fitness sessions, and seasonal celebrations that make work-life balance real.' },
+      { title: 'Education', description: 'Workshops, masterclasses, and skill-building sessions led by industry experts and community members.', icon: 'design' as const },
+      { title: 'Networking', description: 'Structured and informal gatherings designed to connect professionals, founders, and creatives across industries.', icon: 'dot-double' as const },
+      { title: 'Fun', description: 'After-work socials, game nights, fitness sessions, and seasonal celebrations that make work-life balance real.', icon: 'flexibility' as const },
     ],
     blogTitle: 'From the Blog',
     blogDesc: 'Insights, stories, and ideas from the WESPA community. From founder spotlights to industry trends — our blog is where the community shares its voice.',
@@ -56,9 +57,9 @@ const content = {
     eventsTitle: 'Događanja zajednice',
     eventsDesc: 'Redovita događanja koja educiraju, povezuju i energiziraju WESPA zajednicu.',
     eventCategories: [
-      { title: 'Edukacija', description: 'Radionice, masterclassovi i sesije za izgradnju vještina koje vode stručnjaci iz industrije i članovi zajednice.' },
-      { title: 'Networking', description: 'Strukturirana i neformalna okupljanja osmišljena za povezivanje profesionalaca, osnivača i kreatora iz različitih industrija.' },
-      { title: 'Zabava', description: 'Druženja nakon posla, večeri igara, fitness sesije i sezonske proslave koje ostvaruju ravnotežu između posla i života.' },
+      { title: 'Edukacija', description: 'Radionice, masterclassovi i sesije za izgradnju vještina koje vode stručnjaci iz industrije i članovi zajednice.', icon: 'design' as const },
+      { title: 'Networking', description: 'Strukturirana i neformalna okupljanja osmišljena za povezivanje profesionalaca, osnivača i kreatora iz različitih industrija.', icon: 'dot-double' as const },
+      { title: 'Zabava', description: 'Druženja nakon posla, večeri igara, fitness sesije i sezonske proslave koje ostvaruju ravnotežu između posla i života.', icon: 'flexibility' as const },
     ],
     blogTitle: 'S bloga',
     blogDesc: 'Uvidi, priče i ideje iz WESPA zajednice. Od spotlight intervjua s osnivačima do industrijskih trendova — naš blog je mjesto gdje zajednica dijeli svoj glas.',
@@ -137,7 +138,10 @@ export default function CommunityPage() {
             </p>
             <div className="grid gap-8 md:grid-cols-3">
               {c.eventCategories.map((cat) => (
-                <div key={cat.title} className="p-8 bg-white border border-stone-200 rounded-2xl">
+                <div key={cat.title} className="p-8 bg-white border border-stone-200 rounded-2xl hover:shadow-card-hover transition-shadow">
+                  <div className="mb-4">
+                    <WespaIconCircle name={cat.icon} size="md" variant="brand" />
+                  </div>
                   <h3 className="text-2xl font-bold text-stone-900 mb-3">{cat.title}</h3>
                   <p className="text-stone-600">{cat.description}</p>
                 </div>

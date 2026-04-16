@@ -9,8 +9,8 @@ const content = {
   en: {
     pageTitle: 'Coworking',
     breadcrumb: 'Workspaces / Coworking',
-    title: 'Workspace that works for you.',
-    subtitle: 'Choose a plan that matches your pace. High-end infrastructure, fiber-optic internet, and a quiet, distraction-free environment.',
+    title: 'Boost Your Productivity.',
+    subtitle: 'Flexible, dynamic spaces for hundreds of satisfied professionals. Our coworking spaces are located in semi-open areas, striking the perfect compromise between collaborative work and a quiet working environment.',
     mostPopular: 'Most Popular',
     getStarted: 'Get Started',
     galleryTitle: 'Our Coworking Spaces',
@@ -24,8 +24,8 @@ const content = {
   hr: {
     pageTitle: 'Coworking',
     breadcrumb: 'Prostori / Coworking',
-    title: 'Workspace koji radi za tebe.',
-    subtitle: 'Odaberi paket koji odgovara tvom ritmu, uz osiguranu infrastrukturu, optički internet i tiho radno okruženje.',
+    title: 'Povećajte svoju produktivnost.',
+    subtitle: 'Fleksibilni, dinamični prostori za stotine zadovoljnih profesionalaca. Naši coworking prostori nalaze se u poluotvorenim područjima, postižući savršen kompromis između suradničkog rada i mirnog radnog okruženja.',
     mostPopular: 'Najpopularniji',
     getStarted: 'Započni',
     galleryTitle: 'Naši coworking prostori',

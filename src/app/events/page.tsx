@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     pageTitle: 'Events',
-    title: 'Your Idea, Our Stage',
-    subtitle: 'From intimate private celebrations to large-scale conferences, WESPA delivers end-to-end event production in premium venues across Zagreb.',
+    title: 'Your Idea, Our Stage.',
+    subtitle: '10 halls, 20 meeting and classrooms, 3 bars, 2 restaurants. Thousands of exceptional events every year. From intimate celebrations to conferences for 500+ people — full catering, technology, and production.',
     eventTypes: [
       {
         title: 'Custom Special Events',
@@ -35,8 +35,8 @@ const content = {
   },
   hr: {
     pageTitle: 'Događanja',
-    title: 'Vaša ideja, naša pozornica',
-    subtitle: 'Od intimnih privatnih proslava do velikih konferencija, WESPA pruža cjelovitu event produkciju u premium prostorima diljem Zagreba.',
+    title: 'Vaša ideja, naša pozornica.',
+    subtitle: '10 dvorana, 20 soba za sastanke i radionice, 3 bara, 2 restorana. Tisuće iznimnih događaja svake godine. Od intimnih proslava do konferencija za 500+ ljudi — potpuni catering, tehnologija i produkcija.',
     eventTypes: [
       {
         title: 'Posebni događaji',
