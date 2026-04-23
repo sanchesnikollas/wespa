@@ -20,6 +20,12 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+# Build-time args for NEXT_PUBLIC_* vars (inlined pelo webpack no bundle)
+ARG NEXT_PUBLIC_ENABLE_REVIEW
+ARG NEXT_PUBLIC_REVIEW_WIDGET_URL
+ENV NEXT_PUBLIC_ENABLE_REVIEW=${NEXT_PUBLIC_ENABLE_REVIEW}
+ENV NEXT_PUBLIC_REVIEW_WIDGET_URL=${NEXT_PUBLIC_REVIEW_WIDGET_URL}
+
 # Build the application
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
