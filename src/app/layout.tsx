@@ -3,7 +3,6 @@ import { Suspense } from 'react'
 import Script from 'next/script'
 import '@/styles/globals.css'
 import { ConditionalLayout } from '@/components/organisms/ConditionalLayout'
-import { SplashScreen } from '@/components/organisms/SplashScreen'
 import { CustomCursor } from '@/components/organisms/CustomCursor'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { AnalyticsProvider, UTMTracker } from '@/components/tracking'
@@ -108,9 +107,6 @@ export default function RootLayout({
           <LanguageProvider>
             {/* Custom Cursor (desktop only) */}
             <CustomCursor />
-
-            {/* Splash Screen */}
-            <SplashScreen />
 
             {/* UTM Parameter Tracker */}
             <Suspense fallback={null}>
