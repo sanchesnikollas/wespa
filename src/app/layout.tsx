@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Suspense } from 'react'
+import Script from 'next/script'
 import '@/styles/globals.css'
 import { ConditionalLayout } from '@/components/organisms/ConditionalLayout'
 import { SplashScreen } from '@/components/organisms/SplashScreen'
@@ -122,6 +123,15 @@ export default function RootLayout({
             </ConditionalLayout>
           </LanguageProvider>
         </AnalyticsProvider>
+
+        {/* Review widget — só em staging quando NEXT_PUBLIC_ENABLE_REVIEW=1 */}
+        {process.env.NEXT_PUBLIC_ENABLE_REVIEW === '1' && (
+          <Script
+            src="https://review.sanches.io/widget.js"
+            data-site-id="wespa"
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   )
