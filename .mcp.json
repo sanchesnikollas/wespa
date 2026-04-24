@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "review": {
+      "command": "node",
+      "args": ["--env-file=/Users/nikollasanches/code/review-mcp/.env", "/Users/nikollasanches/code/review-mcp/dist/index.js"],
+      "env": {
+        "REVIEW_SITE_ID": "wespa"
+      }
+    }
+  }
+}
