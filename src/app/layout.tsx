@@ -63,17 +63,20 @@ export const metadata: Metadata = {
       'Premium coworking, offices, restaurants, lounges and event venues in Zagreb.',
     images: ['/og-image.jpg'],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  robots:
+    process.env.NEXT_PUBLIC_NOINDEX === '1'
+      ? { index: false, follow: false, googleBot: { index: false, follow: false } }
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+          },
+        },
 }
 
 export const viewport: Viewport = {
