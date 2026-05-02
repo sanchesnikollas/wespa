@@ -11,11 +11,12 @@ const content = {
     breadcrumb: 'Home / Food',
     title: 'Gastronomy at WESPA',
     subtitle: 'Two restaurants, two experiences. From community-driven daily menus to premium fine dining — fuel your workday with culinary excellence.',
+    breakTitle: 'Everything you need for a quality break.',
     restaurants: [
       {
         title: 'Papel',
         subtitle: 'Community Restaurant',
-        description: 'A community restaurant built for the modern business pace. Enjoy premium daily specials and a la carte dishes crafted from nutritious, locally sourced ingredients. Perfect for informal meetings, business lunches, or a quick midday recharge.',
+        description: 'Our definition of a business lunch includes flawless service and culinary precision. Enjoy authentic flavors with attentive hospitality.',
         highlights: ['Daily Specials', 'A La Carte Menu', 'Nutritious Ingredients', 'Informal Meetings'],
         location: 'WESPA Business & Lounge, Green Gold',
         href: '/food/papel',
@@ -33,18 +34,20 @@ const content = {
     galleryDesc: 'From fine dining to casual business meals — culinary excellence at every turn.',
     ctaTitle: 'Hungry for More?',
     ctaDesc: 'WESPA members enjoy exclusive food discounts and priority reservations at both restaurants.',
-    ctaButton: 'Book a Visit',
+    ctaButton: 'Make a Reservation',
   },
+  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #119-#128)
   hr: {
     pageTitle: 'Gastronomija',
     breadcrumb: 'Početna / Gastronomija',
     title: 'Gastronomija u WESPA',
     subtitle: 'Dva restorana, dva iskustva. Od dnevnih jelovnika zajednice do premium fine dininga — napunite radni dan gastronomskom izvrsnošću.',
+    breakTitle: 'Sve što vam treba za kvalitetnu pauzu.',
     restaurants: [
       {
         title: 'Papel',
         subtitle: 'Restoran zajednice',
-        description: 'Restoran zajednice osmišljen za moderni poslovni tempo. Uživajte u premium dnevnim specijalitetima i a la carte jelima pripremljenim od nutritivnih, lokalno nabavljenih sastojaka. Savršen za neformalne sastanke, poslovne ručkove ili brzu pauzu.',
+        description: 'Naša definicija poslovnog ručka uključuje besprijekornu uslugu i kulinarsku preciznost. Uživajte u autentičnim okusima uz pažljivu ugostiteljsku pažnju.',
         highlights: ['Dnevni specijaliteti', 'A la carte jelovnik', 'Nutritivni sastojci', 'Neformalni sastanci'],
         location: 'WESPA Business & Lounge, Green Gold',
         href: '/food/papel',
@@ -62,7 +65,7 @@ const content = {
     galleryDesc: 'Od fine dininga do ležernih poslovnih obroka — gastronomska izvrsnost na svakom koraku.',
     ctaTitle: 'Želite više?',
     ctaDesc: 'WESPA članovi uživaju ekskluzivne popuste na hranu i prioritetne rezervacije u oba restorana.',
-    ctaButton: 'Zakažite posjet',
+    ctaButton: 'Rezervirajte stol',
   },
 }
 
@@ -93,6 +96,7 @@ export default function FoodPage() {
         {/* Restaurant Cards */}
         <section className="section-spacing">
           <div className="container-wespa">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-stone-900">{c.breakTitle}</h2>
             <div className="grid gap-10 md:grid-cols-2">
               {c.restaurants.map((r) => (
                 <Link
@@ -158,7 +162,8 @@ export default function FoodPage() {
               {c.ctaDesc}
             </p>
             <Button variant="wespa" size="lg" asChild>
-              <Link href="/book-visit">{c.ctaButton}</Link>
+              {/* TODO figma #120 — confirmar destino do botão "Make a Reservation" (form? email?). Hoje aponta pra /contact. */}
+              <Link href="/contact?subject=reservation">{c.ctaButton}</Link>
             </Button>
           </div>
         </section>
