@@ -33,18 +33,19 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      tagline: 'Work. Eat. Socialize. Play. Anytime.',
-      title: 'More than a workspace.',
-      titleHighlight: 'Where WESPA connects and creates.',
-      subtitle: 'From dedicated offices to dynamic event venues, we create environments that inspire success. Two premium locations in Zagreb, one community for creators, innovators and leaders.',
+      tagline: 'Welcome to WESPA',
+      title: 'A space built for big ideas.',
+      titleHighlight: '',
+      subtitle: 'Experience total business flexibility in the heart of Zagreb. From premium offices and inspiring coworking to event halls, restaurants and relaxation zones. WESPA is where serious business meets creative atmosphere.',
       cta: 'Book a Visit',
       ctaSecondary: 'Explore Spaces',
+      ctaTertiary: 'Join the Community',
       findSpace: 'Find your space',
       findSpaceSubtitle: 'Tell us about your needs',
       stats: {
-        workspace: 'm² workspace',
+        workspace: 'square meters of space',
         workstations: 'workstations',
-        events: 'events hosted',
+        events: 'hosted events',
       },
     },
     // Client Logos
@@ -53,7 +54,7 @@ export const translations = {
     },
     // Plans Section
     plans: {
-      title: 'Flexible plans for every workstyle',
+      title: 'Workspace that works for you.',
       subtitle: 'From hot desks to private offices — find the perfect setup for you and your team.',
       perDay: '/day',
       perMonth: '/month',
@@ -62,7 +63,7 @@ export const translations = {
     },
     // Features Section
     features: {
-      title: 'Why Choose WESPA?',
+      title: 'Amenities designed for modern business.',
       subtitle: 'All services, one price. Everything you need for productive work, exceptional hospitality, and memorable events — under one roof.',
       events: {
         title: 'Events & Conferences',
@@ -99,7 +100,7 @@ export const translations = {
     },
     // Testimonials
     testimonials: {
-      title: 'Meet our current residents.',
+      title: 'What our members say.',
       subtitle: 'A community of creators, innovators and leaders who made WESPA their workspace home.',
       trustedBy: 'Trusted by industry leaders',
     },
@@ -131,8 +132,14 @@ export const translations = {
     },
     // Lead Form
     leadForm: {
-      title: 'Experience WESPA',
+      title: 'Join the community everyone is talking about.',
       subtitle: 'Come see how work should feel',
+    },
+    // Media (homepage section — figma feedback #13-#17)
+    media: {
+      title: 'WESPA in the Media',
+      readArticle: 'Read Article',
+      watchVideo: 'Watch Video',
     },
     // Ideas / Resources Section
     ideas: {
@@ -309,6 +316,7 @@ export const translations = {
       urbanHub: 'Urban Hub',
     },
     // Hero Section
+    // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #1, #2, #3, #9, #10)
     hero: {
       tagline: 'Radi. Jedi. Druži se. Igraj. Bilo kada.',
       title: 'Više od radnog prostora.',
@@ -316,6 +324,7 @@ export const translations = {
       subtitle: 'Od privatnih ureda do dinamičnih dvorana za događanja — stvaramo okruženja koja potiču uspjeh. Dvije premium lokacije u Zagrebu, jedna zajednica kreatora, inovatora i lidera.',
       cta: 'Zakažite posjet',
       ctaSecondary: 'Istražite prostore',
+      ctaTertiary: 'Pridružite se zajednici',
       findSpace: 'Pronađite svoj prostor',
       findSpaceSubtitle: 'Recite nam o svojim potrebama',
       stats: {
@@ -410,6 +419,13 @@ export const translations = {
     leadForm: {
       title: 'Doživite WESPA-u uživo.',
       subtitle: 'Otkrijte kako izgleda all inclusive rješenje',
+    },
+    // Media (homepage section — figma feedback #13-#17)
+    // TODO i18n HR — texto base do EN, traduzir
+    media: {
+      title: 'WESPA u medijima',
+      readArticle: 'Pročitaj članak',
+      watchVideo: 'Pogledaj video',
     },
     // Ideas / Resources Section
     ideas: {

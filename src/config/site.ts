@@ -46,7 +46,7 @@ export const locations: Location[] = [
     phone: '+385 1 234 5671',
     email: 'greengold@wespa.hr',
     description:
-      'Premium corporate environment in Green Gold Business Centre, featuring sophisticated lounges, executive meeting rooms, and fine dining at Papel Restaurant.',
+      'Premium business hub at Green Gold. Ideal for established firms.',
     features: [
       'Executive meeting rooms',
       'Premium lounge area',
@@ -72,7 +72,7 @@ export const locations: Location[] = [
     phone: '+385 1 234 5672',
     email: 'spaces@wespa.hr',
     description:
-      'Dynamic coworking hub designed for startups, freelancers, and growing teams. Open, collaborative spaces with SPOT Restaurant and event venues.',
+      'Industrial charm at Zavrtnica. Ideal for creatives and startups.',
     features: [
       'Open coworking areas',
       'Hot desks & dedicated desks',
@@ -291,7 +291,7 @@ export const wespaMetrics: Metric[] = [
   {
     id: 'sqm',
     value: '6,000',
-    label: 'Square meters',
+    label: 'Square meters of space',
     suffix: 'm²',
   },
   {
@@ -309,7 +309,7 @@ export const wespaMetrics: Metric[] = [
   {
     id: 'events',
     value: '1,000',
-    label: 'Events hosted',
+    label: 'Hosted events',
     suffix: '+',
   },
 ]

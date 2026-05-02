@@ -177,6 +177,15 @@ export function HeroSection() {
               >
                 <Link href="/workspaces">{t('hero.ctaSecondary')}</Link>
               </Button>
+              {/* figma feedback #3 — Join the Community */}
+              <Button
+                variant="ghost"
+                size="lg"
+                className="text-white hover:bg-white/10 border border-white/30"
+                asChild
+              >
+                <Link href="/community">{t('hero.ctaTertiary')}</Link>
+              </Button>
             </motion.div>
 
             {/* Stats row */}
@@ -198,6 +207,7 @@ export function HeroSection() {
           </motion.div>
 
           {/* Right: Filter Card (Glass effect) */}
+          {/* TODO figma #4 — Gabi marcou "tirar"; candidato a remover este bloco glass card. Confirmar com screenshot. */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -771,6 +781,7 @@ export function LocationsSection() {
 
                 {/* Content overlay */}
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  {/* TODO figma #7 — Gabi marcou "tirar"; candidato a remover este vibe badge. Confirmar com screenshot. */}
                   <motion.span
                     className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium w-fit mb-4"
                     whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.3)' }}
@@ -930,6 +941,88 @@ export function IdeasSection({ articles }: IdeasSectionProps) {
             <motion.div key={article.id} variants={fadeInUp}>
               <CardArticle article={article} />
             </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+// ============================================
+// Media Section (Homepage — figma feedback #13-#17)
+// ============================================
+export function MediaSection() {
+  const { t } = useLanguage()
+  // TODO figma #15-#17 — confirmar URLs reais com a Gabi.
+  const items = [
+    {
+      id: 'story-hr',
+      outlet: 'Story.hr',
+      title: 'WESPA Business & Lounge: Grand Opening & 3rd Anniversary',
+      ctaLabel: t('media.readArticle'),
+      href: '#',
+      image: '/images/spaces/lounge-1.jpg',
+    },
+    {
+      id: 'youtube',
+      outlet: 'YouTube',
+      title: 'Opening Video & Atmosphere',
+      ctaLabel: t('media.watchVideo'),
+      href: '#',
+      image: '/images/spaces/urban-hub-1.jpg',
+    },
+    {
+      id: 'poduzetnik-biz',
+      outlet: 'Poduzetnik.biz',
+      title: 'WESPA as a Hub for Entrepreneurship',
+      ctaLabel: t('media.readArticle'),
+      href: '#',
+      image: '/images/spaces/coworking-1.jpg',
+    },
+  ]
+
+  return (
+    <section className="section-spacing bg-stone-50">
+      <div className="container-wespa">
+        <SectionTitle title={t('media.title')} />
+
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={staggerContainer}
+        >
+          {items.map((item) => (
+            <motion.article
+              key={item.id}
+              variants={fadeInUp}
+              className="group relative overflow-hidden rounded-3xl bg-white shadow-md hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 lg:p-8">
+                <span className="text-xs uppercase tracking-widest text-stone-500 mb-3 inline-block">
+                  {item.outlet}
+                </span>
+                <h3 className="text-xl font-semibold text-stone-900 mb-6 leading-snug">
+                  {item.title}
+                </h3>
+                <Button variant="secondary" asChild>
+                  <Link href={item.href} className="flex items-center gap-2">
+                    {item.ctaLabel}
+                    <Icon name="arrow-right" size="sm" />
+                  </Link>
+                </Button>
+              </div>
+            </motion.article>
           ))}
         </motion.div>
       </div>

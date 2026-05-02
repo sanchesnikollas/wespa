@@ -14,6 +14,7 @@ import {
   LocationsSection,
   LeadFormSection,
   IdeasSection,
+  MediaSection,
   WorkplaceTeaserSection,
 } from '@/components/organisms/Sections'
 
@@ -44,6 +45,7 @@ export default function HomePage() {
       <LocationsSection />
       <LeadFormSection />
       <IdeasSection />
+      <MediaSection />
       <WorkplaceTeaserSection />
     </>
   )
