@@ -9,8 +9,9 @@ const content = {
   en: {
     pageTitle: 'Business Events',
     breadcrumb: 'Events',
+    tagline: 'Technology and ambiance for your most important business moments.',
     title: 'Custom Business Events',
-    subtitle: 'Professional event infrastructure for conferences, panels, workshops, and corporate gatherings. 10 halls across 2 locations with capacity from 2 to 500+ people.',
+    subtitle: 'Professional infrastructure for conferences, panels, and workshops of all sizes. Host an event that reflects your standards.',
     stats: [
       { value: '10', label: 'Event halls' },
       { value: '2', label: 'Locations' },
@@ -25,23 +26,38 @@ const content = {
       { name: 'Workshops & Training', description: 'Interactive sessions in focused environments with flexible seating, whiteboards, and collaboration tools.' },
       { name: 'Corporate Gatherings', description: 'Company meetings, team events, product launches, and celebrations in a professional setting.' },
     ],
-    servicesTitle: 'Included Services',
-    servicesDesc: 'Every business event at WESPA comes with professional support. Mix and match services to build the package your event needs.',
+    // Support / Stage & Media — figma feedback #100-#105
+    supportTitle: 'Support',
+    supportSubtitle: 'We provide complete event organization with professional consulting in all aspects:',
+    stageMediaCategory: 'Stage & Media',
+    supportItems: [
+      'Sound systems, professional lighting, and technical support.',
+      'Booking and coordination of DJs or live bands.',
+      'Stage setup and live streaming for remote guests.',
+    ],
+    // Business Catering destaque — figma feedback #108
+    cateringTitle: 'Business Catering',
+    cateringDesc: 'Professional catering packages from Papel and SPOT. Coffee breaks, working lunches, seated dinners, and cocktail receptions designed for corporate events.',
+    cateringCta: 'Explore Food',
+    // Technical Solutions & Logistics — figma feedback #109-#115
+    servicesTitle: 'Technical Solutions & Logistics (Full Service)',
+    servicesDesc: 'We ensure a flawless execution through a complete range of additional services:',
     services: [
-      { title: 'Business Catering', description: 'Professional catering packages from Papel and SPOT. Coffee breaks, working lunches, seated dinners, and cocktail receptions designed for corporate events.' },
-      { title: 'AV Equipment', description: 'State-of-the-art audio-visual systems in every hall. HD projectors, wireless presentation, multi-zone sound, stage lighting, and video conferencing integration.' },
-      { title: 'Event Management', description: 'Dedicated event coordinators handle logistics, vendor management, guest registration, signage, and on-site support from setup to teardown.' },
-      { title: 'Live Streaming', description: 'Reach remote audiences with multi-camera live streaming, screen sharing, and audience interaction tools for hybrid conferences and webinars.' },
+      { title: 'Advanced AV Equipment', description: 'Professional sound, lighting, and production support.' },
+      { title: 'Event Management', description: 'On-site organizational support and protocol coordination.' },
+      { title: 'Live Streaming', description: 'High-quality broadcasting of your panels or conferences.' },
     ],
     ctaTitle: 'Plan Your Business Event',
     ctaDesc: 'Share your event requirements and our team will prepare a detailed proposal with venue options, services, and pricing.',
-    ctaButton: 'Request a Proposal',
+    ctaButton: 'Get in touch',
   },
+  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #97-#116)
   hr: {
     pageTitle: 'Poslovni događaji',
     breadcrumb: 'Događanja',
+    tagline: 'Tehnologija i ambijent za vaše najvažnije poslovne trenutke.',
     title: 'Poslovni događaji',
-    subtitle: 'Profesionalna infrastruktura za konferencije, panele, radionice i korporativna okupljanja. 10 dvorana na 2 lokacije s kapacitetom od 2 do 500+ osoba.',
+    subtitle: 'Profesionalna infrastruktura za konferencije, panele i radionice svih veličina. Domaćin događanja koje odražava vaše standarde.',
     stats: [
       { value: '10', label: 'Dvorana za događanja' },
       { value: '2', label: 'Lokacije' },
@@ -56,17 +72,27 @@ const content = {
       { name: 'Radionice i edukacije', description: 'Interaktivne sesije u fokusiranim okruženjima s fleksibilnim rasporedom sjedenja, pločama i alatima za suradnju.' },
       { name: 'Korporativna okupljanja', description: 'Sastanci tvrtke, timski događaji, lansiranja proizvoda i proslave u profesionalnom okruženju.' },
     ],
-    servicesTitle: 'Uključene usluge',
-    servicesDesc: 'Svaki poslovni događaj u WESPA dolazi s profesionalnom podrškom. Kombinirajte usluge kako biste sastavili paket koji vaš događaj treba.',
+    supportTitle: 'Podrška',
+    supportSubtitle: 'Pružamo potpunu organizaciju događanja uz profesionalno savjetovanje u svim aspektima:',
+    stageMediaCategory: 'Pozornica i mediji',
+    supportItems: [
+      'Ozvučenje, profesionalna rasvjeta i tehnička podrška.',
+      'Rezervacija i koordinacija DJ-eva ili live bendova.',
+      'Postavljanje pozornice i live streaming za udaljene goste.',
+    ],
+    cateringTitle: 'Poslovni catering',
+    cateringDesc: 'Profesionalni catering paketi od Papel i SPOT restorana. Pauze za kavu, radni ručkovi, večere i koktel prijemi za korporativne događaje.',
+    cateringCta: 'Istraži gastronomiju',
+    servicesTitle: 'Tehnička rješenja i logistika (Full Service)',
+    servicesDesc: 'Osiguravamo besprijekornu izvedbu kroz potpuni raspon dodatnih usluga:',
     services: [
-      { title: 'Poslovni catering', description: 'Profesionalni catering paketi od Papel i SPOT restorana. Pauze za kavu, radni ručkovi, sjedala za večeru i koktel prijemi dizajnirani za korporativne događaje.' },
-      { title: 'AV oprema', description: 'Najsuvremeniji audio-vizualni sustavi u svakoj dvorani. HD projektori, bežična prezentacija, višezonski zvuk, scensko osvjetljenje i integracija video konferencija.' },
-      { title: 'Upravljanje događajem', description: 'Posvećeni koordinatori upravljaju logistikom, dobavljačima, registracijom gostiju, signalizacijom i podrškom na licu mjesta od postavljanja do rastavljanja.' },
-      { title: 'Live streaming', description: 'Doseznite udaljenu publiku s višekamernim live streamingom, dijeljenjem zaslona i alatima za interakciju s publikom za hibridne konferencije i webinare.' },
+      { title: 'Napredna AV oprema', description: 'Profesionalni zvuk, rasvjeta i produkcijska podrška.' },
+      { title: 'Upravljanje događajem', description: 'Operativna podrška i koordinacija protokola na licu mjesta.' },
+      { title: 'Live streaming', description: 'Vrhunsko emitiranje vaših panela ili konferencija.' },
     ],
     ctaTitle: 'Planirajte svoj poslovni događaj',
     ctaDesc: 'Podijelite zahtjeve za događaj i naš tim pripremiti će detaljni prijedlog s opcijama prostora, uslugama i cijenama.',
-    ctaButton: 'Zatražite prijedlog',
+    ctaButton: 'Kontaktirajte nas',
   },
 }
 
@@ -84,9 +110,12 @@ export default function CustomBusinessEventsPage() {
           <Image src="/images/events/business/business-event-1.jpg" alt="WESPA business event" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-stone-900/75" />
           <div className="container-wespa relative z-10">
+            <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-6 border border-white/20">
+              {c.tagline}
+            </span>
             <p className="text-wespa-red font-semibold mb-4">{c.breadcrumb}</p>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">{c.title}</h1>
-            <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
+            <p className="text-lg md:text-xl text-stone-300 max-w-3xl">
               {c.subtitle}
             </p>
           </div>
@@ -128,7 +157,43 @@ export default function CustomBusinessEventsPage() {
           </div>
         </section>
 
-        {/* Services */}
+        {/* Support · Stage & Media — figma feedback #100-#105 */}
+        <section className="section-spacing bg-stone-50">
+          <div className="container-wespa">
+            <div className="max-w-3xl mb-10">
+              <p className="text-sm font-semibold uppercase tracking-widest text-wespa-red mb-3">{c.stageMediaCategory}</p>
+              <h2 className="text-3xl font-bold text-stone-900 mb-4">{c.supportTitle}</h2>
+              <p className="text-stone-600">{c.supportSubtitle}</p>
+            </div>
+            <ul className="space-y-4 max-w-3xl">
+              {c.supportItems.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-stone-700 bg-white rounded-2xl p-5 border border-stone-200">
+                  <span className="text-wespa-red mt-0.5">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Business Catering — figma feedback #108 */}
+        <section className="section-spacing">
+          <div className="container-wespa">
+            <div className="bg-stone-900 text-white rounded-3xl p-10 md:p-14 grid md:grid-cols-3 gap-8 items-center">
+              <div className="md:col-span-2">
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">{c.cateringTitle}</h3>
+                <p className="text-stone-300 leading-relaxed">{c.cateringDesc}</p>
+              </div>
+              <div className="md:text-right">
+                <Button variant="wespa" size="lg" asChild>
+                  <Link href="/food">{c.cateringCta}</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Technical Solutions & Logistics — figma feedback #109-#115 */}
         <section className="section-spacing bg-stone-50">
           <div className="container-wespa">
             <h2 className="text-3xl font-bold text-stone-900 mb-4">{c.servicesTitle}</h2>
@@ -136,9 +201,9 @@ export default function CustomBusinessEventsPage() {
               {c.servicesDesc}
             </p>
 
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid gap-8 md:grid-cols-3">
               {c.services.map((service) => (
-                <div key={service.title} className="flex gap-4">
+                <div key={service.title} className="flex gap-4 bg-white rounded-2xl p-6 border border-stone-200">
                   <div className="w-1 bg-wespa-red rounded-full shrink-0" />
                   <div>
                     <h3 className="text-lg font-bold text-stone-900 mb-2">{service.title}</h3>

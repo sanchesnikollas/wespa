@@ -10,7 +10,14 @@ const content = {
     pageTitle: 'Special Events',
     breadcrumb: 'Events',
     title: 'Custom Special Events',
-    subtitle: 'Celebrate life\'s greatest moments in style. From weddings and private parties to concerts and performances, we handle every detail so you can enjoy the occasion.',
+    subtitle: 'From intimate dinners to large private celebrations with full organizational support. WESPA provides a space that adapts to your concept and audience.',
+    foodDrinkTitle: 'Food & Drink',
+    foodDrinkSubtitle: 'Two restaurants and full custom catering — all in-house.',
+    foodDrink: [
+      { title: 'Restaurant Papel', description: 'Refined Mediterranean cuisine for elegant occasions.', image: '/images/food/papel/papel-1.jpg', href: '/food/papel' },
+      { title: 'Restaurant SPOT', description: 'Contemporary casual menus for vibrant gatherings.', image: '/images/food/spot/spot-1.jpg', href: '/food/spot' },
+      { title: 'Custom Catering', description: 'Tailored menus, plated dinners, and cocktail receptions designed for your event.', image: '/images/events/special/event-1.jpg', href: '/contact' },
+    ],
     whatWeHost: 'What We Host',
     whatWeHostDesc: 'Every special event is unique. We work closely with you to design an experience that reflects your personality and exceeds your expectations.',
     eventCategories: [
@@ -31,11 +38,19 @@ const content = {
     ctaDesc: 'Tell us about your event and our team will craft a tailored proposal. No commitment required.',
     ctaButton: 'Get in Touch',
   },
+  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #91-#107)
   hr: {
     pageTitle: 'Posebni događaji',
     breadcrumb: 'Događanja',
     title: 'Posebni događaji',
-    subtitle: 'Proslavite najveće životne trenutke sa stilom. Od vjenčanja i privatnih zabava do koncerata i nastupa, mi brinemo o svakom detalju kako biste vi uživali u prilici.',
+    subtitle: 'Od intimnih večera do velikih privatnih proslava uz potpunu organizacijsku podršku. WESPA nudi prostor koji se prilagođava vašoj ideji i publici.',
+    foodDrinkTitle: 'Hrana i piće',
+    foodDrinkSubtitle: 'Dva restorana i potpuno prilagođen catering — sve in-house.',
+    foodDrink: [
+      { title: 'Restoran Papel', description: 'Rafinirana mediteranska kuhinja za elegantne prilike.', image: '/images/food/papel/papel-1.jpg', href: '/food/papel' },
+      { title: 'Restoran SPOT', description: 'Suvremeni ležerni jelovnici za živahna okupljanja.', image: '/images/food/spot/spot-1.jpg', href: '/food/spot' },
+      { title: 'Prilagođeni catering', description: 'Prilagođeni jelovnici, večere i koktel prijemi dizajnirani za vaš događaj.', image: '/images/events/special/event-1.jpg', href: '/contact' },
+    ],
     whatWeHost: 'Što organiziramo',
     whatWeHostDesc: 'Svaki posebni događaj je jedinstven. Blisko surađujemo s vama kako bismo dizajnirali iskustvo koje odražava vašu osobnost i nadmašuje vaša očekivanja.',
     eventCategories: [
@@ -80,8 +95,31 @@ export default function CustomSpecialEventsPage() {
           </div>
         </section>
 
-        {/* Event Categories */}
+        {/* Food & Drink — figma feedback #95 */}
         <section className="section-spacing">
+          <div className="container-wespa">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-3">{c.foodDrinkTitle}</h2>
+              <p className="text-stone-600 max-w-2xl mx-auto">{c.foodDrinkSubtitle}</p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {c.foodDrink.map((item) => (
+                <Link key={item.title} href={item.href} className="group bg-white border border-stone-200 rounded-2xl overflow-hidden hover:shadow-card-hover transition-shadow">
+                  <div className="relative aspect-[5/3]">
+                    <Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-stone-900 mb-2 group-hover:text-wespa-red transition-colors">{item.title}</h3>
+                    <p className="text-stone-600 text-sm">{item.description}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Event Categories */}
+        <section className="section-spacing bg-stone-50">
           <div className="container-wespa">
             <h2 className="text-3xl font-bold text-stone-900 mb-4">{c.whatWeHost}</h2>
             <p className="text-stone-600 mb-10 max-w-2xl">
