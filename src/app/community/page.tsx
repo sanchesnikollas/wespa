@@ -10,8 +10,10 @@ const content = {
   en: {
     pageTitle: 'Community',
     breadcrumb: 'Home / Community',
-    title: 'More than just space. Join the community shaping the future.',
-    subtitle: 'WESPA Community is the hub for innovation, business opportunities, and unforgettable experiences.',
+    title: 'WESPA Community Membership: Your Ticket to the World of Innovation',
+    subtitle: 'Become part of the community without renting an office. One membership opens the doors to our spaces, network, and events.',
+    openingTitle: 'Why work in isolation when you can be part of something bigger?',
+    openingTagline: 'WESPA Community Membership.',
     newsletterTitle: 'Stay in the Loop',
     newsletterDesc: 'Sign up for the WESPA newsletter and get community updates, event invitations, and exclusive content delivered to your inbox.',
     emailPlaceholder: 'Your email address',
@@ -34,22 +36,25 @@ const content = {
     membershipTitle: 'Community Membership',
     membershipDesc: 'Join the WESPA community and unlock perks designed to support your work and growth.',
     membershipPerks: [
-      { title: '24/7 Access', description: 'Round-the-clock access to WESPA spaces. Work on your schedule, not ours.' },
-      { title: 'Podcast Promotion', description: 'Get featured on WESPA Talks and amplify your story to our growing audience.' },
-      { title: 'Exclusive Events', description: 'Members-only workshops, dinners, and networking sessions you will not find anywhere else.' },
-      { title: 'WhatsApp Group', description: 'Direct access to the WESPA community channel — share opportunities, ask questions, and stay connected.' },
-      { title: '2 Hours Meeting Room / Month', description: 'Complimentary meeting room access every month, included with your membership.' },
-      { title: 'Food Discounts', description: 'Exclusive discounts at Papel and SPOT restaurants for all community members.' },
+      { title: '24/7 Access', description: 'Your digital key is always with you. Use WESPA community zones whenever it suits you – day or night.' },
+      { title: 'Podcast & Video Promotion', description: 'Have a story? Tell it for free. Book a slot in our studio and present your project to a wider audience.' },
+      { title: 'Exclusive Events & WESPA Collective', description: 'Automatically become part of the Collective. Enjoy free access to workshops, panels, and networking.' },
+      { title: 'WESPA Community', description: 'Connect with other creatives and entrepreneurs directly through our internal WhatsApp group.' },
+      { title: 'Meeting Rooms', description: 'Need privacy for an important deal? Includes 2 hours of meeting room usage per month (in slots after 5 PM).' },
+      { title: 'Perks & Discounts', description: 'Enjoy special prices on food and drinks at our restaurant by showing your membership card.' },
     ],
     ctaTitle: 'Become a Member',
     ctaDesc: 'Join the WESPA community and get access to spaces, events, perks, and a network of professionals who are building the future.',
     ctaButton: 'Get in Touch',
   },
+  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #196-#211)
   hr: {
     pageTitle: 'Zajednica',
     breadcrumb: 'Početna / Zajednica',
-    title: 'Više od prostora. Pripadajte zajednici koja stvara budućnost.',
-    subtitle: 'WESPA Community je središte inovacija, poslovnih prilika i nezaboravnih iskustava.',
+    title: 'WESPA Community Membership: Vaša ulaznica u svijet inovacije',
+    subtitle: 'Postanite dio zajednice bez najma ureda. Jedno članstvo otvara vrata naših prostora, mreže i događanja.',
+    openingTitle: 'Zašto raditi izolirano kad možete biti dio nečeg većeg?',
+    openingTagline: 'WESPA Community Membership.',
     newsletterTitle: 'Budite u toku',
     newsletterDesc: 'Prijavite se na WESPA newsletter i primajte novosti zajednice, pozivnice na događanja i ekskluzivni sadržaj izravno u inbox.',
     emailPlaceholder: 'Vaša email adresa',
@@ -72,12 +77,12 @@ const content = {
     membershipTitle: 'Članstvo u zajednici',
     membershipDesc: 'Pridružite se WESPA zajednici i otključajte pogodnosti dizajnirane za podršku vašem radu i rastu.',
     membershipPerks: [
-      { title: '24/7 pristup', description: 'Pristup WESPA prostorima non-stop. Radite po svom rasporedu, ne po našem.' },
-      { title: 'Promocija na podcastu', description: 'Budite gost WESPA Talks podcasta i pojačajte svoju priču pred našom rastućom publikom.' },
-      { title: 'Ekskluzivna događanja', description: 'Radionice, večere i networking sesije samo za članove koje nećete pronaći nigdje drugdje.' },
-      { title: 'WhatsApp grupa', description: 'Izravni pristup WESPA kanalu zajednice — dijelite prilike, postavljajte pitanja i ostanite povezani.' },
-      { title: '2 sata sobe za sastanke / mjesečno', description: 'Besplatni pristup sobi za sastanke svaki mjesec, uključen u vaše članstvo.' },
-      { title: 'Popusti na hranu', description: 'Ekskluzivni popusti u restoranima Papel i SPOT za sve članove zajednice.' },
+      { title: '24/7 pristup', description: 'Vaš digitalni ključ uvijek je s vama. Koristite WESPA community zone kad god vam odgovara – danju ili noću.' },
+      { title: 'Promocija podcasta i videa', description: 'Imate priču? Ispričajte je besplatno. Rezervirajte termin u našem studiju i predstavite svoj projekt široj publici.' },
+      { title: 'Ekskluzivna događanja i WESPA Collective', description: 'Automatski postajete dio Collectivea. Uživajte besplatno u radionicama, panelima i networkingu.' },
+      { title: 'WESPA Community', description: 'Povežite se s drugim kreativcima i poduzetnicima kroz našu internu WhatsApp grupu.' },
+      { title: 'Sobe za sastanke', description: 'Trebate privatnost za važan dogovor? Uključeno 2 sata korištenja sobe za sastanke mjesečno (termini nakon 17h).' },
+      { title: 'Pogodnosti i popusti', description: 'Posebne cijene na hranu i piće u našem restoranu uz vašu člansku karticu.' },
     ],
     ctaTitle: 'Postanite član',
     ctaDesc: 'Pridružite se WESPA zajednici i dobijte pristup prostorima, događanjima, pogodnostima i mreži profesionalaca koji grade budućnost.',
@@ -189,6 +194,15 @@ export default function CommunityPage() {
         {/* Community Membership */}
         <section className="section-spacing">
           <div className="container-wespa">
+            {/* figma feedback #198 — opening text antes do grid de perks */}
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-2xl md:text-3xl font-bold text-stone-900 leading-snug mb-2">
+                {c.openingTitle}
+              </p>
+              <p className="text-xl text-wespa-red font-semibold">
+                {c.openingTagline}
+              </p>
+            </div>
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
                 {c.membershipTitle}
