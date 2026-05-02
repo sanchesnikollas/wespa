@@ -62,10 +62,22 @@ const content = {
         image: '/images/wespa-gallery/offices-for-rent-in-zagreb.jpg',
       },
     ],
+    viewEventCalendar: 'View Event Calendar',
+    storiesTitle: 'Stories That Inspire',
+    storiesDesc: 'Peek into the minds of our members and partners. We bring you the latest trends in business, technology, and entrepreneurship.',
+    blogCategories: [
+      { slug: 'member-spotlight', title: 'Member Spotlight', description: 'Stories from people building inside WESPA.' },
+      { slug: 'industry-trends', title: 'Industry Trends', description: 'Macro signals shaping the work-and-life economy.' },
+      { slug: 'wespa-news', title: 'WESPA News', description: 'Updates, openings, and behind-the-scenes.' },
+    ],
+    podcastTitle: 'WESPA Talks: Listen to the Voice of Innovation',
+    podcastDesc: 'Tune into honest and deep conversations with the people shaping the market. Our podcast delivers stories straight from the trenches.',
+    podcastCta: 'Listen Now',
     stayUpdated: 'Stay Updated',
     stayUpdatedDesc: 'Get the latest insights and trends delivered to your inbox. No spam, just valuable content for professionals.',
     joinCommunity: 'Join the Community',
   },
+  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #189-#195)
   hr: {
     pageTitle: 'WESPA ideje',
     breadcrumb: 'Početna / WESPA ideje',
@@ -122,6 +134,17 @@ const content = {
         image: '/images/wespa-gallery/offices-for-rent-in-zagreb.jpg',
       },
     ],
+    viewEventCalendar: 'Pogledaj kalendar događanja',
+    storiesTitle: 'Priče koje inspiriraju',
+    storiesDesc: 'Zavirite u glave naših članova i partnera. Donosimo vam najnovije trendove iz poslovanja, tehnologije i poduzetništva.',
+    blogCategories: [
+      { slug: 'member-spotlight', title: 'Member Spotlight', description: 'Priče ljudi koji grade unutar WESPA.' },
+      { slug: 'industry-trends', title: 'Trendovi industrije', description: 'Makro signali koji oblikuju ekonomiju rada i života.' },
+      { slug: 'wespa-news', title: 'WESPA novosti', description: 'Ažuriranja, otvaranja i pogled iza kulisa.' },
+    ],
+    podcastTitle: 'WESPA Talks: Slušajte glas inovacije',
+    podcastDesc: 'Uključite se u iskrene i duboke razgovore s ljudima koji oblikuju tržište. Naš podcast donosi priče izravno s terena.',
+    podcastCta: 'Slušaj sada',
     stayUpdated: 'Budite u toku',
     stayUpdatedDesc: 'Primajte najnovije uvide i trendove izravno u inbox. Bez spama, samo vrijedan sadržaj za profesionalce.',
     joinCommunity: 'Pridružite se zajednici',
@@ -143,15 +166,39 @@ export default function ResourcesPage() {
           <div className="container-wespa relative z-10">
             <p className="text-wespa-red font-semibold mb-4">{c.breadcrumb}</p>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">{c.title}</h1>
-            <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
+            <p className="text-lg md:text-xl text-stone-300 max-w-2xl mb-8">
               {c.subtitle}
             </p>
+            {/* View Event Calendar — figma feedback #189 */}
+            <Button variant="ghost" size="lg" className="text-white hover:bg-white/10 border border-white/30" asChild>
+              {/* TODO figma #189 — confirmar destino (pode ser /community#events ou /events). */}
+              <Link href="/community#events">{c.viewEventCalendar}</Link>
+            </Button>
           </div>
         </section>
 
+        {/* Stories That Inspire — figma feedback #190, #191 */}
         <section className="section-spacing">
           <div className="container-wespa">
-            {/* Category tabs */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-stone-900">{c.storiesTitle}</h2>
+              <p className="text-stone-600 max-w-2xl mx-auto">{c.storiesDesc}</p>
+            </div>
+            {/* Blog categories — figma feedback #192 */}
+            <div className="grid gap-6 md:grid-cols-3 mb-16">
+              {c.blogCategories.map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={`/resources?category=${cat.slug}`}
+                  className="group bg-stone-900 text-white rounded-2xl p-8 hover:bg-stone-800 transition-colors"
+                >
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">{cat.title}</h3>
+                  <p className="text-stone-300 text-sm">{cat.description}</p>
+                </Link>
+              ))}
+            </div>
+
+            {/* Category tabs (mantido como filtro auxiliar) */}
             <div className="flex flex-wrap gap-2 mb-12">
               {c.categories.map((cat, idx) => (
                 <button
@@ -201,8 +248,20 @@ export default function ResourcesPage() {
               ))}
             </div>
 
+            {/* WESPA Talks Podcast — figma feedback #193, #194, #195 */}
+            <div className="mt-20 bg-stone-900 text-white rounded-3xl p-10 md:p-16 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.podcastTitle}</h2>
+              <p className="text-stone-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+                {c.podcastDesc}
+              </p>
+              <Button variant="wespa" size="lg" asChild>
+                {/* TODO figma #195 — destino do podcast CTA (Spotify? YouTube? página interna?) */}
+                <Link href="#">{c.podcastCta}</Link>
+              </Button>
+            </div>
+
             {/* Newsletter CTA */}
-            <div className="mt-20 bg-stone-50 rounded-2xl p-8 md:p-12 text-center">
+            <div className="mt-12 bg-stone-50 rounded-2xl p-8 md:p-12 text-center">
               <h2 className="text-3xl font-bold mb-4">{c.stayUpdated}</h2>
               <p className="text-stone-600 max-w-xl mx-auto mb-8">
                 {c.stayUpdatedDesc}
