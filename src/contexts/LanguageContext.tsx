@@ -17,11 +17,11 @@ function getInitialLanguage(): Language {
     const saved = localStorage.getItem('wespa-lang')
     if (saved === 'en' || saved === 'hr') return saved
   }
-  return 'hr'
+  return 'en'
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('hr')
+  const [language, setLanguageState] = useState<Language>('en')
 
   // Load saved language on mount
   useEffect(() => {
