@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Resources | WESPA',
     description:
       'Articles and guides on coworking, hybrid work, and running a business from Zagreb.',
-    url: 'https://wespa.hr/resources',
+    url: 'https://wespa.gigwand.com/resources',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Resources' }],
   },
   twitter: {

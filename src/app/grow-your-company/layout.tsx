@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Grow Your Company | WESPA',
     description:
       'Scale your business with private offices, meeting rooms, and a premium business community in Zagreb.',
-    url: 'https://wespa.hr/grow-your-company',
+    url: 'https://wespa.gigwand.com/grow-your-company',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Grow Your Company' }],
   },
   twitter: {

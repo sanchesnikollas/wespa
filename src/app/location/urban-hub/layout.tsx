@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Urban Hub — Heinzelova ulica 60 | WESPA',
     description:
       'Coworking, private offices, and event spaces on Heinzelova ulica 60, Zagreb. On-site parking.',
-    url: 'https://wespa.hr/location/urban-hub',
+    url: 'https://wespa.gigwand.com/location/urban-hub',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Urban Hub' }],
   },
   twitter: {

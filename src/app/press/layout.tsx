@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Press & Media | WESPA Zagreb',
     description: 'WESPA Zagreb press center. Find press releases, media coverage, and news.',
-    url: 'https://wespa.hr/press',
+    url: 'https://wespa.gigwand.com/press',
     images: [
       {
         url: '/og-image.jpg',

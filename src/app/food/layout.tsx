@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Food & Restaurants | WESPA',
     description:
       'Papel and SPOT: two restaurants inside WESPA Zagreb with daily fresh menus and specialty coffee.',
-    url: 'https://wespa.hr/food',
+    url: 'https://wespa.gigwand.com/food',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Food Zagreb' }],
   },
   twitter: {

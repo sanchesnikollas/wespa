@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Conference Rooms in Zagreb | WESPA',
     description:
       'Premium conference rooms for up to 150 people with AV, catering, and dedicated event support.',
-    url: 'https://wespa.hr/workspaces/conference-rooms',
+    url: 'https://wespa.gigwand.com/workspaces/conference-rooms',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Conference Rooms Zagreb' }],
   },
   twitter: {

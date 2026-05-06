@@ -5,7 +5,7 @@ import { MetadataRoute } from 'next'
 // ============================================
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://wespa.hr'
+  const baseUrl = 'https://wespa.gigwand.com'
   const lastModified = new Date()
 
   const staticPages = [

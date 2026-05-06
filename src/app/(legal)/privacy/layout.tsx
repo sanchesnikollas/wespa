@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Privacy Policy | WESPA Zagreb',
     description: 'WESPA Zagreb privacy policy and data protection information.',
-    url: 'https://wespa.hr/privacy',
+    url: 'https://wespa.gigwand.com/privacy',
   },
   alternates: {
     canonical: '/privacy',

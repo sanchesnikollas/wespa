@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Locations | WESPA',
     description:
       'Two premium WESPA locations in Zagreb: Business & Lounge and Urban Hub. Easy access and parking.',
-    url: 'https://wespa.hr/location',
+    url: 'https://wespa.gigwand.com/location',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Locations Zagreb' }],
   },
   twitter: {

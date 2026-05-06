@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Private Offices for Rent in Zagreb | WESPA',
     description:
       'Fully managed, move-in-ready offices in central Zagreb. Utilities, cleaning, reception included.',
-    url: 'https://wespa.hr/workspaces/offices',
+    url: 'https://wespa.gigwand.com/workspaces/offices',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Private Offices Zagreb' }],
   },
   twitter: {

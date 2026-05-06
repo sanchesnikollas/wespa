@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${download.title} | WESPA Downloads`,
       description: download.description,
-      url: `https://wespa.hr/downloads/${slug}`,
+      url: `https://wespa.gigwand.com/downloads/${slug}`,
       images: [
         {
           url: '/og-image.jpg',

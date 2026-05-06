@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Book a Visit | WESPA Zagreb',
     description: 'Schedule a tour of WESPA Zagreb. Visit our coworking spaces, private offices, meeting rooms and hospitality venues.',
-    url: 'https://wespa.hr/book-visit',
+    url: 'https://wespa.gigwand.com/book-visit',
     images: [
       {
         url: '/og-image.jpg',

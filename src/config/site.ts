@@ -9,7 +9,7 @@ export const siteConfig = {
   tagline: 'Work. Eat. Socialize. Play. Anytime.',
   description:
     'Premium coworking, offices, restaurants, lounges and event venues in the heart of Zagreb\'s business district.',
-  url: 'https://wespa.hr',
+  url: 'https://wespa.gigwand.com',
   ogImage: '/og-image.jpg',
   contact: {
     sales: {

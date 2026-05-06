@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Workspaces in Zagreb | WESPA',
     description:
       'Coworking, private offices, meeting rooms, and virtual office services in two premium Zagreb locations.',
-    url: 'https://wespa.hr/workspaces',
+    url: 'https://wespa.gigwand.com/workspaces',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Workspaces Zagreb' }],
   },
   twitter: {

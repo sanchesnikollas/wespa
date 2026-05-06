@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'Virtual Office Zagreb | WESPA',
     description:
       'Register your company at a prestigious Zagreb address with mail handling, call answering, and on-demand meeting rooms.',
-    url: 'https://wespa.hr/workspaces/virtual-office',
+    url: 'https://wespa.gigwand.com/workspaces/virtual-office',
     images: [
       {
         url: '/og-image.jpg',

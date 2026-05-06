@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Events in Zagreb | WESPA',
     description:
       'Business events, workshops, launches, and celebrations in central Zagreb. Up to 150 people.',
-    url: 'https://wespa.hr/events',
+    url: 'https://wespa.gigwand.com/events',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Events Zagreb' }],
   },
   twitter: {

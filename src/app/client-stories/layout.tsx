@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Client Stories | WESPA Zagreb',
     description: 'Discover how businesses thrive at WESPA Zagreb. Read success stories from our members.',
-    url: 'https://wespa.hr/client-stories',
+    url: 'https://wespa.gigwand.com/client-stories',
     images: [
       {
         url: '/og-image.jpg',

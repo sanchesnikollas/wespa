@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Terms & Conditions | WESPA Zagreb',
     description: 'WESPA Zagreb terms and conditions for membership and services.',
-    url: 'https://wespa.hr/terms',
+    url: 'https://wespa.gigwand.com/terms',
   },
   alternates: {
     canonical: '/terms',

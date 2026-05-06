@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Business & Lounge — Radnička 50 | WESPA',
     description:
       'Premium coworking, private offices, and a 300m² lounge on Radnička cesta 50, Zagreb.',
-    url: 'https://wespa.hr/location/business-lounge',
+    url: 'https://wespa.gigwand.com/location/business-lounge',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Business & Lounge' }],
   },
   twitter: {

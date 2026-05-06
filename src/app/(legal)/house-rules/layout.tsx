@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'House Rules | WESPA Zagreb',
     description: 'WESPA Zagreb house rules and community guidelines.',
-    url: 'https://wespa.hr/house-rules',
+    url: 'https://wespa.gigwand.com/house-rules',
   },
   alternates: {
     canonical: '/house-rules',

@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://wespa.hr'),
+  metadataBase: new URL('https://wespa.gigwand.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_HR',
-    url: 'https://wespa.hr',
+    url: 'https://wespa.gigwand.com',
     siteName: 'WESPA',
     title: 'WESPA | Work. Eat. Socialize. Play. Anytime.',
     description:

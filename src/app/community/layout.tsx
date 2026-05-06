@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Community | WESPA',
     description:
       'Join 300+ founders, freelancers, and teams in the WESPA Zagreb community.',
-    url: 'https://wespa.hr/community',
+    url: 'https://wespa.gigwand.com/community',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'WESPA Community' }],
   },
   twitter: {
