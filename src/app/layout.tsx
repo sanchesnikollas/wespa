@@ -128,6 +128,7 @@ export default function RootLayout({
           <Script
             src={process.env.NEXT_PUBLIC_REVIEW_WIDGET_URL ?? 'https://review.sanches.io/widget.js'}
             data-site-id="wespa"
+            data-locale="pt"
             strategy="afterInteractive"
           />
         )}
