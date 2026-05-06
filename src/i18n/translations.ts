@@ -52,6 +52,10 @@ export const translations = {
       title: 'Home to industry leaders and the fastest-growing companies.',
       cta: 'Join the Community',
     },
+    // Metrics bar (homepage — figma feedback widget 06/05)
+    metrics: {
+      title: 'Infrastructure built for your success.',
+    },
     // Plans Section
     plans: {
       title: 'Workspace that works for you.',
@@ -336,6 +340,10 @@ export const translations = {
     clientLogos: {
       title: 'Dom lidera industrije i najbrže rastućih tvrtki.',
       cta: 'Pridružite se zajednici',
+    },
+    // Metrics bar
+    metrics: {
+      title: 'Infrastruktura izgrađena za vaš uspjeh.',
     },
     // Plans Section
     plans: {

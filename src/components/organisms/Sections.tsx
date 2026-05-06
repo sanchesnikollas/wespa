@@ -317,6 +317,9 @@ export function PlansSection() {
             <div className="absolute inset-0 bg-stone-900/80 backdrop-blur-sm" />
             <div className="absolute inset-0 flex items-center">
               <div className="container-wespa">
+                <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
+                  {t('metrics.title')}
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {wespaMetrics.map((metric) => (
                     <div key={metric.id} className="text-center">
