@@ -20,22 +20,19 @@ const content = {
       subtitle: 'Every plan includes full access to the WESPA infrastructure.',
       items: [
         'Fiber-optic internet',
+        'Zero Overhead: Utilities, cleaning, and maintenance are all handled by us.',
         'Coffee & tea',
+        'Call Privacy: Access to soundproof phone booths for private calls.',
         'Meeting room access',
-        'Cleaning service',
+        'Organic Networking: Direct access to a network of professionals and partners within the WESPA ecosystem.',
         'Reception',
+        'Meeting rooms: Available upon reservation.',
         'Mail handling',
-        '24/7 secure access',
-        'Pet friendly',
+        'Recharge Zones: Access to fully equipped kitchens and lounge areas.',
       ],
     },
-    meetingRoomsCta: {
-      title: 'Need a meeting room?',
-      subtitle: 'Explore our hourly options and packages.',
-      cta: 'Explore Meeting Rooms',
-    },
     plans: [
-      { name: 'FlyDesk', price: '€30', period: '/day', image: '/images/workspaces/coworking/coworking-1.jpg', description: 'Your office for a day. Includes a desk and ergonomic chair in the coworking area, high-speed internet, and 1 hour of meeting room access.', features: ['Access to any available desk', 'High-speed WiFi', 'Meeting room access', 'Print & scan services', 'Community events', 'Lounge access'] },
+      { name: 'FlyDesk', price: '€30', period: '/day', image: '/images/workspaces/coworking/coworking-1.jpg', description: 'Your office for a day. Includes a desk and ergonomic chair in the coworking area, high-speed internet, and 1 hour of meeting room access. Possible to rent a monitor. Perfect for focused, short-term tasks.', features: ['Access to any available desk', 'High-speed WiFi', 'Meeting room access', 'Print & scan services', 'Community events', 'Lounge access'] },
       { name: 'FlyDesk + Lunch', price: '€35', period: '/day', image: '/images/workspaces/coworking/coworking-4.jpg', description: 'FlyDesk plus a meal of your choice from the daily menu (available at both locations).', features: ['All FlyDesk benefits', 'Daily lunch included', 'Choice of Papel or SPOT', 'Healthy, fresh options'] },
       { name: 'OwnDesk', price: '€219', period: '/month', image: '/images/workspaces/coworking/coworking-7.jpg', description: 'Your permanent workstation in the coworking zone. A dedicated home base with internet access and fair-use printing/scanning included.', features: ['Personal dedicated desk', 'Lockable storage', '24/7 access', 'Meeting room credits', 'Mail handling', 'High-speed WiFi'], popular: true },
       { name: 'OfficeDesk', price: '€226', period: '/month', image: '/images/workspaces/coworking/coworking-9.jpg', description: 'A dedicated desk within a shared office. For those who need office stability with full logistics support and printing services included.', features: ['Private office (2-6 people)', 'Dedicated phone line', 'Meeting room credits', '24/7 access', 'Custom branding options', 'Priority support'] },
@@ -55,22 +52,19 @@ const content = {
       subtitle: 'Svaki plan uključuje puni pristup WESPA infrastrukturi.',
       items: [
         'Optički internet',
+        'Zero Overhead: Režije, čišćenje i održavanje rješavamo mi.',
         'Kava i čaj',
+        'Privatni pozivi: Pristup zvučno izoliranim kabinama za privatne pozive.',
         'Pristup sobama za sastanke',
-        'Usluga čišćenja',
+        'Organski networking: Direktan pristup mreži profesionalaca i partnera unutar WESPA ekosustava.',
         'Recepcija',
+        'Sobe za sastanke: Dostupne uz rezervaciju.',
         'Primanje pošte',
-        '24/7 sigurni pristup',
-        'Pet friendly',
+        'Recharge Zone: Pristup potpuno opremljenim kuhinjama i loungeu.',
       ],
     },
-    meetingRoomsCta: {
-      title: 'Trebate sobu za sastanke?',
-      subtitle: 'Istražite naše satne opcije i pakete.',
-      cta: 'Istraži sobe za sastanke',
-    },
     plans: [
-      { name: 'FlyDesk', price: '€30', period: '/dan', image: '/images/workspaces/coworking/coworking-1.jpg', description: 'Ured na jedan dan. Dobivaš radni stol i ergonomsku stolicu u coworking prostoru, brz internet i jedan sat korištenja sobe za sastanke.', features: ['Pristup bilo kojem dostupnom stolu', 'Brzi WiFi', 'Pristup sobama za sastanke', 'Usluge ispisa i skeniranja', 'Događanja zajednice', 'Pristup loungeu'] },
+      { name: 'FlyDesk', price: '€30', period: '/dan', image: '/images/workspaces/coworking/coworking-1.jpg', description: 'Ured na jedan dan. Dobivaš radni stol i ergonomsku stolicu u coworking prostoru, brz internet i jedan sat korištenja sobe za sastanke. Mogućnost najma monitora. Idealno za fokusirane, kratkoročne zadatke.', features: ['Pristup bilo kojem dostupnom stolu', 'Brzi WiFi', 'Pristup sobama za sastanke', 'Usluge ispisa i skeniranja', 'Događanja zajednice', 'Pristup loungeu'] },
       { name: 'FlyDesk + Ručak', price: '€35', period: '/dan', image: '/images/workspaces/coworking/coworking-4.jpg', description: 'FlyDesk te dnevni obrok po izboru iz naše dnevne ponude (vrijedi za obje lokacije).', features: ['Sve FlyDesk pogodnosti', 'Dnevni ručak uključen', 'Izbor Papel ili SPOT', 'Zdravi, svježi obroci'] },
       { name: 'OwnDesk', price: '€219', period: '/mjesec', image: '/images/workspaces/coworking/coworking-7.jpg', description: 'Tvoj osobni radni stol u coworking zoni. Stalna baza koja uključuje internet te ispis i skeniranje dokumenata.', features: ['Osobni dodijeljeni stol', 'Zaključivo spremište', '24/7 pristup', 'Krediti za sobe za sastanke', 'Primanje pošte', 'Brzi WiFi'], popular: true },
       { name: 'OfficeDesk', price: '€226', period: '/mjesec', image: '/images/workspaces/coworking/coworking-9.jpg', description: 'Radni stol smješten u dijeljenom uredu. Za sve koji trebaju stabilnost ureda uz punu logističku podršku.', features: ['Privatni ured (2-6 osoba)', 'Namjenska telefonska linija', 'Krediti za sobe za sastanke', '24/7 pristup', 'Mogućnosti brendiranja', 'Prioritetna podrška'] },
@@ -156,21 +150,6 @@ export default function CoworkingPage() {
                   <span className="text-sm text-stone-700">{item}</span>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Meeting Rooms CTA — figma feedback #27 */}
-        <section className="py-16">
-          <div className="container-wespa">
-            <div className="bg-stone-900 text-white rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">{c.meetingRoomsCta.title}</h3>
-                <p className="text-stone-300">{c.meetingRoomsCta.subtitle}</p>
-              </div>
-              <Button variant="wespa" size="lg" asChild>
-                <Link href="/workspaces/meeting-rooms">{c.meetingRoomsCta.cta}</Link>
-              </Button>
             </div>
           </div>
         </section>

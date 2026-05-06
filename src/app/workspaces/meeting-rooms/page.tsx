@@ -8,7 +8,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     pageTitle: 'Meeting Rooms',
-    breadcrumb: 'Workspaces',
+    breadcrumb: 'Workspaces / Meeting Rooms',
     title: 'Workspace built for your professional edge.',
     subtitle: 'Choose an environment tailored specifically for your business needs. Organize meetings, key sessions, and important presentations in spaces equipped for success.',
     perHour: '/ hour',
@@ -60,7 +60,7 @@ const content = {
   },
   hr: {
     pageTitle: 'Sobe za sastanke',
-    breadcrumb: 'Prostori',
+    breadcrumb: 'Prostori / Sobe za sastanke',
     title: 'Radni prostor za vašu profesionalnu prednost.',
     subtitle: 'Odaberite okruženje prilagođeno vašim poslovnim potrebama. Organizirajte sastanke, ključne sesije i važne prezentacije u prostorima opremljenima za uspjeh.',
     perHour: '/ sat',
