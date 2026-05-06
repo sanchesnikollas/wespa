@@ -13,7 +13,6 @@ import {
   PainPointsSection,
   LocationsSection,
   LeadFormSection,
-  IdeasSection,
   MediaSection,
   WorkplaceTeaserSection,
 } from '@/components/organisms/Sections'
@@ -29,7 +28,7 @@ import {
  * 6. Testimonials — SaltPay, Felloz, Navigo Sport Travel + client logos
  * 7. Locations — Business & Lounge + Urban Hub
  * 8. Lead Form — Main conversion point
- * 9. Ideas/Resources — Blog articles
+ * 9. WESPA in the Media — Press coverage and videos
  * 10. WESPA Workplace — Future digital product teaser
  */
 
@@ -44,7 +43,6 @@ export default function HomePage() {
       <TestimonialsSection stories={[]} />
       <LocationsSection />
       <LeadFormSection />
-      <IdeasSection />
       <MediaSection />
       <WorkplaceTeaserSection />
     </>

@@ -39,7 +39,6 @@ export const translations = {
       subtitle: 'Experience total business flexibility in the heart of Zagreb. From premium offices and inspiring coworking to event halls, restaurants and relaxation zones. WESPA is where serious business meets creative atmosphere.',
       cta: 'Book a Visit',
       ctaSecondary: 'Explore Spaces',
-      ctaTertiary: 'Join the Community',
       findSpace: 'Find your space',
       findSpaceSubtitle: 'Tell us about your needs',
       stats: {
@@ -51,6 +50,7 @@ export const translations = {
     // Client Logos
     clientLogos: {
       title: 'Home to industry leaders and the fastest-growing companies.',
+      cta: 'Join the Community',
     },
     // Plans Section
     plans: {
@@ -138,6 +138,7 @@ export const translations = {
     // Media (homepage section — figma feedback #13-#17)
     media: {
       title: 'WESPA in the Media',
+      subtitle: 'Join the community everyone is talking about',
       readArticle: 'Read Article',
       watchVideo: 'Watch Video',
     },
@@ -324,7 +325,6 @@ export const translations = {
       subtitle: 'Od privatnih ureda do dinamičnih dvorana za događanja — stvaramo okruženja koja potiču uspjeh. Dvije premium lokacije u Zagrebu, jedna zajednica kreatora, inovatora i lidera.',
       cta: 'Zakažite posjet',
       ctaSecondary: 'Istražite prostore',
-      ctaTertiary: 'Pridružite se zajednici',
       findSpace: 'Pronađite svoj prostor',
       findSpaceSubtitle: 'Recite nam o svojim potrebama',
       stats: {
@@ -336,6 +336,7 @@ export const translations = {
     // Client Logos
     clientLogos: {
       title: 'Dom lidera industrije i najbrže rastućih tvrtki.',
+      cta: 'Pridružite se zajednici',
     },
     // Plans Section
     plans: {
@@ -424,6 +425,7 @@ export const translations = {
     // TODO i18n HR — texto base do EN, traduzir
     media: {
       title: 'WESPA u medijima',
+      subtitle: 'Pridružite se zajednici o kojoj svi govore',
       readArticle: 'Pročitaj članak',
       watchVideo: 'Pogledaj video',
     },

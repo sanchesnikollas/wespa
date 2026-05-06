@@ -143,7 +143,7 @@ export function HeroSection() {
             variants={staggerContainer}
           >
             <motion.div variants={fadeInUp}>
-              <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-8 border border-white/20">
+              <span className="inline-block px-4 py-2 bg-white/25 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-8 border border-white/40">
                 {t('hero.tagline')}
               </span>
             </motion.div>
@@ -176,15 +176,6 @@ export function HeroSection() {
                 asChild
               >
                 <Link href="/workspaces">{t('hero.ctaSecondary')}</Link>
-              </Button>
-              {/* figma feedback #3 — Join the Community */}
-              <Button
-                variant="ghost"
-                size="lg"
-                className="text-white hover:bg-white/10 border border-white/30"
-                asChild
-              >
-                <Link href="/community">{t('hero.ctaTertiary')}</Link>
               </Button>
             </motion.div>
 
@@ -960,7 +951,7 @@ export function MediaSection() {
       outlet: 'Story.hr',
       title: 'WESPA Business & Lounge: Grand Opening & 3rd Anniversary',
       ctaLabel: t('media.readArticle'),
-      href: '#',
+      href: 'https://story.hr/life-and-style/food-and-travel/a268522/Otvoren-Wespa',
       image: '/images/spaces/lounge-1.jpg',
     },
     {
@@ -968,7 +959,7 @@ export function MediaSection() {
       outlet: 'YouTube',
       title: 'Opening Video & Atmosphere',
       ctaLabel: t('media.watchVideo'),
-      href: '#',
+      href: 'https://www.youtube.com/watch?v=Ei2tJkXLhEo',
       image: '/images/spaces/urban-hub-1.jpg',
     },
     {
@@ -984,7 +975,7 @@ export function MediaSection() {
   return (
     <section className="section-spacing bg-stone-50">
       <div className="container-wespa">
-        <SectionTitle title={t('media.title')} />
+        <SectionTitle title={t('media.title')} subtitle={t('media.subtitle')} />
 
         <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -1233,6 +1224,11 @@ export function ClientLogosSection() {
             </div>
           ))}
         </motion.div>
+        <div className="text-center mt-10">
+          <Button variant="secondary" asChild>
+            <Link href="/community">{t('clientLogos.cta')}</Link>
+          </Button>
+        </div>
       </div>
     </section>
   )
