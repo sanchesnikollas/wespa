@@ -10,9 +10,10 @@ const content = {
     pageTitle: 'Meeting Rooms',
     breadcrumb: 'Workspaces / Meeting Rooms',
     title: 'Workspace built for your professional edge.',
-    subtitle: 'Choose an environment tailored specifically for your business needs. Organize meetings, key sessions, and important presentations in spaces equipped for success.',
+    subtitle: 'Choose an environment tailored specifically for your business needs. Organize meetings, key sessions, educational processes, or teamwork in rooms equipped to support you at every step.',
     perHour: '/ hour',
     vat: '+ VAT',
+    bookVisit: 'Book a visit',
     bookRoom: 'Book a Room',
     rooms: [
       {
@@ -48,23 +49,40 @@ const content = {
         description: 'Our best value for regular users: 70 hours of usage with full logistics support.',
       },
     ],
-    includedFeaturesTitle: 'Included Features',
-    includedFeaturesSubtitle: 'Every booking and package comes with the WESPA standards.',
-    includedFeatures: [
-      'Online booking',
-      'High-speed internet',
-      'Presentation hardware',
-      '24/7 access',
-      'Dedicated support',
-    ],
+    included: {
+      featuresTitle: 'Included Features',
+      features: [
+        ['High-Speed Network', 'Stable fiber-optic internet.'],
+        ['AV Systems', 'Modern screens and presentation equipment.'],
+        ['Work Essentials', 'Whiteboard and flipchart included.'],
+        ['Comfort', 'Full air conditioning and ergonomic setups.'],
+        ['Additional equipment', 'Whiteboard and flipchart on request.'],
+      ],
+      tailoredTitle: 'Tailored for',
+      tailored: [
+        'Client meetings and sales pitches.',
+        'Team brainstorming and planning sessions.',
+        'Educational training and workshops.',
+        'High-quality video conferences.',
+        'Recruitment and job interviews.',
+      ],
+      onSiteTitle: 'On-site Benefits',
+      onSite: [
+        ['Instant Booking', 'Seamless online reservation management.'],
+        ['Logistics Support', 'On-site team available for technical assistance.'],
+        ['Catering Services', 'Optional coffee and refreshment packages.'],
+        ['Location', 'Prime access within Zagreb’s main business districts.'],
+      ],
+    },
   },
   hr: {
     pageTitle: 'Sobe za sastanke',
     breadcrumb: 'Prostori / Sobe za sastanke',
     title: 'Radni prostor za vašu profesionalnu prednost.',
-    subtitle: 'Odaberite okruženje prilagođeno vašim poslovnim potrebama. Organizirajte sastanke, ključne sesije i važne prezentacije u prostorima opremljenima za uspjeh.',
+    subtitle: 'Odaberite okruženje prilagođeno vašim poslovnim potrebama. Organizirajte sastanke, ključne sesije, edukacijske procese ili timski rad u sobama opremljenima da vas podrže u svakom koraku.',
     perHour: '/ sat',
     vat: '+ PDV',
+    bookVisit: 'Zakažite posjet',
     bookRoom: 'Rezervirajte sobu',
     rooms: [
       {
@@ -100,15 +118,31 @@ const content = {
         description: 'Najbolja vrijednost za stalne korisnike: 70 sati korištenja s punom logističkom podrškom.',
       },
     ],
-    includedFeaturesTitle: 'Uključene pogodnosti',
-    includedFeaturesSubtitle: 'Svaka rezervacija i paket dolaze s WESPA standardima.',
-    includedFeatures: [
-      'Online rezervacija',
-      'Brzi internet',
-      'Oprema za prezentacije',
-      '24/7 pristup',
-      'Namjenska podrška',
-    ],
+    included: {
+      featuresTitle: 'Uključene pogodnosti',
+      features: [
+        ['Brza mreža', 'Stabilan optički internet.'],
+        ['AV sustavi', 'Moderni zasloni i prezentacijska oprema.'],
+        ['Osnove za rad', 'Uključeni whiteboard i flipchart.'],
+        ['Udobnost', 'Klimatizacija i ergonomski postav.'],
+        ['Dodatna oprema', 'Whiteboard i flipchart na zahtjev.'],
+      ],
+      tailoredTitle: 'Prilagođeno za',
+      tailored: [
+        'Sastanke s klijentima i prodajne prezentacije.',
+        'Timski brainstorming i sesije planiranja.',
+        'Edukacije i radionice.',
+        'Visokokvalitetne video konferencije.',
+        'Razgovore za posao i zapošljavanje.',
+      ],
+      onSiteTitle: 'Pogodnosti na lokaciji',
+      onSite: [
+        ['Brza rezervacija', 'Besprijekorno upravljanje online rezervacijama.'],
+        ['Logistička podrška', 'Tim na lokaciji dostupan za tehničku podršku.'],
+        ['Catering', 'Opcionalni paketi kave i osvježenja.'],
+        ['Lokacija', 'Premium pristup glavnim poslovnim četvrtima Zagreba.'],
+      ],
+    },
   },
 }
 
@@ -135,7 +169,7 @@ export default function MeetingRoomsPage() {
 
         <section className="section-spacing">
           <div className="container-wespa">
-            <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto mb-20">
+            <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto mb-12">
               {c.rooms.map((room) => (
                 <div key={room.name} className="p-8 bg-white border border-stone-200 rounded-2xl">
                   <h3 className="text-2xl font-bold mb-3 text-stone-900">{room.name}</h3>
@@ -147,6 +181,12 @@ export default function MeetingRoomsPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="text-center mb-20">
+              <Button variant="wespa" size="lg" asChild>
+                <Link href="/book-visit">{c.bookVisit}</Link>
+              </Button>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">{c.packagesTitle}</h2>
@@ -165,20 +205,43 @@ export default function MeetingRoomsPage() {
               ))}
             </div>
 
-            {/* Included Features — figma feedback #46 */}
+            {/* Included Features + Tailored for + On-site Benefits */}
             <div className="bg-stone-900 text-white rounded-3xl p-10 md:p-14 max-w-5xl mx-auto">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">{c.includedFeaturesTitle}</h3>
-                <p className="text-stone-300">{c.includedFeaturesSubtitle}</p>
+              <div className="grid md:grid-cols-3 gap-10 mb-10">
+                <div>
+                  <h3 className="text-xl font-bold mb-4">{c.included.featuresTitle}</h3>
+                  <ul className="space-y-3 text-sm">
+                    {c.included.features.map(([t, d]) => (
+                      <li key={t}>
+                        <strong className="text-white">{t}:</strong>
+                        <span className="text-stone-300"> {d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-4">{c.included.tailoredTitle}</h3>
+                  <ul className="space-y-3 text-sm">
+                    {c.included.tailored.map((item) => (
+                      <li key={item} className="flex gap-2">
+                        <span className="text-wespa-red shrink-0">✓</span>
+                        <span className="text-stone-300">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-4">{c.included.onSiteTitle}</h3>
+                  <ul className="space-y-3 text-sm">
+                    {c.included.onSite.map(([t, d]) => (
+                      <li key={t}>
+                        <strong className="text-white">{t}:</strong>
+                        <span className="text-stone-300"> {d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-                {c.includedFeatures.map((feat) => (
-                  <li key={feat} className="flex items-center gap-3">
-                    <span className="text-wespa-red">✓</span>
-                    <span>{feat}</span>
-                  </li>
-                ))}
-              </ul>
               <div className="text-center">
                 <Button variant="wespa" size="lg" asChild>
                   <Link href="/book-visit">{c.bookRoom}</Link>
