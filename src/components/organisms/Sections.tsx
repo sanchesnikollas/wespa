@@ -951,7 +951,7 @@ export function MediaSection() {
       outlet: 'Story.hr',
       title: 'WESPA Business & Lounge: Grand Opening & 3rd Anniversary',
       ctaLabel: t('media.readArticle'),
-      href: 'https://story.hr/life-and-style/food-and-travel/a268522/Otvoren-Wespa',
+      href: 'https://story.hr/life-and-style/food-and-travel/a268522/Otvoren-Wespa-Business-Lounge-u-Green-Goldu.html',
       image: '/images/spaces/lounge-1.jpg',
     },
     {
@@ -967,7 +967,7 @@ export function MediaSection() {
       outlet: 'Poduzetnik.biz',
       title: 'WESPA as a Hub for Entrepreneurship',
       ctaLabel: t('media.readArticle'),
-      href: '#',
+      href: 'https://poduzetnik.biz/produktivnost/wespa-proslavila-3-rodendan-otvaranjem-novog-koncepta-wespa-business-lounge-u-srcu-poslovne-zone/',
       image: '/images/spaces/coworking-1.jpg',
     },
   ]
