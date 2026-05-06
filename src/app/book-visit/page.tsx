@@ -58,7 +58,7 @@ export default function BookVisitPage() {
               animate={{ opacity: 1, x: 0 }}
             >
               <h1 className="text-display-md lg:text-display-lg font-bold mb-6 text-balance">
-                Book a Visit
+                Book Your Tour
               </h1>
               <p className="text-body-lg text-wire-300 mb-8">
                 The best way to understand WESPA is to experience it. Schedule a
