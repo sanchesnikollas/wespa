@@ -10,29 +10,35 @@ const content = {
   en: {
     pageTitle: 'Community',
     breadcrumb: 'Home / Community',
-    title: 'WESPA Community Membership: Your Ticket to the World of Innovation',
-    subtitle: 'Become part of the community without renting an office. One membership opens the doors to our spaces, network, and events.',
+    title: 'More than just space. Join the community shaping the future.',
+    subtitle: 'WESPA Community is the hub for innovation, business opportunities, and unforgettable experiences. Connect with industry leaders, share ideas, and grow with the support of the region’s largest business community.',
     openingTitle: 'Why work in isolation when you can be part of something bigger?',
     openingTagline: 'WESPA Community Membership.',
     newsletterTitle: 'Stay in the Loop',
     newsletterDesc: 'Sign up for the WESPA newsletter and get community updates, event invitations, and exclusive content delivered to your inbox.',
     emailPlaceholder: 'Your email address',
     subscribe: 'Subscribe',
-    eventsTitle: 'Community Events',
-    eventsDesc: 'Regular events that educate, connect, and energize the WESPA community.',
+    eventsTitle: 'Events That Connect',
+    eventsDesc: 'Whether you are seeking inspiration, new knowledge, or relaxed networking over a drink, our calendar is always full. From exclusive panels with industry experts to casual after-work gatherings — our events are designed to break the ice and create opportunities.',
+    viewEventCalendar: 'View Event Calendar',
     eventCategories: [
-      { title: 'Education', description: 'Workshops, masterclasses, and skill-building sessions led by industry experts and community members.', icon: 'design' as const },
-      { title: 'Networking', description: 'Structured and informal gatherings designed to connect professionals, founders, and creatives across industries.', icon: 'dot-double' as const },
-      { title: 'Fun', description: 'After-work socials, game nights, fitness sessions, and seasonal celebrations that make work-life balance real.', icon: 'flexibility' as const },
+      { title: 'Education & Workshops', description: 'Learn from the best through interactive formats.', icon: 'design' as const },
+      { title: 'Networking', description: 'Meet your future business partner or client.', icon: 'dot-double' as const },
+      { title: 'Fun', description: 'Because business is easier with a good atmosphere and a great community.', icon: 'flexibility' as const },
     ],
-    blogTitle: 'From the Blog',
-    blogDesc: 'Insights, stories, and ideas from the WESPA community. From founder spotlights to industry trends — our blog is where the community shares its voice.',
+    blogTitle: 'Stories That Inspire',
+    blogDesc: 'Peek into the minds of our members and partners. We bring you the latest trends in business, technology, and innovation, as well as success stories that started right here in our spaces.',
+    blogCards: [
+      { title: 'Member Spotlight', description: 'Founders and creators building from inside WESPA.' },
+      { title: 'Industry Trends', description: 'Macro signals shaping the work and life economy.' },
+      { title: 'WESPA News', description: 'Updates, openings, and behind-the-scenes from our spaces.' },
+    ],
     readBlog: 'Read the Blog',
     podcastLabel: 'Podcast',
-    podcastTitle: 'WESPA Talks',
-    podcastP1: 'Conversations with founders, creators, and business leaders from the WESPA community and beyond. Real stories, real insights, no fluff.',
+    podcastTitle: 'WESPA Talks: Listen to the Voice of Innovation',
+    podcastP1: 'Tune into honest and deep conversations with the people shaping the market. Our podcast delivers uncensored stories about entrepreneurship, growth challenges, and visions of the future — straight from our studio to your headphones.',
     podcastP2: 'Community members get the opportunity to be featured as guests and share their journey with our growing audience.',
-    listenPodcast: 'Listen to WESPA Talks',
+    listenPodcast: 'Listen to the Latest Episode',
     membershipTitle: 'Community Membership',
     membershipDesc: 'Join the WESPA community and unlock perks designed to support your work and growth.',
     membershipPerks: [
@@ -50,29 +56,35 @@ const content = {
   hr: {
     pageTitle: 'Zajednica',
     breadcrumb: 'Početna / Zajednica',
-    title: 'WESPA Community Membership: Vaša ulaznica u svijet inovacije',
-    subtitle: 'Postanite dio zajednice bez najma ureda. Jedno članstvo otvara vrata naših prostora, mreže i događanja.',
+    title: 'Više od prostora. Pridružite se zajednici koja oblikuje budućnost.',
+    subtitle: 'WESPA Community je hub za inovacije, poslovne prilike i nezaboravna iskustva. Povežite se s liderima industrije, dijelite ideje i rastite uz podršku najveće poslovne zajednice u regiji.',
     openingTitle: 'Zašto raditi izolirano kad možete biti dio nečeg većeg?',
     openingTagline: 'WESPA Community Membership.',
     newsletterTitle: 'Budite u toku',
     newsletterDesc: 'Prijavite se na WESPA newsletter i primajte novosti zajednice, pozivnice na događanja i ekskluzivni sadržaj izravno u inbox.',
     emailPlaceholder: 'Vaša email adresa',
     subscribe: 'Pretplati se',
-    eventsTitle: 'Događanja zajednice',
-    eventsDesc: 'Redovita događanja koja educiraju, povezuju i energiziraju WESPA zajednicu.',
+    eventsTitle: 'Događanja koja povezuju',
+    eventsDesc: 'Bilo da tražite inspiraciju, nova znanja ili opušteni networking uz piće, naš kalendar je uvijek pun. Od ekskluzivnih panela s industrijskim stručnjacima do ležernih after-work druženja — naša događanja dizajnirana su da prelome led i otvore prilike.',
+    viewEventCalendar: 'Pogledaj kalendar događanja',
     eventCategories: [
-      { title: 'Edukacija', description: 'Radionice, masterclassovi i sesije za izgradnju vještina koje vode stručnjaci iz industrije i članovi zajednice.', icon: 'design' as const },
-      { title: 'Networking', description: 'Strukturirana i neformalna okupljanja osmišljena za povezivanje profesionalaca, osnivača i kreatora iz različitih industrija.', icon: 'dot-double' as const },
-      { title: 'Zabava', description: 'Druženja nakon posla, večeri igara, fitness sesije i sezonske proslave koje ostvaruju ravnotežu između posla i života.', icon: 'flexibility' as const },
+      { title: 'Edukacija i radionice', description: 'Učite od najboljih kroz interaktivne formate.', icon: 'design' as const },
+      { title: 'Networking', description: 'Upoznajte svog budućeg poslovnog partnera ili klijenta.', icon: 'dot-double' as const },
+      { title: 'Zabava', description: 'Jer je posao lakši uz dobru atmosferu i sjajnu zajednicu.', icon: 'flexibility' as const },
     ],
-    blogTitle: 'S bloga',
-    blogDesc: 'Uvidi, priče i ideje iz WESPA zajednice. Od spotlight intervjua s osnivačima do industrijskih trendova — naš blog je mjesto gdje zajednica dijeli svoj glas.',
+    blogTitle: 'Priče koje inspiriraju',
+    blogDesc: 'Zavirite u glave naših članova i partnera. Donosimo vam najnovije trendove u poslovanju, tehnologiji i inovacijama, kao i priče o uspjehu koje su krenule baš iz naših prostora.',
+    blogCards: [
+      { title: 'Member Spotlight', description: 'Osnivači i kreatori koji grade unutar WESPA-e.' },
+      { title: 'Industry Trends', description: 'Makro signali koji oblikuju ekonomiju rada i života.' },
+      { title: 'WESPA News', description: 'Ažuriranja, otvaranja i pogled iza kulisa naših prostora.' },
+    ],
     readBlog: 'Čitaj blog',
     podcastLabel: 'Podcast',
-    podcastTitle: 'WESPA Talks',
-    podcastP1: 'Razgovori s osnivačima, kreatorima i poslovnim liderima iz WESPA zajednice i šire. Prave priče, pravi uvidi, bez pretjerivanja.',
+    podcastTitle: 'WESPA Talks: Slušajte glas inovacije',
+    podcastP1: 'Uključite se u iskrene i duboke razgovore s ljudima koji oblikuju tržište. Naš podcast donosi necenzurirane priče o poduzetništvu, izazovima rasta i vizijama budućnosti — izravno iz našeg studija u vaše slušalice.',
     podcastP2: 'Članovi zajednice imaju priliku biti gosti i podijeliti svoje iskustvo s našom rastućom publikom.',
-    listenPodcast: 'Slušaj WESPA Talks',
+    listenPodcast: 'Slušajte najnoviju epizodu',
     membershipTitle: 'Članstvo u zajednici',
     membershipDesc: 'Pridružite se WESPA zajednici i otključajte pogodnosti dizajnirane za podršku vašem radu i rastu.',
     membershipPerks: [
@@ -140,7 +152,7 @@ export default function CommunityPage() {
             <p className="text-lg text-stone-600 mb-10 max-w-2xl">
               {c.eventsDesc}
             </p>
-            <div className="grid gap-8 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-3 mb-10">
               {c.eventCategories.map((cat) => (
                 <div key={cat.title} className="p-8 bg-white border border-stone-200 rounded-2xl hover:shadow-card-hover transition-shadow">
                   <div className="mb-4">
@@ -151,23 +163,36 @@ export default function CommunityPage() {
                 </div>
               ))}
             </div>
+            <div className="text-center">
+              <Button variant="wespa" size="lg" asChild>
+                <Link href="/resources">{c.viewEventCalendar}</Link>
+              </Button>
+            </div>
           </div>
         </section>
 
         {/* Blog Highlights */}
         <section className="section-spacing">
           <div className="container-wespa">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
                 {c.blogTitle}
               </h2>
-              <p className="text-lg text-stone-600 mb-8">
+              <p className="text-lg text-stone-600">
                 {c.blogDesc}
               </p>
-              <Button variant="secondary" size="lg" asChild>
-                <Link href="/resources">{c.readBlog}</Link>
-              </Button>
             </div>
+            <div className="grid gap-6 md:grid-cols-3 mb-8">
+              {c.blogCards.map((card) => (
+                <div key={card.title} className="p-6 bg-white border border-stone-200 rounded-2xl">
+                  <h3 className="text-xl font-bold text-stone-900 mb-2">{card.title}</h3>
+                  <p className="text-stone-600">{card.description}</p>
+                </div>
+              ))}
+            </div>
+            <Button variant="secondary" size="lg" asChild>
+              <Link href="/resources">{c.readBlog}</Link>
+            </Button>
           </div>
         </section>
 
