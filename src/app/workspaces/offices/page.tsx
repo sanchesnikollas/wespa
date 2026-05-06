@@ -8,64 +8,62 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const content = {
   en: {
     pageTitle: 'Private Offices',
-    breadcrumb: 'Workspaces',
-    tagline: 'Beyond the standard office',
-    title: 'Your Address to Success.',
-    subtitle: 'Fully managed, move-in ready offices for your team. Privacy, flexibility, and access to a 200+ company network.',
+    breadcrumb: 'Workspaces / Offices',
+    title: 'Beyond the standard office.',
+    subtitle: 'Fully managed, move-in ready offices for your team. Privacy, flexibility, and access to a 200+ company network. One contract, one invoice, zero hassle.',
     bookVisit: 'Book a visit',
-    // Office Options (#50)
     optionsTitle: 'Office Options',
     optionsSubtitle: 'Choose the format that fits how your team operates today.',
     options: [
       {
         name: 'Private Office Space',
         priceLabel: 'Pricing on request',
-        description: 'Secure a dedicated space of up to 150m² with a fully customizable layout. Enjoy the privacy of a separate zone.',
+        description: 'Offices designed for teams of 2 to 12 people. One space. One price. No hidden costs. Utilities, 24/7 access, high-speed internet, maintenance, meeting rooms, reception, and printing/scanning/copying — all included.',
         image: '/images/workspaces/offices/office-1.jpg',
       },
       {
-        name: 'Tailored Workspace',
+        name: 'Office Zone',
         priceLabel: 'Pricing on request',
-        description: "Large office suites up to 150m², fully customizable to match your team's needs and dynamics.",
+        description: 'Spaces up to 100 m² with customizable layouts to fit your requirements. The go-to solution for larger teams and scaling companies, including premium amenities and additional meeting room hours.',
         image: '/images/workspaces/offices/office-2.jpg',
       },
     ],
-    // Everything Included (mantido)
     everythingIncluded: 'Included Features',
     everythingIncludedSubtitle: 'Every WESPA office comes with the full operational stack.',
-    features: ['Utilities & high-speed internet', 'Professional cleaning', 'Reception services', 'Meeting room hours included', '24/7 secure access', 'Mail & package handling', 'Community events access', 'On-site restaurants'],
-    // Perfect for (#55)
+    features: [
+      ['Infrastructure', 'Fully furnished spaces, high-speed internet, and IT support.'],
+      ['Logistics', 'Cleaning, office maintenance, reception, and mail handling.'],
+      ['Access', '24/7 access to your private workspace.'],
+    ] as [string, string][],
+    perksTitle: 'Additional Perks & Community',
+    perks: [
+      ['Networking', 'Access to community events, professional workshops, and shared lounge areas.'],
+      ['On-site Facilities', 'Local parking, gym, on-site restaurant, and café.'],
+      ['Pet-friendly', 'Your pets are more than welcome in our spaces.'],
+    ] as [string, string][],
     perfectForTitle: 'Perfect for:',
     perfectFor: [
-      'Established teams of 5–50',
-      'Companies opening a Zagreb HQ',
-      'Hybrid teams that need anchored space',
-      'Regulated industries needing privacy',
+      'Small Teams requiring privacy within a connected environment.',
+      'Startups looking for a professional ecosystem to scale.',
+      'Remote Employees seeking a balance between quiet focus and community.',
+      'Entrepreneurs needing a prestigious business address.',
     ],
-    // Why Choose WESPA Offices? (#56)
     whyTitle: 'Why Choose WESPA Offices?',
     whySubtitle: 'Built for ambitious teams that want focus without the operational tax.',
     why: [
-      {
-        title: 'Scalability',
-        description: 'A solution for growing companies seeking a dedicated base with room to expand, without the need for relocation.',
-      },
-      {
-        title: 'Premium Amenities',
-        description: 'Alongside your private office, enjoy full access to all WESPA amenities: professionally designed common areas, fitness, dining, events.',
-      },
-      {
-        title: 'Privacy & Identity',
-        description: 'Branded entrance, dedicated meeting rooms, and a private floor zone for your team.',
-      },
+      { title: 'Dynamic Community', description: 'Be part of a network of over 200 companies.' },
+      { title: 'All-Inclusive Pricing', description: 'One fee covers rent, utilities, internet, and maintenance.' },
+      { title: 'Prime Locations', description: 'Centrally located in Zagreb’s main business districts.' },
+      { title: 'Professional Image', description: 'Modern spaces designed to impress your clients.' },
+      { title: 'Flexibility', description: 'Easily scale your workspace up or down as your business evolves.' },
+      { title: 'Work-Life Balance', description: 'Enjoy on-site amenities like break areas, a gym, and great coffee.' },
     ],
   },
   hr: {
     pageTitle: 'Privatni uredi',
-    breadcrumb: 'Prostori',
-    tagline: 'Iznad standardnog ureda',
-    title: 'Vaša adresa uspjeha.',
-    subtitle: 'Potpuno upravljani uredi spremni za useljenje za vaš tim. Privatnost, fleksibilnost i pristup mreži od 200+ tvrtki.',
+    breadcrumb: 'Prostori / Uredi',
+    title: 'Iznad standardnog ureda.',
+    subtitle: 'Potpuno upravljani uredi spremni za useljenje za vaš tim. Privatnost, fleksibilnost i pristup mreži od 200+ tvrtki. Jedan ugovor, jedan račun, bez gnjavaže.',
     bookVisit: 'Zakažite posjet',
     optionsTitle: 'Opcije ureda',
     optionsSubtitle: 'Odaberite format koji odgovara načinu rada vašeg tima.',
@@ -73,41 +71,45 @@ const content = {
       {
         name: 'Privatni uredski prostor',
         priceLabel: 'Cijena na upit',
-        description: 'Osigurajte dedicirani prostor do 150m² s potpuno prilagodljivim rasporedom. Uživajte u privatnosti odvojene zone.',
+        description: 'Uredi dizajnirani za timove od 2 do 12 osoba. Jedan prostor. Jedna cijena. Bez skrivenih troškova. Režije, 24/7 pristup, brzi internet, održavanje, sobe za sastanke, recepcija i ispis/skeniranje/kopiranje — sve uključeno.',
         image: '/images/workspaces/offices/office-1.jpg',
       },
       {
-        name: 'Prilagođeni radni prostor',
+        name: 'Office Zone',
         priceLabel: 'Cijena na upit',
-        description: 'Veliki uredski apartmani do 150m², potpuno prilagodljivi potrebama i dinamici vašeg tima.',
+        description: 'Prostori do 100 m² s prilagodljivim rasporedom prema vašim potrebama. Idealno rješenje za veće timove i tvrtke u rastu, uključujući premium pogodnosti i dodatne sate za sobe za sastanke.',
         image: '/images/workspaces/offices/office-2.jpg',
       },
     ],
     everythingIncluded: 'Uključene pogodnosti',
     everythingIncludedSubtitle: 'Svaki WESPA ured dolazi s punim operativnim paketom.',
-    features: ['Režije i brzi internet', 'Profesionalno čišćenje', 'Recepcijske usluge', 'Uključeni sati za sobe za sastanke', '24/7 siguran pristup', 'Primanje pošte i paketa', 'Pristup događanjima zajednice', 'Restorani na lokaciji'],
+    features: [
+      ['Infrastruktura', 'Potpuno opremljeni prostori, brzi internet i IT podrška.'],
+      ['Logistika', 'Čišćenje, održavanje ureda, recepcija i primanje pošte.'],
+      ['Pristup', '24/7 pristup vašem privatnom radnom prostoru.'],
+    ] as [string, string][],
+    perksTitle: 'Dodatne pogodnosti i zajednica',
+    perks: [
+      ['Networking', 'Pristup događanjima zajednice, profesionalnim radionicama i zajedničkim loungeovima.'],
+      ['Pogodnosti na lokaciji', 'Parking, teretana, restoran i kafić na lokaciji.'],
+      ['Pet-friendly', 'Vaši ljubimci su više nego dobrodošli u našim prostorima.'],
+    ] as [string, string][],
     perfectForTitle: 'Savršeno za:',
     perfectFor: [
-      'Etablirane timove 5–50 ljudi',
-      'Tvrtke koje otvaraju HQ u Zagrebu',
-      'Hibridne timove kojima treba sidrište',
-      'Regulirane industrije s potrebom privatnosti',
+      'Male timove kojima treba privatnost unutar povezanog okruženja.',
+      'Startupe koji traže profesionalni ekosustav za skaliranje.',
+      'Remote zaposlenike koji žele ravnotežu između fokusa i zajednice.',
+      'Poduzetnike kojima treba prestižna poslovna adresa.',
     ],
     whyTitle: 'Zašto WESPA uredi?',
     whySubtitle: 'Stvoreni za ambiciozne timove koji žele fokus bez operativnog tereta.',
     why: [
-      {
-        title: 'Skalabilnost',
-        description: 'Rješenje za tvrtke u rastu koje traže dediciranu bazu s prostorom za širenje, bez selidbi.',
-      },
-      {
-        title: 'Premium pogodnosti',
-        description: 'Uz vaš privatni ured, puni pristup svim WESPA pogodnostima: zajedničkim prostorima, fitnessu, gastronomiji i događajima.',
-      },
-      {
-        title: 'Privatnost i identitet',
-        description: 'Brendirani ulaz, dedicirane sobe za sastanke i privatna zona kata za vaš tim.',
-      },
+      { title: 'Dinamična zajednica', description: 'Postanite dio mreže od preko 200 tvrtki.' },
+      { title: 'Sve-uključeni paket', description: 'Jedna cijena pokriva najam, režije, internet i održavanje.' },
+      { title: 'Premium lokacije', description: 'Centralno u glavnim poslovnim četvrtima Zagreba.' },
+      { title: 'Profesionalni imidž', description: 'Moderni prostori dizajnirani da ostave dojam na klijente.' },
+      { title: 'Fleksibilnost', description: 'Lako skalirajte radni prostor prema rastu tvrtke.' },
+      { title: 'Work-life balance', description: 'Uživajte u pogodnostima na lokaciji — break areama, teretani i dobroj kavi.' },
     ],
   },
 }
@@ -125,9 +127,6 @@ export default function OfficesPage() {
           <Image src="/images/workspaces/offices/office-1.jpg" alt="WESPA private offices" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-stone-900/75" />
           <div className="container-wespa relative z-10">
-            <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-6 border border-white/20">
-              {c.tagline}
-            </span>
             <p className="text-wespa-red font-semibold mb-4">{c.breadcrumb}</p>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">{c.title}</h1>
             <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
@@ -136,7 +135,6 @@ export default function OfficesPage() {
           </div>
         </section>
 
-        {/* Office Options — figma feedback #50 */}
         <section className="section-spacing">
           <div className="container-wespa">
             <div className="text-center mb-12">
@@ -163,17 +161,16 @@ export default function OfficesPage() {
           </div>
         </section>
 
-        {/* Included Features + Perfect for — figma feedback #46/#55 */}
         <section className="section-spacing bg-stone-50">
           <div className="container-wespa">
-            <div className="grid lg:grid-cols-2 gap-10">
+            <div className="grid lg:grid-cols-2 gap-10 mb-12">
               <div>
                 <h2 className="text-3xl font-bold mb-3">{c.everythingIncluded}</h2>
                 <p className="text-stone-600 mb-6">{c.everythingIncludedSubtitle}</p>
-                <ul className="space-y-3">
-                  {c.features.map((f) => (
-                    <li key={f} className="flex items-center gap-3 text-stone-700">
-                      <span className="text-wespa-red font-bold">✓</span> {f}
+                <ul className="space-y-4">
+                  {c.features.map(([t, d]) => (
+                    <li key={t} className="text-stone-700">
+                      <strong className="text-stone-900">{t}:</strong> {d}
                     </li>
                   ))}
                 </ul>
@@ -182,24 +179,34 @@ export default function OfficesPage() {
                 <h3 className="text-2xl font-bold mb-6">{c.perfectForTitle}</h3>
                 <ul className="space-y-3">
                   {c.perfectFor.map((p) => (
-                    <li key={p} className="flex items-center gap-3 text-stone-200">
-                      <span className="text-wespa-red">✓</span> {p}
+                    <li key={p} className="flex gap-3 text-stone-200">
+                      <span className="text-wespa-red shrink-0">✓</span> {p}
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
+
+            <div className="bg-white border border-stone-200 rounded-2xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold mb-6 text-stone-900">{c.perksTitle}</h3>
+              <ul className="space-y-4">
+                {c.perks.map(([t, d]) => (
+                  <li key={t} className="text-stone-700">
+                    <strong className="text-stone-900">{t}:</strong> {d}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
-        {/* Why Choose WESPA Offices — figma feedback #56 */}
         <section className="section-spacing">
           <div className="container-wespa">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-3">{c.whyTitle}</h2>
               <p className="text-stone-600 max-w-2xl mx-auto">{c.whySubtitle}</p>
             </div>
-            <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto mb-10">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto mb-10">
               {c.why.map((b) => (
                 <div key={b.title} className="bg-white border border-stone-200 rounded-2xl p-8">
                   <h3 className="text-xl font-bold mb-3 text-stone-900">{b.title}</h3>
