@@ -38,7 +38,6 @@ const content = {
     ctaDesc: 'Tell us about your event and our team will craft a tailored proposal. No commitment required.',
     ctaButton: 'Get in Touch',
   },
-  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #91-#107)
   hr: {
     pageTitle: 'Posebni događaji',
     breadcrumb: 'Događanja',

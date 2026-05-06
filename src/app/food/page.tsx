@@ -36,7 +36,6 @@ const content = {
     ctaDesc: 'WESPA members enjoy exclusive food discounts and priority reservations at both restaurants.',
     ctaButton: 'Make a Reservation',
   },
-  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #119-#128)
   hr: {
     pageTitle: 'Gastronomija',
     breadcrumb: 'Početna / Gastronomija',

@@ -60,7 +60,6 @@ const content = {
       },
     ],
   },
-  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #47-#64)
   hr: {
     pageTitle: 'Privatni uredi',
     breadcrumb: 'Prostori',

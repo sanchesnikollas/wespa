@@ -77,7 +77,6 @@ const content = {
     stayUpdatedDesc: 'Get the latest insights and trends delivered to your inbox. No spam, just valuable content for professionals.',
     joinCommunity: 'Join the Community',
   },
-  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #189-#195)
   hr: {
     pageTitle: 'WESPA ideje',
     breadcrumb: 'Početna / WESPA ideje',

@@ -58,7 +58,6 @@ const content = {
       'Dedicated support',
     ],
   },
-  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #28-#46)
   hr: {
     pageTitle: 'Sobe za sastanke',
     breadcrumb: 'Prostori',

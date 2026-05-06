@@ -86,7 +86,6 @@ const content = {
     ctaDesc: 'Apply for an evaluation and see if you can become part of the FORGE portfolio.',
     ctaButton: 'Apply now',
   },
-  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #157-#181)
   hr: {
     pageTitle: 'Rast tvrtke',
     breadcrumb: 'Forge platforma za rast',

@@ -317,7 +317,6 @@ export const translations = {
       urbanHub: 'Urban Hub',
     },
     // Hero Section
-    // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #1, #2, #3, #9, #10)
     hero: {
       tagline: 'Radi. Jedi. Druži se. Igraj. Bilo kada.',
       title: 'Više od radnog prostora.',
@@ -422,7 +421,6 @@ export const translations = {
       subtitle: 'Otkrijte kako izgleda all inclusive rješenje',
     },
     // Media (homepage section — figma feedback #13-#17)
-    // TODO i18n HR — texto base do EN, traduzir
     media: {
       title: 'WESPA u medijima',
       subtitle: 'Pridružite se zajednici o kojoj svi govore',

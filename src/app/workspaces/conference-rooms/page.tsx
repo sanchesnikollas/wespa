@@ -52,7 +52,6 @@ const content = {
     zoneCtaSubtitle: 'Explore our Custom Office Zones for fully branded, dedicated environments.',
     zoneCta: 'Explore Custom Office Zones',
   },
-  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #65-#89)
   hr: {
     pageTitle: 'Konferencijske dvorane',
     breadcrumb: 'Prostori',

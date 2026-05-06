@@ -51,7 +51,6 @@ const content = {
     ctaDesc: 'Share your event requirements and our team will prepare a detailed proposal with venue options, services, and pricing.',
     ctaButton: 'Get in touch',
   },
-  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #97-#116)
   hr: {
     pageTitle: 'Poslovni događaji',
     breadcrumb: 'Događanja',

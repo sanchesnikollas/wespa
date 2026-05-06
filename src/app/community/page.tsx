@@ -47,7 +47,6 @@ const content = {
     ctaDesc: 'Join the WESPA community and get access to spaces, events, perks, and a network of professionals who are building the future.',
     ctaButton: 'Get in Touch',
   },
-  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #196-#211)
   hr: {
     pageTitle: 'Zajednica',
     breadcrumb: 'Početna / Zajednica',

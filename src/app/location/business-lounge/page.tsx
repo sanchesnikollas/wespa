@@ -32,7 +32,6 @@ const content = {
     bookTour: 'Book a Tour',
     allLocations: 'All Locations',
   },
-  // TODO i18n HR — atualizar copy EN aplicado em 02/05/2026 (figma feedback #129-#140)
   hr: {
     pageTitle: 'Business & Lounge',
     breadcrumb: 'Početna / Lokacije / Business & Lounge',
@@ -40,7 +39,7 @@ const content = {
     subtitle: 'Uspostavite svoju novu bazu u najistaknutijem poslovnom kompleksu na Radničkoj. Uživajte u sofisticiranom interijeru, premium pogodnostima i neusporedivoj lokaciji.',
     aboutTitle: 'Premium WESPA iskustvo',
     aboutP1: 'WESPA Business & Lounge u Green Goldu je mjesto gdje etablirane tvrtke pronalaze svoj dom. Svaki detalj — od rafiniranjih interijera do gastronomije na lokaciji — dizajniran je za podršku profesionalcima koji posluju na najvišoj razini.',
-    aboutP2: 'Smješten na Radničkoj cesti 52 u Zagrebu, ova vodeća lokacija spaja ekskluzivne radne prostore, premium ugostiteljstvo i živahnu poslovnu zajednicu pod jednim krovom.',
+    aboutP2: 'Smješten na Radničkoj cesti 50 u Zagrebu, ova vodeća lokacija spaja ekskluzivne radne prostore, premium ugostiteljstvo i živahnu poslovnu zajednicu pod jednim krovom.',
     featuresTitle: 'Što vas čeka u Business & Lounge',
     features: [
       { title: 'Privatni radni prostori', description: 'Privatni radni prostori i Office Zones prilagođeni etabliranim tvrtkama.' },
