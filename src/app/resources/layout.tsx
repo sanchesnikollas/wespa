@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
   },
   alternates: { canonical: '/resources' },
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export default function ResourcesLayout({ children }: { children: React.ReactNode }) {

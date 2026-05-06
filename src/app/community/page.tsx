@@ -14,6 +14,7 @@ const content = {
     subtitle: 'WESPA Community is the hub for innovation, business opportunities, and unforgettable experiences. Connect with industry leaders, share ideas, and grow with the support of the region’s largest business community.',
     openingTitle: 'Why work in isolation when you can be part of something bigger?',
     openingTagline: 'WESPA Community Membership.',
+    openingBody: 'WESPA Community Membership is designed for modern professionals who need flexibility. Whether you need a place to work late hours, a professional studio for your promotion, or just want to stay in the loop with events — we provide the resources, you create the opportunities.',
     newsletterTitle: 'Stay in the Loop',
     newsletterDesc: 'Sign up for the WESPA newsletter and get community updates, event invitations, and exclusive content delivered to your inbox.',
     emailPlaceholder: 'Your email address',
@@ -39,8 +40,8 @@ const content = {
     podcastP1: 'Tune into honest and deep conversations with the people shaping the market. Our podcast delivers uncensored stories about entrepreneurship, growth challenges, and visions of the future — straight from our studio to your headphones.',
     podcastP2: 'Community members get the opportunity to be featured as guests and share their journey with our growing audience.',
     listenPodcast: 'Listen to the Latest Episode',
-    membershipTitle: 'Community Membership',
-    membershipDesc: 'Join the WESPA community and unlock perks designed to support your work and growth.',
+    membershipTitle: 'WESPA Community Membership: Your Ticket to the World of Innovation',
+    membershipDesc: 'Become part of the community without renting an office. One membership opens the doors to our spaces, studios, and network.',
     membershipPerks: [
       { title: '24/7 Access', description: 'Your digital key is always with you. Use WESPA community zones whenever it suits you – day or night.' },
       { title: 'Podcast & Video Promotion', description: 'Have a story? Tell it for free. Book a slot in our studio and present your project to a wider audience.' },
@@ -60,6 +61,7 @@ const content = {
     subtitle: 'WESPA Community je hub za inovacije, poslovne prilike i nezaboravna iskustva. Povežite se s liderima industrije, dijelite ideje i rastite uz podršku najveće poslovne zajednice u regiji.',
     openingTitle: 'Zašto raditi izolirano kad možete biti dio nečeg većeg?',
     openingTagline: 'WESPA Community Membership.',
+    openingBody: 'WESPA Community Membership dizajniran je za moderne profesionalce kojima treba fleksibilnost. Bilo da trebate mjesto za rad u kasnim satima, profesionalni studio za promociju ili jednostavno želite biti u toku s događanjima — mi pružamo resurse, vi stvarate prilike.',
     newsletterTitle: 'Budite u toku',
     newsletterDesc: 'Prijavite se na WESPA newsletter i primajte novosti zajednice, pozivnice na događanja i ekskluzivni sadržaj izravno u inbox.',
     emailPlaceholder: 'Vaša email adresa',
@@ -85,8 +87,8 @@ const content = {
     podcastP1: 'Uključite se u iskrene i duboke razgovore s ljudima koji oblikuju tržište. Naš podcast donosi necenzurirane priče o poduzetništvu, izazovima rasta i vizijama budućnosti — izravno iz našeg studija u vaše slušalice.',
     podcastP2: 'Članovi zajednice imaju priliku biti gosti i podijeliti svoje iskustvo s našom rastućom publikom.',
     listenPodcast: 'Slušajte najnoviju epizodu',
-    membershipTitle: 'Članstvo u zajednici',
-    membershipDesc: 'Pridružite se WESPA zajednici i otključajte pogodnosti dizajnirane za podršku vašem radu i rastu.',
+    membershipTitle: 'WESPA Community Membership: Vaša ulaznica u svijet inovacije',
+    membershipDesc: 'Postanite dio zajednice bez najma ureda. Jedno članstvo otvara vrata naših prostora, studija i mreže.',
     membershipPerks: [
       { title: '24/7 pristup', description: 'Vaš digitalni ključ uvijek je s vama. Koristite WESPA community zone kad god vam odgovara – danju ili noću.' },
       { title: 'Promocija podcasta i videa', description: 'Imate priču? Ispričajte je besplatno. Rezervirajte termin u našem studiju i predstavite svoj projekt široj publici.' },
@@ -218,21 +220,25 @@ export default function CommunityPage() {
         {/* Community Membership */}
         <section className="section-spacing">
           <div className="container-wespa">
-            {/* figma feedback #198 — opening text antes do grid de perks */}
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-2xl md:text-3xl font-bold text-stone-900 leading-snug mb-2">
-                {c.openingTitle}
-              </p>
-              <p className="text-xl text-wespa-red font-semibold">
-                {c.openingTagline}
-              </p>
-            </div>
-            <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
                 {c.membershipTitle}
               </h2>
               <p className="text-lg text-stone-600">
                 {c.membershipDesc}
+              </p>
+            </div>
+
+            {/* Big card: opening question + tagline + body */}
+            <div className="bg-stone-900 text-white rounded-3xl p-10 md:p-14 max-w-4xl mx-auto mb-16">
+              <p className="text-2xl md:text-3xl font-bold leading-snug mb-3">
+                {c.openingTitle}
+              </p>
+              <p className="text-xl text-wespa-red font-semibold mb-6">
+                {c.openingTagline}
+              </p>
+              <p className="text-lg text-stone-300 leading-relaxed">
+                {c.openingBody}
               </p>
             </div>
 

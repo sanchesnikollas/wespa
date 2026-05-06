@@ -55,11 +55,6 @@ export const mainNavigation: NavItem[] = [
     labelHr: 'Zajednica',
     href: '/community',
   },
-  {
-    label: 'Resources',
-    labelHr: 'Resursi',
-    href: '/resources',
-  },
 ]
 
 // Secondary links - shown in footer or secondary positions
@@ -88,7 +83,6 @@ export const footerNavigation = {
     { label: 'About WESPA', labelHr: 'O WESPA', href: '/about' },
     { label: 'Grow Your Company', labelHr: 'Rast tvrtke', href: '/grow-your-company' },
     { label: 'Community', labelHr: 'Zajednica', href: '/community' },
-    { label: 'Resources', labelHr: 'Resursi', href: '/resources' },
     { label: 'Contact', labelHr: 'Kontakt', href: '/contact' },
   ],
   legal: [
