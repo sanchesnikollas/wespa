@@ -40,6 +40,21 @@ Resolve manualmente uma thread específica sem passar por /review start.
 Fluxo:
 1. Chame `review__resolve_thread(comment_id, mensagem)`
 
+### onboard <email> [role]
+Cadastra um email em `site_members` pra liberar login no widget. `role` é opcional (default `client`; outras opções: `designer`).
+
+Fluxo:
+1. Chame `review__add_member(email, role)`
+2. Se `already_existed=true`, avise que o email já estava cadastrado (não é erro)
+3. Confirme pro usuário com o role efetivo + lembre de pedir pro cliente tentar o login
+
+### members
+Lista quem está cadastrado em `site_members`.
+
+Fluxo:
+1. Chame `review__list_members`
+2. Mostre lista compacta: `email — role — created_at`
+
 ## Regras importantes
 
 - Sempre rodar `review__get_active_session` antes — nunca assumir que existe
