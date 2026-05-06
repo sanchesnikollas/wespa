@@ -10,18 +10,14 @@ const content = {
     pageTitle: 'Urban Hub',
     breadcrumb: 'Home / Locations / Urban Hub',
     title: 'WESPA Spaces',
-    subtitle: 'An authentic industrial setting for teams building the future.',
-    aboutTitle: 'Where Ideas Come to Life',
-    aboutP1: 'WESPA Urban Hub at Zavrtnica is the antidote to the corporate office. It is a space where raw creativity meets modern infrastructure — where startups launch, freelancers find their tribe, and ideas turn into ventures.',
-    aboutP2: 'The industrial character of the building is not just aesthetic — it is a mindset. Open, honest, and built for people who are making things happen.',
+    subtitle: 'Step into the space that has become the heart of Zagreb’s startup culture. Whether you need a spot in the coworking, a private office that grows with you, a conference center, or relax & play zones — WESPA Spaces brings it all together.',
     featuresTitle: 'What You Will Find Here',
     features: [
-      { title: 'Industrial Charm', description: 'Raw concrete, exposed brick, and open ceilings create an atmosphere that sparks creativity and bold thinking.' },
-      { title: 'Startup Hub', description: 'Purpose-built for startups and scale-ups. Flexible terms, collaborative spaces, and a network of founders who get it.' },
-      { title: 'Coworking Spaces', description: 'Flexible desks and dedicated workstations for freelancers, remote workers, and small teams who thrive in community.' },
-      { title: 'SPOT Restaurant', description: 'On-site premium dining for tenants and visitors. Fine dining with a curated wine list, right where you work.' },
-      { title: 'Creative Community', description: 'Designers, developers, marketers, and entrepreneurs — a diverse mix of talent that makes Zavrtnica buzz with energy.' },
-      { title: 'Event & Podcast Spaces', description: 'Dedicated areas for workshops, meetups, podcast recordings, and community events.' },
+      { title: 'The Premier Coworking HUB', description: 'A vast zone featuring Fly Desk and Own Desk workstations optimized for your rhythm of work.' },
+      { title: 'Offices for Scaling Teams', description: 'Fully furnished, move-in-ready private spaces that grow along with your business.' },
+      { title: 'Conference Center', description: 'Indigo, Incubator, Bond, and Brain Gym halls, fully equipped for workshops, lectures, and presentations.' },
+      { title: 'Break & Chill', description: 'Relax & play zones, a spacious outdoor terrace, and on-site Restaurant Papel.' },
+      { title: 'The Power of Community', description: 'Regular networking events and gatherings that foster collaboration among innovative teams.' },
     ],
     addressTitle: 'Address',
     addressName: 'WESPA Urban Hub',
@@ -30,24 +26,19 @@ const content = {
     ctaTitle: 'Join the Community',
     ctaDesc: 'Book a tour of WESPA Urban Hub and see why Zavrtnica is Zagreb\'s most exciting business address.',
     bookTour: 'Book a Tour',
-    allLocations: 'All Locations',
   },
   hr: {
     pageTitle: 'Urban Hub',
     breadcrumb: 'Početna / Lokacije / Urban Hub',
     title: 'WESPA Spaces',
-    subtitle: 'Autentičan industrijski prostor za timove koji stvaraju budućnost.',
-    aboutTitle: 'Gdje ideje dobivaju život',
-    aboutP1: 'WESPA Urban Hub na Zavrtnici je protuteža korporativnom uredu. To je prostor gdje se sirova kreativnost susreće s modernom infrastrukturom — gdje startupovi nastaju, freelanceri pronalaze svoje pleme, a ideje se pretvaraju u pothvate.',
-    aboutP2: 'Industrijski karakter zgrade nije samo estetika — to je način razmišljanja. Otvoren, iskren i izgrađen za ljude koji stvaraju promjene.',
+    subtitle: 'Uđite u prostor koji je postao srce zagrebačke startup kulture. Bilo da trebate mjesto u coworkingu, privatni ured koji raste s vama, konferencijski centar ili relax & play zone — WESPA Spaces spaja sve na jednom mjestu.',
     featuresTitle: 'Što ćete ovdje pronaći',
     features: [
-      { title: 'Industrijski šarm', description: 'Sirovi beton, vidljiva cigla i otvoreni stropovi stvaraju atmosferu koja potiče kreativnost i hrabro razmišljanje.' },
-      { title: 'Startup hub', description: 'Namjenski izgrađen za startupove i scale-upove. Fleksibilni uvjeti, kolaborativni prostori i mreža osnivača koji razumiju.' },
-      { title: 'Coworking prostori', description: 'Fleksibilni stolovi i dodijeljene radne stanice za freelancere, remote radnike i male timove koji napreduju u zajednici.' },
-      { title: 'Restoran SPOT', description: 'Premium gastronomija na lokaciji za stanare i posjetitelje. Fine dining s kuratiranom vinskom kartom, upravo tamo gdje radite.' },
-      { title: 'Kreativna zajednica', description: 'Dizajneri, programeri, marketinški stručnjaci i poduzetnici — raznolik spoj talenata koji Zavrtnici daje energiju.' },
-      { title: 'Prostori za događanja i podcast', description: 'Namjenski prostori za radionice, meetupove, snimanja podcasta i događanja zajednice.' },
+      { title: 'Premier Coworking HUB', description: 'Prostrana zona s Fly Desk i Own Desk radnim stanicama optimiziranim za vaš ritam rada.' },
+      { title: 'Uredi za timove u rastu', description: 'Potpuno opremljeni, spremni za useljenje privatni prostori koji rastu zajedno s vašim poslovanjem.' },
+      { title: 'Konferencijski centar', description: 'Dvorane Indigo, Incubator, Bond i Brain Gym, potpuno opremljene za radionice, predavanja i prezentacije.' },
+      { title: 'Break & Chill', description: 'Relax & play zone, prostrana vanjska terasa i Restoran Papel na lokaciji.' },
+      { title: 'Snaga zajednice', description: 'Redovita networking događanja i okupljanja koja potiču suradnju među inovativnim timovima.' },
     ],
     addressTitle: 'Adresa',
     addressName: 'WESPA Urban Hub',
@@ -56,7 +47,6 @@ const content = {
     ctaTitle: 'Pridružite se zajednici',
     ctaDesc: 'Zakažite obilazak WESPA Urban Huba i saznajte zašto je Zavrtnica najuzbudljivija poslovna adresa u Zagrebu.',
     bookTour: 'Zakažite obilazak',
-    allLocations: 'Sve lokacije',
   },
 }
 
@@ -79,23 +69,6 @@ export default function UrbanHubPage() {
             <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
               {c.subtitle}
             </p>
-          </div>
-        </section>
-
-        {/* About */}
-        <section className="section-spacing">
-          <div className="container-wespa">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-6">
-                {c.aboutTitle}
-              </h2>
-              <p className="text-lg text-stone-600 mb-4">
-                {c.aboutP1}
-              </p>
-              <p className="text-lg text-stone-600">
-                {c.aboutP2}
-              </p>
-            </div>
           </div>
         </section>
 
@@ -153,14 +126,9 @@ export default function UrbanHubPage() {
             <p className="text-lg text-stone-300 mb-8 max-w-xl mx-auto">
               {c.ctaDesc}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="wespa" size="lg" asChild>
-                <Link href="/book-visit">{c.bookTour}</Link>
-              </Button>
-              <Button variant="secondary" size="lg" asChild>
-                <Link href="/location">{c.allLocations}</Link>
-              </Button>
-            </div>
+            <Button variant="wespa" size="lg" asChild>
+              <Link href="/book-visit">{c.bookTour}</Link>
+            </Button>
           </div>
         </section>
       </main>

@@ -25,7 +25,6 @@ export const mainNavigation: NavItem[] = [
     children: [
       { label: 'Custom Special Events', labelHr: 'Posebni događaji', href: '/events/custom-special-events' },
       { label: 'Custom Business Events', labelHr: 'Poslovni događaji', href: '/events/custom-business-events' },
-      { label: 'Event Spaces', labelHr: 'Prostori za događanja', href: '/events/event-spaces' },
     ],
   },
   {
@@ -84,7 +83,6 @@ export const footerNavigation = {
   events: [
     { label: 'Custom Special Events', labelHr: 'Posebni događaji', href: '/events/custom-special-events' },
     { label: 'Custom Business Events', labelHr: 'Poslovni događaji', href: '/events/custom-business-events' },
-    { label: 'Event Spaces', labelHr: 'Prostori za događanja', href: '/events/event-spaces' },
   ],
   company: [
     { label: 'About WESPA', labelHr: 'O WESPA', href: '/about' },

@@ -10,14 +10,10 @@ const content = {
     pageTitle: 'SPOT Restaurant',
     breadcrumb: 'Home / Food / SPOT',
     title: 'Business-class dining',
-    subtitle: 'A premium business restaurant in the Green Gold center featuring top-tier daily menu, a la carte service and a curated wine list.',
-    aboutTitle: 'Where Business Meets Culinary Art',
-    aboutP1: 'SPOT redefines business dining in Zagreb. This is not just a restaurant — it is a venue where important conversations happen, partnerships are forged, and milestones are celebrated over exceptional food.',
-    aboutP2: 'With a kitchen driven by precision and creativity, SPOT delivers an experience that meets and exceeds the standards expected by corporate leaders and discerning diners alike.',
+    subtitle: 'A premium business restaurant in the Green Gold center featuring top-tier daily menu, a la carte service and a curated wine list. Our definition of a business lunch includes flawless service and culinary precision. Enjoy authentic flavors within an elegant setting that fully meets corporate standards.',
     galleryTitle: 'The SPOT Experience',
     featuresTitle: 'The SPOT Standard',
     features: [
-      { title: 'Fine Dining Experience', description: 'Meticulously crafted dishes that blend global culinary traditions with local excellence. Every plate is a statement.' },
       { title: 'Curated Wine List', description: 'An expertly assembled selection of wines from renowned vineyards — chosen to complement every course and occasion.' },
       { title: 'Corporate Standards', description: 'From executive lunches to client dinners, SPOT meets the expectations of the most discerning business professionals.' },
       { title: 'Flawless Service', description: 'Attentive, discreet, and impeccable. Our team ensures every detail is handled so you can focus on what matters.' },
@@ -27,21 +23,16 @@ const content = {
     findUsAddress: 'Heinzelova ulica 60, Zagreb',
     ctaTitle: 'Experience SPOT',
     ctaDesc: 'Reserve your table and discover premium business dining at its finest.',
-    reserveTable: 'Reserve a Table',
-    backToFood: 'Back to Food',
+    reserveTable: 'Make a reservation',
   },
   hr: {
     pageTitle: 'Restoran SPOT',
     breadcrumb: 'Početna / Gastronomija / SPOT',
     title: 'Gastronomija s poslovnim potpisom',
-    subtitle: 'Premium restoran u Green Gold centru s vrhunskim dnevnim menijem, a la carte uslugom i probranom vinskom kartom.',
-    aboutTitle: 'Gdje se poslovanje susreće s kulinarskom umjetnošću',
-    aboutP1: 'SPOT redefinira poslovnu gastronomiju u Zagrebu. Ovo nije samo restoran — to je mjesto gdje se vode važni razgovori, stvaraju partnerstva i slave postignuća uz iznimnu hranu.',
-    aboutP2: 'S kuhinjom vođenom preciznošću i kreativnošću, SPOT pruža iskustvo koje zadovoljava i premašuje standarde koje očekuju korporativni lideri i zahtjevni gosti.',
+    subtitle: 'Premium restoran u Green Gold centru s vrhunskim dnevnim menijem, a la carte uslugom i probranom vinskom kartom. Naša definicija poslovnog ručka uključuje besprijekornu uslugu i kulinarsku preciznost. Uživajte u autentičnim okusima u elegantnom ambijentu koji u potpunosti zadovoljava korporativne standarde.',
     galleryTitle: 'SPOT iskustvo',
     featuresTitle: 'SPOT standard',
     features: [
-      { title: 'Fine dining iskustvo', description: 'Pažljivo pripremljena jela koja spajaju globalne kulinarske tradicije s lokalnom izvrsnošću. Svaki tanjur je izjava.' },
       { title: 'Kuratirana vinska karta', description: 'Stručno sastavljen izbor vina iz renomiranih vinograda — odabran da nadopuni svaki gang i priliku.' },
       { title: 'Korporativni standardi', description: 'Od izvršnih ručkova do večera s klijentima, SPOT zadovoljava očekivanja najzahtjevnijih poslovnih profesionalaca.' },
       { title: 'Besprijekorna usluga', description: 'Pažljiva, diskretna i besprijekorna. Naš tim osigurava da je svaki detalj zbrinut kako biste se vi mogli fokusirati na ono što je važno.' },
@@ -51,8 +42,7 @@ const content = {
     findUsAddress: 'Heinzelova ulica 60, Zagreb',
     ctaTitle: 'Doživite SPOT',
     ctaDesc: 'Rezervirajte stol i otkrijte premium poslovnu gastronomiju u njenom najboljem izdanju.',
-    reserveTable: 'Rezervirajte stol',
-    backToFood: 'Natrag na gastronomiju',
+    reserveTable: 'Napravite rezervaciju',
   },
 }
 
@@ -75,23 +65,6 @@ export default function SpotPage() {
             <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
               {c.subtitle}
             </p>
-          </div>
-        </section>
-
-        {/* About */}
-        <section className="section-spacing">
-          <div className="container-wespa">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-6">
-                {c.aboutTitle}
-              </h2>
-              <p className="text-lg text-stone-600 mb-4">
-                {c.aboutP1}
-              </p>
-              <p className="text-lg text-stone-600">
-                {c.aboutP2}
-              </p>
-            </div>
           </div>
         </section>
 
@@ -151,14 +124,9 @@ export default function SpotPage() {
             <p className="text-lg text-stone-300 mb-8 max-w-xl mx-auto">
               {c.ctaDesc}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="wespa" size="lg">
-                {c.reserveTable}
-              </Button>
-              <Button variant="secondary" size="lg" asChild>
-                <Link href="/food">{c.backToFood}</Link>
-              </Button>
-            </div>
+            <Button variant="wespa" size="lg">
+              {c.reserveTable}
+            </Button>
           </div>
         </section>
       </main>

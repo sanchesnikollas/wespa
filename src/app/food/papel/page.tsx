@@ -10,14 +10,10 @@ const content = {
     pageTitle: 'Papel Restaurant',
     breadcrumb: 'Home / Food / Papel',
     title: 'The gastro hub for your workday',
-    subtitle: 'A relaxed community restaurant tailored to the pace of modern business. Choose from premium daily specials and an a la carte menu made with nutrient-rich ingredients.',
-    aboutTitle: 'Your Daily Dining Companion',
-    aboutP1: 'Papel is more than a lunch spot — it is the heartbeat of the WESPA community. Designed for professionals who value quality without compromise, our kitchen serves dishes that are nutritious, flavorful, and ready when you are.',
-    aboutP2: 'Whether you are catching up with a colleague over daily specials or hosting an informal meeting over an a la carte lunch, Papel offers the perfect balance of convenience and quality.',
+    subtitle: 'Everything you need for a quality break. A relaxed community restaurant tailored to the pace of modern business. Choose from premium daily specials and an a la carte menu made with nutrient-rich ingredients.',
     galleryTitle: 'The Papel Experience',
     featuresTitle: 'What Makes Papel Special',
     features: [
-      { title: 'Daily Specials', description: 'A rotating menu of freshly prepared dishes using seasonal, locally sourced ingredients. New flavors every day.' },
       { title: 'A La Carte Menu', description: 'A carefully curated selection of dishes for when you want to choose exactly what you crave.' },
       { title: 'Nutritious Ingredients', description: 'Every dish is designed to fuel your productivity — balanced, wholesome, and delicious.' },
       { title: 'Business-Friendly Atmosphere', description: 'Ideal for informal meetings, business lunches, or a quick recharge between sessions.' },
@@ -27,21 +23,16 @@ const content = {
     findUsAddress: 'Radnička cesta 50, Zagreb',
     ctaTitle: 'Ready to Try Papel?',
     ctaDesc: 'Reserve your table and discover a dining experience designed for the modern professional.',
-    bookTable: 'Book a Table',
-    backToFood: 'Back to Food',
+    bookTable: 'Make a Reservation',
   },
   hr: {
     pageTitle: 'Restoran Papel',
     breadcrumb: 'Početna / Gastronomija / Papel',
     title: 'Gastro baza vašeg radnog dana',
-    subtitle: 'Opušteni community restoran prilagođen tempu suvremenog poslovanja. Birajte između vrhunskih dnevnih i a la carte jela od nutritivno bogatih namirnica.',
-    aboutTitle: 'Vaš svakodnevni gastronomski pratitelj',
-    aboutP1: 'Papel je više od mjesta za ručak — to je srce WESPA zajednice. Dizajniran za profesionalce koji cijene kvalitetu bez kompromisa, naša kuhinja služi jela koja su nutritivna, ukusna i spremna kad vi jeste.',
-    aboutP2: 'Bilo da se družite s kolegom uz dnevne specijalitete ili organizirate neformalni sastanak uz a la carte ručak, Papel nudi savršenu ravnotežu praktičnosti i kvalitete.',
+    subtitle: 'Sve što trebate za kvalitetnu pauzu. Opušteni community restoran prilagođen tempu suvremenog poslovanja. Birajte između vrhunskih dnevnih i a la carte jela od nutritivno bogatih namirnica.',
     galleryTitle: 'Papel iskustvo',
     featuresTitle: 'Što čini Papel posebnim',
     features: [
-      { title: 'Dnevni specijaliteti', description: 'Rotirajući jelovnik svježe pripremljenih jela od sezonskih, lokalno nabavljenih sastojaka. Novi okusi svaki dan.' },
       { title: 'A la carte jelovnik', description: 'Pažljivo kuratiran izbor jela za trenutke kada želite odabrati točno ono što želite.' },
       { title: 'Nutritivni sastojci', description: 'Svako jelo dizajnirano je da potakne vašu produktivnost — uravnoteženo, zdravo i ukusno.' },
       { title: 'Poslovno ugodna atmosfera', description: 'Idealno za neformalne sastanke, poslovne ručkove ili brzo punjenje baterija između sesija.' },
@@ -51,8 +42,7 @@ const content = {
     findUsAddress: 'Radnička cesta 50, Zagreb',
     ctaTitle: 'Spremni probati Papel?',
     ctaDesc: 'Rezervirajte stol i otkrijte gastronomsko iskustvo dizajnirano za modernog profesionalca.',
-    bookTable: 'Rezervirajte stol',
-    backToFood: 'Natrag na gastronomiju',
+    bookTable: 'Napravite rezervaciju',
   },
 }
 
@@ -75,23 +65,6 @@ export default function PapelPage() {
             <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
               {c.subtitle}
             </p>
-          </div>
-        </section>
-
-        {/* About */}
-        <section className="section-spacing">
-          <div className="container-wespa">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-6">
-                {c.aboutTitle}
-              </h2>
-              <p className="text-lg text-stone-600 mb-4">
-                {c.aboutP1}
-              </p>
-              <p className="text-lg text-stone-600">
-                {c.aboutP2}
-              </p>
-            </div>
           </div>
         </section>
 
@@ -151,14 +124,9 @@ export default function PapelPage() {
             <p className="text-lg text-stone-300 mb-8 max-w-xl mx-auto">
               {c.ctaDesc}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="wespa" size="lg">
-                {c.bookTable}
-              </Button>
-              <Button variant="secondary" size="lg" asChild>
-                <Link href="/food">{c.backToFood}</Link>
-              </Button>
-            </div>
+            <Button variant="wespa" size="lg">
+              {c.bookTable}
+            </Button>
           </div>
         </section>
       </main>

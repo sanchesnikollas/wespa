@@ -9,11 +9,11 @@ const content = {
   en: {
     pageTitle: 'Business & Lounge',
     breadcrumb: 'Home / Locations / Business & Lounge',
-    title: 'A Premium Address for Your Success: WESPA Business & Lounge',
-    subtitle: 'Establish your new base in the most prominent business complex on Radnička. Enjoy sophisticated interior, premium amenities, and an unparalleled location.',
-    aboutTitle: 'The Premium WESPA Experience',
+    title: 'The Premium WESPA Experience',
+    subtitle: 'Exclusive business hub in the heart of Radnička.',
+    aboutTitle: 'A Premium Address for Your Success: WESPA Business & Lounge',
     aboutP1: 'WESPA Business & Lounge at Green Gold is where established businesses find their home. Every detail — from the refined interiors to the on-site dining — is designed to support professionals who operate at the highest level.',
-    aboutP2: 'Located at Radnička cesta 50 in Zagreb, this flagship location brings together exclusive workspaces, premium hospitality, and a vibrant business community under one roof.',
+    aboutP2: 'Establish your new base in the most prominent business complex on Radnička. Enjoy sophisticated interiors, premium service standards, and the discretion offered by our private offices and meeting rooms.',
     featuresTitle: "What's at Business & Lounge",
     features: [
       { title: 'Private Workspaces', description: 'Private workspaces and Office Zones tailored for established firms.' },
@@ -26,20 +26,20 @@ const content = {
     addressName: 'WESPA Business & Lounge',
     addressBuilding: 'Green Gold Business Centre',
     addressStreet: 'Radnička cesta 50, Zagreb',
+    addressNote: 'Please Note: At this location, we provide individual offices and team suites, while our coworking options (Fly Desk or Own Desk) are located at WESPA Spaces, Zavrtnica.',
     galleryTitle: 'Explore Business & Lounge',
     ctaTitle: 'See It for Yourself',
     ctaDesc: 'Book a tour of WESPA Business & Lounge and discover your next business address.',
     bookTour: 'Book a Tour',
-    allLocations: 'All Locations',
   },
   hr: {
     pageTitle: 'Business & Lounge',
     breadcrumb: 'Početna / Lokacije / Business & Lounge',
-    title: 'Premium adresa za vaš uspjeh: WESPA Business & Lounge',
-    subtitle: 'Uspostavite svoju novu bazu u najistaknutijem poslovnom kompleksu na Radničkoj. Uživajte u sofisticiranom interijeru, premium pogodnostima i neusporedivoj lokaciji.',
-    aboutTitle: 'Premium WESPA iskustvo',
+    title: 'Premium WESPA iskustvo',
+    subtitle: 'Ekskluzivni poslovni hub u srcu Radničke.',
+    aboutTitle: 'Premium adresa za vaš uspjeh: WESPA Business & Lounge',
     aboutP1: 'WESPA Business & Lounge u Green Goldu je mjesto gdje etablirane tvrtke pronalaze svoj dom. Svaki detalj — od rafiniranjih interijera do gastronomije na lokaciji — dizajniran je za podršku profesionalcima koji posluju na najvišoj razini.',
-    aboutP2: 'Smješten na Radničkoj cesti 50 u Zagrebu, ova vodeća lokacija spaja ekskluzivne radne prostore, premium ugostiteljstvo i živahnu poslovnu zajednicu pod jednim krovom.',
+    aboutP2: 'Uspostavite svoju novu bazu u najistaknutijem poslovnom kompleksu na Radničkoj. Uživajte u sofisticiranim interijerima, premium standardima usluge i diskreciji koju nude naši privatni uredi i sobe za sastanke.',
     featuresTitle: 'Što vas čeka u Business & Lounge',
     features: [
       { title: 'Privatni radni prostori', description: 'Privatni radni prostori i Office Zones prilagođeni etabliranim tvrtkama.' },
@@ -52,11 +52,11 @@ const content = {
     addressName: 'WESPA Business & Lounge',
     addressBuilding: 'Green Gold poslovni centar',
     addressStreet: 'Radnička cesta 50, Zagreb',
+    addressNote: 'Napomena: Na ovoj lokaciji pružamo individualne urede i timske apartmane, dok se naše coworking opcije (Fly Desk ili Own Desk) nalaze u WESPA Spaces, Zavrtnica.',
     galleryTitle: 'Istražite Business & Lounge',
     ctaTitle: 'Uvjerite se sami',
     ctaDesc: 'Zakažite obilazak WESPA Business & Lounge i otkrijte svoju sljedeću poslovnu adresu.',
     bookTour: 'Zakažite obilazak',
-    allLocations: 'Sve lokacije',
   },
 }
 
@@ -121,7 +121,10 @@ export default function BusinessLoungePage() {
               <h2 className="text-3xl font-bold text-stone-900 mb-4">{c.addressTitle}</h2>
               <p className="text-lg text-stone-600 mb-1">{c.addressName}</p>
               <p className="text-lg text-stone-600 mb-1">{c.addressBuilding}</p>
-              <p className="text-lg text-stone-900 font-semibold">{c.addressStreet}</p>
+              <p className="text-lg text-stone-900 font-semibold mb-6">{c.addressStreet}</p>
+              <p className="text-stone-600 text-sm leading-relaxed border-l-2 border-wespa-red pl-4">
+                {c.addressNote}
+              </p>
             </div>
           </div>
         </section>
@@ -154,14 +157,9 @@ export default function BusinessLoungePage() {
             <p className="text-lg text-stone-300 mb-8 max-w-xl mx-auto">
               {c.ctaDesc}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="wespa" size="lg" asChild>
-                <Link href="/book-visit">{c.bookTour}</Link>
-              </Button>
-              <Button variant="secondary" size="lg" asChild>
-                <Link href="/location">{c.allLocations}</Link>
-              </Button>
-            </div>
+            <Button variant="wespa" size="lg" asChild>
+              <Link href="/book-visit">{c.bookTour}</Link>
+            </Button>
           </div>
         </section>
       </main>
