@@ -38,6 +38,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/workspaces/virtual-office',
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export default function VirtualOfficeLayout({

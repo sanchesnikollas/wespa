@@ -197,15 +197,14 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right: Filter Card (Glass effect) */}
-          {/* TODO figma #4 — Gabi marcou "tirar"; candidato a remover este bloco glass card. Confirmar com screenshot. */}
+          {/* Right: Filter Card */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="hidden lg:block"
           >
-            <div className="card-glass p-8 shadow-2xl">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-stone-200">
               <h2 className="text-2xl font-semibold text-stone-900 mb-2">{t('hero.findSpace')}</h2>
               <p className="text-stone-600 mb-6">{t('hero.findSpaceSubtitle')}</p>
               <HeroFilterForm />
@@ -318,7 +317,7 @@ export function PlansSection() {
             <div className="absolute inset-0 bg-stone-900/80 backdrop-blur-sm" />
             <div className="absolute inset-0 flex items-center">
               <div className="container-wespa">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {wespaMetrics.map((metric) => (
                     <div key={metric.id} className="text-center">
                       <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
@@ -772,13 +771,6 @@ export function LocationsSection() {
 
                 {/* Content overlay */}
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  {/* TODO figma #7 — Gabi marcou "tirar"; candidato a remover este vibe badge. Confirmar com screenshot. */}
-                  <motion.span
-                    className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium w-fit mb-4"
-                    whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.3)' }}
-                  >
-                    {location.vibe === 'corporate' ? t('locations.corporate') : t('locations.startup')}
-                  </motion.span>
                   <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-200">{location.fullName}</h3>
                   <p className="text-stone-300 mb-4 flex items-center gap-2">
                     <Icon name="map-pin" size="sm" />
