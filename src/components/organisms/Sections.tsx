@@ -318,7 +318,7 @@ export function PlansSection() {
             <div className="absolute inset-0 bg-stone-900/80 backdrop-blur-sm" />
             <div className="absolute inset-0 flex items-center">
               <div className="container-wespa">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
                   {wespaMetrics.map((metric) => (
                     <div key={metric.id} className="text-center">
                       <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
@@ -782,7 +782,7 @@ export function LocationsSection() {
                   <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-200">{location.fullName}</h3>
                   <p className="text-stone-300 mb-4 flex items-center gap-2">
                     <Icon name="map-pin" size="sm" />
-                    {location.address}
+                    {`${location.address}, ${location.postalCode} ${location.city}, ${location.country}`}
                   </p>
                   <p className="text-stone-300 mb-6 line-clamp-2 group-hover:text-stone-200 transition-colors duration-200">{location.description}</p>
                   <motion.div whileHover={{ x: 4 }} transition={{ duration: 0.2 }}>
@@ -952,7 +952,7 @@ export function MediaSection() {
       title: 'WESPA Business & Lounge: Grand Opening & 3rd Anniversary',
       ctaLabel: t('media.readArticle'),
       href: 'https://story.hr/life-and-style/food-and-travel/a268522/Otvoren-Wespa-Business-Lounge-u-Green-Goldu.html',
-      image: '/images/spaces/lounge-1.jpg',
+      image: '/images/media/story-hr.jpg',
     },
     {
       id: 'youtube',
@@ -960,7 +960,7 @@ export function MediaSection() {
       title: 'Opening Video & Atmosphere',
       ctaLabel: t('media.watchVideo'),
       href: 'https://www.youtube.com/watch?v=Ei2tJkXLhEo',
-      image: '/images/spaces/urban-hub-1.jpg',
+      image: '/images/media/youtube-thumb.jpg',
     },
     {
       id: 'poduzetnik-biz',
@@ -968,7 +968,7 @@ export function MediaSection() {
       title: 'WESPA as a Hub for Entrepreneurship',
       ctaLabel: t('media.readArticle'),
       href: 'https://poduzetnik.biz/produktivnost/wespa-proslavila-3-rodendan-otvaranjem-novog-koncepta-wespa-business-lounge-u-srcu-poslovne-zone/',
-      image: '/images/spaces/coworking-1.jpg',
+      image: '/images/media/poduzetnik.jpg',
     },
   ]
 

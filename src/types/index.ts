@@ -39,6 +39,7 @@ export interface Location {
   address: string
   city: string
   postalCode: string
+  country: string
   phone: string
   email: string
   description: string

@@ -43,6 +43,7 @@ export const locations: Location[] = [
     address: 'Radnička cesta 50',
     city: 'Zagreb',
     postalCode: '10000',
+    country: 'Croatia',
     phone: '+385 1 234 5671',
     email: 'greengold@wespa.hr',
     description:
@@ -69,6 +70,7 @@ export const locations: Location[] = [
     address: 'Heinzelova ulica 60',
     city: 'Zagreb',
     postalCode: '10000',
+    country: 'Croatia',
     phone: '+385 1 234 5672',
     email: 'spaces@wespa.hr',
     description:
@@ -299,12 +301,6 @@ export const wespaMetrics: Metric[] = [
     value: '500',
     label: 'Workstations',
     suffix: '+',
-  },
-  {
-    id: 'locations',
-    value: '2',
-    label: 'Locations',
-    suffix: '',
   },
   {
     id: 'events',
