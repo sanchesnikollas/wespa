@@ -18,7 +18,6 @@ const content = {
     vat: '+ VAT',
     urbanHubTitle: 'WESPA Urban Hub (Zavrtnica 17)',
     businessLoungeTitle: 'WESPA Business & Lounge (Green Gold)',
-    businessLoungeRange: '€113 – €180 + VAT / hour',
     whatsIncludedTitle: "What's Included?",
     whatsIncludedSubtitle: 'Every booking comes with the full WESPA standards.',
     whatsIncluded: [
@@ -47,7 +46,6 @@ const content = {
     vat: '+ PDV',
     urbanHubTitle: 'WESPA Urban Hub (Zavrtnica 17)',
     businessLoungeTitle: 'WESPA Business & Lounge (Green Gold)',
-    businessLoungeRange: '€113 – €180 + PDV / sat',
     whatsIncludedTitle: 'Što je uključeno?',
     whatsIncludedSubtitle: 'Svaka rezervacija dolazi s WESPA standardima.',
     whatsIncluded: [
@@ -126,7 +124,6 @@ export default function ConferenceRoomsPage() {
 
             <div className="mb-8">
               <h2 className="text-3xl font-bold">{c.businessLoungeTitle}</h2>
-              <p className="text-stone-500 mt-1">{c.businessLoungeRange}</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-20">
               {rooms.filter(r => r.location === 'Green Gold').map((room) => (

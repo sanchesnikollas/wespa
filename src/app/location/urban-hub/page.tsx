@@ -10,7 +10,9 @@ const content = {
     pageTitle: 'Urban Hub',
     breadcrumb: 'Home / Locations / Urban Hub',
     title: 'WESPA Spaces',
-    subtitle: 'Step into the space that has become the heart of Zagreb’s startup culture. Whether you need a spot in the coworking, a private office that grows with you, a conference center, or relax & play zones — WESPA Spaces brings it all together.',
+    subtitle: 'An authentic industrial setting for teams building the future.',
+    introTitle: 'Where ideas come to life',
+    introBody: 'Step into the space that has become the heart of Zagreb’s startup culture. Whether you need a spot in the coworking, a private office that grows with you, a conference center, or relax & play zones — WESPA Spaces brings it all together.',
     featuresTitle: 'What You Will Find Here',
     features: [
       { title: 'The Premier Coworking HUB', description: 'A vast zone featuring Fly Desk and Own Desk workstations optimized for your rhythm of work.' },
@@ -31,7 +33,9 @@ const content = {
     pageTitle: 'Urban Hub',
     breadcrumb: 'Početna / Lokacije / Urban Hub',
     title: 'WESPA Spaces',
-    subtitle: 'Uđite u prostor koji je postao srce zagrebačke startup kulture. Bilo da trebate mjesto u coworkingu, privatni ured koji raste s vama, konferencijski centar ili relax & play zone — WESPA Spaces spaja sve na jednom mjestu.',
+    subtitle: 'Autentičan industrijski ambijent za timove koji grade budućnost.',
+    introTitle: 'Gdje ideje oživljavaju',
+    introBody: 'Uđite u prostor koji je postao srce zagrebačke startup kulture. Bilo da trebate mjesto u coworkingu, privatni ured koji raste s vama, konferencijski centar ili relax & play zone — WESPA Spaces spaja sve na jednom mjestu.',
     featuresTitle: 'Što ćete ovdje pronaći',
     features: [
       { title: 'Premier Coworking HUB', description: 'Prostrana zona s Fly Desk i Own Desk radnim stanicama optimiziranim za vaš ritam rada.' },
@@ -69,6 +73,20 @@ export default function UrbanHubPage() {
             <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
               {c.subtitle}
             </p>
+          </div>
+        </section>
+
+        {/* Intro */}
+        <section className="section-spacing">
+          <div className="container-wespa">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-6">
+                {c.introTitle}
+              </h2>
+              <p className="text-lg text-stone-600">
+                {c.introBody}
+              </p>
+            </div>
           </div>
         </section>
 

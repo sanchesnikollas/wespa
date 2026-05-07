@@ -79,16 +79,9 @@ export default function CustomBusinessEventsPage() {
 
         <section className="section-spacing bg-stone-50">
           <div className="container-wespa">
-            <div className="bg-stone-900 text-white rounded-3xl p-10 md:p-14 grid md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-2">
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">{c.cateringTitle}</h3>
-                <p className="text-stone-300 leading-relaxed">{c.cateringDesc}</p>
-              </div>
-              <div className="md:text-right">
-                <Button variant="wespa" size="lg" asChild>
-                  <Link href="/food">{c.cateringCta}</Link>
-                </Button>
-              </div>
+            <div className="bg-stone-900 text-white rounded-3xl p-10 md:p-14 max-w-4xl mx-auto">
+              <h3 className="text-2xl md:text-3xl font-bold mb-3">{c.cateringTitle}</h3>
+              <p className="text-stone-300 leading-relaxed">{c.cateringDesc}</p>
             </div>
           </div>
         </section>

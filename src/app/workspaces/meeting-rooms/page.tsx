@@ -183,12 +183,6 @@ export default function MeetingRoomsPage() {
               ))}
             </div>
 
-            <div className="text-center mb-20">
-              <Button variant="wespa" size="lg" asChild>
-                <Link href="/book-visit">{c.bookVisit}</Link>
-              </Button>
-            </div>
-
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">{c.packagesTitle}</h2>
             <p className="text-stone-600 text-center max-w-xl mx-auto mb-12">{c.packagesNote}</p>
 
@@ -242,11 +236,12 @@ export default function MeetingRoomsPage() {
                   </ul>
                 </div>
               </div>
-              <div className="text-center">
-                <Button variant="wespa" size="lg" asChild>
-                  <Link href="/book-visit">{c.bookRoom}</Link>
-                </Button>
-              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Button variant="wespa" size="lg" asChild>
+                <Link href="/book-visit">{c.bookVisit}</Link>
+              </Button>
             </div>
           </div>
         </section>

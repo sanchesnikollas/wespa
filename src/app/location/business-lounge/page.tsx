@@ -12,8 +12,7 @@ const content = {
     title: 'The Premium WESPA Experience',
     subtitle: 'Exclusive business hub in the heart of Radnička.',
     aboutTitle: 'A Premium Address for Your Success: WESPA Business & Lounge',
-    aboutP1: 'WESPA Business & Lounge at Green Gold is where established businesses find their home. Every detail — from the refined interiors to the on-site dining — is designed to support professionals who operate at the highest level.',
-    aboutP2: 'Establish your new base in the most prominent business complex on Radnička. Enjoy sophisticated interiors, premium service standards, and the discretion offered by our private offices and meeting rooms.',
+    aboutP1: 'Establish your new base in the most prominent business complex on Radnička. Enjoy sophisticated interiors, premium service standards, and the discretion offered by our private offices and meeting rooms.',
     featuresTitle: "What's at Business & Lounge",
     features: [
       { title: 'Private Workspaces', description: 'Private workspaces and Office Zones tailored for established firms.' },
@@ -38,8 +37,7 @@ const content = {
     title: 'Premium WESPA iskustvo',
     subtitle: 'Ekskluzivni poslovni hub u srcu Radničke.',
     aboutTitle: 'Premium adresa za vaš uspjeh: WESPA Business & Lounge',
-    aboutP1: 'WESPA Business & Lounge u Green Goldu je mjesto gdje etablirane tvrtke pronalaze svoj dom. Svaki detalj — od rafiniranjih interijera do gastronomije na lokaciji — dizajniran je za podršku profesionalcima koji posluju na najvišoj razini.',
-    aboutP2: 'Uspostavite svoju novu bazu u najistaknutijem poslovnom kompleksu na Radničkoj. Uživajte u sofisticiranim interijerima, premium standardima usluge i diskreciji koju nude naši privatni uredi i sobe za sastanke.',
+    aboutP1: 'Uspostavite svoju novu bazu u najistaknutijem poslovnom kompleksu na Radničkoj. Uživajte u sofisticiranim interijerima, premium standardima usluge i diskreciji koju nude naši privatni uredi i sobe za sastanke.',
     featuresTitle: 'Što vas čeka u Business & Lounge',
     features: [
       { title: 'Privatni radni prostori', description: 'Privatni radni prostori i Office Zones prilagođeni etabliranim tvrtkama.' },
@@ -89,11 +87,8 @@ export default function BusinessLoungePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-6">
                 {c.aboutTitle}
               </h2>
-              <p className="text-lg text-stone-600 mb-4">
-                {c.aboutP1}
-              </p>
               <p className="text-lg text-stone-600">
-                {c.aboutP2}
+                {c.aboutP1}
               </p>
             </div>
           </div>
