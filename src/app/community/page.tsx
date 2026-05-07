@@ -158,7 +158,7 @@ export default function CommunityPage() {
               {c.eventCategories.map((cat) => (
                 <div key={cat.title} className="p-8 bg-white border border-stone-200 rounded-2xl hover:shadow-card-hover transition-shadow">
                   <div className="mb-4">
-                    <WespaIconCircle name={cat.icon} size="xl" variant="brand-solid" />
+                    <WespaIconCircle name={cat.icon} size="lg" iconSize="xl" variant="brand-solid" />
                   </div>
                   <h3 className="text-2xl font-bold text-stone-900 mb-3">{cat.title}</h3>
                   <p className="text-stone-600">{cat.description}</p>

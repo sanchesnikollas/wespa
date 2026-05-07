@@ -147,6 +147,7 @@ export function WespaIcon({
  */
 interface WespaIconCircleProps extends WespaIconProps {
   variant?: 'light' | 'dark' | 'outline' | 'brand' | 'brand-solid'
+  iconSize?: WespaIconProps['size']
 }
 
 export function WespaIconCircle({
@@ -154,11 +155,12 @@ export function WespaIconCircle({
   size = 'md',
   variant = 'light',
   className,
-  alt
+  alt,
+  iconSize: iconSizeOverride,
 }: WespaIconCircleProps) {
   const iconFile = WESPA_ICONS[name]
   const containerSize = containerSizeMap[size]
-  const iconSize = iconInCircleSizeMap[size]
+  const iconSize = iconInCircleSizeMap[iconSizeOverride ?? size]
 
   const variantStyles = {
     light: 'bg-stone-100',
