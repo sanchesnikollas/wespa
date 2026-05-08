@@ -5,7 +5,7 @@ import '@/styles/globals.css'
 import { ConditionalLayout } from '@/components/organisms/ConditionalLayout'
 import { CustomCursor } from '@/components/organisms/CustomCursor'
 import { LanguageProvider } from '@/contexts/LanguageContext'
-import { AnalyticsProvider, UTMTracker } from '@/components/tracking'
+import { AnalyticsProvider, ConsentBanner, UTMTracker } from '@/components/tracking'
 import { HomePageJsonLd } from '@/components/seo'
 
 // ============================================
@@ -38,6 +38,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://wespa.gigwand.com'),
   alternates: {
     canonical: '/',
+    languages: {
+      en: '/',
+      hr: '/',
+      'x-default': '/',
+    },
   },
   openGraph: {
     type: 'website',
@@ -102,6 +107,35 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Preconnect to GTM/GA + Resend image CDN */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+
+        {/* Critical font preload (regular + bold for above-the-fold copy) */}
+        <link
+          rel="preload"
+          href="/font/D-DIN.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/font/D-DIN-Bold.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+
+        {/* GTM Consent Mode v2 — default to denied; cookie banner upgrades */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','functionality_storage':'granted','security_storage':'granted','wait_for_update':500});gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);`,
+          }}
+        />
+
         {/* JSON-LD Structured Data for SEO */}
         <HomePageJsonLd />
       </head>
@@ -120,6 +154,9 @@ export default function RootLayout({
             <ConditionalLayout>
               {children}
             </ConditionalLayout>
+
+            {/* GDPR cookie consent */}
+            <ConsentBanner />
           </LanguageProvider>
         </AnalyticsProvider>
 

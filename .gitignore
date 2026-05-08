@@ -43,3 +43,9 @@ next-env.d.ts
 
 # Client assets (reference only, not for deployment)
 Estrutura, conteudo review/
+HOSPITALITY/
+SPACES/
+STAGE/
+
+# Image originals (pre-optimization, kept locally only)
+public/_originals/

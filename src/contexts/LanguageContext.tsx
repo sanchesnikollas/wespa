@@ -35,8 +35,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLanguageState(lang)
     if (typeof window !== 'undefined') {
       localStorage.setItem('wespa-lang', lang)
+      document.documentElement.lang = lang === 'hr' ? 'hr' : 'en'
     }
   }, [])
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = language === 'hr' ? 'hr' : 'en'
+    }
+  }, [language])
 
   const t = useCallback((key: TranslationKey): string => {
     const keys = key.split('.') as string[]

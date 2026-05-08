@@ -1,35 +1,31 @@
-# WESPA - Robots.txt
-# https://wespa.hr
+# WESPA — robots.txt
+# https://wespa.gigwand.com
 
 User-agent: *
 Allow: /
-
-# Disallow private/admin areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /_originals/
 Disallow: /dashboard
-Disallow: /dashboard/*
 Disallow: /login
 Disallow: /join
 Disallow: /forgot-password
 Disallow: /reset-password
-Disallow: /api/
-Disallow: /_next/
 
-# Crawl delay for polite crawling
-Crawl-delay: 1
-
-# Sitemaps
-Sitemap: https://wespa.hr/sitemap.xml
-
-# Google specific
 User-agent: Googlebot
 Allow: /
-Disallow: /dashboard
-Disallow: /login
-Disallow: /join
 
-# Bing specific
 User-agent: Bingbot
 Allow: /
-Disallow: /dashboard
-Disallow: /login
-Disallow: /join
+
+# AI crawlers — opted in for brand discovery
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://wespa.gigwand.com/sitemap.xml

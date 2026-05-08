@@ -8,3 +8,4 @@ export {
   trackEvent,
   getStoredUTM,
 } from './Analytics'
+export { ConsentBanner } from './ConsentBanner'

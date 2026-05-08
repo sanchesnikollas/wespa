@@ -1,51 +1,39 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable React strict mode for better development experience
   reactStrictMode: true,
-
-  // Output standalone for faster builds and smaller deployments
   output: 'standalone',
+  poweredByHeader: false,
+  compress: true,
 
-  // Image optimization configuration
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Use unoptimized since we're serving static images from public folder
-    // This ensures images work reliably on all hosting platforms (Railway, Vercel, etc.)
-    unoptimized: true,
+    minimumCacheTTL: 31536000,
   },
 
-  // Enable experimental features
   experimental: {
-    // Optimize package imports
-    optimizePackageImports: ['framer-motion', 'react-hook-form'],
+    optimizePackageImports: ['framer-motion', 'react-hook-form', 'lucide-react'],
   },
 
-  // Headers for security and SEO
   async headers() {
+    const longCache = [
+      { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+    ]
     return [
       {
         source: '/:path*',
         headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self)' },
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
         ],
       },
+      { source: '/font/:all*', headers: longCache },
+      { source: '/images/:all*', headers: longCache },
     ]
   },
 

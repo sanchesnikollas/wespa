@@ -10,19 +10,23 @@ import { useEffect } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 
 // ============================================
-// Configuration (replace with actual IDs)
+// Configuration — only render if a real ID is set in the env.
+// Falsy / placeholder IDs are dropped at render to avoid 404-ing tag servers.
 // ============================================
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-XXXXXXX'
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || 'XXXXXXXXXXXXXXXXX'
-const LINKEDIN_PARTNER_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID || 'XXXXXXX'
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID
+const LINKEDIN_PARTNER_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID
+
+const isValidGtmId = (id?: string) => !!id && /^GTM-[A-Z0-9]+$/i.test(id)
+const isValidNumericId = (id?: string) => !!id && /^\d{6,}$/.test(id)
 
 // ============================================
 // Google Tag Manager
 // ============================================
 export function GoogleTagManager() {
+  if (!isValidGtmId(GTM_ID)) return null
   return (
     <>
-      {/* GTM Script */}
       <Script
         id="gtm-script"
         strategy="afterInteractive"
@@ -36,7 +40,6 @@ export function GoogleTagManager() {
           `,
         }}
       />
-      {/* GTM NoScript (for body) */}
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -53,6 +56,7 @@ export function GoogleTagManager() {
 // Meta Pixel (Facebook)
 // ============================================
 export function MetaPixel() {
+  if (!isValidNumericId(META_PIXEL_ID)) return null
   return (
     <Script
       id="meta-pixel"
@@ -79,6 +83,7 @@ export function MetaPixel() {
 // LinkedIn Insight Tag
 // ============================================
 export function LinkedInInsightTag() {
+  if (!isValidNumericId(LINKEDIN_PARTNER_ID)) return null
   return (
     <Script
       id="linkedin-insight"
