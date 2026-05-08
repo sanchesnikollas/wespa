@@ -124,6 +124,7 @@ export const translations = {
         title: 'For Corporations',
         description: 'Scalable offices with zero admin overhead',
       },
+      exploreSpaces: 'Explore Spaces',
       satisfaction: 'member satisfaction rate',
     },
     // Locations
@@ -133,6 +134,8 @@ export const translations = {
       corporate: 'Corporate Vibe',
       startup: 'Startup Vibe',
       explore: 'Explore Location',
+      visitZavrtnica: 'Visit Zavrtnica',
+      visitGreenGold: 'Visit WESPA Green Gold',
     },
     // Lead Form
     leadForm: {
@@ -413,6 +416,7 @@ export const translations = {
         title: 'Za korporacije',
         description: 'Prostori dizajnirani za vrhunsku produktivnost bez operativnih briga.',
       },
+      exploreSpaces: 'Istražite prostore',
       satisfaction: 'stopa zadovoljstva članova',
     },
     // Locations
@@ -422,6 +426,8 @@ export const translations = {
       corporate: 'Korporativni ugođaj',
       startup: 'Startup ugođaj',
       explore: 'Istražite lokaciju',
+      visitZavrtnica: 'Posjetite Zavrtnicu',
+      visitGreenGold: 'Posjetite WESPA Green Gold',
     },
     // Lead Form
     leadForm: {

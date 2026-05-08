@@ -178,23 +178,6 @@ export function HeroSection() {
                 <Link href="/workspaces">{t('hero.ctaSecondary')}</Link>
               </Button>
             </motion.div>
-
-            {/* Stats row */}
-            <motion.div
-              className="flex gap-8 mt-12 pt-12 border-t border-white/20"
-              variants={fadeInUp}
-            >
-              {[
-                { value: '6,000+', label: t('hero.stats.workspace') },
-                { value: '500+', label: t('hero.stats.workstations') },
-                { value: '1,000+', label: t('hero.stats.events') },
-              ].map((stat, i) => (
-                <div key={i}>
-                  <div className="text-3xl font-bold text-white">{stat.value}</div>
-                  <div className="text-sm text-stone-400">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
           </motion.div>
 
           {/* Right: Filter Card */}
@@ -441,10 +424,7 @@ export function FeaturesSection() {
   return (
     <section className="section-spacing">
       <div className="container-wespa">
-        <SectionTitle
-          title={t('features.title')}
-          subtitle={t('features.subtitle')}
-        />
+        <SectionTitle title={t('features.title')} />
 
         <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6"
@@ -545,11 +525,7 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
   return (
     <section className="section-spacing bg-stone-900 text-white overflow-hidden">
       <div className="container-wespa">
-        <SectionTitle
-          title={t('testimonials.title')}
-          subtitle={t('testimonials.subtitle')}
-          light
-        />
+        <SectionTitle title={t('testimonials.title')} light />
 
         {/* Testimonial cards */}
         <motion.div
@@ -615,36 +591,6 @@ export function TestimonialsSection({ stories }: TestimonialsSectionProps) {
           ))}
         </motion.div>
 
-        {/* Logo bar */}
-        <motion.div
-          className="mt-16 pt-16 border-t border-white/10"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-center text-stone-500 text-sm uppercase tracking-widest mb-8">
-            {t('testimonials.trustedBy')}
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
-            {[
-              { src: '/images/clients/sony.png', alt: 'Sony' },
-              { src: '/images/clients/disney.png', alt: 'Disney' },
-              { src: '/images/clients/mews.png', alt: 'Mews' },
-              { src: '/images/clients/57-hours.png', alt: '57 hours' },
-              { src: '/images/clients/logo-transparent.png', alt: 'Client' },
-              { src: '/images/clients/client-1.png', alt: 'Client' },
-            ].map((logo, i) => (
-              <div key={i} className="relative w-24 h-10 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 invert">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   )
@@ -689,12 +635,9 @@ export function PainPointsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-8 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-stone-900 mb-10 tracking-tight">
               {t('painPoints.title')}
             </h2>
-            <p className="text-xl text-stone-600 mb-10 leading-relaxed">
-              {t('painPoints.subtitle')}
-            </p>
 
             <div className="space-y-6">
               {[
@@ -704,17 +647,16 @@ export function PainPointsSection() {
               ].map((group, i) => (
                 <div key={i} className="bg-stone-50 rounded-2xl p-6">
                   <h3 className="font-semibold text-stone-900 mb-4">{group.title}</h3>
-                  <p className="flex items-center gap-3 text-stone-600">
+                  <p className="flex items-center gap-3 text-stone-600 mb-5">
                     <Icon name="check" size="sm" className="text-wespa-red shrink-0" />
                     {group.description}
                   </p>
+                  <Button variant="secondary" size="sm" asChild>
+                    <Link href="/workspaces">{t('painPoints.exploreSpaces')}</Link>
+                  </Button>
                 </div>
               ))}
             </div>
-
-            <Button variant="wespa" size="lg" className="mt-8" asChild>
-              <Link href="/book-visit">{t('hero.cta')}</Link>
-            </Button>
           </motion.div>
         </div>
       </div>
@@ -729,22 +671,23 @@ export function LocationsSection() {
   const { t } = useLanguage()
   const locationData = [
     {
-      ...locations[0],
-      image: '/images/spaces/lounge-2.jpg',
-    },
-    {
       ...locations[1],
       image: '/images/spaces/coworking-2.jpg',
+      href: '/location/urban-hub',
+      ctaKey: 'locations.visitZavrtnica' as const,
+    },
+    {
+      ...locations[0],
+      image: '/images/spaces/lounge-2.jpg',
+      href: '/location/business-lounge',
+      ctaKey: 'locations.visitGreenGold' as const,
     },
   ]
 
   return (
     <section className="section-spacing bg-stone-50">
       <div className="container-wespa">
-        <SectionTitle
-          title={t('locations.title')}
-          subtitle={t('locations.subtitle')}
-        />
+        <SectionTitle title={t('locations.title')} />
 
         <div className="grid md:grid-cols-2 gap-8">
           {locationData.map((location, index) => (
@@ -770,23 +713,23 @@ export function LocationsSection() {
                     className="object-cover"
                   />
                 </motion.div>
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent group-hover:from-stone-900/95 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/60 to-stone-900/20 group-hover:from-stone-900/95 transition-colors duration-300" />
 
                 {/* Content overlay */}
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-200">{location.fullName}</h3>
-                  <p className="text-stone-300 mb-4 flex items-center gap-2">
+                  <h3 className="text-3xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-200">{location.fullName}</h3>
+                  <p className="text-white text-lg font-medium mb-3 leading-snug">{location.description}</p>
+                  <p className="text-stone-300 mb-6 flex items-center gap-2 text-sm">
                     <Icon name="map-pin" size="sm" />
                     {`${location.address}, ${location.postalCode} ${location.city}, ${location.country}`}
                   </p>
-                  <p className="text-stone-300 mb-6 line-clamp-2 group-hover:text-stone-200 transition-colors duration-200">{location.description}</p>
                   <motion.div whileHover={{ x: 4 }} transition={{ duration: 0.2 }}>
                     <Button
-                      variant="secondary"
-                      className="w-fit bg-white/10 border-white/30 text-white hover:bg-white hover:text-stone-900"
+                      variant="wespa"
+                      className="w-fit"
                       asChild
                     >
-                      <Link href={location.id === 'green-gold' ? '/location/business-lounge' : '/location/urban-hub'}>{t('locations.explore')}</Link>
+                      <Link href={location.href}>{t(location.ctaKey)}</Link>
                     </Button>
                   </motion.div>
                 </div>
@@ -828,9 +771,6 @@ export function LeadFormSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
               {t('leadForm.title')}
             </h2>
-            <p className="text-xl text-stone-300">
-              {t('leadForm.subtitle')}
-            </p>
           </motion.div>
 
           <motion.div
