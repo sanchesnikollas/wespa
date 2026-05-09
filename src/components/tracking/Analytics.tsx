@@ -17,8 +17,80 @@ const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID
 const LINKEDIN_PARTNER_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID
 
+// Beacon → gigwand portal funnel.
+const GIGWAND_INGEST_URL =
+  process.env.NEXT_PUBLIC_GIGWAND_INGEST_URL ||
+  'https://hayjlojrcmprwmzgqlxz.supabase.co/functions/v1/ingest-event'
+const GIGWAND_SITE_ID = process.env.NEXT_PUBLIC_GIGWAND_SITE_ID || 'wespa'
+
 const isValidGtmId = (id?: string) => !!id && /^GTM-[A-Z0-9]+$/i.test(id)
 const isValidNumericId = (id?: string) => !!id && /^\d{6,}$/.test(id)
+
+// Per-tab session id (cheap, no PII).
+function getSessionId(): string {
+  if (typeof window === 'undefined') return ''
+  const KEY = 'wespa-sess'
+  let id = sessionStorage.getItem(KEY)
+  if (!id) {
+    id = Math.random().toString(36).slice(2) + Date.now().toString(36)
+    sessionStorage.setItem(KEY, id)
+  }
+  return id
+}
+
+interface BeaconPayload {
+  event_name: string
+  page_path?: string
+  props?: Record<string, unknown>
+}
+
+// Fire-and-forget POST to gigwand. Uses sendBeacon when available so it
+// survives page unloads (link clicks, form submits navigating away).
+export function gigwandBeacon({ event_name, page_path, props }: BeaconPayload) {
+  if (typeof window === 'undefined') return
+  try {
+    const utm = (() => {
+      try {
+        const stored = sessionStorage.getItem('wespa_utm')
+        return stored ? JSON.parse(stored) : null
+      } catch {
+        return null
+      }
+    })()
+    const body = JSON.stringify({
+      site_id: GIGWAND_SITE_ID,
+      event_name,
+      page_path: page_path ?? window.location.pathname,
+      session_id: getSessionId(),
+      referrer: document.referrer || undefined,
+      utm: utm
+        ? {
+            source: utm.utm_source ?? undefined,
+            medium: utm.utm_medium ?? undefined,
+            campaign: utm.utm_campaign ?? undefined,
+            content: utm.utm_content ?? undefined,
+            term: utm.utm_term ?? undefined,
+          }
+        : undefined,
+      props,
+    })
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(
+        GIGWAND_INGEST_URL,
+        new Blob([body], { type: 'application/json' }),
+      )
+    } else {
+      void fetch(GIGWAND_INGEST_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body,
+        keepalive: true,
+      }).catch(() => undefined)
+    }
+  } catch {
+    // Beacon failures are non-fatal; never break the user flow.
+  }
+}
 
 // ============================================
 // Google Tag Manager
@@ -141,6 +213,12 @@ export function useUTMTracker() {
         ...utmParams,
       })
     }
+
+    gigwandBeacon({
+      event_name: 'page_view',
+      page_path: pathname,
+      props: { page_title: typeof document !== 'undefined' ? document.title : undefined },
+    })
   }, [pathname, searchParams])
 }
 
@@ -174,7 +252,6 @@ export const trackEvent = {
   // Lead form submission
   leadSubmit: (formType: string, data?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
-      // GTM
       if ((window as any).dataLayer) {
         (window as any).dataLayer.push({
           event: 'lead_submit',
@@ -182,16 +259,13 @@ export const trackEvent = {
           ...data,
         })
       }
-
-      // Meta Pixel
       if ((window as any).fbq) {
         (window as any).fbq('track', 'Lead', { content_name: formType })
       }
-
-      // LinkedIn
       if ((window as any).lintrk) {
         (window as any).lintrk('track', { conversion_id: formType })
       }
+      gigwandBeacon({ event_name: 'lead_submit', props: { form_type: formType } })
     }
   },
 
@@ -204,10 +278,10 @@ export const trackEvent = {
           contact_subject: subject,
         })
       }
-
       if ((window as any).fbq) {
         (window as any).fbq('track', 'Contact')
       }
+      gigwandBeacon({ event_name: 'contact_submit', props: { contact_subject: subject } })
     }
   },
 
@@ -220,10 +294,10 @@ export const trackEvent = {
           resource_name: resourceName,
         })
       }
-
       if ((window as any).fbq) {
         (window as any).fbq('track', 'Lead', { content_name: resourceName })
       }
+      gigwandBeacon({ event_name: 'download', props: { resource_name: resourceName } })
     }
   },
 
@@ -236,10 +310,10 @@ export const trackEvent = {
           visit_location: location,
         })
       }
-
       if ((window as any).fbq) {
         (window as any).fbq('track', 'Schedule')
       }
+      gigwandBeacon({ event_name: 'book_visit', props: { visit_location: location } })
     }
   },
 
@@ -253,6 +327,10 @@ export const trackEvent = {
           space_name: spaceName,
         })
       }
+      gigwandBeacon({
+        event_name: 'space_view',
+        props: { space_type: spaceType, space_name: spaceName },
+      })
     }
   },
 
@@ -260,14 +338,12 @@ export const trackEvent = {
   newsletterSignup: () => {
     if (typeof window !== 'undefined') {
       if ((window as any).dataLayer) {
-        (window as any).dataLayer.push({
-          event: 'newsletter_signup',
-        })
+        (window as any).dataLayer.push({ event: 'newsletter_signup' })
       }
-
       if ((window as any).fbq) {
         (window as any).fbq('track', 'Subscribe')
       }
+      gigwandBeacon({ event_name: 'newsletter_signup' })
     }
   },
 }
