@@ -1,0 +1,136 @@
+{
+  "timestamp": "2026-05-12T03:09:57.719Z",
+  "baseUrl": "http://localhost:3003",
+  "formFactor": "mobile",
+  "throttling": "slow-4g + 4x cpu",
+  "results": [
+    {
+      "route": "/",
+      "slug": "home",
+      "ok": true,
+      "metrics": {
+        "performance": 0.88,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcp": 3772.5491250000005,
+        "fcp": 906.0130999999999,
+        "cls": 0.068652,
+        "tbt": 3,
+        "si": 1499.5018239499502
+      }
+    },
+    {
+      "route": "/workspaces",
+      "slug": "workspaces",
+      "ok": true,
+      "metrics": {
+        "performance": 0.94,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcp": 3082.5814,
+        "fcp": 753.7907,
+        "cls": 0.04994900000000001,
+        "tbt": 0,
+        "si": 1540.822522995662
+      }
+    },
+    {
+      "route": "/workspaces/coworking",
+      "slug": "workspaces-coworking",
+      "ok": true,
+      "metrics": {
+        "performance": 0.94,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcp": 3082.2183999999997,
+        "fcp": 753.6092000000001,
+        "cls": 0.050186999999999996,
+        "tbt": 0,
+        "si": 1413.102711627636
+      }
+    },
+    {
+      "route": "/workspaces/meeting-rooms",
+      "slug": "workspaces-meeting-rooms",
+      "ok": true,
+      "metrics": {
+        "performance": 0.94,
+        "accessibility": 0.95,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcp": 3016.4030000000002,
+        "fcp": 756.5612000000001,
+        "cls": 0.050176,
+        "tbt": 0,
+        "si": 890.8003891368081
+      }
+    },
+    {
+      "route": "/workspaces/offices",
+      "slug": "workspaces-offices",
+      "ok": true,
+      "metrics": {
+        "performance": 0.93,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcp": 3158.95225,
+        "fcp": 753.5808999999999,
+        "cls": 0.053370999999999995,
+        "tbt": 0,
+        "si": 1423.6111530361281
+      }
+    },
+    {
+      "route": "/workspaces/conference-rooms",
+      "slug": "workspaces-conference-rooms",
+      "ok": true,
+      "metrics": {
+        "performance": 0.96,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcp": 2633.4832,
+        "fcp": 754.2416000000001,
+        "cls": 0.056726,
+        "tbt": 0,
+        "si": 1056.4598520186687
+      }
+    },
+    {
+      "route": "/food",
+      "slug": "food",
+      "ok": true,
+      "metrics": {
+        "performance": 0.94,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcp": 3086.2034249999997,
+        "fcp": 754.9793,
+        "cls": 0.05015800000000001,
+        "tbt": 1,
+        "si": 1082.3193380117725
+      }
+    },
+    {
+      "route": "/location",
+      "slug": "location",
+      "ok": true,
+      "metrics": {
+        "performance": 0.95,
+        "accessibility": 0.97,
+        "bestPractices": 0.96,
+        "seo": 1,
+        "lcp": 2857.1118,
+        "fcp": 753.5559000000001,
+        "cls": 0.055231999999999996,
+        "tbt": 0,
+        "si": 944.4347860228277
+      }
+    }
+  ]
+}

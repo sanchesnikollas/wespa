@@ -204,7 +204,7 @@ export default function ConferenceRoomDetailPage() {
       <main>
         {/* Hero */}
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
-          <Image src={room.images[0]} alt={room.name} fill className="object-cover" priority />
+          <Image src={room.images[0]} alt={room.name} fill sizes="100vw" className="object-cover" priority />
           <div className="absolute inset-0 bg-stone-900/75" />
           <div className="container-wespa relative z-10">
             <Link href="/workspaces/conference-rooms" className="inline-flex items-center gap-2 text-stone-400 hover:text-white mb-6 transition-colors">

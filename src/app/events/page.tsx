@@ -71,7 +71,7 @@ export default function EventsPage() {
       <main>
         {/* Hero */}
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
-          <Image src="/images/events/spaces/venue-1.jpg" alt="WESPA event venue" fill className="object-cover" priority />
+          <Image src="/images/events/spaces/venue-1.jpg" alt="WESPA event venue" fill sizes="100vw" className="object-cover" priority />
           <div className="absolute inset-0 bg-stone-900/75" />
           <div className="container-wespa relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">{c.title}</h1>

@@ -126,9 +126,10 @@ export function HeroSection() {
           src="/images/spaces/urban-hub-1.jpg"
           alt="WESPA Premium Workspace"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
-          quality={90}
+          quality={85}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40" />
       </motion.div>

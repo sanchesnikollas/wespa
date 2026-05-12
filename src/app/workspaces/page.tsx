@@ -93,7 +93,7 @@ export default function WorkspacesPage() {
     <>
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
-          <Image src="/images/workspaces/coworking/coworking-1.jpg" alt="WESPA workspaces" fill className="object-cover" priority />
+          <Image src="/images/workspaces/coworking/coworking-1.jpg" alt="WESPA workspaces" fill sizes="100vw" className="object-cover" priority />
           <div className="absolute inset-0 bg-stone-900/75" />
           <div className="container-wespa relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">{c.title}</h1>

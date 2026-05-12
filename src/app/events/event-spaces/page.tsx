@@ -121,7 +121,7 @@ export default function EventSpacesPage() {
       <main>
         {/* Hero */}
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
-          <Image src="/images/events/spaces/venue-2.jpg" alt="WESPA event space" fill className="object-cover" priority />
+          <Image src="/images/events/spaces/venue-2.jpg" alt="WESPA event space" fill sizes="100vw" className="object-cover" priority />
           <div className="absolute inset-0 bg-stone-900/75" />
           <div className="container-wespa relative z-10">
             <p className="text-wespa-red font-semibold mb-4">{c.breadcrumb}</p>
