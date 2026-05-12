@@ -223,7 +223,7 @@ export function BottomNav() {
                   className={cn(
                     'flex flex-col items-center justify-center gap-1 py-2 px-4 min-w-[64px]',
                     'transition-colors duration-200',
-                    active ? 'text-wespa-red' : 'text-gray-500'
+                    active ? 'text-wespa-red-dark' : 'text-gray-500'
                   )}
                 >
                   <motion.div
@@ -253,7 +253,7 @@ export function BottomNav() {
                 className={cn(
                   'flex flex-col items-center justify-center gap-1 py-2 px-4 min-w-[64px]',
                   'transition-colors duration-200',
-                  active ? 'text-wespa-red' : 'text-gray-500'
+                  active ? 'text-wespa-red-dark' : 'text-gray-500'
                 )}
               >
                 <motion.div

@@ -71,10 +71,10 @@ const variantStyles: Record<ButtonVariant, string> = {
   ),
   // WESPA Red: Brand red with WHITE text (high contrast)
   wespa: cn(
-    'bg-wespa-red text-white',
-    'hover:bg-wespa-red-dark hover:shadow-lg hover:shadow-red-500/30',
+    'bg-wespa-red-dark text-white',
+    'hover:bg-wespa-red-darker hover:shadow-lg hover:shadow-red-500/30',
     'active:bg-wespa-red-darker',
-    'focus-visible:ring-wespa-red'
+    'focus-visible:ring-wespa-red-dark'
   ),
   // Gold: Gold gradient with WHITE text (high contrast)
   gold: cn(

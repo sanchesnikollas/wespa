@@ -90,7 +90,7 @@ export default function CoworkingPage() {
               {c.plans.map((plan) => (
                 <div key={plan.name} className={`relative bg-white border rounded-2xl overflow-hidden flex flex-col ${plan.popular ? 'border-wespa-red shadow-lg' : 'border-stone-200'}`}>
                   {plan.popular && (
-                    <span className="absolute top-4 right-4 z-10 bg-wespa-red text-white text-xs font-semibold px-4 py-1 rounded-full">{c.mostPopular}</span>
+                    <span className="absolute top-4 right-4 z-10 bg-wespa-red-dark text-white text-xs font-semibold px-4 py-1 rounded-full">{c.mostPopular}</span>
                   )}
                   <div className="relative aspect-[5/3] w-full">
                     <Image

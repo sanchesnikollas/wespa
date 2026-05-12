@@ -147,7 +147,7 @@ export default function OfficesPage() {
                   </div>
                   <div className="p-8 flex flex-col flex-1">
                     <h3 className="text-2xl font-bold mb-2 text-stone-900">{opt.name}</h3>
-                    <p className="text-wespa-red font-semibold mb-4">{opt.priceLabel}</p>
+                    <p className="text-wespa-red-dark font-semibold mb-4">{opt.priceLabel}</p>
                     <p className="text-stone-600 leading-relaxed mb-6 flex-1">{opt.description}</p>
                     <Button variant="wespa" size="lg" asChild>
                       <Link href="/book-visit">{c.bookVisit}</Link>

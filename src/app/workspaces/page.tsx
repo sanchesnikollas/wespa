@@ -110,7 +110,7 @@ export default function WorkspacesPage() {
                 <Link key={ws.href} href={ws.href} className="group block p-8 bg-white border border-stone-200 rounded-2xl hover:shadow-card-hover hover:border-stone-300 transition-all">
                   <h2 className="text-2xl font-bold text-stone-900 mb-3 group-hover:text-wespa-red transition-colors">{ws.title}</h2>
                   <p className="text-stone-600 mb-4">{ws.description}</p>
-                  <p className="text-lg font-semibold text-wespa-red">{ws.price}</p>
+                  <p className="text-lg font-semibold text-wespa-red-dark">{ws.price}</p>
                 </Link>
               ))}
             </div>

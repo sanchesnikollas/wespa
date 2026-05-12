@@ -92,7 +92,7 @@ export default function LocationPage() {
                   href={loc.href}
                   className="group block p-8 bg-white border border-stone-200 rounded-2xl hover:shadow-lg hover:border-stone-300 transition-all"
                 >
-                  <p className="text-sm font-medium text-wespa-red uppercase tracking-wider mb-2">
+                  <p className="text-sm font-medium text-wespa-red-dark uppercase tracking-wider mb-2">
                     {loc.subtitle}
                   </p>
                   <h2 className="text-3xl font-bold text-stone-900 mb-2 group-hover:text-wespa-red transition-colors">

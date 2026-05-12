@@ -165,8 +165,11 @@ export default function MeetingRoomsPage() {
           </div>
         </section>
 
-        <section className="section-spacing">
+        <section className="section-spacing" aria-labelledby="meeting-rooms-heading">
           <div className="container-wespa">
+            <h2 id="meeting-rooms-heading" className="sr-only">
+              {language === 'en' ? 'Meeting Rooms' : 'Sobe za sastanke'}
+            </h2>
             <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto mb-12">
               {c.rooms.map((room) => (
                 <div key={room.name} className="p-8 bg-white border border-stone-200 rounded-2xl">

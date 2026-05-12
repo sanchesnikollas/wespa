@@ -270,7 +270,7 @@ export default function ClientStoryPage() {
                 </div>
 
                 {/* Results */}
-                <div className="bg-wespa-red text-white rounded-2xl p-6">
+                <div className="bg-wespa-red-dark text-white rounded-2xl p-6">
                   <h3 className="font-semibold mb-4">Key Results</h3>
                   <div className="space-y-4">
                     {story.results.map((result, i) => (

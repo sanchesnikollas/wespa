@@ -88,7 +88,7 @@ export function ConsentBanner() {
         <button
           type="button"
           onClick={() => decide('granted')}
-          className="px-4 py-2 rounded-lg bg-wespa-red text-white font-semibold hover:bg-wespa-red/90"
+          className="px-4 py-2 rounded-lg bg-wespa-red-dark text-white font-semibold hover:bg-wespa-red-darker"
         >
           {t.accept}
         </button>
