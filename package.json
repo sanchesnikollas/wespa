@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "lighthouse": "lighthouse",
+    "lighthouse:all": "node scripts/lighthouse-run.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
@@ -27,8 +29,10 @@
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.16",
+    "chrome-launcher": "^1.2.1",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
+    "lighthouse": "^13.3.0",
     "postcss": "^8.4.32",
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.0",
