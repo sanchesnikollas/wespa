@@ -81,8 +81,11 @@ export default function CoworkingPage() {
           </div>
         </section>
 
-        <section className="section-spacing">
+        <section className="section-spacing" aria-labelledby="coworking-plans-heading">
           <div className="container-wespa">
+            <h2 id="coworking-plans-heading" className="sr-only">
+              {language === 'en' ? 'Coworking Plans' : 'Coworking planovi'}
+            </h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {c.plans.map((plan) => (
                 <div key={plan.name} className={`relative bg-white border rounded-2xl overflow-hidden flex flex-col ${plan.popular ? 'border-wespa-red shadow-lg' : 'border-stone-200'}`}>

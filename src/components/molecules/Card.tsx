@@ -308,8 +308,8 @@ export function CardPlan({ plan, onClick }: CardPlanProps) {
         className="mt-auto"
         asChild
       >
-        <Link href="/workspaces/coworking">
-          Learn More
+        <Link href="/workspaces/coworking" aria-label={`Learn more about the ${plan.name} plan`}>
+          View {plan.name}
         </Link>
       </Button>
       </div>
