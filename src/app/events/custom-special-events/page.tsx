@@ -58,8 +58,6 @@ export default function CustomSpecialEventsPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
           <Image src="/images/events/special/event-1.jpg" alt="WESPA special event" fill className="object-cover" priority />

@@ -322,7 +322,7 @@ function MobileNavItem({ item, onClose }: MobileNavItemProps) {
           animate={{ rotate: isExpanded ? 180 : 0 }}
           transition={{ duration: 0.2 }}
         >
-          <Icon name="chevron-down" size="sm" className="text-stone-500" />
+          <Icon name="chevron-down" size="sm" className="text-stone-600" />
         </motion.span>
       </button>
 

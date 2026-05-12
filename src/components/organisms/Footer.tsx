@@ -140,7 +140,7 @@ function SocialLinks() {
           href={social.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 text-stone-500 hover:text-stone-900 transition-colors"
+          className="p-2 text-stone-600 hover:text-stone-900 transition-colors"
           aria-label={social.label}
         >
           <Icon name={social.name} size="md" />
@@ -215,7 +215,7 @@ export function Footer() {
         <div className="container-wespa py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             {/* Copyright */}
-            <p className="text-caption text-stone-500">
+            <p className="text-caption text-stone-600">
               &copy; {currentYear} WESPA. {t('footer.copyright')}
             </p>
 
@@ -225,7 +225,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-stone-500 hover:text-stone-700 transition-colors"
+                  className="text-stone-600 hover:text-stone-700 transition-colors"
                 >
                   {link.label}
                 </Link>

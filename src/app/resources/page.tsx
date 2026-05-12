@@ -156,8 +156,6 @@ export default function ResourcesPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
           <Image src="/images/workspaces/coworking/coworking-3.jpg" alt="WESPA resources" fill className="object-cover" priority />
@@ -235,7 +233,7 @@ export default function ResourcesPage() {
                         {article.category}
                       </span>
                       <span className="text-xs text-stone-400">·</span>
-                      <span className="text-xs text-stone-500">{article.date}</span>
+                      <span className="text-xs text-stone-600">{article.date}</span>
                     </div>
                     <h3 className="text-lg font-bold text-stone-900 mb-3 group-hover:text-wespa-red transition-colors">
                       {article.title}

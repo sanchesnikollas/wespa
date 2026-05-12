@@ -104,7 +104,7 @@ export default function HouseRulesPage() {
                   <li>Monday - Friday: 7:00 - 22:00</li>
                   <li>Saturday: 8:00 - 18:00</li>
                   <li>Sunday: Closed</li>
-                  <li className="text-sm text-stone-500 mt-2">* OwnDesk & OfficeDesk members have 24/7 access</li>
+                  <li className="text-sm text-stone-600 mt-2">* OwnDesk & OfficeDesk members have 24/7 access</li>
                 </ul>
               </div>
               <div>

@@ -54,8 +54,6 @@ export default function CustomBusinessEventsPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
           <Image src="/images/events/business/business-event-1.jpg" alt="WESPA business event" fill className="object-cover" priority />

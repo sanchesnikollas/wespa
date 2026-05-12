@@ -118,8 +118,6 @@ export default function EventSpacesPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
@@ -146,7 +144,7 @@ export default function EventSpacesPage() {
                   <div className="md:flex md:items-start md:justify-between md:gap-8 mb-6">
                     <div>
                       <h2 className="text-2xl font-bold text-stone-900 mb-1">{venue.name}</h2>
-                      <p className="text-stone-500">{venue.location}</p>
+                      <p className="text-stone-600">{venue.location}</p>
                     </div>
                     <span className="inline-block mt-3 md:mt-0 bg-stone-100 text-stone-700 font-semibold text-sm px-4 py-2 rounded-full">
                       {venue.capacity}

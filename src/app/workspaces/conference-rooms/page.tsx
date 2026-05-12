@@ -89,8 +89,8 @@ export default function ConferenceRoomsPage() {
         <p className="text-stone-600 text-sm mb-4 leading-relaxed flex-1">{room.descriptionEn}</p>
         <div className="flex items-baseline gap-2">
           <span className="text-xl font-bold text-stone-900">{room.price}</span>
-          <span className="text-stone-500 text-sm">{c.vat}</span>
-          <span className="text-stone-500 text-sm">{c.perHour}</span>
+          <span className="text-stone-600 text-sm">{c.vat}</span>
+          <span className="text-stone-600 text-sm">{c.perHour}</span>
         </div>
       </div>
     </Link>
@@ -98,8 +98,6 @@ export default function ConferenceRoomsPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
           <Image src="/images/workspaces/meeting-rooms/meeting-room-2.jpg" alt="WESPA conference rooms" fill className="object-cover" priority />

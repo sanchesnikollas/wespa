@@ -121,7 +121,7 @@ function DownloadCard({ resource }: { resource: DownloadResource }) {
       </p>
 
       {/* File info */}
-      <div className="flex items-center gap-3 text-sm text-stone-500 mb-4">
+      <div className="flex items-center gap-3 text-sm text-stone-600 mb-4">
         <span className="flex items-center gap-1">
           <Icon name="file" size="sm" />
           {resource.fileType}
@@ -205,7 +205,7 @@ export default function DownloadsPage() {
                         </Link>
                       )}
                     </Button>
-                    <span className="text-sm text-stone-500">{resource.fileType} • {resource.fileSize}</span>
+                    <span className="text-sm text-stone-600">{resource.fileType} • {resource.fileSize}</span>
                   </div>
                 </div>
               </motion.div>

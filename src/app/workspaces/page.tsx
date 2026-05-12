@@ -91,8 +91,6 @@ export default function WorkspacesPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
           <Image src="/images/workspaces/coworking/coworking-1.jpg" alt="WESPA workspaces" fill className="object-cover" priority />

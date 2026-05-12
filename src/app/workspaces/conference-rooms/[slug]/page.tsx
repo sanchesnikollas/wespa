@@ -201,8 +201,6 @@ export default function ConferenceRoomDetailPage() {
 
   return (
     <>
-      <title>{room.name} | WESPA</title>
-      <meta name="description" content={description} />
       <main>
         {/* Hero */}
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
@@ -240,7 +238,7 @@ export default function ConferenceRoomDetailPage() {
                   ].map((cap) => (
                     <div key={cap.label} className="p-4 bg-stone-50 rounded-xl text-center">
                       <div className="text-2xl font-bold text-stone-900">{cap.value}</div>
-                      <div className="text-sm text-stone-500">{cap.label}</div>
+                      <div className="text-sm text-stone-600">{cap.label}</div>
                     </div>
                   ))}
                 </div>
@@ -277,11 +275,11 @@ export default function ConferenceRoomDetailPage() {
               <div>
                 <div className="sticky top-24 p-8 bg-white border border-stone-200 rounded-2xl shadow-sm space-y-6">
                   <div>
-                    <span className="text-sm text-stone-500">{l.area}</span>
+                    <span className="text-sm text-stone-600">{l.area}</span>
                     <p className="text-2xl font-bold text-stone-900">{room.area}m²</p>
                   </div>
                   <div>
-                    <span className="text-sm text-stone-500">{l.price}</span>
+                    <span className="text-sm text-stone-600">{l.price}</span>
                     <p className="text-2xl font-bold text-wespa-red">
                       €{room.pricePerHour}{room.maxPrice ? `–${room.maxPrice}` : ''}{l.perHour}
                     </p>
@@ -292,7 +290,7 @@ export default function ConferenceRoomDetailPage() {
                     )}
                   </div>
                   <div>
-                    <span className="text-sm text-stone-500">{l.capacity}</span>
+                    <span className="text-sm text-stone-600">{l.capacity}</span>
                     <p className="text-lg font-semibold text-stone-900">
                       {room.capacity.theater} {l.people} ({l.theater})
                     </p>

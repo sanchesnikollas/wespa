@@ -114,7 +114,7 @@ function PressReleaseCard({ release }: { release: PressRelease }) {
     >
       <div className="flex items-center justify-between mb-4">
         <Tag size="sm">{categoryLabels[release.category]}</Tag>
-        <time className="text-sm text-stone-500">{formattedDate}</time>
+        <time className="text-sm text-stone-600">{formattedDate}</time>
       </div>
 
       <h3 className="text-lg font-semibold text-stone-900 mb-3 line-clamp-2">
@@ -136,7 +136,7 @@ function PressReleaseCard({ release }: { release: PressRelease }) {
           <a
             href={release.pdfUrl}
             download
-            className="text-sm text-stone-500 hover:text-stone-700 flex items-center gap-1"
+            className="text-sm text-stone-600 hover:text-stone-700 flex items-center gap-1"
           >
             <Icon name="download" size="sm" />
             PDF

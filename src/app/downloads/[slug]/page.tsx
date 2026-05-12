@@ -178,7 +178,7 @@ export default function DownloadArticlePage() {
       {/* Breadcrumb */}
       <section className="bg-stone-100 py-4">
         <div className="container-wespa">
-          <nav className="flex items-center gap-2 text-sm text-stone-500">
+          <nav className="flex items-center gap-2 text-sm text-stone-600">
             <Link href="/" className="hover:text-stone-900">Home</Link>
             <Icon name="chevron-right" size="xs" />
             <Link href="/downloads" className="hover:text-stone-900">Downloads</Link>
@@ -212,7 +212,7 @@ export default function DownloadArticlePage() {
                 </div>
                 <div>
                   <p className="font-semibold text-stone-900">{resource.fileType} Download</p>
-                  <p className="text-sm text-stone-500">{resource.fileSize}</p>
+                  <p className="text-sm text-stone-600">{resource.fileSize}</p>
                 </div>
               </div>
 
@@ -235,7 +235,7 @@ export default function DownloadArticlePage() {
                 <ol className="space-y-2">
                   {resource.tableOfContents.map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-stone-600">
-                      <span className="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center text-sm font-medium text-stone-500">
+                      <span className="w-6 h-6 bg-stone-100 rounded-full flex items-center justify-center text-sm font-medium text-stone-600">
                         {i + 1}
                       </span>
                       {item}
@@ -255,7 +255,7 @@ export default function DownloadArticlePage() {
                 <h2 className="text-xl font-semibold text-stone-900 mb-2">
                   Download Free
                 </h2>
-                <p className="text-sm text-stone-500 mb-6">
+                <p className="text-sm text-stone-600 mb-6">
                   Enter your details to get instant access
                 </p>
 
@@ -339,7 +339,7 @@ export default function DownloadArticlePage() {
                   </div>
                   <Tag size="sm" className="mb-2">{r.category}</Tag>
                   <h3 className="font-semibold text-stone-900 mb-2">{r.title}</h3>
-                  <p className="text-sm text-stone-500">{r.fileType} • {r.fileSize}</p>
+                  <p className="text-sm text-stone-600">{r.fileType} • {r.fileSize}</p>
                 </Link>
               ))}
           </div>

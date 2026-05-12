@@ -74,8 +74,6 @@ export default function FoodPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
@@ -120,7 +118,7 @@ export default function FoodPage() {
                     ))}
                   </ul>
 
-                  <p className="text-sm text-stone-500">{r.location}</p>
+                  <p className="text-sm text-stone-600">{r.location}</p>
                 </Link>
               ))}
             </div>

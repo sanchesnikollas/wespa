@@ -68,8 +68,6 @@ export default function LocationPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
@@ -100,7 +98,7 @@ export default function LocationPage() {
                   <h2 className="text-3xl font-bold text-stone-900 mb-2 group-hover:text-wespa-red transition-colors">
                     {loc.title}
                   </h2>
-                  <p className="text-sm text-stone-500 mb-4">{loc.address}</p>
+                  <p className="text-sm text-stone-600 mb-4">{loc.address}</p>
                   <p className="text-stone-600 mb-6">{loc.description}</p>
 
                   <ul className="grid grid-cols-2 gap-3 mb-6">

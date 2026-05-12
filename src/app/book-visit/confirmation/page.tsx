@@ -105,7 +105,7 @@ export default function BookVisitConfirmationPage() {
           </div>
 
           {/* Contact info */}
-          <p className="text-sm text-stone-500 mt-8">
+          <p className="text-sm text-stone-600 mt-8">
             Questions? Contact us at{' '}
             <a href="tel:+38512345678" className="text-stone-700 hover:text-wespa-red">
               +385 1 234 5678

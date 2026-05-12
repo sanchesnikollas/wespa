@@ -935,7 +935,7 @@ export function MediaSection() {
                 />
               </div>
               <div className="p-6 lg:p-8">
-                <span className="text-xs uppercase tracking-widest text-stone-500 mb-3 inline-block">
+                <span className="text-xs uppercase tracking-widest text-stone-600 mb-3 inline-block">
                   {item.outlet}
                 </span>
                 <h3 className="text-xl font-semibold text-stone-900 mb-6 leading-snug">
@@ -1135,7 +1135,7 @@ export function ClientLogosSection() {
   return (
     <section className="py-12 md:py-16 border-b border-stone-200">
       <div className="container-wespa">
-        <p className="text-center text-stone-500 text-sm uppercase tracking-widest mb-8">
+        <p className="text-center text-stone-600 text-sm uppercase tracking-widest mb-8">
           {t('clientLogos.title')}
         </p>
         <motion.div

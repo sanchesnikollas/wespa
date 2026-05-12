@@ -152,8 +152,6 @@ export default function MeetingRoomsPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
           <Image src="/images/workspaces/meeting-rooms/meeting-room-1.jpg" alt="WESPA meeting rooms" fill className="object-cover" priority />
@@ -176,8 +174,8 @@ export default function MeetingRoomsPage() {
                   <p className="text-stone-600 mb-6 leading-relaxed">{room.description}</p>
                   <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-bold text-stone-900">{room.price}</span>
-                    <span className="text-stone-500">{c.vat}</span>
-                    <span className="text-stone-500">{c.perHour}</span>
+                    <span className="text-stone-600">{c.vat}</span>
+                    <span className="text-stone-600">{c.perHour}</span>
                   </div>
                 </div>
               ))}
@@ -192,7 +190,7 @@ export default function MeetingRoomsPage() {
                   <h3 className="text-xl font-bold mb-3 text-stone-900">{pkg.name}</h3>
                   <div className="flex items-baseline gap-2 mb-4">
                     <span className="text-3xl font-bold text-stone-900">{pkg.price}</span>
-                    <span className="text-stone-500 text-sm">{c.vat}</span>
+                    <span className="text-stone-600 text-sm">{c.vat}</span>
                   </div>
                   <p className="text-stone-600 leading-relaxed">{pkg.description}</p>
                 </div>

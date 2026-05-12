@@ -68,8 +68,6 @@ export default function CoworkingPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
           <Image src="/images/workspaces/coworking/coworking-2.jpg" alt="WESPA coworking space" fill className="object-cover" priority />
@@ -104,8 +102,8 @@ export default function CoworkingPage() {
                     <h3 className="text-xl font-bold text-stone-900 mb-2">{plan.name}</h3>
                     <div className="mb-4">
                       <span className="text-3xl font-bold text-stone-900">{plan.price}</span>
-                      <span className="text-stone-500">{plan.period}</span>
-                      <span className="text-stone-500 ml-2 text-sm">{c.vat}</span>
+                      <span className="text-stone-600">{plan.period}</span>
+                      <span className="text-stone-600 ml-2 text-sm">{c.vat}</span>
                     </div>
                     <p className="text-stone-600 text-sm mb-6">{plan.description}</p>
                     <ul className="space-y-3 mb-8 flex-1">

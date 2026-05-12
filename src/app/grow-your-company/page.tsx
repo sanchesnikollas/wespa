@@ -182,8 +182,6 @@ export default function GrowYourCompanyPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
           <Image src="/images/locations/business-lounge/lounge-3.jpg" alt="Grow your company at WESPA" fill className="object-cover" priority />
@@ -226,7 +224,7 @@ export default function GrowYourCompanyPage() {
                   <div className="border-t border-stone-200 pt-4 space-y-3">
                     {phase.outcomes.map((o) => (
                       <div key={o.label}>
-                        <p className="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-1">{o.label}</p>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-stone-600 mb-1">{o.label}</p>
                         <p className="text-sm text-stone-700">{o.text}</p>
                       </div>
                     ))}

@@ -251,19 +251,19 @@ export default function ClientStoryPage() {
                   <h3 className="font-semibold text-stone-900 mb-4">Company Profile</h3>
                   <dl className="space-y-4 text-sm">
                     <div>
-                      <dt className="text-stone-500">Company</dt>
+                      <dt className="text-stone-600">Company</dt>
                       <dd className="font-medium text-stone-900">{story.companyName}</dd>
                     </div>
                     <div>
-                      <dt className="text-stone-500">Industry</dt>
+                      <dt className="text-stone-600">Industry</dt>
                       <dd className="font-medium text-stone-900">{story.industry}</dd>
                     </div>
                     <div>
-                      <dt className="text-stone-500">Team Size</dt>
+                      <dt className="text-stone-600">Team Size</dt>
                       <dd className="font-medium text-stone-900">{story.teamSize}</dd>
                     </div>
                     <div>
-                      <dt className="text-stone-500">Space Type</dt>
+                      <dt className="text-stone-600">Space Type</dt>
                       <dd className="font-medium text-stone-900">{story.spaceType}</dd>
                     </div>
                   </dl>

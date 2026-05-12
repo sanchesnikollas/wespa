@@ -31,7 +31,7 @@ function LanguageSwitcher({ className }: { className?: string }) {
           'px-3 py-1 rounded-full text-body-sm font-medium transition-all duration-200',
           language === 'hr'
             ? 'bg-white text-stone-900 shadow-sm'
-            : 'text-stone-500 hover:text-stone-700'
+            : 'text-stone-600 hover:text-stone-700'
         )}
         aria-label="Hrvatski"
       >
@@ -43,7 +43,7 @@ function LanguageSwitcher({ className }: { className?: string }) {
           'px-3 py-1 rounded-full text-body-sm font-medium transition-all duration-200',
           language === 'en'
             ? 'bg-white text-stone-900 shadow-sm'
-            : 'text-stone-500 hover:text-stone-700'
+            : 'text-stone-600 hover:text-stone-700'
         )}
         aria-label="English"
       >

@@ -200,8 +200,6 @@ export default function VirtualOfficePage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
           <Image
@@ -275,7 +273,7 @@ export default function VirtualOfficePage() {
                     <span className="text-3xl font-bold text-stone-900">
                       {plan.price}
                     </span>
-                    <span className="text-stone-500">{plan.period}</span>
+                    <span className="text-stone-600">{plan.period}</span>
                   </div>
                   <p className="text-stone-600 text-sm mb-6">
                     {plan.description}

@@ -52,8 +52,6 @@ export default function PapelPage() {
 
   return (
     <>
-      <title>{c.pageTitle} | WESPA</title>
-      <meta name="description" content={c.subtitle} />
       <main>
         {/* Hero */}
         <section className="relative text-white py-24 md:py-32 overflow-hidden">
@@ -110,7 +108,7 @@ export default function PapelPage() {
               <p className="text-lg text-stone-600 mb-2">
                 {c.findUsLocation}
               </p>
-              <p className="text-stone-500">{c.findUsAddress}</p>
+              <p className="text-stone-600">{c.findUsAddress}</p>
             </div>
           </div>
         </section>

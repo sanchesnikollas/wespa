@@ -148,7 +148,7 @@ export default function ClientStoriesPage() {
             {stats.map((stat, index) => (
               <motion.div key={index} variants={fadeInUp} className="text-center">
                 <p className="text-4xl md:text-5xl font-bold text-stone-900">{stat.value}</p>
-                <p className="text-stone-500 mt-2">{stat.label}</p>
+                <p className="text-stone-600 mt-2">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -224,7 +224,7 @@ export default function ClientStoriesPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-stone-900">{story.author}</p>
-                      <p className="text-stone-500 text-sm">{story.role}</p>
+                      <p className="text-stone-600 text-sm">{story.role}</p>
                     </div>
                   </div>
 
@@ -233,7 +233,7 @@ export default function ClientStoriesPage() {
                     {story.results.map((result, i) => (
                       <div key={i} className="text-center">
                         <p className="text-2xl font-bold text-stone-900">{result.metric}</p>
-                        <p className="text-sm text-stone-500">{result.label}</p>
+                        <p className="text-sm text-stone-600">{result.label}</p>
                       </div>
                     ))}
                   </div>
