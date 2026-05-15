@@ -54,17 +54,11 @@ Links/destinos a confirmar antes de remover os TODOs:
 
 ## 🟢 Acionável neste repo (não bloqueado por terceiros)
 
-### Adicionar `ines@checkgrow.com` ao review widget
-- **Status:** Pendente
-- **Bloqueio:** `review-mcp` desconectado nesta sessão. 2 caminhos:
-  1. Reconectar `review-mcp` (config Claude Code) → eu rodo `mcp__review__review__add_member`
-  2. Inserir manualmente no Supabase `site_members` (table editor ou SQL)
-- **Schema esperado** (de [docs/superpowers/specs/2026-04-21-review-widget-design.md](docs/superpowers/specs/2026-04-21-review-widget-design.md)):
-  ```sql
-  INSERT INTO site_members (site_id, email, role)
-  VALUES ('<wespa-site-id>', 'ines@checkgrow.com', 'editor');
-  ```
-- Trigger `notify-comment` deve disparar email convite via Resend após insert.
+### ~~Adicionar `ines@checkgrow.com` ao review widget~~ ✅ FEITO
+- **Status:** Adicionada em 2026-05-15 14:56 UTC como `role='client'` (mesmo padrão de andrea/bruno @checkgrow.com)
+- **Como foi feito:** `supabase db query --linked` no project `rmrtndvblnsvogifxisr` (review-sanches), `INSERT INTO site_members (site_id, email, role) VALUES ('wespa', 'ines@checkgrow.com', 'client')`
+- **Schema real** descoberto: `role` tem CHECK constraint `IN ('designer', 'client')` — não 'editor' como spec sugeria
+- **5 members atuais** no site `wespa`: nikollas (designer), gabriela/andrea/bruno/ines (client)
 
 ### LCP <2.5s (único gap Lighthouse acionável)
 - **Status:** Pendente — homepage 3.5-4.5s, target Google "Good" <2.5s
