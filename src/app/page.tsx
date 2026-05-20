@@ -1,7 +1,6 @@
-'use client'
-
 // ============================================
 // WESPA Website - Homepage
+// Server Component — Sections internas sao Client onde precisam
 // ============================================
 
 import {

@@ -1,8 +1,8 @@
 # TASKS — Wespa Website
 
-Pendências consolidadas do projeto. Atualizado: 2026-05-12.
+Pendências consolidadas do projeto. Atualizado: 2026-05-16.
 
-Branch atual: `sanches/stoic-zhukovsky-d11765` (6 commits acima de master). Última auditoria Lighthouse: [docs/lighthouse/2026-05-12-a11y-final/](docs/lighthouse/2026-05-12-a11y-final/README.md) — A11y 100 + SEO 100 em 8/8 páginas.
+Branch atual: `sanches/stoic-zhukovsky-d11765` (10 commits acima de master). Última auditoria Lighthouse: [docs/lighthouse/2026-05-16-server-component/](docs/lighthouse/2026-05-16-server-component/README.md) — A11y 100 + SEO 100 em 8/8 páginas. Homepage Perf 90 (LCP 3.48s, ainda acima do <2.5s "Good").
 
 ---
 
@@ -61,10 +61,11 @@ Links/destinos a confirmar antes de remover os TODOs:
 - **5 members atuais** no site `wespa`: nikollas (designer), gabriela/andrea/bruno/ines (client)
 
 ### LCP <2.5s (único gap Lighthouse acionável)
-- **Status:** Pendente — homepage 3.5-4.5s, target Google "Good" <2.5s
-- **Hipótese:** Bottleneck é hydration de Client Component (`'use client'` em [src/app/page.tsx](src/app/page.tsx)) + framer-motion no hero, não a imagem em si. Next.js já preload hero corretamente (srcset + fetchPriority).
-- **Próximo experimento:** tornar `page.tsx` Server Component, isolar `'use client'` só nas Sections que precisam (HeroSection com `useScroll`/`useTransform`).
-- **Esforço:** ~1-2h, ROI incerto.
+- **Status parcial:** Homepage refatorada pra Server Component (commit `<pendente>`, 2026-05-16) — Perf 84→90, LCP 4.19s→3.48s. **Ainda acima de 2.5s** Google "Good".
+- **Próximas tentativas** (próxima sessão, ROI marginal):
+  - Lazy load das Sections below-the-fold via `next/dynamic`
+  - Substituir framer-motion no HeroSection por CSS animations
+  - Critical CSS inline manual
 
 ### Audit final em produção
 - **Após** decisões 1-2-3-4 acima ficarem resolvidas
@@ -73,9 +74,9 @@ Links/destinos a confirmar antes de remover os TODOs:
 
 ---
 
-## ✅ Concluído na linha Lighthouse (6 commits acima de master)
+## ✅ Concluído na linha Lighthouse (10 commits acima de master)
 
-Atalho: ver [docs/lighthouse/2026-05-12-a11y-final/README.md](docs/lighthouse/2026-05-12-a11y-final/README.md) pra comparação completa.
+Atalho: ver [docs/lighthouse/2026-05-16-server-component/README.md](docs/lighthouse/2026-05-16-server-component/README.md) pra comparação completa.
 
 - `deb6e68` — baseline audit 8 páginas
 - `ecb02f6` — title duplicado em 21 páginas + `text-stone-500 → text-stone-600`
@@ -83,8 +84,12 @@ Atalho: ver [docs/lighthouse/2026-05-12-a11y-final/README.md](docs/lighthouse/20
 - `5c1c605` — audit em prod (descobertas: noindex env, review widget env, CORS Supabase bug)
 - `9ac44c1` — `sizes="100vw"` em 21 hero images + quality 90→85
 - `e5403f0` — `wespa-red` contrast cirúrgico + heading-order meeting-rooms → **A11y 100 em 8/8**
+- `215fb5a` — TASKS.md in-repo com pendências consolidadas
+- `b72e6a4` — Inês adicionada ao site_members
+- `4f9b68c` — gitignore supabase/.temp/
+- `<pendente>` — homepage Server Component → **Homepage Perf 84→90, LCP 4.19s→3.48s**
 
-**Métricas finais (local):** A11y 100, SEO 100, BP 96, Perf 84-97 em 8/8 páginas auditadas. LCP 2.63-4.19s.
+**Métricas finais (local, 2026-05-16):** A11y 100, SEO 100, BP 96-100, Perf 90-95 em 8/8 páginas. LCP 2.86-3.48s.
 
 ---
 
