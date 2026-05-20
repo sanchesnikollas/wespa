@@ -49,3 +49,6 @@ STAGE/
 
 # Image originals (pre-optimization, kept locally only)
 public/_originals/
+
+# Supabase CLI metadata (local cache, project linked via `supabase link`)
+supabase/.temp/
