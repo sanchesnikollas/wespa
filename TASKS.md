@@ -33,9 +33,10 @@ Branch atual: `sanches/stoic-zhukovsky-d11765` (10 commits acima de master). Úl
 - **Quem fixa:** Time/projeto gigwand-portal
 
 ### 4. Deploy desta branch pra prod
-- **Onde:** `git push origin sanches/stoic-zhukovsky-d11765` → merge pra master → Railway auto-deploy
-- **Impacto:** Propaga 6 commits de fixes pra prod (title duplicado resolve, A11y 100, SEO 100, contrast, etc.)
-- **Quem decide:** Você (quando aprovar os fixes)
+- **Status:** Branch pushada + **PR #2 aberto** → https://github.com/sanchesnikollas/wespa/pull/2
+- **Falta:** revisar e dar **merge** do PR pra master → Railway auto-deploya prod
+- **Impacto:** Propaga 11 commits de fixes (title duplicado resolve, A11y 100, SEO 100, contrast, LCP melhoria)
+- **Quem decide:** Você (merge quando aprovar) — atenção: noindex segue ativo em prod por decisão (soft launch)
 
 ---
 
