@@ -29,7 +29,7 @@ Branch atual: `sanches/stoic-zhukovsky-d11765` (10 commits acima de master). Úl
 ### 3. CORS bug REAL em produção
 - **Onde:** Edge Function `ingest-event` no projeto **`gigwand-portal`** (Supabase: `hayjlojrcmprwmzgqlxz`)
 - **Impacto atual:** Tracking beacon Gigwand silenciosamente quebrado em prod. `https://wespa.gigwand.com` é bloqueado por CORS quando faz POST pra `supabase.co/functions/v1/ingest-event`. Best Practices fica em 96.
-- **Fix:** Adicionar `wespa.gigwand.com` aos allowed origins na configuração CORS da Edge Function (no repositório `gigwand-portal`, **não** neste repo).
+- **Fix DOCUMENTADO:** patch exato em [docs/cors-fix-gigwand-portal.md](docs/cors-fix-gigwand-portal.md) — aplicar no repo `gigwand-portal` (prod compartilhada multi-tenant, NÃO mexer daqui).
 - **Quem fixa:** Time/projeto gigwand-portal
 
 ### 4. Deploy desta branch pra prod
@@ -60,12 +60,10 @@ Links/destinos a confirmar antes de remover os TODOs:
 - **Schema real** descoberto: `role` tem CHECK constraint `IN ('designer', 'client')` — não 'editor' como spec sugeria
 - **5 members atuais** no site `wespa`: nikollas (designer), gabriela/andrea/bruno/ines (client)
 
-### LCP <2.5s (único gap Lighthouse acionável)
-- **Status parcial:** Homepage refatorada pra Server Component (commit `<pendente>`, 2026-05-16) — Perf 84→90, LCP 4.19s→3.48s. **Ainda acima de 2.5s** Google "Good".
-- **Próximas tentativas** (próxima sessão, ROI marginal):
-  - Lazy load das Sections below-the-fold via `next/dynamic`
-  - Substituir framer-motion no HeroSection por CSS animations
-  - Critical CSS inline manual
+### LCP <2.5s (gap Lighthouse — refactor deferido)
+- **Status:** Homepage refatorada pra Server Component (`e372d5d`) — Perf 84→90, LCP 4.19s→3.48s (-31% vs baseline 5.04s). **Ainda acima de 2.5s.**
+- **Análise + plano completo:** [docs/lighthouse/LCP-next-steps.md](docs/lighthouse/LCP-next-steps.md)
+- **Por que deferido:** o que falta exige code-split de `Sections.tsx` (1201 linhas, 14 componentes, `'use client'` + framer-motion num módulo só) → refactor de risco que merece sessão dedicada com regression testing visual. Ganho fácil já capturado.
 
 ### Audit final em produção
 - **Após** decisões 1-2-3-4 acima ficarem resolvidas
