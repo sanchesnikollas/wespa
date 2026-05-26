@@ -13,7 +13,7 @@ const content = {
     subtitle: 'Choose an environment tailored specifically for your business needs. Organize meetings, key sessions, educational processes, or teamwork in rooms equipped to support you at every step.',
     perHour: '/ hour',
     vat: '+ VAT',
-    bookVisit: 'Book a visit',
+    bookVisit: 'Book a Room',
     bookRoom: 'Book a Room',
     rooms: [
       {
@@ -33,19 +33,19 @@ const content = {
       {
         name: 'Package S',
         hours: 20,
-        price: '€350',
+        price: '€350.00',
         description: 'Includes 20 hours of usage, online booking, and full access to presentation hardware.',
       },
       {
         name: 'Package M',
         hours: 40,
-        price: '€750',
+        price: '€750.00',
         description: 'Includes 40 hours of usage with high availability and high-speed internet.',
       },
       {
         name: 'Package L',
         hours: 70,
-        price: '€850',
+        price: '€850.00',
         description: 'Our best value for regular users: 70 hours of usage with full logistics support.',
       },
     ],
@@ -102,19 +102,19 @@ const content = {
       {
         name: 'Paket S',
         hours: 20,
-        price: '€350',
+        price: '€350.00',
         description: 'Uključuje 20 sati korištenja, online rezervaciju i puni pristup opremi za prezentacije.',
       },
       {
         name: 'Paket M',
         hours: 40,
-        price: '€750',
+        price: '€750.00',
         description: 'Uključuje 40 sati korištenja s visokom dostupnošću i brzim internetom.',
       },
       {
         name: 'Paket L',
         hours: 70,
-        price: '€850',
+        price: '€850.00',
         description: 'Najbolja vrijednost za stalne korisnike: 70 sati korištenja s punom logističkom podrškom.',
       },
     ],

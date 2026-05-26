@@ -9,11 +9,11 @@ const content = {
   en: {
     pageTitle: 'Private Offices',
     breadcrumb: 'Workspaces / Offices',
-    title: 'Beyond the standard office.',
+    title: 'Beyond the standard office',
     subtitle: 'Fully managed, move-in ready offices for your team. Privacy, flexibility, and access to a 200+ company network. One contract, one invoice, zero hassle.',
-    bookVisit: 'Book a visit',
+    bookVisit: 'Book your office now',
     optionsTitle: 'Office Options',
-    optionsSubtitle: 'Choose the format that fits how your team operates today.',
+    optionsSubtitle: '',
     options: [
       {
         name: 'Private Office Space',

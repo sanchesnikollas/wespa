@@ -11,6 +11,7 @@ const content = {
     breadcrumb: 'Events / Custom Business Events',
     title: 'Technology and ambiance for your most important business moments.',
     subtitle: 'Professional infrastructure for conferences, panels, and workshops of all sizes. Host an event that reflects your brand’s professionalism.',
+    introTitle: 'A flexible space that works for you.',
     intro: 'With 10 halls across two locations, state-of-the-art AV equipment, and the support of an experienced team, WESPA is the logical choice for gatherings of 2 to 500+ participants.',
     cateringTitle: 'Business Catering',
     cateringDesc: 'Great food is essential for successful networking. In partnership with Restaurants Papel & SPOT, we offer culinary solutions tailored to your business format, from coffee breaks and healthy breakfasts to gala dinners.',
@@ -24,13 +25,14 @@ const content = {
     ],
     ctaTitle: 'Plan Your Business Event',
     ctaDesc: 'Share your event requirements and our team will prepare a detailed proposal with venue options, services, and pricing.',
-    ctaButton: 'Get in touch',
+    ctaButton: 'Check date availability for your event.',
   },
   hr: {
     pageTitle: 'Poslovni događaji',
     breadcrumb: 'Događanja / Poslovni događaji',
     title: 'Tehnologija i ambijent za vaše najvažnije poslovne trenutke.',
     subtitle: 'Profesionalna infrastruktura za konferencije, panele i radionice svih veličina. Domaćin događanja koje odražava profesionalnost vaše marke.',
+    introTitle: 'Fleksibilan prostor prilagođen vama.',
     intro: 'S 10 dvorana na dvije lokacije, vrhunskom AV opremom i podrškom iskusnog tima, WESPA je logičan izbor za okupljanja od 2 do 500+ sudionika.',
     cateringTitle: 'Poslovni catering',
     cateringDesc: 'Dobra hrana ključna je za uspješan networking. U partnerstvu s restoranima Papel i SPOT nudimo kulinarska rješenja prilagođena vašem poslovnom formatu — od pauza za kavu i zdravih doručaka do gala večera.',
@@ -71,6 +73,7 @@ export default function CustomBusinessEventsPage() {
 
         <section className="section-spacing">
           <div className="container-wespa">
+            <h2 className="text-3xl font-bold text-stone-900 mb-4">{c.introTitle}</h2>
             <p className="text-xl md:text-2xl text-stone-700 leading-relaxed max-w-4xl">
               {c.intro}
             </p>

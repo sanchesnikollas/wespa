@@ -10,6 +10,7 @@ const content = {
     pageTitle: 'Custom Office Zones',
     breadcrumb: 'Workspaces / Office Zones',
     title: 'Custom office suites tailored to your needs',
+    tagline: 'Full-service office solutions for larger teams and established companies.',
     subtitle: 'Secure a dedicated space of up to 150m² with a fully customizable layout. Enjoy the privacy of a separate zone with full access to all WESPA community amenities and services. One contract, one invoice, no additional fees.',
     highlights: [
       {
@@ -41,12 +42,13 @@ const content = {
     ],
     interestedTitle: 'Interested in a Custom Zone?',
     interestedDesc: 'Our team will help you design the perfect space. Pricing is tailored to your specific requirements.',
-    requestQuote: 'Request a Quote',
+    requestQuote: 'Request a Custom Quote',
   },
   hr: {
     pageTitle: 'Uredske zone',
     breadcrumb: 'Prostori / Uredske zone',
     title: 'Samostalni uredski prostor prilagođen vašim potrebama',
+    tagline: 'Full-service office solutions for larger teams and established companies.',
     subtitle: 'Osigurajte dedicirani prostor do 150m² s potpuno prilagodljivim rasporedom. Uživajte u privatnosti odvojene zone uz puni pristup svim WESPA pogodnostima i uslugama zajednice. Jedan ugovor, jedan račun, bez dodatnih troškova.',
     highlights: [
       {
@@ -97,6 +99,7 @@ export default function CustomOfficeZonesPage() {
           <div className="container-wespa relative z-10">
             <p className="text-wespa-red font-semibold mb-4">{c.breadcrumb}</p>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">{c.title}</h1>
+            <p className="text-xl md:text-2xl text-stone-200 max-w-2xl mb-4">{c.tagline}</p>
             <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
               {c.subtitle}
             </p>

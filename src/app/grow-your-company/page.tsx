@@ -11,10 +11,12 @@ const content = {
     breadcrumb: 'Forge Growth Platform',
     title: 'FORGE: From Traction to Scale.',
     subtitle: "We don't build MVPs; we build growth engines. The region's first execution-first platform for post-seed startups ready for global expansion.",
+    heroCta: 'Apply Your Startup',
     whyTitle: 'WHY FORGE?',
     whySubtitle: 'Not an Accelerator. We Are Your Growth Partner',
     whyBody: "Accelerators teach theory and help you raise your first round. We step in when you already have that. FORGE is designed for founders who have outgrown early-stage programs. We don't offer generic lectures, but an operational deep dive. Our goal isn't a Demo Day, but sustainable revenue growth, new market entry, and Series A readiness.",
-    processTitle: 'Our Process',
+    processTitle: 'How We Work?',
+    processSubtitle: 'Structured process, measurable results.',
     processDesc: 'A structured, hands-on approach to unlocking your next stage of growth. Applications are open year-round. Our Core Team filters candidates. We look for proven traction, clear ambition, and a team ready for rapid change.',
     phases: [
       {
@@ -38,7 +40,7 @@ const content = {
       },
       {
         step: '03',
-        title: 'Market Expansion',
+        title: 'Expansion & Capital Bridge',
         duration: '',
         description: 'For those ready for the big leagues. We focus on new market expansion and strategic partnerships.',
         outcomes: [
@@ -88,7 +90,7 @@ const content = {
     ],
     ctaTitle: "Scaling is hard. Don't do it alone.",
     ctaDesc: 'Apply for an evaluation and see if you can become part of the FORGE portfolio.',
-    ctaButton: 'Apply now',
+    ctaButton: 'APPLY NOW',
   },
   hr: {
     pageTitle: 'Rast tvrtke',
@@ -194,6 +196,11 @@ export default function GrowYourCompanyPage() {
             <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
               {c.subtitle}
             </p>
+            <div className="mt-8">
+              <Button variant="wespa" size="lg" asChild>
+                <Link href="/contact?subject=forge">{'heroCta' in c ? c.heroCta : c.ctaButton}</Link>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -210,6 +217,9 @@ export default function GrowYourCompanyPage() {
         <section className="section-spacing bg-stone-50">
           <div className="container-wespa">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">{c.processTitle}</h2>
+            {'processSubtitle' in c && (
+              <p className="text-lg font-semibold text-wespa-red text-center mb-4">{c.processSubtitle}</p>
+            )}
             <p className="text-stone-600 text-center max-w-2xl mx-auto mb-16">
               {c.processDesc}
             </p>
