@@ -12,7 +12,7 @@ const content = {
     title: 'Workspace that works for you.',
     subtitle: 'Choose a plan that matches your pace. High-end infrastructure, fiber-optic internet, and a quiet, distraction-free environment.',
     mostPopular: 'Most Popular',
-    getStarted: 'Get Started',
+    getStarted: 'Book Your Desk',
     vat: '+ VAT',
     galleryTitle: 'Our Coworking Spaces',
     amenities: {
@@ -27,10 +27,10 @@ const content = {
       ],
     },
     plans: [
-      { name: 'FlyDesk', price: '€30', period: '/day', image: '/images/workspaces/coworking/coworking-1.jpg', description: 'Your office for a day. Includes a desk and ergonomic chair in the coworking area, high-speed internet, and 1 hour of meeting room access. Possible to rent a monitor. Perfect for focused, short-term tasks.', features: ['Access to any available desk', 'High-speed WiFi', 'Meeting room access', 'Print & scan services', 'Community events', 'Lounge access'] },
-      { name: 'FlyDesk + Lunch', price: '€35', period: '/day', image: '/images/workspaces/coworking/coworking-4.jpg', description: 'FlyDesk plus a meal of your choice from the daily menu (available at both locations).', features: ['All FlyDesk benefits', 'Daily lunch included', 'Choice of Papel or SPOT', 'Healthy, fresh options'] },
-      { name: 'OwnDesk', price: '€219', period: '/month', image: '/images/workspaces/coworking/coworking-7.jpg', description: 'Your permanent workstation in the coworking zone. A dedicated home base with internet access and fair-use printing/scanning included.', features: ['Personal dedicated desk', 'Lockable storage', '24/7 access', 'Meeting room credits', 'Mail handling', 'High-speed WiFi'], popular: true },
-      { name: 'OfficeDesk', price: '€226', period: '/month', image: '/images/workspaces/coworking/coworking-9.jpg', description: 'A dedicated desk within a shared office. For those who need office stability with full logistics support and printing services included.', features: ['Private office (2-6 people)', 'Dedicated phone line', 'Meeting room credits', '24/7 access', 'Custom branding options', 'Priority support'] },
+      { name: 'FlyDesk', price: '€30.00', period: '', image: '/images/workspaces/coworking/coworking-1.jpg', description: 'Your office for a day. Includes a desk and ergonomic chair in the coworking area, high-speed internet, and 1 hour of meeting room access. Possible to rent a monitor. Perfect for focused, short-term tasks.', features: ['Access to any available desk', 'High-speed WiFi', 'Meeting room access', 'Print & scan services', 'Community events', 'Lounge access'] },
+      { name: 'FlyDesk + Lunch', price: '€35.00', period: '', image: '/images/workspaces/coworking/coworking-4.jpg', description: 'FlyDesk plus a meal of your choice from the daily menu (available at both locations).', features: ['All FlyDesk benefits', 'Daily lunch included', 'Choice of Papel or SPOT', 'Healthy, fresh options'] },
+      { name: 'OwnDesk', price: '€219.00', period: '', image: '/images/workspaces/coworking/coworking-7.jpg', description: 'Your permanent workstation in the coworking zone. A dedicated home base with internet access and fair-use printing/scanning included.', features: ['Personal dedicated desk', 'Lockable storage', '24/7 access', 'Meeting room credits', 'Mail handling', 'High-speed WiFi'], popular: false },
+      { name: 'OfficeDesk', price: '€226.00', period: '', image: '/images/workspaces/coworking/coworking-9.jpg', description: 'A dedicated desk within a shared office. For those who need office stability with full logistics support and printing services included.', features: ['Dedicated phone line', 'Meeting room credits', '24/7 access', 'Custom branding options', 'Priority support'] },
     ],
   },
   hr: {
@@ -54,10 +54,10 @@ const content = {
       ],
     },
     plans: [
-      { name: 'FlyDesk', price: '€30', period: '/dan', image: '/images/workspaces/coworking/coworking-1.jpg', description: 'Ured na jedan dan. Dobivaš radni stol i ergonomsku stolicu u coworking prostoru, brz internet i jedan sat korištenja sobe za sastanke. Mogućnost najma monitora. Idealno za fokusirane, kratkoročne zadatke.', features: ['Pristup bilo kojem dostupnom stolu', 'Brzi WiFi', 'Pristup sobama za sastanke', 'Usluge ispisa i skeniranja', 'Događanja zajednice', 'Pristup loungeu'] },
-      { name: 'FlyDesk + Ručak', price: '€35', period: '/dan', image: '/images/workspaces/coworking/coworking-4.jpg', description: 'FlyDesk te dnevni obrok po izboru iz naše dnevne ponude (vrijedi za obje lokacije).', features: ['Sve FlyDesk pogodnosti', 'Dnevni ručak uključen', 'Izbor Papel ili SPOT', 'Zdravi, svježi obroci'] },
-      { name: 'OwnDesk', price: '€219', period: '/mjesec', image: '/images/workspaces/coworking/coworking-7.jpg', description: 'Tvoj osobni radni stol u coworking zoni. Stalna baza koja uključuje internet te ispis i skeniranje dokumenata.', features: ['Osobni dodijeljeni stol', 'Zaključivo spremište', '24/7 pristup', 'Krediti za sobe za sastanke', 'Primanje pošte', 'Brzi WiFi'], popular: true },
-      { name: 'OfficeDesk', price: '€226', period: '/mjesec', image: '/images/workspaces/coworking/coworking-9.jpg', description: 'Radni stol smješten u dijeljenom uredu. Za sve koji trebaju stabilnost ureda uz punu logističku podršku.', features: ['Privatni ured (2-6 osoba)', 'Namjenska telefonska linija', 'Krediti za sobe za sastanke', '24/7 pristup', 'Mogućnosti brendiranja', 'Prioritetna podrška'] },
+      { name: 'FlyDesk', price: '€30.00', period: '', image: '/images/workspaces/coworking/coworking-1.jpg', description: 'Ured na jedan dan. Dobivaš radni stol i ergonomsku stolicu u coworking prostoru, brz internet i jedan sat korištenja sobe za sastanke. Mogućnost najma monitora. Idealno za fokusirane, kratkoročne zadatke.', features: ['Pristup bilo kojem dostupnom stolu', 'Brzi WiFi', 'Pristup sobama za sastanke', 'Usluge ispisa i skeniranja', 'Događanja zajednice', 'Pristup loungeu'] },
+      { name: 'FlyDesk + Ručak', price: '€35.00', period: '', image: '/images/workspaces/coworking/coworking-4.jpg', description: 'FlyDesk te dnevni obrok po izboru iz naše dnevne ponude (vrijedi za obje lokacije).', features: ['Sve FlyDesk pogodnosti', 'Dnevni ručak uključen', 'Izbor Papel ili SPOT', 'Zdravi, svježi obroci'] },
+      { name: 'OwnDesk', price: '€219.00', period: '', image: '/images/workspaces/coworking/coworking-7.jpg', description: 'Tvoj osobni radni stol u coworking zoni. Stalna baza koja uključuje internet te ispis i skeniranje dokumenata.', features: ['Osobni dodijeljeni stol', 'Zaključivo spremište', '24/7 pristup', 'Krediti za sobe za sastanke', 'Primanje pošte', 'Brzi WiFi'], popular: false },
+      { name: 'OfficeDesk', price: '€226.00', period: '', image: '/images/workspaces/coworking/coworking-9.jpg', description: 'Radni stol smješten u dijeljenom uredu. Za sve koji trebaju stabilnost ureda uz punu logističku podršku.', features: ['Privatni ured (2-6 osoba)', 'Namjenska telefonska linija', 'Krediti za sobe za sastanke', '24/7 pristup', 'Mogućnosti brendiranja', 'Prioritetna podrška'] },
     ],
   },
 }
