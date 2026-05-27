@@ -13,11 +13,12 @@ const content = {
     subtitle: 'From intimate dinners to large private celebrations with full organizational support. WESPA provides a space that transforms according to your vision. Whether you are planning a wedding with a modern twist, a private concert, or an exclusive dinner at SPOT, we deliver top-tier production, custom catering, and an ambiance to remember.',
     foodDrinkTitle: 'Food & Drink',
     foodDrinkSubtitle: 'Good food makes a great event even better.',
+    foodDrinkBody: 'Restaurant Papel & restaurant SPOT offer a wide range of contemporary international and regional cuisine. Our focus is on quality ingredients and the highest level of service, whether for an elegant fine dining experience or a relaxed buffet.',
     foodDrink: [
       { title: 'Restaurant Papel', description: 'Refined Mediterranean cuisine for elegant occasions.', image: '/images/food/papel/papel-1.jpg', href: '/food/papel' },
       { title: 'Restaurant SPOT', description: 'Contemporary casual menus for vibrant gatherings.', image: '/images/food/spot/spot-1.jpg', href: '/food/spot' },
     ],
-    servicesTitle: 'Support',
+    servicesTitle: 'Full Service Support',
     servicesDesc: 'We provide complete event organization with professional consulting in all aspects:',
     services: [
       { title: 'AV Production', description: 'Sound systems, professional lighting, and technical support.' },
@@ -26,7 +27,7 @@ const content = {
     ],
     ctaTitle: 'Let\'s Plan Your Celebration',
     ctaDesc: 'Tell us about your event and our team will craft a tailored proposal. No commitment required.',
-    ctaButton: 'Get in Touch',
+    ctaButton: 'Check date availability for your event.',
   },
   hr: {
     pageTitle: 'Posebni događaji',
@@ -35,11 +36,12 @@ const content = {
     subtitle: 'Od intimnih večera do velikih privatnih proslava uz potpunu organizacijsku podršku. WESPA nudi prostor koji se transformira prema vašoj viziji. Bilo da planirate vjenčanje s modernim štihom, privatni koncert ili ekskluzivnu večeru u SPOT-u, donosimo vrhunsku produkciju, prilagođeni catering i ambijent koji se pamti.',
     foodDrinkTitle: 'Hrana i piće',
     foodDrinkSubtitle: 'Dobra hrana čini sjajan događaj još boljim.',
+    foodDrinkBody: 'Restoran Papel i restoran SPOT nude širok izbor suvremene internacionalne i regionalne kuhinje. Naš fokus je na kvalitetnim namirnicama i najvišoj razini usluge, bilo za elegantno fine dining iskustvo ili opušteni buffet.',
     foodDrink: [
       { title: 'Restoran Papel', description: 'Rafinirana mediteranska kuhinja za elegantne prilike.', image: '/images/food/papel/papel-1.jpg', href: '/food/papel' },
       { title: 'Restoran SPOT', description: 'Suvremeni ležerni jelovnici za živahna okupljanja.', image: '/images/food/spot/spot-1.jpg', href: '/food/spot' },
     ],
-    servicesTitle: 'Podrška',
+    servicesTitle: 'Cjelovita usluga podrške',
     servicesDesc: 'Pružamo cjelovitu organizaciju događanja uz profesionalno savjetovanje u svim aspektima:',
     services: [
       { title: 'AV produkcija', description: 'Zvučni sustavi, profesionalna rasvjeta i tehnička podrška.' },
@@ -48,7 +50,7 @@ const content = {
     ],
     ctaTitle: 'Isplanirajmo vašu proslavu',
     ctaDesc: 'Recite nam o svom događaju i naš tim izraditi će prilagođeni prijedlog. Bez obveza.',
-    ctaButton: 'Kontaktirajte nas',
+    ctaButton: 'Provjerite dostupnost datuma za vaš događaj.',
   },
 }
 
@@ -75,7 +77,8 @@ export default function CustomSpecialEventsPage() {
           <div className="container-wespa">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-3">{c.foodDrinkTitle}</h2>
-              <p className="text-stone-600 max-w-2xl mx-auto">{c.foodDrinkSubtitle}</p>
+              <p className="text-stone-600 max-w-2xl mx-auto mb-4">{c.foodDrinkSubtitle}</p>
+              <p className="text-stone-600 max-w-2xl mx-auto">{c.foodDrinkBody}</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
               {c.foodDrink.map((item) => (

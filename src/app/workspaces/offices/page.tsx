@@ -9,11 +9,10 @@ const content = {
   en: {
     pageTitle: 'Private Offices',
     breadcrumb: 'Workspaces / Offices',
-    title: 'Beyond the standard office.',
+    title: 'Beyond the standard office',
     subtitle: 'Fully managed, move-in ready offices for your team. Privacy, flexibility, and access to a 200+ company network. One contract, one invoice, zero hassle.',
-    bookVisit: 'Book a visit',
+    bookVisit: 'Book your office now',
     optionsTitle: 'Office Options',
-    optionsSubtitle: 'Choose the format that fits how your team operates today.',
     options: [
       {
         name: 'Private Office Space',
@@ -62,11 +61,10 @@ const content = {
   hr: {
     pageTitle: 'Privatni uredi',
     breadcrumb: 'Prostori / Uredi',
-    title: 'Iznad standardnog ureda.',
+    title: 'Iznad standardnog ureda',
     subtitle: 'Potpuno upravljani uredi spremni za useljenje za vaš tim. Privatnost, fleksibilnost i pristup mreži od 200+ tvrtki. Jedan ugovor, jedan račun, bez gnjavaže.',
-    bookVisit: 'Zakažite posjet',
+    bookVisit: 'Rezervirajte svoj ured sada',
     optionsTitle: 'Opcije ureda',
-    optionsSubtitle: 'Odaberite format koji odgovara načinu rada vašeg tima.',
     options: [
       {
         name: 'Privatni uredski prostor',
@@ -136,8 +134,7 @@ export default function OfficesPage() {
         <section className="section-spacing">
           <div className="container-wespa">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-3">{c.optionsTitle}</h2>
-              <p className="text-stone-600 max-w-2xl mx-auto">{c.optionsSubtitle}</p>
+              <h2 className="text-3xl md:text-4xl font-bold">{c.optionsTitle}</h2>
             </div>
             <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
               {c.options.map((opt) => (

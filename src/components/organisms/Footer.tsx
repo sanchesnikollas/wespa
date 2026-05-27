@@ -9,7 +9,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Icon, IconName } from '@/components/atoms/Icon'
-import { NewsletterForm } from '@/components/molecules/Form'
 import { footerNavigation } from '@/config/navigation'
 import { siteConfig, locations } from '@/config/site'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -159,19 +158,6 @@ export function Footer() {
 
   return (
     <footer className="bg-stone-50 border-t border-stone-200">
-      {/* Newsletter Section */}
-      <div className="container-wespa py-12 border-b border-stone-200">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-heading-lg font-sans font-semibold text-stone-900 mb-2">
-            {t('footer.newsletter.title')}
-          </h2>
-          <p className="text-body-md text-stone-600 mb-6">
-            {t('footer.newsletter.subtitle')}
-          </p>
-          <NewsletterForm />
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="container-wespa py-12 lg:py-16">
         <div className="grid gap-8 lg:gap-12 sm:grid-cols-2 lg:grid-cols-6">

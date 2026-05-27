@@ -12,15 +12,10 @@ const content = {
     title: 'Business-class dining',
     subtitle: 'A premium business restaurant in the Green Gold center featuring top-tier daily menu, a la carte service and a curated wine list. Our definition of a business lunch includes flawless service and culinary precision. Enjoy authentic flavors within an elegant setting that fully meets corporate standards.',
     galleryTitle: 'The SPOT Experience',
-    featuresTitle: 'The SPOT Standard',
-    features: [
-      { title: 'Curated Wine List', description: 'An expertly assembled selection of wines from renowned vineyards — chosen to complement every course and occasion.' },
-      { title: 'Corporate Standards', description: 'From executive lunches to client dinners, SPOT meets the expectations of the most discerning business professionals.' },
-      { title: 'Flawless Service', description: 'Attentive, discreet, and impeccable. Our team ensures every detail is handled so you can focus on what matters.' },
-    ],
+    seeMenu: 'See the Menu',
     findUs: 'Find Us',
-    findUsLocation: 'WESPA Spaces — Urban Hub',
-    findUsAddress: 'Heinzelova ulica 60, Zagreb',
+    findUsLocation: 'WESPA Spaces — Green Gold',
+    findUsAddress: 'Radnička cesta 50, Zagreb',
     ctaTitle: 'Experience SPOT',
     ctaDesc: 'Reserve your table and discover premium business dining at its finest.',
     reserveTable: 'Make a reservation',
@@ -31,15 +26,10 @@ const content = {
     title: 'Gastronomija s poslovnim potpisom',
     subtitle: 'Premium restoran u Green Gold centru s vrhunskim dnevnim menijem, a la carte uslugom i probranom vinskom kartom. Naša definicija poslovnog ručka uključuje besprijekornu uslugu i kulinarsku preciznost. Uživajte u autentičnim okusima u elegantnom ambijentu koji u potpunosti zadovoljava korporativne standarde.',
     galleryTitle: 'SPOT iskustvo',
-    featuresTitle: 'SPOT standard',
-    features: [
-      { title: 'Kuratirana vinska karta', description: 'Stručno sastavljen izbor vina iz renomiranih vinograda — odabran da nadopuni svaki gang i priliku.' },
-      { title: 'Korporativni standardi', description: 'Od izvršnih ručkova do večera s klijentima, SPOT zadovoljava očekivanja najzahtjevnijih poslovnih profesionalaca.' },
-      { title: 'Besprijekorna usluga', description: 'Pažljiva, diskretna i besprijekorna. Naš tim osigurava da je svaki detalj zbrinut kako biste se vi mogli fokusirati na ono što je važno.' },
-    ],
+    seeMenu: 'Pogledajte meni',
     findUs: 'Pronađite nas',
-    findUsLocation: 'WESPA Spaces — Urban Hub',
-    findUsAddress: 'Heinzelova ulica 60, Zagreb',
+    findUsLocation: 'WESPA Spaces — Green Gold',
+    findUsAddress: 'Radnička cesta 50, Zagreb',
     ctaTitle: 'Doživite SPOT',
     ctaDesc: 'Rezervirajte stol i otkrijte premium poslovnu gastronomiju u njenom najboljem izdanju.',
     reserveTable: 'Napravite rezervaciju',
@@ -82,20 +72,11 @@ export default function SpotPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Features */}
-        <section className="section-spacing bg-stone-50">
-          <div className="container-wespa">
-            <h2 className="text-3xl font-bold text-stone-900 mb-10">{c.featuresTitle}</h2>
-            <div className="grid gap-8 md:grid-cols-2">
-              {c.features.map((f) => (
-                <div key={f.title} className="p-6 bg-white border border-stone-200 rounded-2xl">
-                  <h3 className="text-xl font-bold text-stone-900 mb-3">{f.title}</h3>
-                  <p className="text-stone-600">{f.description}</p>
-                </div>
-              ))}
+            {/* TODO(Gabi): apontar "See the Menu" para o menu real (PDF/página) quando disponível */}
+            <div className="text-center mt-10">
+              <Button variant="wespa" size="lg" asChild>
+                <Link href="/food">{c.seeMenu}</Link>
+              </Button>
             </div>
           </div>
         </section>

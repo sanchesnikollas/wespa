@@ -10,6 +10,7 @@ const content = {
     pageTitle: 'Custom Office Zones',
     breadcrumb: 'Workspaces / Office Zones',
     title: 'Custom office suites tailored to your needs',
+    subtitleLead: 'Full-service office solutions for larger teams and established companies.',
     subtitle: 'Secure a dedicated space of up to 150m² with a fully customizable layout. Enjoy the privacy of a separate zone with full access to all WESPA community amenities and services. One contract, one invoice, no additional fees.',
     highlights: [
       {
@@ -41,12 +42,13 @@ const content = {
     ],
     interestedTitle: 'Interested in a Custom Zone?',
     interestedDesc: 'Our team will help you design the perfect space. Pricing is tailored to your specific requirements.',
-    requestQuote: 'Request a Quote',
+    requestQuote: 'Request a Custom Quote',
   },
   hr: {
     pageTitle: 'Uredske zone',
     breadcrumb: 'Prostori / Uredske zone',
     title: 'Samostalni uredski prostor prilagođen vašim potrebama',
+    subtitleLead: 'Full-service uredska rješenja za veće timove i etablirane tvrtke.',
     subtitle: 'Osigurajte dedicirani prostor do 150m² s potpuno prilagodljivim rasporedom. Uživajte u privatnosti odvojene zone uz puni pristup svim WESPA pogodnostima i uslugama zajednice. Jedan ugovor, jedan račun, bez dodatnih troškova.',
     highlights: [
       {
@@ -78,7 +80,7 @@ const content = {
     ],
     interestedTitle: 'Zainteresirani za prilagođenu zonu?',
     interestedDesc: 'Naš tim pomoći će vam dizajnirati savršen prostor. Cijena je prilagođena vašim specifičnim zahtjevima.',
-    requestQuote: 'Zatražite ponudu',
+    requestQuote: 'Zatražite prilagođenu ponudu',
   },
 }
 
@@ -94,7 +96,10 @@ export default function CustomOfficeZonesPage() {
           <div className="absolute inset-0 bg-stone-900/75" />
           <div className="container-wespa relative z-10">
             <p className="text-wespa-red font-semibold mb-4">{c.breadcrumb}</p>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">{c.title}</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">{c.title}</h1>
+            <p className="text-xl md:text-2xl text-white font-semibold mb-4 max-w-2xl">
+              {c.subtitleLead}
+            </p>
             <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
               {c.subtitle}
             </p>

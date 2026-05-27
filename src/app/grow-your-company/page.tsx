@@ -11,10 +11,12 @@ const content = {
     breadcrumb: 'Forge Growth Platform',
     title: 'FORGE: From Traction to Scale.',
     subtitle: "We don't build MVPs; we build growth engines. The region's first execution-first platform for post-seed startups ready for global expansion.",
+    heroButton: 'Apply Your Startup',
     whyTitle: 'WHY FORGE?',
     whySubtitle: 'Not an Accelerator. We Are Your Growth Partner',
     whyBody: "Accelerators teach theory and help you raise your first round. We step in when you already have that. FORGE is designed for founders who have outgrown early-stage programs. We don't offer generic lectures, but an operational deep dive. Our goal isn't a Demo Day, but sustainable revenue growth, new market entry, and Series A readiness.",
-    processTitle: 'Our Process',
+    processTitle: 'How We Work?',
+    processTagline: 'Structured process, measurable results.',
     processDesc: 'A structured, hands-on approach to unlocking your next stage of growth. Applications are open year-round. Our Core Team filters candidates. We look for proven traction, clear ambition, and a team ready for rapid change.',
     phases: [
       {
@@ -38,7 +40,7 @@ const content = {
       },
       {
         step: '03',
-        title: 'Market Expansion',
+        title: 'Expansion & Capital Bridge',
         duration: '',
         description: 'For those ready for the big leagues. We focus on new market expansion and strategic partnerships.',
         outcomes: [
@@ -88,17 +90,19 @@ const content = {
     ],
     ctaTitle: "Scaling is hard. Don't do it alone.",
     ctaDesc: 'Apply for an evaluation and see if you can become part of the FORGE portfolio.',
-    ctaButton: 'Apply now',
+    ctaButton: 'APPLY NOW',
   },
   hr: {
     pageTitle: 'Rast tvrtke',
     breadcrumb: 'Forge platforma za rast',
     title: 'FORGE: Od trakcije do skaliranja.',
     subtitle: 'Ne gradimo MVP-e, gradimo mašine za rast. Prva execution-first platforma u regiji za post-seed startupe.',
+    heroButton: 'Prijavite svoj startup',
     whyTitle: 'ZAŠTO FORGE?',
     whySubtitle: 'Nismo akcelerator. Mi smo vaš growth partner',
     whyBody: 'Akceleratori uče teoriju i pomažu vam u prvoj rundi. Mi ulazimo kad to već imate. FORGE je dizajniran za osnivače koji su prerasli early-stage programe. Ne nudimo generičke predavanja, već operativni deep dive. Naš cilj nije Demo Day, već održiv rast prihoda, ulazak na nova tržišta i Series A spremnost.',
-    processTitle: 'Naš proces',
+    processTitle: 'Kako radimo?',
+    processTagline: 'Strukturiran proces, mjerljivi rezultati.',
     processDesc: 'Strukturirani, praktični pristup otključavanju vaše sljedeće faze rasta. Prijave su otvorene tijekom cijele godine. Naš Core Team filtrira kandidate. Tražimo dokazanu trakciju, jasnu ambiciju i tim spreman za brze promjene.',
     phases: [
       {
@@ -122,7 +126,7 @@ const content = {
       },
       {
         step: '03',
-        title: 'Tržišna ekspanzija',
+        title: 'Ekspanzija i kapitalni most',
         duration: '',
         description: 'Za one spremne za veliku ligu. Fokus na ekspanziju na nova tržišta i strateška partnerstva.',
         outcomes: [
@@ -172,7 +176,7 @@ const content = {
     ],
     ctaTitle: 'Skaliranje je teško. Ne radite to sami.',
     ctaDesc: 'Prijavite se za evaluaciju i otkrijte možete li postati dio FORGE portfelja.',
-    ctaButton: 'Prijavite se',
+    ctaButton: 'PRIJAVITE SE',
   },
 }
 
@@ -189,9 +193,12 @@ export default function GrowYourCompanyPage() {
           <div className="container-wespa relative z-10">
             <p className="text-wespa-red font-semibold mb-4">{c.breadcrumb}</p>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">{c.title}</h1>
-            <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
+            <p className="text-lg md:text-xl text-stone-300 max-w-2xl mb-8">
               {c.subtitle}
             </p>
+            <Button variant="wespa" size="lg" asChild>
+              <Link href="/contact?subject=forge">{c.heroButton}</Link>
+            </Button>
           </div>
         </section>
 
@@ -207,7 +214,8 @@ export default function GrowYourCompanyPage() {
 
         <section className="section-spacing bg-stone-50">
           <div className="container-wespa">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">{c.processTitle}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">{c.processTitle}</h2>
+            <p className="text-lg font-medium text-wespa-red text-center mb-4">{c.processTagline}</p>
             <p className="text-stone-600 text-center max-w-2xl mx-auto mb-16">
               {c.processDesc}
             </p>

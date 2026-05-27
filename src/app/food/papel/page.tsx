@@ -10,7 +10,8 @@ const content = {
     pageTitle: 'Papel Restaurant',
     breadcrumb: 'Home / Food / Papel',
     title: 'The gastro hub for your workday',
-    subtitle: 'Everything you need for a quality break. A relaxed community restaurant tailored to the pace of modern business. Choose from premium daily specials and an a la carte menu made with nutrient-rich ingredients.',
+    subtitleLead: 'Everything you need for a quality break.',
+    subtitle: 'A relaxed community restaurant tailored to the pace of modern business. Choose from premium daily specials and an a la carte menu made with nutrient-rich ingredients that provide energy without the heavy feel. The ideal spot for an informal meeting or a business lunch.',
     galleryTitle: 'The Papel Experience',
     featuresTitle: 'What Makes Papel Special',
     features: [
@@ -29,7 +30,8 @@ const content = {
     pageTitle: 'Restoran Papel',
     breadcrumb: 'Početna / Gastronomija / Papel',
     title: 'Gastro baza vašeg radnog dana',
-    subtitle: 'Sve što trebate za kvalitetnu pauzu. Opušteni community restoran prilagođen tempu suvremenog poslovanja. Birajte između vrhunskih dnevnih i a la carte jela od nutritivno bogatih namirnica.',
+    subtitleLead: 'Sve što trebate za kvalitetnu pauzu.',
+    subtitle: 'Opušteni community restoran prilagođen tempu suvremenog poslovanja. Birajte između vrhunskih dnevnih specijaliteta i a la carte jelovnika od nutritivno bogatih namirnica koje daju energiju bez teškog osjećaja. Idealno mjesto za neformalni sastanak ili poslovni ručak.',
     galleryTitle: 'Papel iskustvo',
     featuresTitle: 'Što čini Papel posebnim',
     features: [
@@ -60,6 +62,9 @@ export default function PapelPage() {
           <div className="container-wespa relative z-10">
             <p className="text-wespa-red font-medium mb-4">{c.breadcrumb}</p>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">{c.title}</h1>
+            <p className="text-xl md:text-2xl text-white font-semibold mb-4 max-w-2xl">
+              {c.subtitleLead}
+            </p>
             <p className="text-lg md:text-xl text-stone-300 max-w-2xl">
               {c.subtitle}
             </p>
