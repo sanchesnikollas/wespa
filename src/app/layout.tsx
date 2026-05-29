@@ -160,8 +160,8 @@ export default function RootLayout({
           </LanguageProvider>
         </AnalyticsProvider>
 
-        {/* Review widget — só em staging quando NEXT_PUBLIC_ENABLE_REVIEW=1 */}
-        {process.env.NEXT_PUBLIC_ENABLE_REVIEW === '1' && (
+        {/* Review widget — ocultado temporariamente pra cliente revisar sem a barra */}
+        {false && process.env.NEXT_PUBLIC_ENABLE_REVIEW === '1' && (
           <Script
             src={process.env.NEXT_PUBLIC_REVIEW_WIDGET_URL ?? 'https://widget.gigwand.com/widget.js'}
             data-site-id="wespa"
